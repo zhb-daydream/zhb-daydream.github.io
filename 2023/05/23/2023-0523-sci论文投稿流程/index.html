@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="fonts.lug.ustc.edu.cn/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"zhb-daydream.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="论文撰写 完成了基本的数据、方法总结以及最核心的 Introduction 和 Abstract 后，论文的文本内容就已经基本完成了。这时候要先确定要投稿哪一家期刊，然后去它官网阅读作者投稿指南、下载论文模板（推荐 LaTex 写作，改格式要比 Word 快多了！）。投稿指南很重要，因为里面会讲许多论文的格式要求，比如不能超过多少页数（否则要加钱）、图片表格的字体与尺寸、论文结构要包含哪几个模块等">
+<meta property="og:type" content="article">
+<meta property="og:title" content="sci论文投稿流程">
+<meta property="og:url" content="https://zhb-daydream.github.io/2023/05/23/2023-0523-sci%E8%AE%BA%E6%96%87%E6%8A%95%E7%A8%BF%E6%B5%81%E7%A8%8B/index.html">
+<meta property="og:site_name" content="zhb木木三的个人网页">
+<meta property="og:description" content="论文撰写 完成了基本的数据、方法总结以及最核心的 Introduction 和 Abstract 后，论文的文本内容就已经基本完成了。这时候要先确定要投稿哪一家期刊，然后去它官网阅读作者投稿指南、下载论文模板（推荐 LaTex 写作，改格式要比 Word 快多了！）。投稿指南很重要，因为里面会讲许多论文的格式要求，比如不能超过多少页数（否则要加钱）、图片表格的字体与尺寸、论文结构要包含哪几个模块等">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png?v8">
+<meta property="og:image" content="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png?v8">
+<meta property="article:published_time" content="2023-05-23T09:28:00.000Z">
+<meta property="article:modified_time" content="2023-05-29T14:49:29.500Z">
+<meta property="article:author" content="zhb">
+<meta property="article:tag" content="文献">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png?v8">
+
+<link rel="canonical" href="https://zhb-daydream.github.io/2023/05/23/2023-0523-sci%E8%AE%BA%E6%96%87%E6%8A%95%E7%A8%BF%E6%B5%81%E7%A8%8B/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>sci论文投稿流程 | zhb木木三的个人网页</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">zhb木木三的个人网页</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">个人博客的新尝试（页面渲染需要时间，请耐心等待）</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/05/23/2023-0523-sci%E8%AE%BA%E6%96%87%E6%8A%95%E7%A8%BF%E6%B5%81%E7%A8%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="zhb">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="zhb木木三的个人网页">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          sci论文投稿流程
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-05-23 17:28:00" itemprop="dateCreated datePublished" datetime="2023-05-23T17:28:00+08:00">2023-05-23</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-05-29 22:49:29" itemprop="dateModified" datetime="2023-05-29T22:49:29+08:00">2023-05-29</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%AD%A6%E6%9C%AF%E6%A8%A1%E5%9D%97/" itemprop="url" rel="index"><span itemprop="name">学术模块</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>2.5k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>8 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="论文撰写">论文撰写</h2>
+<p>完成了基本的数据、方法总结以及最核心的 Introduction 和 Abstract 后，论文的文本内容就已经基本完成了。这时候要先确定要投稿哪一家期刊，然后去它官网阅读作者投稿指南、下载论文模板（推荐 LaTex 写作，改格式要比 Word 快多了！）。投稿指南很重要，因为里面会讲许多论文的格式要求，比如不能超过多少页数（否则要加钱）、图片表格的字体与尺寸、论文结构要包含哪几个模块等等。</p>
+<h2 id="论文投稿">论文投稿</h2>
+<p>在找期刊的投稿指南时，也可以顺便找一下这个期刊的投稿入口，并注册期刊投稿账户。注册时一般都要绑定经过认证的 <a href="%5Bwww.orcid.org%5D(http://www.orcid.org/)">ORCID</a>（开放研究贡献人员身份识别码，简称学者代码），这个差不多是学术领域的独一无二的身份证，认证的时候需要经过各高校的登录系统认证，要在学术圈里混的话，肯定就离不开这个 ORCID 了。</p>
+<p>每个期刊的投稿系统所要填写的内容都可能不同，这里列出几点常见的：</p>
+<ul>
+<li>投稿状态：一般会有New Submissions”（新投稿）、“Revisions”（修改后再投）、“Completed”（接收后确认录用）三种选项。</li>
+<li>文档上传：有的可以打包压缩上传，大部分期刊是各文件分别上传，一般包括（1）正文 .tex 文件，（2）由 LaTex 生成的 .pdf 文件，（3）.pdf、.eps、.jpg 等各插图文件。各文件的命名参考投稿指南，IEEE Access 中是要求用论文标题命名 .tex 文件和由 LaTex 生成的 .pdf 文件，然后用 [作者名+index] 命名的正文插图文件，其中作者名为 5 个字符。</li>
+<li>创新性说明：一般会让你写一段本论文的创新性（150 字内），讲一讲贡献点在哪、如何与期刊的研究领域相符等。</li>
+<li>选择审稿人：普通实验室就不用管这些了，大概也只有经历大风大雨的实验室才需要避免让冤家仇敌做审稿人吧。</li>
+<li>选择专业领域：一般磁共振领域就是含这几个关键词的领域：Instrumentation and Measurement、Biomedical Engineering</li>
+<li>代码和数据开源声明：能选开源就尽量选开源，除非开源流程很复杂（比如代码和数据都要上传到指定服务器）。</li>
+</ul>
+<h2 id="等待审稿">等待审稿</h2>
+<p>完成所有材料上传和文本填写，并点击 submit 之后，剩下的就是等待审稿了。一般期刊投稿系统都能查阅当前的状态，从投稿指南里也能看到一共会有几个状态，而在这审稿期间又会涉及一些人员，因而下面的介绍也分为这几个部分（当然，主要还是参考一篇<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/149509820">知乎文章</a>的）。</p>
+<ul>
+<li><strong>参与审稿的人：</strong></li>
+</ul>
+<ol type="1">
+<li>EIC ：Editor in Chief，主编，首先评判论文是否满足期刊要求，对稿件有最终决定权。</li>
+<li>ADM ：Administrator，协助主编工作。</li>
+<li>AE<span class="github-emoji"><span>⭐</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>：Associated Editor，副主编，会在审稿人（reviewers）意见的基础上对文章作个综合评价后，给主编一个recommendation。一般主编都会按照 AE 的意见写最终的 decision letter。（在学术会议里面 Program Chairs 会指定一批有建树的专家学者作为领域朱旭 Area Chair，即 AC，拥有一票否决权，地位基本与学术期刊里的 AE 一样）。</li>
+<li>TE ：Technical Editor，技术编辑，主要是熟悉文章领域的人对该文章进行宏观上的评价。</li>
+<li>SE ：Senior Editor，资深编委，应该跟主编差不多的身份吧。</li>
+<li>Reviewer<span class="github-emoji"><span>⭐</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>：审稿人，一般由 AE 委派（assign）三个审稿人对文章进行评审（俗称送外审），并将审稿意见返回给 AE。</li>
+</ol>
+<ul>
+<li><strong>审稿状态：</strong></li>
+</ul>
+<ol type="1">
+<li>Awaiting Admin Processing ：一般 3-4 天后就会安排主编 EIC。</li>
+<li>Awaiting AE Assignment ：等待 AE 的指派。编辑部在选择/联系 AE，一般 1-3 天左右。</li>
+<li>Awaiting Reviewer Assignment ：等待指定审稿人。AE 在选择审稿人，等待审稿人回复是否同意审稿。一般在一周以内，看审稿人的回复速度。</li>
+<li>Awaiting Reviewer Scores：等待审稿人审稿意见。一般 AE 会要求审稿人三周内给审稿意见，如果审稿人觉得时间不够，可以写信给主编要求延长审稿期限。</li>
+<li>Awaiting AE Recommendation： 等待 AE 的推荐。一般要求 AE 三周内给结果。</li>
+<li>Awaiting TE Recommendation：等待技术编辑的推荐，一般技术编辑会根据审稿人的意见做决定.</li>
+<li>Awaiting SE Recommendation：等待资深编辑的推荐，一般是 1-2 天；</li>
+<li>Awaiting EIC Decision ：等待主编的决定，一般是 1-2 天。</li>
+</ol>
+<ul>
+<li><strong>审稿结果：</strong></li>
+</ul>
+<ol type="1">
+<li>Accept：那只能恭喜你了！</li>
+<li>Accept after minor revision (without re-review)：不需要再送审。</li>
+<li>Major revision：大修，一般根据审稿人的意见进行修改录用的概率很大。</li>
+<li>Reconsideration after major revision：要再送审，即要再经过上述审稿流程。</li>
+<li>Reject and resubmit：论文现在状态不能接受，但可以修改后重新再投（其实差不多就是大修的意思，一般这时候主编都不会给论文一棒子打死，会说该文章有点新意，但是需要改进的地方还有很多，所以还有一个机会大修重投）。大修后的稿件要重新经过整个审稿流程。</li>
+<li>Reject ：一点希望都没有了，赶紧改投吧。</li>
+</ol>
+<h2 id="润色">润色</h2>
+<p>参考的<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/149509820">知乎文章</a>中还推荐了两家润色机构：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.editage.cn/">Editage</a>：国内公司，支持中文客服，有多种服务可选，价格相对较高，<strong>服务很好</strong>，回稿及时，提供发票；</li>
+<li><a target="_blank" rel="noopener" href="https://www.proofessor.co.uk/">Proofreading</a>：国外公司，支持中文客服，有多种服务可选，<strong>性价比高</strong>，回稿及时，提供发票，不过需要通过英文邮件与编辑沟通（其实也没啥的）。</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/%E6%96%87%E7%8C%AE/" rel="tag"><i class="fa fa-tag"></i> 文献</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2023/05/23/2023-0523-MRI%E9%87%8D%E5%BB%BA%E6%97%B6%E7%9A%84fftshift/" rel="prev" title="MRI重建时的fftshift">
+      <i class="fa fa-chevron-left"></i> MRI重建时的fftshift
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2023/05/24/2023-0524-%E5%AD%A6%E6%9C%AF%E8%AE%BA%E6%96%87%E7%A7%8D%E7%B1%BB/" rel="next" title="学术论文种类">
+      学术论文种类 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%BA%E6%96%87%E6%92%B0%E5%86%99"><span class="nav-number">1.</span> <span class="nav-text">论文撰写</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%BA%E6%96%87%E6%8A%95%E7%A8%BF"><span class="nav-number">2.</span> <span class="nav-text">论文投稿</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AD%89%E5%BE%85%E5%AE%A1%E7%A8%BF"><span class="nav-number">3.</span> <span class="nav-text">等待审稿</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B6%A6%E8%89%B2"><span class="nav-number">4.</span> <span class="nav-text">润色</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">zhb</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">52</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">zhb</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">74k</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+          load: ['[tex]/mhchem'],
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+          packages: {'[+]': ['mhchem']},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+</body>
+</html>

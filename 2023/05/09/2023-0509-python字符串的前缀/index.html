@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="fonts.lug.ustc.edu.cn/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"zhb-daydream.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="如何零基础学 python？照理来说应该要找本书系统地看一遍的，但我又懒，只能面向搜索引擎，边写边做点笔记了（坏习惯，不要学）。 首先在 python 中，字符串可以使用单引号或者双引号来描述的，基本没啥区别（好像百度找到的区别就是当字符串里涉及单引号&#x2F;双引号的转义字符时有区别，但我懒就不在这里写了）。其次，通过在字符串前面添加 f、r、u、l 字符可以产生额外的作用。 f-strings f-s">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python字符串前的f、r、u、l作用">
+<meta property="og:url" content="https://zhb-daydream.github.io/2023/05/09/2023-0509-python%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%89%8D%E7%BC%80/index.html">
+<meta property="og:site_name" content="zhb木木三的个人网页">
+<meta property="og:description" content="如何零基础学 python？照理来说应该要找本书系统地看一遍的，但我又懒，只能面向搜索引擎，边写边做点笔记了（坏习惯，不要学）。 首先在 python 中，字符串可以使用单引号或者双引号来描述的，基本没啥区别（好像百度找到的区别就是当字符串里涉及单引号&#x2F;双引号的转义字符时有区别，但我懒就不在这里写了）。其次，通过在字符串前面添加 f、r、u、l 字符可以产生额外的作用。 f-strings f-s">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-05-09T13:18:00.000Z">
+<meta property="article:modified_time" content="2023-05-19T09:44:25.858Z">
+<meta property="article:author" content="zhb">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://zhb-daydream.github.io/2023/05/09/2023-0509-python%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%89%8D%E7%BC%80/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>python字符串前的f、r、u、l作用 | zhb木木三的个人网页</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">zhb木木三的个人网页</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">个人博客的新尝试（页面渲染需要时间，请耐心等待）</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/05/09/2023-0509-python%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%89%8D%E7%BC%80/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="zhb">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="zhb木木三的个人网页">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          python字符串前的f、r、u、l作用
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-05-09 21:18:00" itemprop="dateCreated datePublished" datetime="2023-05-09T21:18:00+08:00">2023-05-09</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-05-19 17:44:25" itemprop="dateModified" datetime="2023-05-19T17:44:25+08:00">2023-05-19</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>859</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>3 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>如何零基础学 python？照理来说应该要找本书系统地看一遍的，但我又懒，只能面向搜索引擎，边写边做点笔记了（坏习惯，不要学）。</p>
+<p>首先在 python 中，字符串可以使用单引号或者双引号来描述的，基本没啥区别（好像百度找到的区别就是当字符串里涉及单引号/双引号的转义字符时有区别，但我懒就不在这里写了）。其次，通过在字符串前面添加 f、r、u、l 字符可以产生额外的作用。</p>
+<h3 id="f-strings">f-strings</h3>
+<p>f-strings 是指以 <code>f</code> 或 <code>F</code> 开头的字符串，对应于 format，即一种模板字符串，作用就是使字符串中 <code>{}</code> 所包含的表达式可以进行<strong>值替换</strong>（python3.6 版本是支持的，其他就不知道了）。例子如下：</p>
+<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>index = <span class="string">'1'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">f'this is <span class="subst">{index}</span> point'</span></span><br><span class="line"><span class="comment">#输出如下:</span></span><br><span class="line"><span class="string">'this is 1 point'</span></span><br></pre></td></tr></tbody></table></figure>
+<p>加入了列表推导式（List Comprehension，与 lambda 表达式类似，可以替代 for 循环达到有效的加速效果）之后，还可以对字符串数组进行操作，非常的方便。例子如下：</p>
+<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>index = [<span class="string">'1'</span>,<span class="string">'2'</span>,<span class="string">'3'</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>[<span class="string">f'this is <span class="subst">{n}</span> point'</span> <span class="keyword">for</span> n <span class="keyword">in</span> index]</span><br><span class="line"><span class="comment">#输出如下:</span></span><br><span class="line">[<span class="string">'this is 1 point'</span>, <span class="string">'this is 2 point'</span>, <span class="string">'this is 3 point'</span>]</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="r-strings">r-strings</h3>
+<p>r 表示 raw，其作用就是<strong>防止字符串转义</strong>，例子如下：</p>
+<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#使用r-strings之前</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>s = <span class="string">'abc\nabc'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>s</span><br><span class="line"><span class="string">'abc\nabc'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">print</span> s</span><br><span class="line">abc</span><br><span class="line">abc</span><br><span class="line"><span class="comment">#使用r-strings之后</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>s = <span class="string">r'abc\nabc'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>s</span><br><span class="line"><span class="string">'abc\\nabc'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">print</span> s</span><br><span class="line">abc\nabc</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="u-strings">u-strings</h3>
+<p>u 表示 unicode，其作用就是<strong>对字符串进行 unicode 编码</strong>，一般英文字符在各种编码下都可以正常解析，因而一般不需要带<code>u</code>，但是中文在不表明所需要的编码时就可能会在编码转换时出现乱码现象，因而建议对所有中文的编码方式都采用 unicode 类的字符编码（里面包括了 UTF-8、UTF-16、UTF-32）。例子嘛，好像没什么例子，反正在涉及中午的字符串前面加上 <code>u</code> 就行，能减少一些报错的情况。</p>
+<h3 id="l-strings">l-strings</h3>
+<p>l 表示 long，其作用就是<strong>表明每个字符占用两个字节</strong>，因为 unicode 字符集是由两个字节组成的，故该声明主要用于将字符转换为 unicode 字符。例子如下：</p>
+<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#使用l-strings前占用的字节</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>strlen(<span class="string">"abc"</span>)</span><br><span class="line"><span class="number">3</span></span><br><span class="line"><span class="comment">#使用l-strings后占用的字节</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>strlen(l<span class="string">"abc"</span>)</span><br><span class="line"><span class="number">6</span></span><br></pre></td></tr></tbody></table></figure>
+<h3 id="备注">备注</h3>
+<p>话说，感觉就只用 f-strings 对我比较有用，那些字符编码什么的完全没兴趣去了解呢，但照理来说是不是应该专门弄个《ANSI、Unicdoe、UTF8、ASCII 字符编码的区别》之类的博文呀？</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2023/05/09/2023-0509-%E4%B8%AA%E4%BA%BA%E5%90%90%E6%A7%BD/" rel="prev" title="2023-0509个人吐槽">
+      <i class="fa fa-chevron-left"></i> 2023-0509个人吐槽
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2023/05/17/2023-0517-%E9%98%B6%E6%AE%B5%E5%B0%8F%E7%BB%93/" rel="next" title="阶段小结-2023-0517">
+      阶段小结-2023-0517 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#f-strings"><span class="nav-number">1.</span> <span class="nav-text">f-strings</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#r-strings"><span class="nav-number">2.</span> <span class="nav-text">r-strings</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u-strings"><span class="nav-number">3.</span> <span class="nav-text">u-strings</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#l-strings"><span class="nav-number">4.</span> <span class="nav-text">l-strings</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%87%E6%B3%A8"><span class="nav-number">5.</span> <span class="nav-text">备注</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">zhb</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">52</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">zhb</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">74k</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+          load: ['[tex]/mhchem'],
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+          packages: {'[+]': ['mhchem']},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+</body>
+</html>

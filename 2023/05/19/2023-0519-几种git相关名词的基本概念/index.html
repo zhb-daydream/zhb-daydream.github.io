@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="fonts.lug.ustc.edu.cn/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"zhb-daydream.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="进了互联网公司，核心产能就是代码，而管理多个人、多个项目的代码就基本是使用 Git。同时，搜索现成代码的时候，绕不开的一个平台就是 github，而有时候又会听人说用的是 gitlab 来管理代码，那么这些与 git 相关的概念都是什么意思呢？ Git 总的来说，Git 是一款免费、开源的分布式版本控制系统&#x2F;工具。每个人的设备就是一个完整的版本库，支持离线工作，当需要多人协作、维护共同的版本库时，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="几种git相关名词的基本概念">
+<meta property="og:url" content="https://zhb-daydream.github.io/2023/05/19/2023-0519-%E5%87%A0%E7%A7%8Dgit%E7%9B%B8%E5%85%B3%E5%90%8D%E8%AF%8D%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/index.html">
+<meta property="og:site_name" content="zhb木木三的个人网页">
+<meta property="og:description" content="进了互联网公司，核心产能就是代码，而管理多个人、多个项目的代码就基本是使用 Git。同时，搜索现成代码的时候，绕不开的一个平台就是 github，而有时候又会听人说用的是 gitlab 来管理代码，那么这些与 git 相关的概念都是什么意思呢？ Git 总的来说，Git 是一款免费、开源的分布式版本控制系统&#x2F;工具。每个人的设备就是一个完整的版本库，支持离线工作，当需要多人协作、维护共同的版本库时，">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://zhb-daydream.github.io/ref_pic/github_logo.jpg">
+<meta property="og:image" content="https://zhb-daydream.github.io/ref_pic/gitee_logo.png">
+<meta property="og:image" content="https://zhb-daydream.github.io/ref_pic/gitlab_logo.jpg">
+<meta property="article:published_time" content="2023-05-19T08:15:00.000Z">
+<meta property="article:modified_time" content="2023-05-19T09:19:01.164Z">
+<meta property="article:author" content="zhb">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://zhb-daydream.github.io/ref_pic/github_logo.jpg">
+
+<link rel="canonical" href="https://zhb-daydream.github.io/2023/05/19/2023-0519-%E5%87%A0%E7%A7%8Dgit%E7%9B%B8%E5%85%B3%E5%90%8D%E8%AF%8D%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>几种git相关名词的基本概念 | zhb木木三的个人网页</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">zhb木木三的个人网页</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">个人博客的新尝试（页面渲染需要时间，请耐心等待）</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/05/19/2023-0519-%E5%87%A0%E7%A7%8Dgit%E7%9B%B8%E5%85%B3%E5%90%8D%E8%AF%8D%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="zhb">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="zhb木木三的个人网页">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          几种git相关名词的基本概念
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2023-05-19 16:15:00 / 修改时间：17:19:01" itemprop="dateCreated datePublished" datetime="2023-05-19T16:15:00+08:00">2023-05-19</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%AD%A6%E6%9C%AF%E6%A8%A1%E5%9D%97/" itemprop="url" rel="index"><span itemprop="name">学术模块</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.3k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>4 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>进了互联网公司，核心产能就是代码，而管理多个人、多个项目的代码就基本是使用 Git。同时，搜索现成代码的时候，绕不开的一个平台就是 github，而有时候又会听人说用的是 gitlab 来管理代码，那么这些与 git 相关的概念都是什么意思呢？</p>
+<h2 id="git">Git</h2>
+<p>总的来说，Git 是一款免费、开源的<strong>分布式</strong>版本控制系统/工具。每个人的设备就是一个完整的版本库，支持离线工作，当需要多人协作、维护共同的版本库时，可以通过将各自的版本库 push 到统一的云端服务器/远程仓库进行管理。</p>
+<p>与 Git 相对应的另一个概念就是 SVN（SubVersioN，版本控制系统），这是<strong>集中式</strong>版本控制系统。从名字上看可知，Git 与 SVN 的最主要区别就是 Git 是分布式的，SVN 是集中式的。对于 SVN 来说，版本库是集中放在中央服务器的，因而写代码时要一直联网工作，更适合与局域网下的协同工作。相比 SVN，Git 的概念更复杂、功能更丰富，因而 Git 出现后，慢慢地取代 SVN 成为主流。</p>
+<p>与 python 一样，要在本地使用 Git 工具管理的话，也是需要去 <a target="_blank" rel="noopener" href="https://git-scm.com/">Git 官网</a>下载并安装的，之后就可以通过 Git Bash 调出控制台用命令行调用了（当然，还得配置一下），这也是 GitHub Desktop 等客户端的使用基础。</p>
+<h2 id="github">GitHub</h2>
+<p><img src="/ref_pic/github_logo.jpg"></p>
+<p>就和 Sci-Hub 一样，xx-hub 里的 hub 表示的就是某个中心、社区的意思，而 <a target="_blank" rel="noopener" href="https://github.com/">GitHub</a> 就是一个基于 Git 实现的在线代码平台，也是目前全球最大的代码托管平台，服务器都在美国（所以国内裸连速度会比较慢）。在 2008 年 4 月 10 日正式上线，许多大开源项目都在上面托管，可以提供免费的公共仓库、私有仓库，但涉及多成员协作的企业账号则需要收费。</p>
+<h2 id="gitee码云">Gitee（码云）</h2>
+<p><img src="/ref_pic/gitee_logo.png"></p>
+<p><a target="_blank" rel="noopener" href="https://gitee.com/">Gitee</a>（也称码云，但这个名字真的不是马云谐音吗？） 是由 <a target="_blank" rel="noopener" href="https://oschina.net/">OSCHINA</a> （深圳奥思网络科技有限公司，成立于 2008 年，是国内大型综合开源技术社区）推出的基于 Git 的代码托管平台，在 2016 年推出免费的企业版，相当于服务器在国内的 GitHub，区别是 Gitee 的企业账号不收钱。</p>
+<h2 id="gitlab">GitLab</h2>
+<p><img src="/ref_pic/gitlab_logo.jpg"></p>
+<p><a target="_blank" rel="noopener" href="https://about.gitlab.com/">GitLab</a> 是基于 Git 实现的在线代码仓库软件，有官方的服务器，可以像 GitHub 一样通过 <a target="_blank" rel="noopener" href="https://gitlab.com">网页</a> 将代码存储在它的官方服务器上，此外还可以在企业、学校等内部网络上用 GitLab <strong>自行搭建</strong>出基于 Git 的服务器（相当于是一种搭建 GitHub 私服的工具），具体的搭建、安装、使用可以参考 GitLab 官网的 <a target="_blank" rel="noopener" href="https://about.gitlab.com/install/">下载页面</a> 中的一些超链接。GitLab 最开始由 Ruby 语言写成，后面一些部分用 Go 语言重写，它核心的优势就是可以自己搭建封闭的代码管理平台，而不用使用 GitHub 的付费企业账号。</p>
+<h2 id="小结">小结</h2>
+<table>
+<thead>
+<tr class="header">
+<th>名词</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a target="_blank" rel="noopener" href="https://git-scm.com/">Git</a></td>
+<td>一种版本控制系统、一种工具</td>
+</tr>
+<tr class="even">
+<td><a target="_blank" rel="noopener" href="https://github.com/">GitHub</a></td>
+<td>基于 Git 实现的在线代码托管平台，企业版要收费</td>
+</tr>
+<tr class="odd">
+<td><a target="_blank" rel="noopener" href="https://gitee.com/">Gitee</a></td>
+<td>基于 Git 实现的在线代码托管平台，企业版不收费</td>
+</tr>
+<tr class="even">
+<td><a target="_blank" rel="noopener" href="https://gitlab.com">GitLab</a></td>
+<td>基于 Git 实现的在线代码托管平台和软件，可以自己搭服务器</td>
+</tr>
+</tbody>
+</table>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2023/05/18/2023-0518-%E8%87%B4%E9%BB%AF%E6%B7%A1%E6%98%9F/" rel="prev" title="致黯淡星">
+      <i class="fa fa-chevron-left"></i> 致黯淡星
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2023/05/22/2023-0522-StableDiffusion%E7%9A%84%E4%BD%BF%E7%94%A8/" rel="next" title="StableDiffusion的使用">
+      StableDiffusion的使用 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#git"><span class="nav-number">1.</span> <span class="nav-text">Git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#github"><span class="nav-number">2.</span> <span class="nav-text">GitHub</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#gitee%E7%A0%81%E4%BA%91"><span class="nav-number">3.</span> <span class="nav-text">Gitee（码云）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#gitlab"><span class="nav-number">4.</span> <span class="nav-text">GitLab</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B0%8F%E7%BB%93"><span class="nav-number">5.</span> <span class="nav-text">小结</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">zhb</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">52</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">zhb</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">74k</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+          load: ['[tex]/mhchem'],
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+          packages: {'[+]': ['mhchem']},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+</body>
+</html>

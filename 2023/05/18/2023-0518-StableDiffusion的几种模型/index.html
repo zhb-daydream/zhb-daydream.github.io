@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="fonts.lug.ustc.edu.cn/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"zhb-daydream.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="为了避免一篇博文太长，想了想还是决定把 Stable Diffusion 涉及的几种常见模型单独列出来讲。在 SD 的安装教程中只提到 SD 提供的基础 checkpoint（如 sd-v1.4.ckpt），但实际还有一大堆大神弄出来的各种其他模型以及对应的微调工具，这可不得不了解一下。 Stable Diffusion 框架会用到几类模型，基本都可以从万能的 c 站（www.civitai.co">
+<meta property="og:type" content="article">
+<meta property="og:title" content="StableDiffusion的几种模型">
+<meta property="og:url" content="https://zhb-daydream.github.io/2023/05/18/2023-0518-StableDiffusion%E7%9A%84%E5%87%A0%E7%A7%8D%E6%A8%A1%E5%9E%8B/index.html">
+<meta property="og:site_name" content="zhb木木三的个人网页">
+<meta property="og:description" content="为了避免一篇博文太长，想了想还是决定把 Stable Diffusion 涉及的几种常见模型单独列出来讲。在 SD 的安装教程中只提到 SD 提供的基础 checkpoint（如 sd-v1.4.ckpt），但实际还有一大堆大神弄出来的各种其他模型以及对应的微调工具，这可不得不了解一下。 Stable Diffusion 框架会用到几类模型，基本都可以从万能的 c 站（www.civitai.co">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://zhb-daydream.github.io/ref_pic/civitai界面.png">
+<meta property="og:image" content="https://github.githubassets.com/images/icons/emoji/unicode/1f31f.png?v8">
+<meta property="og:image" content="https://github.githubassets.com/images/icons/emoji/unicode/1f31f.png?v8">
+<meta property="og:image" content="https://zhb-daydream.github.io/ref_pic/staleDiffusion模型存放位置及小结.png">
+<meta property="article:published_time" content="2023-05-17T16:35:00.000Z">
+<meta property="article:modified_time" content="2023-05-29T14:50:26.838Z">
+<meta property="article:author" content="zhb">
+<meta property="article:tag" content="AI绘画">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://zhb-daydream.github.io/ref_pic/civitai界面.png">
+
+<link rel="canonical" href="https://zhb-daydream.github.io/2023/05/18/2023-0518-StableDiffusion%E7%9A%84%E5%87%A0%E7%A7%8D%E6%A8%A1%E5%9E%8B/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>StableDiffusion的几种模型 | zhb木木三的个人网页</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">zhb木木三的个人网页</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">个人博客的新尝试（页面渲染需要时间，请耐心等待）</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/05/18/2023-0518-StableDiffusion%E7%9A%84%E5%87%A0%E7%A7%8D%E6%A8%A1%E5%9E%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="zhb">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="zhb木木三的个人网页">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          StableDiffusion的几种模型
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-05-18 00:35:00" itemprop="dateCreated datePublished" datetime="2023-05-18T00:35:00+08:00">2023-05-18</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-05-29 22:50:26" itemprop="dateModified" datetime="2023-05-29T22:50:26+08:00">2023-05-29</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%90%9E%E7%82%B9%E8%AF%BE%E5%A4%96%E7%9F%A5%E8%AF%86/" itemprop="url" rel="index"><span itemprop="name">搞点课外知识</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>2.1k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>7 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>为了避免一篇博文太长，想了想还是决定把 Stable Diffusion 涉及的几种常见模型单独列出来讲。在 SD 的安装教程中只提到 SD 提供的基础 checkpoint（如 sd-v1.4.ckpt），但实际还有一大堆大神弄出来的各种其他模型以及对应的微调工具，这可不得不了解一下。</p>
+<p>Stable Diffusion 框架会用到几类模型，基本都可以从万能的 c 站（www.civitai.com）下载（从网页右上角的 filter 中也可以看到模型的分类），这几种常见模型类型的区别可以参考 <a target="_blank" rel="noopener" href="https://blog.csdn.net/snans/article/details/129838033">一篇 CSDN 博文</a> 或者 <a target="_blank" rel="noopener" href="https://github.com/civitai/civitai/wiki/How-to-use-models">civitai 的说明</a>。访问 c 站的时候可以右上角登录自己的 google 账号，然后记得将 Browsing Mode 调成 Safe，不然就会有一大堆 NSFW（Not Safe For Work）的内容出现，谨慎呀！</p>
+<p><img src="/ref_pic/civitai界面.png"></p>
+<h2 id="checkpoint主模型star2">checkpoint（主模型）<span class="github-emoji"><span>🌟</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f31f.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></h2>
+<p>在深度学习中，checkpoint 是一个用于描述每次训练完后保存模型参数、权重操作的术语，就像在游戏中的存档点，而在 AI 绘图中，更像是一个画师（后续的其他类型模型则属于调整和优化主模型的工具）。在前文的 WebUI 安装中提到的 "No checkpoints found" 错误即是缺失主模型文件。checkpoint 也就是 StableDiffusion 里所谓的大模型，或者说基础模型，比如 SD 官方自带的 sd-v1.5.ckpt（我 2 月份下载的时候还是 sd-v1.4.ckpt）。这类模型都是由 <strong>dreambooth 技术</strong>，经过大量数据训练得到的，可以用于生成各类常见元素的图片，算是一个全能工具。因此不可缺少，至少有一个，不然 SD 不能启动。</p>
+<p>SD 官方的 checkpoint 可以从 <a target="_blank" rel="noopener" href="https://cyberes.github.io/stable-diffusion-models/">这里</a> 下载（我也不知道这个是不是官方链接），而之前火出圈的真人绘图则主要是基于 <a target="_blank" rel="noopener" href="https://civitai.com/models/6424/chilloutmix">ChilloutMix 模型</a>，基本在 civitai 里都能找到。下载好 checkpoint 文件后，存放位置是 <code>/models/Stable-diffusion</code> 文件夹，文件的后缀一般为 .ckpt 或 .safetensions，这种文件一般为 4GB 左右的大小。</p>
+<h2 id="embedding文本转换textual-inversions">Embedding（文本转换，Textual Inversions）</h2>
+<p>Embedding 是指将自然语言文本（如句子或段落）转换为计算机可以理解的数值向量表示形式的过程，这种向量表示法通常称为嵌入（embedding），可以在许多自然语言处理（NLP）任务中使用，例如语言模型、情感分析、问答系统等。在Stable Diffusion中，用户可以使用内置的嵌入模型或创建自定义的嵌入模型来生成嵌入，<strong>但最终效果特别依赖 checkpoint，一定要看清适用于什么 checkpoint</strong>。下载好 embedding 文件后，存放位置是 <code>/embeddings</code> 文件夹，文件的后缀一般为 .pt，这种文件一般在 1MB 以内。</p>
+<h2 id="lorastar2">LoRA<span class="github-emoji"><span>🌟</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f31f.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></h2>
+<p>LoRA 全称为 Low-Rank Adaptation of Large Language Models（大语言模型的低阶适应），最初是由微软为了解决大语言模型的微调微调而开发出来的一项技术。在 Stable Diffusion 中使用时相当于绘画风格滤镜，对我这种小白用户来说是<strong>最重要</strong>的一类模型，因为往往只需要使用不同的 LoRA 模型就能满足相应绘画需求了。下载好 LoRA 文件后，存放位置是 <code>/models/Lora</code> 文件夹，文件的后缀一般为 .pt 或 .safetensions，这种文件一般为 144MB 左右的大小。</p>
+<h2 id="hypernetwork">Hypernetwork</h2>
+<p>在 Stable Diffusion 中，Hypernetwork 是一种用于训练大型神经网络的技术，是一种生成网络的网络，可以通过它来生成其他网络的权重。相比 LoRA，多了一些步骤，更适合风景绘图，而不适合特定具象的物体，使用的人也比较少。下载好 Hypernetwork 文件后，存放位置是 <code>/models/hypernetworks</code> 文件夹，文件的后缀一般为 .pt，一般为 100MB 左右的大小。</p>
+<h2 id="vae">VAE</h2>
+<p>在Stable Diffusion中，VAE 是另一种用于训练大型神经网络的技术，与 Hypernetwork 一样也是一种生成网络的网络。其功能是增强模型的色彩、光照等表现效果，相当于给模型加了美颜滤镜（如果模型生成的图发灰，可以检查一下 Vae 文件是否勾选），不过大都会集成在主模型 checkpoint 中，一般也不会单独列出。下载好 Vae 文件后，存放位置是 <code>/models/VAE</code> 文件夹。</p>
+<h2 id="小结">小结</h2>
+<p>主要还得看 LoRA 模型，其次就是再关注一下 checkpoint 和 Embedding，剩下的模型都是非热门的，只想浅尝辄止的话就可以不用管了（大伙会用下载量投票的）。还有就是要注意一下本地文件的存放的位置，不要放错地方了哦。</p>
+<p><img src="/ref_pic/staleDiffusion模型存放位置及小结.png"></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/AI%E7%BB%98%E7%94%BB/" rel="tag"><i class="fa fa-tag"></i> AI绘画</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2023/05/17/2023-0517-StableDiffusion%E5%AE%89%E8%A3%85/" rel="prev" title="StableDiffusion安装">
+      <i class="fa fa-chevron-left"></i> StableDiffusion安装
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2023/05/18/2023-0518-%E8%87%B4%E9%BB%AF%E6%B7%A1%E6%98%9F/" rel="next" title="致黯淡星">
+      致黯淡星 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#checkpoint%E4%B8%BB%E6%A8%A1%E5%9E%8Bstar2"><span class="nav-number">1.</span> <span class="nav-text">checkpoint（主模型）🌟</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#embedding%E6%96%87%E6%9C%AC%E8%BD%AC%E6%8D%A2textual-inversions"><span class="nav-number">2.</span> <span class="nav-text">Embedding（文本转换，Textual Inversions）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#lorastar2"><span class="nav-number">3.</span> <span class="nav-text">LoRA🌟</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hypernetwork"><span class="nav-number">4.</span> <span class="nav-text">Hypernetwork</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vae"><span class="nav-number">5.</span> <span class="nav-text">VAE</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B0%8F%E7%BB%93"><span class="nav-number">6.</span> <span class="nav-text">小结</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">zhb</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">52</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">zhb</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">74k</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+          load: ['[tex]/mhchem'],
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+          packages: {'[+]': ['mhchem']},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+</body>
+</html>

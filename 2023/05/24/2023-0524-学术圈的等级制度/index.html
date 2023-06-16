@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="fonts.lug.ustc.edu.cn/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"zhb-daydream.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="虽然我读了个水博，有生之年也没什么希望做出高质量的学术成果或者发出高数量的学术论文，以后更不可能走进学术圈拿教职，但还是有点好奇在读完了本科（学士）、研究生（硕士、博士）之后，再往后的学术圈的等级金字塔大概是长什么样的。 国内等级制度  毕导的一个 b 站视频：《从博士到教授到院士，中国科研的打怪升级之路》就讲的很清楚。下面是大概的由底层向高层的“升级”路线： （不严格职称版）  博士：最高学历，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="学术圈的等级制度">
+<meta property="og:url" content="https://zhb-daydream.github.io/2023/05/24/2023-0524-%E5%AD%A6%E6%9C%AF%E5%9C%88%E7%9A%84%E7%AD%89%E7%BA%A7%E5%88%B6%E5%BA%A6/index.html">
+<meta property="og:site_name" content="zhb木木三的个人网页">
+<meta property="og:description" content="虽然我读了个水博，有生之年也没什么希望做出高质量的学术成果或者发出高数量的学术论文，以后更不可能走进学术圈拿教职，但还是有点好奇在读完了本科（学士）、研究生（硕士、博士）之后，再往后的学术圈的等级金字塔大概是长什么样的。 国内等级制度  毕导的一个 b 站视频：《从博士到教授到院士，中国科研的打怪升级之路》就讲的很清楚。下面是大概的由底层向高层的“升级”路线： （不严格职称版）  博士：最高学历，">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://zhb-daydream.github.io/ref_pic/学术圈等级制度.png">
+<meta property="og:image" content="https://github.githubassets.com/images/icons/emoji/unicode/1f393.png?v8">
+<meta property="article:published_time" content="2023-05-24T15:01:00.000Z">
+<meta property="article:modified_time" content="2023-05-29T14:43:21.084Z">
+<meta property="article:author" content="zhb">
+<meta property="article:tag" content="等级制度">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://zhb-daydream.github.io/ref_pic/学术圈等级制度.png">
+
+<link rel="canonical" href="https://zhb-daydream.github.io/2023/05/24/2023-0524-%E5%AD%A6%E6%9C%AF%E5%9C%88%E7%9A%84%E7%AD%89%E7%BA%A7%E5%88%B6%E5%BA%A6/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>学术圈的等级制度 | zhb木木三的个人网页</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">zhb木木三的个人网页</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">个人博客的新尝试（页面渲染需要时间，请耐心等待）</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/05/24/2023-0524-%E5%AD%A6%E6%9C%AF%E5%9C%88%E7%9A%84%E7%AD%89%E7%BA%A7%E5%88%B6%E5%BA%A6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="zhb">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="zhb木木三的个人网页">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          学术圈的等级制度
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-05-24 23:01:00" itemprop="dateCreated datePublished" datetime="2023-05-24T23:01:00+08:00">2023-05-24</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-05-29 22:43:21" itemprop="dateModified" datetime="2023-05-29T22:43:21+08:00">2023-05-29</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%90%9E%E7%82%B9%E8%AF%BE%E5%A4%96%E7%9F%A5%E8%AF%86/" itemprop="url" rel="index"><span itemprop="name">搞点课外知识</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.9k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>6 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>虽然我读了个水博，有生之年也没什么希望做出高质量的学术成果或者发出高数量的学术论文，以后更不可能走进学术圈拿教职，但还是有点好奇在读完了本科（学士）、研究生（硕士、博士）之后，再往后的学术圈的等级金字塔大概是长什么样的。</p>
+<h2 id="国内等级制度">国内等级制度</h2>
+<p><img src="/ref_pic/学术圈等级制度.png"></p>
+<p>毕导的一个 <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1wC4y1x7c8/?share_medium=web&amp;share_source=weibo&amp;bbid=A100BC1A-3ED9-4CBD-8B18-EBC00AAF5DEC155825infoc&amp;ts=1587215934992&amp;vd_source=9f42c74d38b311d152245e7c84682d01">b 站视频</a>：《从博士到教授到院士，中国科研的打怪升级之路》就讲的很清楚。下面是大概的由底层向高层的“升级”路线：</p>
+<p><strong>（不严格职称版）</strong></p>
+<ol type="1">
+<li>博士：最高学历，学术圈的入门门槛。</li>
+<li>博士后：俗称<strong>博后</strong>，实际是一个工作岗位，更像是科研助理。</li>
+<li>讲师（高校）或助理研究员（科研院所）</li>
+<li>副教授（高校）或副研究员（科研院所）</li>
+<li>正教授（高校）或研究员（科研院所）</li>
+</ol>
+<p><strong>（荣誉/帽子/Title 版）</strong><span class="github-emoji"><span>🎓</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f393.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></p>
+<ol type="1">
+<li>青年教师：俗称<strong>青椒</strong>，大学老师的起点，是指还未获得高校长聘的学者，需要给本科生上课、发论文、申国家自然科学基金项目。国内目前实行非升即走制（Tenure Track），预聘期内（约 6 年）成果达标的晋升长聘为副教授或教授，否则不再续聘。</li>
+<li>“四青”：<strong>优青</strong>（国自然基金委优秀青年科学基金项目）、<strong>青长</strong>（教育部青年长江学者）、<strong>青拔</strong>（中组部万人计划的青年拔尖人才）、<strong>青千</strong>（中组部千人计划的青年千人计划），2019 年共评出 1600 个 “四青”人才（同年有约 54.4 万硕士毕业生和 6.1 万博士毕业生），评选<strong>一般不超过 40 岁</strong>。</li>
+<li>三大帽子：<strong>杰青</strong>（国家杰出青年科学基金）、<strong>长江</strong>（教育部长江学者奖励计划）、<strong>千人</strong>（海外高层次人才引进计划）。三种帽子每年各有约几百人，副高级职称也可以申请（但基本都是正高级职称），评选<strong>一般不超过 45 岁</strong>（千人计划可以放宽到 55 岁）</li>
+<li>院士：终身荣誉，两年一评，一次评一百多人（只有院士能提名别人当院士）</li>
+</ol>
+<p>根据中华人民共和国人力资源社会保障部的 <a target="_blank" rel="noopener" href="http://www.mohrss.gov.cn/SYrlzyhshbzb/ztzl/zyhzyzggg/zcwj_zc/zc/202111/t20211102_426565.html">《职称系列层级名称》</a> 以及人事部、教育部在 2007 年 <a target="_blank" rel="noopener" href="http://www.moe.gov.cn/jyb_xxgk/gk_gbgg/moe_0/moe_1443/moe_1497/tnull_23287.html">《关于印发高等学校、义务教育学校、中等职业学校等教育事业单位岗位设置管理的三个指导意见的通知》</a>，我国的<strong>高等学校教师职称</strong>可以分为以下十二级：</p>
+<table>
+<thead>
+<tr class="header">
+<th>正高级教师岗位</th>
+<th>副高级教师岗位</th>
+<th>中级教师岗位</th>
+<th>初级教师岗位</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>教授一级岗位</td>
+<td>副教授一级岗位</td>
+<td>讲师一级岗位</td>
+<td>助教一级岗位</td>
+</tr>
+<tr class="even">
+<td>教授二级岗位</td>
+<td>副教授二级岗位</td>
+<td>讲师二级岗位</td>
+<td>助教二级岗位</td>
+</tr>
+<tr class="odd">
+<td>教授三级岗位</td>
+<td>副教授三级岗位</td>
+<td>讲师三级岗位</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>教授四级岗位</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="北美等级制度">北美等级制度</h2>
+<p>在北美的高等院校，教职（faculty）大概可以分为以下两类，其中助理教授 Assistant Professor 也称 AP，大概就对应于国内的青年教师/青椒，都是处于非升即走的焦虑状态，要抓紧时间发论文才能拿到终身教职。</p>
+<table>
+<thead>
+<tr class="header">
+<th>非终身教职 (Non-Tenure Track)</th>
+<th>终身教职 (Tenure Track)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>研究序列 Research Track</td>
+<td>讲师 Lecture Convertible（1-2 年）</td>
+</tr>
+<tr class="even">
+<td>临床序列 Clinical Track</td>
+<td>助理教授 Assistant Professor（≤ 6 年）</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>副教授 Associate Professor（一般为终身制）</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>教授 Professor（终身制）</td>
+</tr>
+</tbody>
+</table>
+<h2 id="一些碎碎念">一些碎碎念</h2>
+<p>国内引入了北美的非升即走制（Tenure Track），通过“预聘—长聘”实现，但北美大都是一个萝卜一个坑，如果只有 10 个教职名额，就只会预聘 10 个学者，彼此之间不存在零和博弈的局面。而国内的竞争情况激烈，如果有 10 个教职名额，可能就会预聘 50 个学者进来竞争，预聘期结束时无论如何都会有 40 个人拿不到教职而走人。</p>
+<p>国内高校职称中没有与北美 Assistant Professor 对应的岗位，但有“特聘教授”、“特聘副教授”相对应，这种职位的职称教授（正高级职称）、副教授（副高级职称）一致，但不是终身的长聘制，在有限的预聘期（约 6 年）内成果不够就得走人。从这里也可以看出，只是将 Assistant Professor 换了个说法而已，虽然名义上是教授、副教授，但却不享有教授、副教授的“<strong>终身教职</strong>”特性。</p>
+<p>教授、副教授严格上是指高等学校教师职称中的正高级职称、副高级职称，但平常也会有其他的“xx 教授”称呼。例如“客座教授”（客情聘请来作报告讲座的学者，可以是名人、官员、企业家等）、“兼职教授”（校际互相聘请讲课的正高级职称的学者）、“荣誉教授”（对知名老教授、老领导授予的荣誉称号）等。</p>
+<p>教授与博导不同，博导是一种（可以带博士的）资格而非职称。在有博士点的地方，即使身为教授或研究员，也未必有带博士的资格。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/%E7%AD%89%E7%BA%A7%E5%88%B6%E5%BA%A6/" rel="tag"><i class="fa fa-tag"></i> 等级制度</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2023/05/24/2023-0524-%E5%85%B3%E4%BA%8E%E9%A2%84%E5%8D%B0%E6%9C%AC%E7%9A%84%E4%BA%89%E8%AE%AE/" rel="prev" title="关于预印本的争议">
+      <i class="fa fa-chevron-left"></i> 关于预印本的争议
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2023/05/25/2023-0525-%E5%8C%BB%E7%94%9F%E7%9A%84%E7%AD%89%E7%BA%A7%E5%88%B6%E5%BA%A6/" rel="next" title="医生的等级制度">
+      医生的等级制度 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%BD%E5%86%85%E7%AD%89%E7%BA%A7%E5%88%B6%E5%BA%A6"><span class="nav-number">1.</span> <span class="nav-text">国内等级制度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8C%97%E7%BE%8E%E7%AD%89%E7%BA%A7%E5%88%B6%E5%BA%A6"><span class="nav-number">2.</span> <span class="nav-text">北美等级制度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E4%BA%9B%E7%A2%8E%E7%A2%8E%E5%BF%B5"><span class="nav-number">3.</span> <span class="nav-text">一些碎碎念</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">zhb</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">52</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">zhb</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">74k</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+          load: ['[tex]/mhchem'],
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+          packages: {'[+]': ['mhchem']},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+</body>
+</html>

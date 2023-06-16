@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="fonts.lug.ustc.edu.cn/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"zhb-daydream.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="Stable Diffusion（SD）提出之初还是主要靠 prompt（关键词）来进行绘画，同一组关键词往往会有不同的输出，最终就有点像是抽盲盒一样。但随着 AI 绘画模型的开源和插件化，个人也可以通过开源的代码库和插件训练并定制高质量的 AI 图像，此时关键词已经没那么重要了，比拼的是大模型以及各种模型、插件的综合运用。 ControlNet 就是其中一个很好用的 AI 绘画插件（Github">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SD与骨架插件ControlNet">
+<meta property="og:url" content="https://zhb-daydream.github.io/2023/05/22/2023-0522-SD%E4%B8%8E%E9%AA%A8%E6%9E%B6%E6%8F%92%E4%BB%B6ControlNet/index.html">
+<meta property="og:site_name" content="zhb木木三的个人网页">
+<meta property="og:description" content="Stable Diffusion（SD）提出之初还是主要靠 prompt（关键词）来进行绘画，同一组关键词往往会有不同的输出，最终就有点像是抽盲盒一样。但随着 AI 绘画模型的开源和插件化，个人也可以通过开源的代码库和插件训练并定制高质量的 AI 图像，此时关键词已经没那么重要了，比拼的是大模型以及各种模型、插件的综合运用。 ControlNet 就是其中一个很好用的 AI 绘画插件（Github">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://zhb-daydream.github.io/ref_pic/staleDiffusion-ControlNet使用-1.png">
+<meta property="og:image" content="https://zhb-daydream.github.io/ref_pic/staleDiffusion-ControlNet使用-2.png">
+<meta property="og:image" content="https://zhb-daydream.github.io/ref_pic/staleDiffusion-ControlNet使用-3.png">
+<meta property="og:image" content="https://zhb-daydream.github.io/ref_pic/staleDiffusion-ControlNet使用-4.png">
+<meta property="og:image" content="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png?v8">
+<meta property="og:image" content="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png?v8">
+<meta property="og:image" content="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png?v8">
+<meta property="og:image" content="https://zhb-daydream.github.io/ref_pic/staleDiffusion-ControlNet使用-5.png">
+<meta property="og:image" content="https://zhb-daydream.github.io/ref_pic/staleDiffusion-ControlNet使用-6.png">
+<meta property="og:image" content="https://zhb-daydream.github.io/ref_pic/staleDiffusion-ControlNet使用-7.png">
+<meta property="article:published_time" content="2023-05-22T06:01:00.000Z">
+<meta property="article:modified_time" content="2023-05-29T14:50:53.868Z">
+<meta property="article:author" content="zhb">
+<meta property="article:tag" content="AI绘画">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://zhb-daydream.github.io/ref_pic/staleDiffusion-ControlNet使用-1.png">
+
+<link rel="canonical" href="https://zhb-daydream.github.io/2023/05/22/2023-0522-SD%E4%B8%8E%E9%AA%A8%E6%9E%B6%E6%8F%92%E4%BB%B6ControlNet/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>SD与骨架插件ControlNet | zhb木木三的个人网页</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">zhb木木三的个人网页</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">个人博客的新尝试（页面渲染需要时间，请耐心等待）</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/05/22/2023-0522-SD%E4%B8%8E%E9%AA%A8%E6%9E%B6%E6%8F%92%E4%BB%B6ControlNet/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="zhb">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="zhb木木三的个人网页">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          SD与骨架插件ControlNet
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-05-22 14:01:00" itemprop="dateCreated datePublished" datetime="2023-05-22T14:01:00+08:00">2023-05-22</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-05-29 22:50:53" itemprop="dateModified" datetime="2023-05-29T22:50:53+08:00">2023-05-29</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%90%9E%E7%82%B9%E8%AF%BE%E5%A4%96%E7%9F%A5%E8%AF%86/" itemprop="url" rel="index"><span itemprop="name">搞点课外知识</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>2.1k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>7 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>Stable Diffusion（SD）提出之初还是主要靠 prompt（关键词）来进行绘画，同一组关键词往往会有不同的输出，最终就有点像是抽盲盒一样。但随着 AI 绘画模型的开源和插件化，个人也可以通过开源的代码库和插件训练并定制高质量的 AI 图像，此时关键词已经没那么重要了，比拼的是大模型以及各种模型、插件的综合运用。</p>
+<p>ControlNet 就是其中一个很好用的 AI 绘画插件（<a target="_blank" rel="noopener" href="https://github.com/lllyasviel/ControlNet">Github 主页</a>），可以通过骨骼绑定、控线来几乎完美地控制画面，在 2023 的 2 月中旬也一度成为最大热点。基本模式是输入一张参考图（甚至可以是简单的人物线条），然后插件根据参考图按一定模式预处理一张新图作为初始值，再由 AI 模型根据两幅图绘制出成品。</p>
+<p><img src="/ref_pic/staleDiffusion-ControlNet使用-1.png"></p>
+<h2 id="安装">安装</h2>
+<h3 id="插件">插件</h3>
+<p>与汉化插件一样，可以在 SD-WebUI 的扩展界面从作者的 github 项目中加载可供下载的插件，搜索 <code>sd-webui-controlnet</code> 并安装（如果挂梯子也装得很慢，也可以通过 Install from URL 页面手动安装。插件地址是：https://github.com/Mikubill/sd-webui-controlnet）。</p>
+<p><img src="/ref_pic/staleDiffusion-ControlNet使用-2.png"></p>
+<p>同时，还可以顺便安装 <code>OpenPose Editor</code> 插件，方便后续自己编辑自定义的姿势（pose）。</p>
+<p><img src="/ref_pic/staleDiffusion-ControlNet使用-3.png"></p>
+<p>最后，再装一个能支持 ControlNet 的汉化插件（stable-diffusion-webui-chinese）。这次该插件无法从 SD-WebUI 作者的 github 项目中加载，因而要去“从网址安装”那里输入该插件的 github 地址（https://github.com/VinsonLaro/stable-diffusion-webui-chinese）然后安装。再去设置——用户界面——（最下方的）语言文件处，将语言文件从之前的 zh_CN 切换到该汉化插件（chinese-all-0512）。</p>
+<p><img src="/ref_pic/staleDiffusion-ControlNet使用-4.png"></p>
+<h3 id="controlnet-应用模型">ControlNet 应用模型</h3>
+<p>ControlNet 是需要专用模型的，否则无法使用相关功能引导画面。模型的下载路径为 <a target="_blank" rel="noopener" href="https://huggingface.co/lllyasviel/ControlNet-v1-1/tree/main">IIIyasviel 的 huggingface 主页</a>，其中 8 个常用的应用模型介绍如下（图文可参考一篇<a target="_blank" rel="noopener" href="http://www.shejixf.com/shejijiaocheng/shouhui/9627.html">使用指南</a>或<a target="_blank" rel="noopener" href="https://github.com/lllyasviel/ControlNet-v1-1-nightly">作者说明文档</a>），每个应用模型（文件后缀 <code>.pth</code>）为 1.45GB，有对应配套使用的 .yaml 文件作为预处理器文件（即 WebUI 中的预处理器选项），所有应用模型文件下载后的存放路径都为 <code>\extensions\sd-webui-controlnet\models</code>。尽管 civitai 里有 <a target="_blank" rel="noopener" href="https://civitai.com/models/9251?modelVersionId=11017">theally</a> 提供了压缩版本的模型文件（后缀为 <code>.safetensors</code>，每个文件只要 689MB），但没有对应的 .yaml 文件，使用的时候可能会出现对应错误的情况，因而还是建议使用 IIIyasviel 版本的。此外还可以下载 <a target="_blank" rel="noopener" href="https://huggingface.co/TencentARC/T2I-Adapter/tree/main/models">T2I- Adapter</a> 版本的 ControlNet 模型。</p>
+<ul>
+<li><span class="github-emoji"><span>⭐</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>OpenPose：识别参考图像的姿势，提取出对应的骨骼姿势（甚至是手部骨骼），达到精准控制人体动作的效果。</li>
+<li><span class="github-emoji"><span>⭐</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>Canny：识别参考图像的边缘，提取出线稿，再根据提示词生成同样构图的画面，也可以达成给线稿上色的效果。</li>
+<li>HED：与 Canny 类似的边缘检测，但自由发挥程度更高，保留了更多参考图像的细节，绘制的人物明暗对比明显、轮廓感强</li>
+<li><span class="github-emoji"><span>⭐</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>Scribble：提取参考图像的黑白涂鸦稿，自由发挥程度比 Canny、HED 更高</li>
+<li>Mlsd：主要用于提取建筑的线条结构和几何形状，以构建出建筑外框</li>
+<li>Seg：通过对参考图像进行语义分割，区分画面色块，适用于大场景的画风更改</li>
+<li>Normal Map：提取参考图像中的 3D 物体的法线向量，使新图的光影效果与参考图像一致</li>
+<li>Depth：提取参考图像的深度信息，生成具有同样深度结构的图或场景</li>
+</ul>
+<p><img src="/ref_pic/staleDiffusion-ControlNet使用-5.png"></p>
+<h3 id="预处理模型">预处理模型</h3>
+<p>第一次使用时都会自动下载预处理（preprocessor）所需要的模型并放到 <code>\extensions\sd-webui-controlnet\annotator</code> 的对应文件夹里，如果下载速度太慢也可以手动下载，参考<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Wo4y1i77v/?vd_source=9f42c74d38b311d152245e7c84682d01">秋叶的 b 站视频</a>或者直接从<a target="_blank" rel="noopener" href="https://huggingface.co/lllyasviel/ControlNet/tree/main">lllyasviel 主页</a>的 <code>annotator</code> 目录下载人体检测预处理模型（body_pose_model.pth 和 hand_pose_model.pth）至 <code>/annotator/openpose</code>、以及深度图模型（dpt_hybrid-midas-501f0c75.pt）至 <code>/annotator/midas</code>。</p>
+<h2 id="使用">使用</h2>
+<p>上面配置正常的情况下，在 WebUI 界面就会出现 ControlNet 的选项。使用的时候，只是额外多了导入一张参考图片的步骤，并选择预处理器为 openpose，模型也为 openpose，其他的按照默认不用改动。</p>
+<p><img src="/ref_pic/staleDiffusion-ControlNet使用-6.png"></p>
+<p>随后照常输入关键词，就能生成类似姿势的图像了。</p>
+<p><img src="/ref_pic/staleDiffusion-ControlNet使用-7.png"></p>
+<p>注：ControlNet 依赖 xformers 算法框架及 Nvidia 显卡，因而使用 Mac 系统的用户使用效果可能只能有 70-80 分，而且速度慢，较难达到文档描述那种哇塞的效果。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/AI%E7%BB%98%E7%94%BB/" rel="tag"><i class="fa fa-tag"></i> AI绘画</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2023/05/22/2023-0522-StableDiffusion%E7%9A%84%E4%BD%BF%E7%94%A8/" rel="prev" title="StableDiffusion的使用">
+      <i class="fa fa-chevron-left"></i> StableDiffusion的使用
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2023/05/23/2023-0523-Hexo%E9%A6%96%E8%A1%8C%E7%BC%A9%E8%BF%9B/" rel="next" title="Hexo首行缩进">
+      Hexo首行缩进 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-number">1.</span> <span class="nav-text">安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8F%92%E4%BB%B6"><span class="nav-number">1.1.</span> <span class="nav-text">插件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#controlnet-%E5%BA%94%E7%94%A8%E6%A8%A1%E5%9E%8B"><span class="nav-number">1.2.</span> <span class="nav-text">ControlNet 应用模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%84%E5%A4%84%E7%90%86%E6%A8%A1%E5%9E%8B"><span class="nav-number">1.3.</span> <span class="nav-text">预处理模型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8"><span class="nav-number">2.</span> <span class="nav-text">使用</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">zhb</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">52</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">zhb</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">74k</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+          load: ['[tex]/mhchem'],
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+          packages: {'[+]': ['mhchem']},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+</body>
+</html>
