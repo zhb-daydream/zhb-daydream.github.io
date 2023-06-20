@@ -72,6 +72,8 @@
   </style>
 </noscript>
 
+
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
 <style>mjx-container[jax="SVG"] {
   direction: ltr;
 }
@@ -184,9 +186,7 @@ mjx-container[display="true"] {
 mjx-container[display="true"] + br {
   display: none;
 }
-</style>
-<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-</head>
+</style></head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
   <div class="container use-motion">
@@ -266,6 +266,277 @@ mjx-container[display="true"] + br {
 
           <div class="content index posts-expand">
             
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/06/20/2023-0620-%E6%97%A0%E6%B6%B2%E6%B0%A6%E7%A3%81%E4%BD%93/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="zhb">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="zhb木木三的个人网页">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/06/20/2023-0620-%E6%97%A0%E6%B6%B2%E6%B0%A6%E7%A3%81%E4%BD%93/" class="post-title-link" itemprop="url">无液氦磁体</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2023-06-20 21:17:00 / 修改时间：21:17:14" itemprop="dateCreated datePublished" datetime="2023-06-20T21:17:00+08:00">2023-06-20</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/MRI/" itemprop="url" rel="index"><span itemprop="name">MRI</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>2.2k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>7 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="技术背景">技术背景</h2>
+<p>场强稍微高一点（&gt;0.5T）的 MRI 是没法通过永磁体实现的，这时候就需要超导磁体（处于超导状态的电磁线圈通电产生磁场）。</p>
+<p>超导状态的实现需要超低温。目前超导工业常用的<strong>铌钛合金超导体</strong>的临界温度是 9.3K，而 MRI 超导磁体所用超导线圈一般是以铜为基体的<strong>多芯复合铌-钛与铜的超导线材</strong>，其临界温度是 4.2K。一般的 MRI 超导磁体的冷却过程如下。</p>
+<ol type="1">
+<li>将超导磁体线圈悬挂在封闭的不锈钢容器（杜瓦真空筒）中</li>
+<li><strong>抽真空</strong>至 0.001 Pa（耗时约一周）</li>
+<li>通过<strong>液氮</strong>等介质将磁体从室温（300K）<strong>预冷</strong>到几十 K（如 77K）</li>
+<li>通过<strong>液氦</strong>制冷机将磁体<strong>二级制冷</strong>至临界温度 4.2K</li>
+<li>杜瓦真空筒灌满液氦，通过<strong>液氦浸泡冷却</strong>维持超导临界温度</li>
+</ol>
+<p>这里液氦的重要性在于其沸点（4.2K）是目前已知物质中最低的，只要能保证其液态状态，就能维持温度。当然，这还有额外的风险，就是当超导磁体<strong>失超</strong>时，会由于线圈电阻的存在而产生大量电热，加速液氦沸腾至气体，进而产生高压造成真空筒爆炸（所以一般都需要设置一个失超管，及时排走氦气）。</p>
+<p><img src="/ref_pic/超导磁体失超.png"></p>
+<p>无液氦磁体的优势除了避免了失超时造成的氦气泄露问题以外，还有一个就是降低液氦的使用量。传统的液氦磁共振需要 <strong>800L 以上</strong>的液氦（例如 2022 年某厂商的 1.5T 招标书中列出的液氦容量是 1200L）。在 2021 年底到 2022 年期间，由于地缘冲突（俄乌战争）等问题导致氦气产量下降、氦气价格剧烈飙升（可看下图，来源于 <a target="_blank" rel="noopener" href="https://finance.yahoo.com/quote/HNT-USD/chart?p=HNT-USD#eyJpbnRlcnZhbCI6IndlZWsiLCJwZXJpb2RpY2l0eSI6MSwiY2FuZGxlV2lkdGgiOjcuMTM4MzY0Nzc5ODc0MjE0LCJmbGlwcGVkIjpmYWxzZSwidm9sdW1lVW5kZXJsYXkiOnRydWUsImFkaiI6dHJ1ZSwiY3Jvc3NoYWlyIjp0cnVlLCJjaGFydFR5cGUiOiJsaW5lIiwiZXh0ZW5kZWQiOmZhbHNlLCJtYXJrZXRTZXNzaW9ucyI6e30sImFnZ3JlZ2F0aW9uVHlwZSI6Im9obGMiLCJjaGFydFNjYWxlIjoibGluZWFyIiwicGFuZWxzIjp7ImNoYXJ0Ijp7InBlcmNlbnQiOjEsImRpc3BsYXkiOiJITlQtVVNEIiwiY2hhcnROYW1lIjoiY2hhcnQiLCJpbmRleCI6MCwieUF4aXMiOnsibmFtZSI6ImNoYXJ0IiwicG9zaXRpb24iOm51bGx9LCJ5YXhpc0xIUyI6W10sInlheGlzUkhTIjpbImNoYXJ0Iiwi4oCMdm9sIHVuZHLigIwiXX19LCJzZXRTcGFuIjp7ImJhc2UiOiJhbGwiLCJtdWx0aXBsaWVyIjoxfSwibGluZVdpZHRoIjoyLCJzdHJpcGVkQmFja2dyb3VuZCI6dHJ1ZSwiZXZlbnRzIjp0cnVlLCJjb2xvciI6IiMwMDgxZjIiLCJzdHJpcGVkQmFja2dyb3VkIjp0cnVlLCJldmVudE1hcCI6eyJjb3Jwb3JhdGUiOnsiZGl2cyI6dHJ1ZSwic3BsaXRzIjp0cnVlfSwic2lnRGV2Ijp7fX0sInN5bWJvbHMiOlt7InN5bWJvbCI6IkhOVC1VU0QiLCJzeW1ib2xPYmplY3QiOnsic3ltYm9sIjoiSE5ULVVTRCIsInF1b3RlVHlwZSI6IkNSWVBUT0NVUlJFTkNZIiwiZXhjaGFuZ2VUaW1lWm9uZSI6IlVUQyJ9LCJwZXJpb2RpY2l0eSI6MSwiaW50ZXJ2YWwiOiJ3ZWVrIiwic2V0U3BhbiI6eyJiYXNlIjoiYWxsIiwibXVsdGlwbGllciI6MX19XSwiY3VzdG9tUmFuZ2UiOm51bGwsInN0dWRpZXMiOnsi4oCMdm9sIHVuZHLigIwiOnsidHlwZSI6InZvbCB1bmRyIiwiaW5wdXRzIjp7ImlkIjoi4oCMdm9sIHVuZHLigIwiLCJkaXNwbGF5Ijoi4oCMdm9sIHVuZHLigIwifSwib3V0cHV0cyI6eyJVcCBWb2x1bWUiOiIjMDBiMDYxIiwiRG93biBWb2x1bWUiOiIjZmYzMzNhIn0sInBhbmVsIjoiY2hhcnQiLCJwYXJhbWV0ZXJzIjp7IndpZHRoRmFjdG9yIjowLjQ1LCJjaGFydE5hbWUiOiJjaGFydCIsInBhbmVsTmFtZSI6ImNoYXJ0In19fX0-">雅虎财经</a> 统计结果），不少媒体称此为氦短缺 4.0（helium shortage 4.0），进而也导致有些医院因为缺少液氦而无法按时装机。此外我国的氦气资源在全球范围也只占 2%，氦气本身还属于不可再生能源。因此无液氦磁体的最主要（几乎是唯一）宣传口径就是“解决‘卡脖子’问题”、降低维护成本。</p>
+<p><img src="/ref_pic/氦气价格波动.png"></p>
+<h2 id="技术原理">技术原理</h2>
+<p>绝大部分磁共振都是通过<strong>液氦浸泡</strong>的冷却方式维持超导，此外还有通过<strong>冷头传导</strong>的冷却方式，即无液氦技术。</p>
+<p>以鑫高益的<a target="_blank" rel="noopener" href="https://xueshu.baidu.com/usercenter/paper/show?paperid=1w6q06p0rn3b04p0527g0gq0dk095874&amp;site=xueshu_se">无液氦冷却专利</a>为例，是将二级制冷阶段（从 77K 到 4.2K）中的液氦制冷机<strong>替换</strong>为基于冷却铜带（无氧铜）的二级制冷机，该专利中的二级制冷机采用已有的 GM（Gifford McMahon）制冷机和脉冲式（Pulse Tube）制冷机，并不是鑫高益的自创技术。总体而言，鑫高益的这个无液氦冷却技术专利，强调的是把一级制冷阶段（从 300K 到 77K）的液氦制冷更换为液氮制冷，而二级制冷阶段实际使用的是已有的制冷机技术。</p>
+<p>我的整体感觉，“无液氦技术”关键在于二级制冷阶段的无液氦制冷机（目前就是 GM 制冷机和脉冲式制冷机两种），但该制冷机是已经接近成熟的，且没有国产、只有进口[<a target="_blank" rel="noopener" href="https://xueqiu.com/8621110281/218756637">参考网页</a>]，国内各厂商能研发的也主要是冷却流程、装配工艺上的事情，并不具有原理性的瓶颈及解决能力。</p>
+<h2 id="国内行业情况及历史">国内行业情况及历史</h2>
+<table>
+<thead>
+<tr class="header">
+<th>时间</th>
+<th>企业</th>
+<th>事件</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1996</td>
+<td>佳能医疗</td>
+<td>推出全球第一款商用 0.35T 无液氦 Vantage Opart</td>
+</tr>
+<tr class="even">
+<td>2018</td>
+<td>飞利浦</td>
+<td>推出 1.5T 低液氦（7L 液氦） 007[<a target="_blank" rel="noopener" href="https://m.baidu.com/bh/m/detail/ar_9366570163355523862">新闻稿</a>]，在我国重庆武汉济宁香港等累计装机数十台</td>
+</tr>
+<tr class="odd">
+<td>2020</td>
+<td>西门子</td>
+<td>推出 0.55T 低液氦（0.7L）MAGNETOM Free.Max</td>
+</tr>
+<tr class="even">
+<td>2021</td>
+<td>飞利浦</td>
+<td>推出第二代 1.5T 无液氦</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>西门子</td>
+<td>推出第二代 0.55T 低液氦（0.7L）MAGNETOM Free.Star</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>健信</td>
+<td>推出 1.5T 无液氦</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>鑫高益</td>
+<td>推出 1.5T 无液氦</td>
+</tr>
+<tr class="even">
+<td>2022</td>
+<td>万东医疗</td>
+<td>推出 1.5T 无液氦：开天 i_Vision1.5T，</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>朗润</td>
+<td>推出 1.5T 无液氦</td>
+</tr>
+</tbody>
+</table>
+<p>在<a target="_blank" rel="noopener" href="https://www.patenthub.cn/">专利汇</a>上查询“无液氦”关键字的结果如下，其中“宁波高思超导技术有限公司”是“鑫高益”的下属子公司。</p>
+<p><img src="/ref_pic/无液氦发明专利统计.png"></p>
+<h2 id="参考资料">参考资料</h2>
+<h3 id="科普类">科普类</h3>
+<p>磁共振超导所需温度：https://zhuanlan.zhihu.com/p/403969348?ivk_sa=1024320u</p>
+<p>无液氦磁体发展历史的科普文：https://baijiahao.baidu.com/s?id=1728582883141252825&amp;wfr=spider&amp;for=pc</p>
+<p>鑫高益（莫磊）的无液氦冷却技术专利：https://xueshu.baidu.com/usercenter/paper/show?paperid=1w6q06p0rn3b04p0527g0gq0dk095874&amp;site=xueshu_se</p>
+<p>介绍无液氦磁体技术（更偏重技术）：https://xueqiu.com/8621110281/218756637</p>
+<h3 id="新闻稿">新闻稿</h3>
+<p>飞利浦007的无液氦系统新闻稿：https://m.baidu.com/bh/m/detail/ar_9366570163355523862</p>
+<p>万东医疗的无液氦磁体许可证新闻稿：https://baijiahao.baidu.com/s?id=1737183469147339456&amp;wfr=spider&amp;for=pc</p>
+<p>鑫高益的无液氦磁共振系统新闻稿：https://www.haoyisheng.com/yx/news/3713</p>
+<p>万东的无液氦磁体在山东曲阜装机：https://finance.sina.cn/stock/med/2023-06-15/detail-imyxkhsm6549097.d.html</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/06/20/2023-0620-MRI%E5%9B%BE%E5%83%8F%E8%B4%A8%E9%87%8F%E8%AF%84%E4%BC%B0%E6%8C%87%E6%A0%87/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="zhb">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="zhb木木三的个人网页">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/06/20/2023-0620-MRI%E5%9B%BE%E5%83%8F%E8%B4%A8%E9%87%8F%E8%AF%84%E4%BC%B0%E6%8C%87%E6%A0%87/" class="post-title-link" itemprop="url">MRI图像质量评估指标</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2023-06-20 18:00:00 / 修改时间：17:59:51" itemprop="dateCreated datePublished" datetime="2023-06-20T18:00:00+08:00">2023-06-20</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/MRI/" itemprop="url" rel="index"><span itemprop="name">MRI</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.4k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>5 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="噪声功率-ap">噪声功率 AP</h2>
+<p>用于评估噪声大小：噪声功率（AP，Artifact Power），通过以下公式定义，其中 <span class="math inline">\(I^{recon}(x,y)\)</span> 表示利用待评估图像，<span class="math inline">\(I^{ref}(x,y)\)</span> 表示参考图像（一般是全采样得到的图像）。 <span class="math display">\[
+AP=\frac{\sum_{xy} |\ |I^{recon}(x,y)|-|I^{ref}(x,y)|\ |^2}{\sum_{xy}|I^{ref}(x,y)|^2}\times 100\%
+\]</span> 噪声功率数值越大，表示噪声影响程度越大，图像质量越低。</p>
+<h2 id="信噪比-snr">信噪比 SNR</h2>
+<p>用于评估图像中有效信号与噪声信号的对比参数：信噪比（SNR，Signal to Noise Ratio），通过以下公式定义，其中 <span class="math inline">\(S\)</span> 表示参考图像的协方差，反映图像的有效信息，<span class="math inline">\(N\)</span> 表示参考图像与待评估图像直接的均方误差，反映待评估图像相对于参考图像的噪声程度。 <span class="math display">\[
+SNR(dB)=10log_{10}{\frac{S}{N}}
+\]</span> 信噪比通常以分贝数 <span class="math inline">\(dB\)</span> 表示，数值越高，表示图像质量越高。</p>
+<h2 id="峰值信噪比-psnr">峰值信噪比 PSNR</h2>
+<p>用于最大值信号与背景噪声之间的对比：峰值信噪比（PSNR，Peak Signal to Noise Ratio），通过以下公式定义，其中 <span class="math inline">\((M,N)\)</span> 表示图像的行和列，需要保证参考图像 <span class="math inline">\(I^{ref}(x,y)\)</span> 与待评估图像 <span class="math inline">\(I^{recon}(x,y)\)</span> 的大小一致，MSE 表示两幅图像的均方误差（MSE，Mean Squared Error），B 表示图像中编码一个像素需要的二进制位数，<span class="math inline">\(2^B-1\)</span> 即为图像的灰度级。 <span class="math display">\[
+PSNR(dB)=10log_{10}{\frac{(2^B-1)^2}{MSE}}\\
+MSE=\frac{\sum_{xy} |\ |I^{recon}(x,y)|-|I^{ref}(x,y)|\ |^2}{M\times N}
+\]</span> 峰值信噪比通常以分贝数 <span class="math inline">\(dB\)</span> 表示，数值越高，图像质量越好。</p>
+<h2 id="结构相似度-ssim">结构相似度 SSIM</h2>
+<p>用于评估参考图像与待评估图像间的相似度：结构相似度（SSIM，Structural SImilarity Index Measurement），通过以下公式定义，其中 <span class="math inline">\(\mu\)</span> 表示图像灰度均质，<span class="math inline">\(\sigma\)</span> 表示图像方差，<span class="math inline">\(\sigma_{ref\_ recon}\)</span> 表示参考图像与待评估图像的协方差，<span class="math inline">\((C_1,C_2)\)</span> 为手动设置的常数。 <span class="math display">\[
+SSIM=\frac{(2\mu_{ref}\ \mu_{recon}+C_1)(2\sigma_{ref\_ recon}+C_2)}{(\mu_{ref}^2+\mu_{recon}^2+C_1)(\sigma_{ref}^2+\sigma_{recon}^2+C_2)}
+\]</span> 结构相似度的取值范围是 <span class="math inline">\(0\leq SSIM \leq 1\)</span>，数值越接近 1 ，则表示参考图像与待评估图像的相似度越高，重建效果越好。</p>
+<h2 id="结构因子-g-factor">结构因子 g-factor</h2>
+<p>由 SENSE 重建的图像会存在 SNR 的降低，满足下式。其中 <span class="math inline">\(R\)</span> 为加速因子，<span class="math inline">\(g\)</span> 是由阵列线圈和加速因子 <span class="math inline">\(R\)</span> 决定的几何因子。 <span class="math display">\[
+SNR_{SENSE}=\frac{SNR_{full}}{\sqrt{R}\cdot g}\leq SNR_{full}
+\]</span></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
       
   
   
@@ -642,372 +913,6 @@ mjx-container[display="true"] + br {
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/06/17/2023-0617-%E5%A6%82%E4%BD%95%E6%AD%A3%E7%A1%AE%E4%BD%BF%E7%94%A8%E6%8B%90%E6%9D%96/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="zhb">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="zhb木木三的个人网页">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/06/17/2023-0617-%E5%A6%82%E4%BD%95%E6%AD%A3%E7%A1%AE%E4%BD%BF%E7%94%A8%E6%8B%90%E6%9D%96/" class="post-title-link" itemprop="url">如何正确使用拐杖</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2023-06-17 22:03:00 / 修改时间：22:27:02" itemprop="dateCreated datePublished" datetime="2023-06-17T22:03:00+08:00">2023-06-17</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%90%9E%E7%82%B9%E8%AF%BE%E5%A4%96%E7%9F%A5%E8%AF%86/" itemprop="url" rel="index"><span itemprop="name">搞点课外知识</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>993</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>3 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>（注：致我的崴到脚的女朋友。）</p>
-<h2 id="拐杖定义">拐杖定义</h2>
-<p>拐杖是—种辅助行走的简单器械（通常是一根木制或金属棍子）也是一种重要的医疗康复辅助用具。一般有以下三种分类：</p>
-<ul>
-<li>手杖：主要用于轻度需要例如老年人或登山者，不属于残疾人用品</li>
-<li>肘杖：肘杖属于中度下肢残疾人用品</li>
-<li>腋杖：腋杖是下肢重度残疾者（病残伤残等）的必需品，一般是左右各一个</li>
-</ul>
-<p><img src="/ref_pic/拐杖使用-1.png"></p>
-<h2 id="拐杖挑选">拐杖挑选</h2>
-<p><img src="/ref_pic/拐杖使用2.png"></p>
-<h2 id="负重程度">负重程度</h2>
-<p>使用拐杖的目的就是减轻或避免下肢负重、帮助维持身体平衡。而根据患者症状，医生一般会划分为五种负重程度（即使用拐杖时要达到的目的）：</p>
-<ul>
-<li>不负重（Non-weightbearing，NWB）∶即患腿不受力，也就是保持你的患腿离开地面</li>
-<li>轻负重（Feather-weightbearing，FeWB）∶可以用脚趾点地来维持平衡</li>
-<li>部分负重（Partial-weightbearing，PWB）∶可以将身体部分体重分担到患腿上</li>
-<li>可忍耐负重（Weightbearing as tolerated，WBAT）∶将大部分体重甚至所有重量负担到患脚，能忍耐即可</li>
-<li>全负重（Full-weightbearing，FWB）∶只要患肢不痛，可完全受力</li>
-</ul>
-<h2 id="单拐放置位置">单拐放置位置</h2>
-<p>使用单拐时，单拐的放置位置会有患侧、健侧两种选择：</p>
-<ul>
-<li>对于截肢患者：单拐应在患侧，用拐杖代替患肢实现行走功能</li>
-<li>对于不能完全负重患者：单拐应在健侧，用于将重心放在健侧，从而减少患侧的负重与身体横向移动，增加身体稳定性</li>
-</ul>
-<h2 id="单拐步态">单拐步态</h2>
-<p><strong>平地行走</strong></p>
-<ol type="1">
-<li>正常站立保持稳定</li>
-<li>重心转移到健侧</li>
-<li>患腿与拐杖同时向前迈（向前距离一致，横向宽度要给健侧腿留有空间）</li>
-<li>重心转移到患腿和拐杖</li>
-<li>健侧腿向前迈</li>
-<li>回到第 2 步</li>
-</ol>
-<p><img src="/ref_pic/拐杖使用3.png"></p>
-<p><strong>上楼梯</strong></p>
-<ol type="1">
-<li>健侧腿迈上台阶</li>
-<li>重心转移到健侧腿</li>
-<li>拐杖与患腿迈上台阶</li>
-<li>回到第 1 步</li>
-</ol>
-<p><img src="/ref_pic/拐杖使用4.png"></p>
-<p><strong>下楼梯</strong></p>
-<ol type="1">
-<li>重心在健侧腿上</li>
-<li>拐杖与患腿迈到下一个台阶</li>
-<li>重心移到拐杖与患腿上</li>
-<li>迈出健侧腿</li>
-<li>回到第 1 步</li>
-</ol>
-<p><img src="/ref_pic/拐杖使用5.png"></p>
-<p><strong>==注意==</strong>：用握住拐杖手柄来支撑你的体重，不是用腋窝顶在拐杖上。因腋窝有重要的血管神经丛通过，以免受压损伤</p>
-<h2 id="参考资料">参考资料</h2>
-<p>《教你如何使用“第三只腿”》：https://www.cn-healthcare.com/articlewm/20201022/content-1155786.html</p>
-<p>《单拐，拄患侧还是健侧？可别再继续错下去了 ！》：https://zhuanlan.zhihu.com/p/106179133</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/06/16/2023-0616-%E4%B8%93%E5%88%A9%E7%94%B3%E8%AF%B7%E6%B5%81%E7%A8%8B/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="zhb">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="zhb木木三的个人网页">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/06/16/2023-0616-%E4%B8%93%E5%88%A9%E7%94%B3%E8%AF%B7%E6%B5%81%E7%A8%8B/" class="post-title-link" itemprop="url">专利申请流程</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2023-06-16 17:52:00 / 修改时间：17:52:48" itemprop="dateCreated datePublished" datetime="2023-06-16T17:52:00+08:00">2023-06-16</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%90%9E%E7%82%B9%E8%AF%BE%E5%A4%96%E7%9F%A5%E8%AF%86/" itemprop="url" rel="index"><span itemprop="name">搞点课外知识</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>1.3k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>4 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="专利类型">专利类型</h2>
-<ul>
-<li><strong>发明专利</strong>：针对产品、方法或者产品、方法的改进所提出的新的技术方案。</li>
-<li><strong>实用新型专利</strong>：针对产品的形状、构造或者其结合所提出的适于实用的新的技术方案。</li>
-<li><strong>外观设计专利</strong>：针对产品的形状、图案或者其结合以及色彩与形状、图案的结合所作出的富有美感并适于工业应用的新设计。</li>
-</ul>
-<h2 id="涉及的人员类型">涉及的人员类型</h2>
-<ul>
-<li>发明人：即作者（第一发明人对应于论文的一作）。必须是法人，一篇专利可有多个发明人。</li>
-<li>申请人：拥有专利权利的所有人及持有人（专利授权前的称呼）。也称专利申请权人，包括自然人、各单位、院校、企业。</li>
-<li>专利权人：拥有专利权利的所有人及持有人（专利授权后的称呼）。包括自然人、各单位、院校、企业。</li>
-<li>代理人：受申请人委托，为其办理专利申请、转让、许可等事务的代办人</li>
-</ul>
-<h2 id="专利申请流程">专利申请流程</h2>
-<p>对于<strong>发明专利</strong>而言：</p>
-<ol type="1">
-<li>提出申请</li>
-<li>专利局受理</li>
-<li>初步审查</li>
-<li>公布阶段</li>
-<li>实质审查（含第一次审查意见等）</li>
-<li>授权公告</li>
-</ol>
-<p>对于<strong>实用新型专利</strong>和<strong>外观设计专利</strong>而言：</p>
-<ol type="1">
-<li>提出申请</li>
-<li>专利局受理</li>
-<li>初步审查</li>
-<li>授权公告</li>
-</ol>
-<h2 id="审查周期">审查周期</h2>
-<table>
-<thead>
-<tr class="header">
-<th></th>
-<th>普通申请通道审查周期</th>
-<th>优先审查通道审查周期</th>
-<th>快速预审通道审查周期</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>发明</td>
-<td>18-26个月</td>
-<td>7-12个月</td>
-<td>3-6个月</td>
-</tr>
-<tr class="even">
-<td>实用新型</td>
-<td>7-8个月</td>
-<td>3-6个月</td>
-<td>1-2个月</td>
-</tr>
-<tr class="odd">
-<td>外观设计</td>
-<td>3-6个月</td>
-<td>3-6个月</td>
-<td>5-7个工作日</td>
-</tr>
-</tbody>
-</table>
-<p><strong>优先审查</strong>通道需要满⾜以下条件（主要是对领域的要求）：</p>
-<ol type="1">
-<li>涉及国家大力扶持的领域（如新材料、新能源、生物医药、节能环保、智能制造、互联网大数据等）。</li>
-<li>属于各省级、市级重点扶持的领域。</li>
-<li>申请人已经做好专利内容的实施准备或者已经开始实施。</li>
-</ol>
-<p><strong>快速预审</strong>通道需要满⾜以下条件：</p>
-<ol type="1">
-<li>权利人的注册或登记地在保护中⼼所属⾏政区域，且为具有独⽴法⼈资格的企业、高校或科研院所；</li>
-<li>权利人的⽣产、研发或经营⽅向，属于保护中⼼的快速预审领域，即高端装备制造产业或新材料产业；</li>
-<li>权利人没有非正常专利申请、故意侵犯他人知识产权等不良记录。</li>
-</ol>
-<p>我自己申请的一个参考时间节点</p>
-<ul>
-<li>2022.4.29 想写专利</li>
-<li>2022.6.15 完成技术交底书并交给专利代理中介</li>
-<li>2022.7.14 中介代理人定稿并申报</li>
-<li>2022.7.28 知识产权保护中心预审并下发了预审意见（形式问题，一天答复时间）</li>
-<li>2022.8.1 专利局受理</li>
-<li>2022.9.2 进入实质审查</li>
-<li>2022.9.14 发出一审结果（一些形式问题，没有原创性问题）</li>
-<li>2022.9.28 授权通知</li>
-<li>2022.10.25 授权公告</li>
-</ul>
-<h2 id="费用">费用</h2>
-<table>
-<thead>
-<tr class="header">
-<th>（仅供参考）</th>
-<th>发明</th>
-<th>实用新型</th>
-<th>外观设计</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>快速预审费</td>
-<td>1500元</td>
-<td>1500元</td>
-<td>1500元</td>
-</tr>
-<tr class="even">
-<td>申请费</td>
-<td>950元</td>
-<td>500元</td>
-<td>500元</td>
-</tr>
-<tr class="odd">
-<td>审查费</td>
-<td>2500元</td>
-<td>0元</td>
-<td>0元</td>
-</tr>
-<tr class="even">
-<td>专利登记费（授权后）</td>
-<td>255元</td>
-<td>205元</td>
-<td>205元</td>
-</tr>
-<tr class="odd">
-<td>第1年-第3年的年费（授权后）</td>
-<td>900元/年</td>
-<td>600元/年</td>
-<td>600元/年</td>
-</tr>
-<tr class="even">
-<td>第4年-第6年的年费（授权后）</td>
-<td>1200元/年</td>
-<td>900元/年</td>
-<td>900元/年</td>
-</tr>
-<tr class="odd">
-<td>第7年-第9年的年费（授权后）</td>
-<td>2000元/年</td>
-<td>1200元/年</td>
-<td>1200元/年</td>
-</tr>
-<tr class="even">
-<td>第10年-第12年的年费（授权后）</td>
-<td>4000元/年</td>
-<td>2000元/年</td>
-<td>2000元/年</td>
-</tr>
-</tbody>
-</table>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1077,7 +982,7 @@ mjx-container[display="true"] + br {
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">57</span>
+          <span class="site-state-item-count">59</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1126,7 +1031,7 @@ mjx-container[display="true"] + br {
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">77k</span>
+    <span title="站点总字数">80k</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
   </div>
