@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="fonts.lug.ustc.edu.cn/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"zhb-daydream.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="基本操作 Hexo 的 NeXT 主题自带有 Mermaid 渲染器，只要先装个 Mermaid 的渲染插件hexo-filter-mermaid-diagrams，然后在 NeXT 主题根目录的配置文件 _config.yml 中启用 Mermaid 即可。 1npm install --save hexo-filter-mermaid-diagrams  # 安装mermaid插件 12345">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo安装mermaid插件">
+<meta property="og:url" content="https://zhb-daydream.github.io/2023/07/04/2023-0704-Hexo%E5%AE%89%E8%A3%85mermaid%E6%8F%92%E4%BB%B6/index.html">
+<meta property="og:site_name" content="zhb木木三的个人网页">
+<meta property="og:description" content="基本操作 Hexo 的 NeXT 主题自带有 Mermaid 渲染器，只要先装个 Mermaid 的渲染插件hexo-filter-mermaid-diagrams，然后在 NeXT 主题根目录的配置文件 _config.yml 中启用 Mermaid 即可。 1npm install --save hexo-filter-mermaid-diagrams  # 安装mermaid插件 12345">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-07-04T02:23:00.000Z">
+<meta property="article:modified_time" content="2023-07-04T03:13:52.392Z">
+<meta property="article:author" content="zhb">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://zhb-daydream.github.io/2023/07/04/2023-0704-Hexo%E5%AE%89%E8%A3%85mermaid%E6%8F%92%E4%BB%B6/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>Hexo安装mermaid插件 | zhb木木三的个人网页</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">zhb木木三的个人网页</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">个人博客的新尝试（页面渲染需要时间，请耐心等待）</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/07/04/2023-0704-Hexo%E5%AE%89%E8%A3%85mermaid%E6%8F%92%E4%BB%B6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="zhb">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="zhb木木三的个人网页">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Hexo安装mermaid插件
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2023-07-04 10:23:00 / 修改时间：11:13:52" itemprop="dateCreated datePublished" datetime="2023-07-04T10:23:00+08:00">2023-07-04</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" itemprop="url" rel="index"><span itemprop="name">博客搭建</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.9k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>6 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="基本操作">基本操作</h2>
+<p>Hexo 的 NeXT 主题自带有 Mermaid 渲染器，只要先装个 Mermaid 的渲染插件<code>hexo-filter-mermaid-diagrams</code>，然后在 NeXT 主题根目录的配置文件 <code>_config.yml</code> 中启用 Mermaid 即可。</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save hexo-filter-mermaid-diagrams  <span class="comment"># 安装mermaid插件</span></span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight yaml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Mermaid tag</span></span><br><span class="line"><span class="attr">mermaid:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># Available themes: default | dark | forest | neutral</span></span><br><span class="line">  <span class="attr">theme:</span> <span class="string">forest</span></span><br></pre></td></tr></tbody></table></figure>
+<h2 id="报错">报错</h2>
+<p>本来是一件很简单的事情，但偏偏出岔子了！</p>
+<p>首先，一个有效的检查方法，就是去看 Hexo 生成的 public 目录下存放的各 .md 文件生成的 index.html，所有 Mermaid 生成的流程图都应该是包含在一个标签类里的，这时候如果流程图没有<code>class = “mermaid”</code>的字段，那就是第一步安装的<code>hexo-filter-mermaid-diagrams</code>插件没有解析成功，这时候就要检查安装是否成功、依赖库是否正确。</p>
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">pre</span> <span class="attr">class</span>=<span class="string">"mermaid"</span>&gt;</span>graph LR</span><br><span class="line">   A -- text --<span class="symbol">&amp;gt;</span> B -- text2 --<span class="symbol">&amp;gt;</span> C<span class="tag">&lt;/<span class="name">pre</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
+<p>其次，在本次安装<code>hexo-filter-mermaid-diagrams</code>插件时，就已经报错了，再次输入<code>npm audit</code>，可以看到文本中的大意是说，一个叫<code>optionator</code>的库所依赖的另一个<code>word-wrap</code>的库有问题，处于<strong>vulnerable versions</strong>中。</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">F:\Blog\Hexo-Blog&gt;npm audit</span><br><span class="line"><span class="comment"># npm audit report</span></span><br><span class="line"></span><br><span class="line">word-wrap  *</span><br><span class="line">Severity: moderate</span><br><span class="line">word-wrap vulnerable to Regular Expression Denial of Service - https://github.com/advisories/GHSA-j8xg-fqg3-53r7</span><br><span class="line">No fix available</span><br><span class="line">node_modules/word-wrap</span><br><span class="line">  optionator  0.8.3 - 0.9.1</span><br><span class="line">  Depends on vulnerable versions of word-wrap</span><br><span class="line">  node_modules/optionator</span><br><span class="line"></span><br><span class="line">2 moderate severity vulnerabilities</span><br><span class="line"></span><br><span class="line">To address issues that <span class="keyword">do</span> not require attention, run:  npm audit fix</span><br><span class="line"></span><br><span class="line">Some issues need review, and may require choosing a different dependency.</span><br></pre></td></tr></tbody></table></figure>
+<p>在word-wrap的github库下的<a target="_blank" rel="noopener" href="https://github.com/jonschlinkert/word-wrap/pull/33">#33讨论</a>中，可以大致判断出是该库的一些正则表达式（regex）可能存在bug，而该库所有者<a target="_blank" rel="noopener" href="https://github.com/jonschlinkert">Jon Schlinkert</a>在2023.5月的时候出车祸了，导致后续的PR（Pull Request）至今无人merge，很多人也在吐槽原作者根本就无意继续维护这库，这在JS（JavaScript）社区是个耻辱，因为这依赖库很常用，每周有2.9千万次的下载量。为此，<a target="_blank" rel="noopener" href="https://github.com/aashutoshrathi">aashutoshrathi</a>自行fork了一下目前的库，修改了bug后发行了自己版本的word-wrap，用于临时替换不再维护的版本（someone brave enough can publish a version of the package that can be a replacement）。</p>
+<p>注：git中的各个动词举例如下：</p>
+<ul>
+<li>你做的试卷就像仓库，你的试卷肯定会有很多错误，就相当于程序里的 <strong>bug</strong>。</li>
+<li>老师把你的试卷拿过来，相当于先 <strong>fork</strong>。</li>
+<li>在你的卷子上做一些修改批注，相当于 <strong>git commit</strong>。</li>
+<li>最后把改好的试卷给你，相当于发 <strong>pull request</strong>.</li>
+<li>你拿到试卷重新改正错误，相当于 <strong>merge</strong>。</li>
+</ul>
+<h2 id="更换依赖库">更换依赖库</h2>
+<p>接下来的问题就是更换一个能用的word-wrap版本了，也是参考的<a target="_blank" rel="noopener" href="https://github.com/jonschlinkert/word-wrap/pull/33">#33讨论</a>。</p>
+<p>首先在 Hexo 根目录里打开 cmd，安装<a target="_blank" rel="noopener" href="https://github.com/aashutoshrathi">aashutoshrathi</a>依赖库：<code>npm install --save @aashutoshrathi/word-wrap</code>，随后就能在 Hexo 根目录的 node_modules 文件夹里看到有 <code>node_modules\@aashutoshrathi\word-wrap</code>。</p>
+<p>接下来，就是在 Hexo 根目录下的 package.json 文件（指定当前项目所依赖的包）里进行依赖库的替换（由于仓库名等问题，不能直接把aashutoshrathi的word-wrap里的文件直接替换掉原版本文件）。在末尾处加上如下的 overrides 命令，将默认的 word-wrap 库替换成 <span class="citation" data-cites="aashutoshrathi/word-wrap">@aashutoshrathi/word-wrap</span> 的版本。</p>
+<figure class="highlight json"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">"overrides"</span><span class="punctuation">:</span> <span class="punctuation">{</span></span><br><span class="line">    <span class="attr">"word-wrap"</span><span class="punctuation">:</span> <span class="string">"npm:@aashutoshrathi/word-wrap"</span></span><br><span class="line">  <span class="punctuation">}</span></span><br></pre></td></tr></tbody></table></figure>
+<p>在 json 文件中加上 overrides 后，报错。</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">F:\Blog\Hexo-Blog&gt;npm audit fix</span><br><span class="line">npm ERR! code EOVERRIDE</span><br><span class="line">npm ERR! Override <span class="keyword">for</span> word-wrap@^1.2.3 conflicts with direct dependency</span><br><span class="line"></span><br><span class="line">npm ERR! A complete <span class="built_in">log</span> of this run can be found <span class="keyword">in</span>:</span><br><span class="line">npm ERR!     C:\Users\ZHB-personal\AppData\Local\npm-cache\_logs\2023-07-03T18_25_01_175Z-debug-0.log</span><br></pre></td></tr></tbody></table></figure>
+<p>报错原因是因为在 package.json 中的 dependencies 中已经声明了 word-wrap，导致依赖库替换时产生冲突。可以参考 <a target="_blank" rel="noopener" href="https://docs.npmjs.com/cli/v9/configuring-npm/package-json#overrides">npm 官方文件中关于 overrides</a> 的阐述，在 dependencies 中的 word-wrap 前面加上 <code>$</code> 符号（不是注释符号，json 不支持注释），或者也可以就把这行直接删掉，省得可能会报错，如下所示。</p>
+<figure class="highlight json"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">"hexo"</span><span class="punctuation">:</span> <span class="punctuation">{</span></span><br><span class="line">    <span class="attr">"version"</span><span class="punctuation">:</span> <span class="string">"5.4.2"</span></span><br><span class="line">  <span class="punctuation">}</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">"dependencies"</span><span class="punctuation">:</span> <span class="punctuation">{</span></span><br><span class="line">    <span class="attr">"@aashutoshrathi/word-wrap"</span><span class="punctuation">:</span> <span class="string">"^1.2.6"</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">"hexo"</span><span class="punctuation">:</span> <span class="string">"^5.0.0"</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">"hexo-deployer-git"</span><span class="punctuation">:</span> <span class="string">"^4.0.0"</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">"hexo-filter-github-emojis"</span><span class="punctuation">:</span> <span class="string">"^3.0.5"</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">"hexo-filter-mathjax"</span><span class="punctuation">:</span> <span class="string">"^0.9.0"</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">"hexo-filter-mermaid-diagrams"</span><span class="punctuation">:</span> <span class="string">"^1.0.5"</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">"hexo-generator-archive"</span><span class="punctuation">:</span> <span class="string">"^1.0.0"</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">"hexo-generator-category"</span><span class="punctuation">:</span> <span class="string">"^1.0.0"</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">"hexo-generator-index"</span><span class="punctuation">:</span> <span class="string">"^2.0.0"</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">"hexo-generator-tag"</span><span class="punctuation">:</span> <span class="string">"^1.0.0"</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">"hexo-neat"</span><span class="punctuation">:</span> <span class="string">"^1.0.9"</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">"hexo-renderer-ejs"</span><span class="punctuation">:</span> <span class="string">"^2.0.0"</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">"hexo-renderer-pandoc"</span><span class="punctuation">:</span> <span class="string">"^0.3.1"</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">"hexo-renderer-stylus"</span><span class="punctuation">:</span> <span class="string">"^2.0.0"</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">"hexo-server"</span><span class="punctuation">:</span> <span class="string">"^2.0.0"</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">"hexo-symbols-count-time"</span><span class="punctuation">:</span> <span class="string">"^0.6.2"</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">"hexo-theme-landscape"</span><span class="punctuation">:</span> <span class="string">"^0.0.3"</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">"hexo-wordcount"</span><span class="punctuation">:</span> <span class="string">"^6.0.1"</span></span><br><span class="line">  <span class="punctuation">}</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">"overrides"</span><span class="punctuation">:</span> <span class="punctuation">{</span></span><br><span class="line">    <span class="attr">"word-wrap"</span><span class="punctuation">:</span> <span class="string">"npm:@aashutoshrathi/word-wrap"</span></span><br><span class="line">  <span class="punctuation">}</span></span><br></pre></td></tr></tbody></table></figure>
+<p>最后运行 <code>npm audit</code> 就没问题了。</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">F:\Blog\Hexo-Blog&gt;npm audit</span><br><span class="line">found 0 vulnerabilities</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="参考资料">参考资料</h2>
+<p>《Hexo引入Mermaid流程图和MathJax数学公式》：https://www.cnblogs.com/icoty23/p/10911231.html</p>
+<p>《word-wrap的#33问题解决》：https://github.com/jonschlinkert/word-wrap/pull/33</p>
+<p>《npm的官方介绍--overrides的使用》：https://docs.npmjs.com/cli/v9/configuring-npm/package-json#overrides</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2023/07/04/2023-0704-Typora%E7%94%BB%E6%B5%81%E7%A8%8B%E5%9B%BE(Mermaid)/" rel="prev" title="Typora画流程图(Mermaid)">
+      <i class="fa fa-chevron-left"></i> Typora画流程图(Mermaid)
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2023/07/04/2023-0704-package-js%E6%96%87%E4%BB%B6%E4%BB%8B%E7%BB%8D/" rel="next" title="package.js文件介绍">
+      package.js文件介绍 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C"><span class="nav-number">1.</span> <span class="nav-text">基本操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8A%A5%E9%94%99"><span class="nav-number">2.</span> <span class="nav-text">报错</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9B%B4%E6%8D%A2%E4%BE%9D%E8%B5%96%E5%BA%93"><span class="nav-number">3.</span> <span class="nav-text">更换依赖库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="nav-number">4.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">zhb</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">75</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">zhb</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">100k</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'forest',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+          load: ['[tex]/mhchem'],
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+          packages: {'[+]': ['mhchem']},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+</body>
+</html>

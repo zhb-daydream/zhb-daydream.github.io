@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="fonts.lug.ustc.edu.cn/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"zhb-daydream.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="拖延是大家经常会碰到的事情，一种重要的事也很可能会一直拖到临近 DDL 才会弄完，甚至可能会导致更多的事情完成不了。但斯坦福一个荣誉客座教授、哲学家约翰·佩里在《拖拉一点也无妨》里就提出了一个结构化拖延（structured procrastination）的概念，通过合理规划任务，利用拖延症来完成更多的事情。当然，作者本人提出该理论之后，花了15年才总算把这书写完，可以说很切题了。 战术拖延策略">
+<meta property="og:type" content="article">
+<meta property="og:title" content="结构化拖延-拖着拖着就把事情做完了？">
+<meta property="og:url" content="https://zhb-daydream.github.io/2023/07/05/2023-0705-%E7%BB%93%E6%9E%84%E5%8C%96%E6%8B%96%E5%BB%B6-%E6%8B%96%E7%9D%80%E6%8B%96%E7%9D%80%E5%B0%B1%E6%8A%8A%E4%BA%8B%E6%83%85%E5%81%9A%E5%AE%8C%E4%BA%86/index.html">
+<meta property="og:site_name" content="zhb木木三的个人网页">
+<meta property="og:description" content="拖延是大家经常会碰到的事情，一种重要的事也很可能会一直拖到临近 DDL 才会弄完，甚至可能会导致更多的事情完成不了。但斯坦福一个荣誉客座教授、哲学家约翰·佩里在《拖拉一点也无妨》里就提出了一个结构化拖延（structured procrastination）的概念，通过合理规划任务，利用拖延症来完成更多的事情。当然，作者本人提出该理论之后，花了15年才总算把这书写完，可以说很切题了。 战术拖延策略">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://zhb-daydream.github.io/2023/07/05/2023-0705-%E7%BB%93%E6%9E%84%E5%8C%96%E6%8B%96%E5%BB%B6-%E6%8B%96%E7%9D%80%E6%8B%96%E7%9D%80%E5%B0%B1%E6%8A%8A%E4%BA%8B%E6%83%85%E5%81%9A%E5%AE%8C%E4%BA%86/ref_pic/image-20230705135912771.png">
+<meta property="article:published_time" content="2023-07-05T06:42:00.000Z">
+<meta property="article:modified_time" content="2023-07-05T06:42:35.707Z">
+<meta property="article:author" content="zhb">
+<meta property="article:tag" content="心理学">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://zhb-daydream.github.io/2023/07/05/2023-0705-%E7%BB%93%E6%9E%84%E5%8C%96%E6%8B%96%E5%BB%B6-%E6%8B%96%E7%9D%80%E6%8B%96%E7%9D%80%E5%B0%B1%E6%8A%8A%E4%BA%8B%E6%83%85%E5%81%9A%E5%AE%8C%E4%BA%86/ref_pic/image-20230705135912771.png">
+
+<link rel="canonical" href="https://zhb-daydream.github.io/2023/07/05/2023-0705-%E7%BB%93%E6%9E%84%E5%8C%96%E6%8B%96%E5%BB%B6-%E6%8B%96%E7%9D%80%E6%8B%96%E7%9D%80%E5%B0%B1%E6%8A%8A%E4%BA%8B%E6%83%85%E5%81%9A%E5%AE%8C%E4%BA%86/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>结构化拖延-拖着拖着就把事情做完了？ | zhb木木三的个人网页</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">zhb木木三的个人网页</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">个人博客的新尝试（页面渲染需要时间，请耐心等待）</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/07/05/2023-0705-%E7%BB%93%E6%9E%84%E5%8C%96%E6%8B%96%E5%BB%B6-%E6%8B%96%E7%9D%80%E6%8B%96%E7%9D%80%E5%B0%B1%E6%8A%8A%E4%BA%8B%E6%83%85%E5%81%9A%E5%AE%8C%E4%BA%86/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="zhb">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="zhb木木三的个人网页">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          结构化拖延-拖着拖着就把事情做完了？
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2023-07-05 14:42:00 / 修改时间：14:42:35" itemprop="dateCreated datePublished" datetime="2023-07-05T14:42:00+08:00">2023-07-05</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%90%9E%E7%82%B9%E8%AF%BE%E5%A4%96%E7%9F%A5%E8%AF%86/" itemprop="url" rel="index"><span itemprop="name">搞点课外知识</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.6k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>5 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>拖延是大家经常会碰到的事情，一种重要的事也很可能会一直拖到临近 DDL 才会弄完，甚至可能会导致更多的事情完成不了。但斯坦福一个荣誉客座教授、哲学家约翰·佩里在《拖拉一点也无妨》里就提出了一个<strong>结构化拖延（structured procrastination）</strong>的概念，通过合理规划任务，利用拖延症来完成更多的事情。当然，作者本人提出该理论之后，花了15年才总算把这书写完，可以说很切题了。</p>
+<h2 id="战术拖延策略">战术拖延策略</h2>
+<p>结构化拖延这个概念并不是让人根除掉拖延的坏习惯，而是与它进行妥协，进行某种战术拖延。一般而言，拖延就是单纯地不想干某件事，而且可能越紧迫，就越不想干，比如考试前由休闲地玩手机变成焦虑地玩手机。</p>
+<figure>
+<img src="ref_pic/image-20230705135912771.png" alt="image-20230705135912771"><figcaption aria-hidden="true">image-20230705135912771</figcaption>
+</figure>
+<p>而结构化拖延，就是要利用“逃避”的这个特性，在拖延正事的时候，给自己安排一些没那么重要、但也是次重要的事情，从而完成掉它。而这个结构化，就是指如何去安排自己的任务清单。</p>
+<p>首先，要构建一个优先级的任务清单：把看起来最紧急迫切的事排在最前头，一些其他值得一做但没那么紧急的事情排在后面。这个清单可以只在脑子里想想，也可以专门写下来，尤其是当这件事不能在短时间（比如几分钟）内完成的话，就应该记下来，这样可以帮助我们专注在当前的事情上，而不会一直在脑子里转着从而引起焦虑。</p>
+<p>接着，就是对任务清单进行分解，把不能轻易完成的任务分解地足够细（甚至可以做到那种，打开教材、新建一页PPT、列出题目的详细程度）。<strong>“难事做于易，大事做于细”</strong>。这个目的是避免我们因为害怕大任务而逃避，同时也能帮助思考如何解决问题，可以不断肯定自己的进展，从而获得更多成就感而非挫败感。</p>
+<p>最后，就是任务的执行了。只要上面的任务清单设计的足够合理，那在拖延正事的时候，就不至于无事可做而跑去用奶头乐消磨时光。这时候“拖延”的力量会迫使我们去做任务清单上一些别的事情，就像我之前为了逃避改论文而写了一堆博客文章一样。在这个拖延过程中，及时记录自己每天完成的“杂事”，久而久之，就会发现自己已经完成了不少东西，也就不容易焦虑了。毕竟，焦虑常常是因为我们觉得有太多的事情要做，却又无从下手。</p>
+<h2 id="别让自己无事可做">别让自己无事可做</h2>
+<p>其实结构化拖延的核心，就是<strong>构建一个合理的任务清单</strong>。居于榜首的任务应当是有明确的截止期限，但拖延的后果其实又不是特别大的（比如给自己定下这个月底要把小论文改完，但就算超时了，也没有实质损害）。而排在后面的则是没那么重要，但又是有用的小事情（比如看一篇小论文并用三句话概括）。不要因为小事情“不重要”就不列上去，用更多的事情填满任务清单，是结构化拖延的重要环节，也就是让自己<strong>有事可做</strong>。</p>
+<p>一个反例就是任务清单上只有寥寥几项任务，还全都是最重要的级别。这时候，按照拖延特性，逃避做这些重要事的唯一选择就只剩下啥也不做了，跑去玩游戏、看微信、刷短视频，慢慢地停不下来，想着明天再做也无妨，最终陷入拖延，甚至习得性无助感，任何积极的事情都不想做，包括吃饭睡觉。</p>
+<h2 id="拖延本身是有问题的">拖延本身是有问题的</h2>
+<p>结构化拖延不能解决拖延问题，有时候，拖延是由某些更深层的问题导致的，这可能需要医学手段治疗，而不是一些哲学、生活策略就能解决。面对难题时，有逃避困难的心态是很正常的，因为困难会带来不适，而我们不喜欢这样的不适。当然，人与人之间不能一概而论，毅力更强的人能够忍受更大的不适感。因为不适，就会逃避，就会拖延。</p>
+<p>结构化拖延可以通过充分利用拖延过程来完成一些杂事，提高自己的成就感，减少内疚和绝望，从而帮助增强行动力。而如果自己拖延到，连重要事以外的东西都不想做，那也许就不是这个策略能解决的问题了，或许该散散心、换个环境了。</p>
+<h2 id="参考资料">参考资料</h2>
+<p>《结构化拖延：由于没有做某些事，从而做成了不少别的事》：https://zhuanlan.zhihu.com/p/68745835</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/%E5%BF%83%E7%90%86%E5%AD%A6/" rel="tag"><i class="fa fa-tag"></i> 心理学</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2023/07/04/2023-0704-%E4%B8%AD%E5%8F%A4%E6%88%98%E9%94%A4%E9%98%B5%E8%90%A5/" rel="prev" title="中古战锤阵营">
+      <i class="fa fa-chevron-left"></i> 中古战锤阵营
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%88%98%E6%9C%AF%E6%8B%96%E5%BB%B6%E7%AD%96%E7%95%A5"><span class="nav-number">1.</span> <span class="nav-text">战术拖延策略</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%AB%E8%AE%A9%E8%87%AA%E5%B7%B1%E6%97%A0%E4%BA%8B%E5%8F%AF%E5%81%9A"><span class="nav-number">2.</span> <span class="nav-text">别让自己无事可做</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8B%96%E5%BB%B6%E6%9C%AC%E8%BA%AB%E6%98%AF%E6%9C%89%E9%97%AE%E9%A2%98%E7%9A%84"><span class="nav-number">3.</span> <span class="nav-text">拖延本身是有问题的</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="nav-number">4.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">zhb</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">75</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">zhb</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">100k</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'forest',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+          load: ['[tex]/mhchem'],
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+          packages: {'[+]': ['mhchem']},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+</body>
+</html>
