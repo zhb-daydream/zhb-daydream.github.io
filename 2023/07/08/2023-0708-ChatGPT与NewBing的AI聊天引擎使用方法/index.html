@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="fonts.lug.ustc.edu.cn/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"zhb-daydream.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="产品名 开发公司 推出时间 LLM     ChatGPT3.5 OpenAI 2022-11 GPT-3.5   ChatGPT4 OpenAI 2023-03 GPT-4   NewBing 微软(Microsoft) 2023-05 GPT-4   文心一言 百度 2023-03 Ernie   通义千问 阿里巴巴 2023-04 通义   Google bard 谷歌(Google)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ChatGPT与NewBing的AI聊天引擎使用方法">
+<meta property="og:url" content="https://zhb-daydream.github.io/2023/07/08/2023-0708-ChatGPT%E4%B8%8ENewBing%E7%9A%84AI%E8%81%8A%E5%A4%A9%E5%BC%95%E6%93%8E%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/index.html">
+<meta property="og:site_name" content="zhb木木三的个人网页">
+<meta property="og:description" content="产品名 开发公司 推出时间 LLM     ChatGPT3.5 OpenAI 2022-11 GPT-3.5   ChatGPT4 OpenAI 2023-03 GPT-4   NewBing 微软(Microsoft) 2023-05 GPT-4   文心一言 百度 2023-03 Ernie   通义千问 阿里巴巴 2023-04 通义   Google bard 谷歌(Google)">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://zhb-daydream.github.io/ref_pic/ChatGPT使用-1.png">
+<meta property="og:image" content="https://zhb-daydream.github.io/ref_pic/ChatGPT使用-2.png">
+<meta property="og:image" content="https://zhb-daydream.github.io/ref_pic/NewBing使用-1.png">
+<meta property="og:image" content="https://zhb-daydream.github.io/ref_pic/NewBing使用-2.png">
+<meta property="article:published_time" content="2023-07-08T05:54:00.000Z">
+<meta property="article:modified_time" content="2023-07-08T05:55:41.234Z">
+<meta property="article:author" content="zhb">
+<meta property="article:tag" content="AI文本处理">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://zhb-daydream.github.io/ref_pic/ChatGPT使用-1.png">
+
+<link rel="canonical" href="https://zhb-daydream.github.io/2023/07/08/2023-0708-ChatGPT%E4%B8%8ENewBing%E7%9A%84AI%E8%81%8A%E5%A4%A9%E5%BC%95%E6%93%8E%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>ChatGPT与NewBing的AI聊天引擎使用方法 | zhb木木三的个人网页</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">zhb木木三的个人网页</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">个人博客的新尝试（页面渲染需要时间，请耐心等待）</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/07/08/2023-0708-ChatGPT%E4%B8%8ENewBing%E7%9A%84AI%E8%81%8A%E5%A4%A9%E5%BC%95%E6%93%8E%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="zhb">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="zhb木木三的个人网页">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          ChatGPT与NewBing的AI聊天引擎使用方法
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2023-07-08 13:54:00 / 修改时间：13:55:41" itemprop="dateCreated datePublished" datetime="2023-07-08T13:54:00+08:00">2023-07-08</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%90%9E%E7%82%B9%E8%AF%BE%E5%A4%96%E7%9F%A5%E8%AF%86/" itemprop="url" rel="index"><span itemprop="name">搞点课外知识</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.9k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>6 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <table>
+<thead>
+<tr class="header">
+<th>产品名</th>
+<th>开发公司</th>
+<th>推出时间</th>
+<th>LLM</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>ChatGPT3.5</td>
+<td>OpenAI</td>
+<td>2022-11</td>
+<td>GPT-3.5</td>
+</tr>
+<tr class="even">
+<td>ChatGPT4</td>
+<td>OpenAI</td>
+<td>2023-03</td>
+<td>GPT-4</td>
+</tr>
+<tr class="odd">
+<td>NewBing</td>
+<td>微软(Microsoft)</td>
+<td>2023-05</td>
+<td>GPT-4</td>
+</tr>
+<tr class="even">
+<td>文心一言</td>
+<td>百度</td>
+<td>2023-03</td>
+<td>Ernie</td>
+</tr>
+<tr class="odd">
+<td>通义千问</td>
+<td>阿里巴巴</td>
+<td>2023-04</td>
+<td>通义</td>
+</tr>
+<tr class="even">
+<td>Google bard</td>
+<td>谷歌(Google)</td>
+<td>2023-05</td>
+<td>LaMDA</td>
+</tr>
+</tbody>
+</table>
+<h2 id="chatgpt">ChatGPT</h2>
+<p>首先，要使用 ChatGPT，就需要有 OpenAI 的账号（注册需要使用境外手机号进行验证，相关方法可以参考网上攻略）。在使用时，可以通过网页 chat.openai.com/chat 进行访问（需要大陆地区以外的IP才能访问），也可以用 OpenAI 的账户申请一个 OpenAI API Key 用于本地部署 OpenAI 相关的应用。</p>
+<h3 id="网页对话">网页对话</h3>
+<p>访问网页：https://chat.openai.com/chat ，登陆账号（注意网络IP），然后就可以进入界面使用了。如果登陆不成功或提示失败（在2023-05那段时间经常出现访问不了的情况），就只能多试几次，或者换个时间段再试。</p>
+<p>虽然交互界面中都是英文，但实际上 ChatGPT 是支持中文输入和输出的。一个账号可以在多个设备登录，但同时只能进行一段对话。目前网页版是基础版的 ChatGPT，搭载的是 GPT-3.5 模型，可免费使用，但对话结果是预训练好的、不支持联网搜索。如果升级到 ChatGPT Plus（每月$20）则可以使用可联网版的 GPT-4 模型。（但那样其实还不如直接使用同样搭载了 GPT-4 的免费 NewBing）</p>
+<p><img src="/ref_pic/ChatGPT使用-1.png"></p>
+<h3 id="api-key">API Key</h3>
+<p>该方法用于开发基于 ChatGPT 的应用。首先需要获取 API（Application Programming Interface，应用程序编程接口）密钥，可以参考 <a target="_blank" rel="noopener" href="https://chatgpt.cn.obiscr.com/blog/posts/2023/How-to-get-api-key/">获取 API Key 的教程</a>。此处的 API Key 是用于外部访问的一个密钥，在 <a target="_blank" rel="noopener" href="https://platform.openai.com/account/api-keys">OpenAI 官网</a> 登录账户后进行申请，以随机字符串形式保存，若丢失该字符串，需要再次生成。</p>
+<p>OpenAI 提供的 API Key 是要<strong>收费的</strong>，因为调用 GPT 模型也是需要消耗计算机算力、电费的，在使用量巨大的时候该成本更是明显。1000个 token/令牌大概 0.002 刀，一般情况下有 18 美元的免费额度。其中，token 是 GPT 一类应用对文本进行划分的单位，1个 token 大约为 0.75 个词（word）。</p>
+<p>正因为 API Key 是收费的，因而在2023年初的时候，大佬们开发出来一堆基于ChatGPT开发的免费应用（比如ChatGPT Next Web）也慢慢地开始要收费或者不好用了（当然，也可能是因为我很久没碰了，所以换地儿了）。之后有时间或许可以写一下基于ChatGPT的其他应用，比如文献分析之类的，毕竟AI时代，还是得学点相关的。</p>
+<p><img src="/ref_pic/ChatGPT使用-2.png"></p>
+<h2 id="new-bing">New Bing</h2>
+<p>在2023年5月4日，微软就宣布搭载了GPT模型的NewBing聊天机器人全面开放给所有用户，不再需要加入候补名单，只要有一个微软账户，且使用 Microsoft Edge 浏览器访问 www.bing.com，就可以立刻进行体验。（注：Firefox浏览器似乎不支持，而且需要非中国地区的IP）</p>
+<p>访问bing主页、登录了微软账号、更换了IP地址后，就能在网页最上方看到“聊天”标签。</p>
+<p><img src="/ref_pic/NewBing使用-1.png"></p>
+<p>点开后，就能愉快地使用了！由于使用的是可联网的GPT-4，因而对话信息里会有实时的搜索信息，而且引用材料还挺全。目前支持30条的连续对话，感觉比ChatGPT好用。</p>
+<p><img src="/ref_pic/NewBing使用-2.png"></p>
+<h2 id="其他">其他</h2>
+<p>百度的文心一言、阿里的通义千问在使用的时候，也是差不多，而且由于是国内，不需要考虑ChatGPT那种使用国际手机注册、NewBing需要更换网络IP地址的额外步骤，这里就不讲它们的使用方法了。（主要是平常NewBing就够我用了，好像也暂时用不到其他的）</p>
+<h2 id="参考材料">参考材料</h2>
+<p>《人工智能盘点：ChatGPT、NewBing、文心一言、通义千问大PK》：http://blog.itpub.net/70028956/viewspace-2945911/</p>
+<p>《一文看懂chatGPT3.5和chatGPT4的区别》：https://zhuanlan.zhihu.com/p/623038596</p>
+<p>《一文看懂：什么是ChatGPT-4及如何使用》：https://baijiahao.baidu.com/s?id=1760520583680609370&amp;wfr=spider&amp;for=pc</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/AI%E6%96%87%E6%9C%AC%E5%A4%84%E7%90%86/" rel="tag"><i class="fa fa-tag"></i> AI文本处理</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2023/07/08/2023-0708-NLP%E4%B8%AD%E7%9A%84%E5%A4%A7%E5%9E%8B%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8BLLM/" rel="prev" title="NLP中的大型语言模型LLM">
+      <i class="fa fa-chevron-left"></i> NLP中的大型语言模型LLM
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#chatgpt"><span class="nav-number">1.</span> <span class="nav-text">ChatGPT</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BD%91%E9%A1%B5%E5%AF%B9%E8%AF%9D"><span class="nav-number">1.1.</span> <span class="nav-text">网页对话</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#api-key"><span class="nav-number">1.2.</span> <span class="nav-text">API Key</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#new-bing"><span class="nav-number">2.</span> <span class="nav-text">New Bing</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B6%E4%BB%96"><span class="nav-number">3.</span> <span class="nav-text">其他</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%9D%90%E6%96%99"><span class="nav-number">4.</span> <span class="nav-text">参考材料</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">zhb</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">79</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">zhb</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">106k</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'forest',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+          load: ['[tex]/mhchem'],
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+          packages: {'[+]': ['mhchem']},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+</body>
+</html>
