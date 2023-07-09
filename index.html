@@ -158,6 +158,203 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/07/09/2023-0709-LaTeX%E4%BD%BF%E7%94%A8bib%E6%96%87%E4%BB%B6%E7%BC%96%E8%AF%91%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="zhb">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="zhb木木三的个人网页">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/07/09/2023-0709-LaTeX%E4%BD%BF%E7%94%A8bib%E6%96%87%E4%BB%B6%E7%BC%96%E8%AF%91%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE/" class="post-title-link" itemprop="url">LaTeX使用bib文件编译参考文献</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2023-07-09 18:13:00 / 修改时间：18:13:16" itemprop="dateCreated datePublished" datetime="2023-07-09T18:13:00+08:00">2023-07-09</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%AD%A6%E6%9C%AF%E6%A8%A1%E5%9D%97/" itemprop="url" rel="index"><span itemprop="name">学术模块</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.3k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>4 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="涉及的文件">涉及的文件</h2>
+<h3 id="tex文件">.tex文件</h3>
+<p>最常见的LaTeX文件，也是编写文章的文件。</p>
+<h3 id="bib文件">.bib文件</h3>
+<p>BiBTeX文件，是一种用于管理参考文献的工具，将参考文献以一种<strong>标准化</strong>的格式存储（包括参考文献的作者、标题、出版社、出版日期等详细信息），并在LaTeX文档（.tex文件）中引用。每个参考文献都有一个<strong>唯一</strong>的标识符，即“键”，可以在.tex文件中使用这个键来引用该参考文献。例如，在正文段使用<code>\cite{key}</code>就会在文档中生成一个带有作者、出版日期的引用标记（具体的引用样式会在.tex文件中定义）</p>
+<h3 id="bst文件">.bst文件</h3>
+<p>定义参考文献的引用样式的文件，一般在.tex文件中通过<code>\bibliographystyle{xxx.bst}</code>导入</p>
+<h3 id="bbl文件">.bbl文件</h3>
+<p>由BiBTeX根据某一个参考文献引用样式（.bst文件）生成的参考文献记录文件，可以将里面的内容复制粘贴到.tex文件中，通过<code>\begin{thebibliography}{}  \end{thebibliography}</code>调用。</p>
+<h2 id="从endnote导出bib文件">从EndNote导出bib文件</h2>
+<p>在EndNote中选中待导出的参考文献，依次点击左上角的 <strong>File</strong> — <strong>Export</strong>，在 <code>Output style</code> 中选择 <code>BibTeX Export</code>，输出为 .txt 文件。</p>
+<p><img src="/ref_pic/LaTeX编译bib文件-1.png"></p>
+<p>随后直接修改文件后缀名为 .bib 即可。通过文本编辑器打开可见 .bib 文件中列出了某篇文献的所有<strong>标准化信息</strong>，该信息是通用的，与参考样式无关。同时在红框处（RN508）还有各文献在该 .bib 文件中的唯一标识符（key），该标识符可以手动修改，在 .tex 文件的正文段中通过 <code>\cite{RN508}</code> 来引用文献。</p>
+<p><img src="/ref_pic/LaTeX编译bib文件-2.png"></p>
+<h2 id="在.tex中导入.bst文件和.bib文件">在.tex中导入.bst文件和.bib文件</h2>
+<p>一般各个期刊提供的LaTeX模板文件中，都会包含<strong>定义了参考文献样式</strong>的.bst文件（例如 Medical Physics 期刊用的是 medphy.bst，IEEE Access 期刊用的是 IEEEtran.bst），如果没有的话就去搜索引擎下载一个。</p>
+<p>将.bst文件放到.tex文件的同目录下，然后在.tex文件接近结束的地方通过以下两行来导入.bst文件和.bib文件（这里导入的是medphy.bst文件和ref.bib文件）</p>
+<figure class="highlight latex"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\bibliographystyle</span>{medphy.bst} </span><br><span class="line"><span class="keyword">\bibliography</span>{ref.bib}</span><br><span class="line"></span><br><span class="line"><span class="keyword">\end</span>{document}</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="编译得到.bbl文件并替换.bib可选">编译得到.bbl文件并替换.bib（可选）</h2>
+<p>在 VS Code 中，ctrl+s 保存后，就会自动进行 LaTeX 编译，该过程会输出 .bbl 文件。用文本编辑器打开，可见其内包含了指定参考文献引用样式下的文本信息。<strong>有些期刊会要求将.bbl这里的文本信息全都复制到.tex文件中，这样在后续编译的时候就不需要依赖.bib文件和.bst文件了。</strong></p>
+<p><img src="/ref_pic/LaTeX编译bib文件-3.png"></p>
+<p>打开.bbl文件并将其中的内容全部复制粘贴到.tex文件的参考文献区域中，注释掉或删除 <code>\bibliography{references.bib}</code> 命令。然后重新编译.tex文件，此时输出的PDF文件应与以前相同。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/07/09/2023-0709-LaTeX%E7%94%9F%E6%88%90%E6%9C%AF%E8%AF%AD%E8%A1%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="zhb">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="zhb木木三的个人网页">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/07/09/2023-0709-LaTeX%E7%94%9F%E6%88%90%E6%9C%AF%E8%AF%AD%E8%A1%A8/" class="post-title-link" itemprop="url">LaTeX生成术语表</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2023-07-09 17:35:00 / 修改时间：17:35:41" itemprop="dateCreated datePublished" datetime="2023-07-09T17:35:00+08:00">2023-07-09</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%AD%A6%E6%9C%AF%E6%A8%A1%E5%9D%97/" itemprop="url" rel="index"><span itemprop="name">学术模块</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>849</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>3 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>在使用 LaTeX 写学术论文的时候，有些期刊会要求提供缩写词汇对应表（List of Abbreviations）、术语表（List of Terminology），一般就是通过调用一些库函数来实现的。</p>
+<h2 id="三种package">三种package</h2>
+<p>常用的库函数有 <strong>Nomenclature</strong>：<code>\usepackage{nomencl}</code>、<strong>Glossaries</strong>：<code>\usepackage{glossaries}</code>，但这两种库函数在线上的 LaTeX 编辑器（如Overleaf）中不需要额外的操作，但在本地编译的时候，需要通过 cmd 进行额外的编译操作（如 makeindex、makeglossaries），而不能直接在 VS Code 中保存-自动编译-预览。为了在本地编译的时候减少步骤，这里使用了UIUC的一个 <strong>Acro</strong> 库：<code>\usepackage{acro}</code>。</p>
+<h2 id="acro使用方法">Acro使用方法</h2>
+<p>使用方法和选项可以参考官方文档：https://ctan.math.illinois.edu/macros/latex/contrib/acro/acro-manual.pdf</p>
+<figure class="highlight latex"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\documentclass</span>{article}</span><br><span class="line"></span><br><span class="line"><span class="keyword">\usepackage</span>{longtable}<span class="comment">%acro的一种排版模板,用于对齐</span></span><br><span class="line"><span class="keyword">\usepackage</span>{array}<span class="comment">%longtable依赖的库函数</span></span><br><span class="line"><span class="keyword">\usepackage</span>{acro}</span><br><span class="line"></span><br><span class="line"><span class="comment">%提前定义术语对应关系</span></span><br><span class="line"><span class="keyword">\DeclareAcronym</span>{usa}{</span><br><span class="line">  short=USA,</span><br><span class="line">  long=United States of America,</span><br><span class="line">}</span><br><span class="line"><span class="keyword">\DeclareAcronym</span>{eu}{</span><br><span class="line">  short=EU,</span><br><span class="line">  long=European Union,</span><br><span class="line">}</span><br><span class="line"><span class="keyword">\DeclareAcronym</span>{ussr}{</span><br><span class="line">  short=USSR,</span><br><span class="line">  long=Union of Soviet Socialist Republics,</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">\begin</span>{document}</span><br><span class="line"></span><br><span class="line"><span class="keyword">\printacronyms</span>[display=all,name=Abbreviations,template=longtable]</span><br><span class="line"><span class="comment">%display=all：用于展示所有定义的术语，即使它没在正文段出现过</span></span><br><span class="line"><span class="comment">%name=Abbreviations：定义该小节的名字为Abbreviations</span></span><br><span class="line"><span class="comment">%template=longtable：使用对齐的排版方式</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">\end</span>{document}</span><br></pre></td></tr></tbody></table></figure>
+<p><img src="/ref_pic/LaTeX生成术语表.png"></p>
+<h2 id="参考资料">参考资料</h2>
+<p>《LaTeX技巧889: 用LaTeX生成术语表》：https://www.latexstudio.net/archives/9704.html</p>
+<p>《LaTeX 术语表 Glossaries》：https://blog.csdn.net/xovee/article/details/118548271</p>
+<p>《Latex添加缩略词列表》：https://blog.csdn.net/shuaicenglou3032/article/details/128565320</p>
+<p>《LaTeX使用nomencl制作术语表》：<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_46046053/article/details/121183785?spm=1001.2101.3001.6650.1&amp;utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-121183785-blog-128565320.235%5Ev38%5Epc_relevant_sort_base1&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-121183785-blog-128565320.235%5Ev38%5Epc_relevant_sort_base1&amp;utm_relevant_index=2">网址</a></p>
+<p>《UIUC的Acro官方文档》：https://ctan.math.illinois.edu/macros/latex/contrib/acro/acro-manual.pdf</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/07/08/2023-0708-ChatGPT%E4%B8%8ENewBing%E7%9A%84AI%E8%81%8A%E5%A4%A9%E5%BC%95%E6%93%8E%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -812,248 +1009,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/07/05/2023-0705-%E7%BB%93%E6%9E%84%E5%8C%96%E6%8B%96%E5%BB%B6-%E6%8B%96%E7%9D%80%E6%8B%96%E7%9D%80%E5%B0%B1%E6%8A%8A%E4%BA%8B%E6%83%85%E5%81%9A%E5%AE%8C%E4%BA%86/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="zhb">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="zhb木木三的个人网页">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/07/05/2023-0705-%E7%BB%93%E6%9E%84%E5%8C%96%E6%8B%96%E5%BB%B6-%E6%8B%96%E7%9D%80%E6%8B%96%E7%9D%80%E5%B0%B1%E6%8A%8A%E4%BA%8B%E6%83%85%E5%81%9A%E5%AE%8C%E4%BA%86/" class="post-title-link" itemprop="url">结构化拖延-拖着拖着就把事情做完了？</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2023-07-05 14:42:00 / 修改时间：14:49:22" itemprop="dateCreated datePublished" datetime="2023-07-05T14:42:00+08:00">2023-07-05</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%90%9E%E7%82%B9%E8%AF%BE%E5%A4%96%E7%9F%A5%E8%AF%86/" itemprop="url" rel="index"><span itemprop="name">搞点课外知识</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>1.5k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>5 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>拖延是大家经常会碰到的事情，一种重要的事也很可能会一直拖到临近 DDL 才会弄完，甚至可能会导致更多的事情完成不了。但斯坦福一个荣誉客座教授、哲学家约翰·佩里在《拖拉一点也无妨》里就提出了一个<strong>结构化拖延（structured procrastination）</strong>的概念，通过合理规划任务，利用拖延症来完成更多的事情。当然，作者本人提出该理论之后，花了15年才总算把这书写完，可以说很切题了。</p>
-<h2 id="战术拖延策略">战术拖延策略</h2>
-<p>结构化拖延这个概念并不是让人根除掉拖延的坏习惯，而是与它进行妥协，进行某种战术拖延。一般而言，拖延就是单纯地不想干某件事，而且可能越紧迫，就越不想干，比如考试前由休闲地玩手机变成焦虑地玩手机。</p>
-<p><img src="/ref_pic/结构化拖延.png"></p>
-<p>而结构化拖延，就是要利用“逃避”的这个特性，在拖延正事的时候，给自己安排一些没那么重要、但也是次重要的事情，从而完成掉它。而这个结构化，就是指如何去安排自己的任务清单。</p>
-<p>首先，要构建一个优先级的任务清单：把看起来最紧急迫切的事排在最前头，一些其他值得一做但没那么紧急的事情排在后面。这个清单可以只在脑子里想想，也可以专门写下来，尤其是当这件事不能在短时间（比如几分钟）内完成的话，就应该记下来，这样可以帮助我们专注在当前的事情上，而不会一直在脑子里转着从而引起焦虑。</p>
-<p>接着，就是对任务清单进行分解，把不能轻易完成的任务分解地足够细（甚至可以做到那种，打开教材、新建一页PPT、列出题目的详细程度）。<strong>“难事做于易，大事做于细”</strong>。这个目的是避免我们因为害怕大任务而逃避，同时也能帮助思考如何解决问题，可以不断肯定自己的进展，从而获得更多成就感而非挫败感。</p>
-<p>最后，就是任务的执行了。只要上面的任务清单设计的足够合理，那在拖延正事的时候，就不至于无事可做而跑去用奶头乐消磨时光。这时候“拖延”的力量会迫使我们去做任务清单上一些别的事情，就像我之前为了逃避改论文而写了一堆博客文章一样。在这个拖延过程中，及时记录自己每天完成的“杂事”，久而久之，就会发现自己已经完成了不少东西，也就不容易焦虑了。毕竟，焦虑常常是因为我们觉得有太多的事情要做，却又无从下手。</p>
-<h2 id="别让自己无事可做">别让自己无事可做</h2>
-<p>其实结构化拖延的核心，就是<strong>构建一个合理的任务清单</strong>。居于榜首的任务应当是有明确的截止期限，但拖延的后果其实又不是特别大的（比如给自己定下这个月底要把小论文改完，但就算超时了，也没有实质损害）。而排在后面的则是没那么重要，但又是有用的小事情（比如看一篇小论文并用三句话概括）。不要因为小事情“不重要”就不列上去，用更多的事情填满任务清单，是结构化拖延的重要环节，也就是让自己<strong>有事可做</strong>。</p>
-<p>一个反例就是任务清单上只有寥寥几项任务，还全都是最重要的级别。这时候，按照拖延特性，逃避做这些重要事的唯一选择就只剩下啥也不做了，跑去玩游戏、看微信、刷短视频，慢慢地停不下来，想着明天再做也无妨，最终陷入拖延，甚至习得性无助感，任何积极的事情都不想做，包括吃饭睡觉。</p>
-<h2 id="拖延本身是有问题的">拖延本身是有问题的</h2>
-<p>结构化拖延不能解决拖延问题，有时候，拖延是由某些更深层的问题导致的，这可能需要医学手段治疗，而不是一些哲学、生活策略就能解决。面对难题时，有逃避困难的心态是很正常的，因为困难会带来不适，而我们不喜欢这样的不适。当然，人与人之间不能一概而论，毅力更强的人能够忍受更大的不适感。因为不适，就会逃避，就会拖延。</p>
-<p>结构化拖延可以通过充分利用拖延过程来完成一些杂事，提高自己的成就感，减少内疚和绝望，从而帮助增强行动力。而如果自己拖延到，连重要事以外的东西都不想做，那也许就不是这个策略能解决的问题了，或许该散散心、换个环境了。</p>
-<h2 id="参考资料">参考资料</h2>
-<p>《结构化拖延：由于没有做某些事，从而做成了不少别的事》：https://zhuanlan.zhihu.com/p/68745835</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/07/04/2023-0704-%E4%B8%AD%E5%8F%A4%E6%88%98%E9%94%A4%E9%98%B5%E8%90%A5/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="zhb">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="zhb木木三的个人网页">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/07/04/2023-0704-%E4%B8%AD%E5%8F%A4%E6%88%98%E9%94%A4%E9%98%B5%E8%90%A5/" class="post-title-link" itemprop="url">中古战锤阵营</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2023-07-04 11:10:00 / 修改时间：11:11:28" itemprop="dateCreated datePublished" datetime="2023-07-04T11:10:00+08:00">2023-07-04</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%B8%B8%E6%88%8F/" itemprop="url" rel="index"><span itemprop="name">游戏</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>269</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="主要种族">主要种族</h2>
-<table>
-<thead>
-<tr class="header">
-<th>秩序阵营</th>
-<th>中立阵营</th>
-<th>混沌阵营</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>蜥蜴人</td>
-<td>古墓王</td>
-<td>混沌恶魔</td>
-</tr>
-<tr class="even">
-<td>高等精灵</td>
-<td>食人魔</td>
-<td>斯卡文鼠人</td>
-</tr>
-<tr class="odd">
-<td>巴托尼亚</td>
-<td>黑暗精灵</td>
-<td>吸血鬼伯爵</td>
-</tr>
-<tr class="even">
-<td>木精灵</td>
-<td></td>
-<td>野兽人</td>
-</tr>
-<tr class="odd">
-<td>矮人</td>
-<td></td>
-<td>绿皮部落</td>
-</tr>
-<tr class="even">
-<td>人类帝国-西格玛</td>
-<td></td>
-<td>混沌勇士-诺斯卡</td>
-</tr>
-<tr class="odd">
-<td>震旦</td>
-<td></td>
-<td>恐孽-四神</td>
-</tr>
-<tr class="even">
-<td>基斯里夫</td>
-<td></td>
-<td>纳垢-四神</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td></td>
-<td>奸奇-四神</td>
-</tr>
-<tr class="even">
-<td></td>
-<td></td>
-<td>色孽-四神</td>
-</tr>
-</tbody>
-</table>
-<h2 id="参考资料">参考资料</h2>
-<p>《中古战锤-百度百科》：https://baike.baidu.com/item/%E4%B8%AD%E5%8F%A4%E6%88%98%E9%94%A4/3721968?fr=aladdin</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1123,7 +1078,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">79</span>
+          <span class="site-state-item-count">81</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1136,7 +1091,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-count">12</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -1172,7 +1127,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">106k</span>
+    <span title="站点总字数">108k</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
   </div>
