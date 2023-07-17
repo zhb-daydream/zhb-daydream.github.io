@@ -158,6 +158,116 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/05/23/2023-0523-HTML-CSS-JS%E7%9A%84%E5%85%B3%E7%B3%BB/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="zhb">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="zhb木木三的个人网页">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/05/23/2023-0523-HTML-CSS-JS%E7%9A%84%E5%85%B3%E7%B3%BB/" class="post-title-link" itemprop="url">HTML-CSS-JS的关系</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-05-23 01:01:00" itemprop="dateCreated datePublished" datetime="2023-05-23T01:01:00+08:00">2023-05-23</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-06-09 11:34:42" itemprop="dateModified" datetime="2023-06-09T11:34:42+08:00">2023-06-09</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" itemprop="url" rel="index"><span itemprop="name">博客搭建</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.5k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>5 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>一般下，Web 前端有三剑客：HTML、CSS、JavaScript，这是三种不同的技术，实际应用时还需要相互搭配使用。</p>
+<h2 id="html">HTML</h2>
+<p>即超文本标记语言（Hyper Text Markup Language），是一种不严谨、简单的描述性语言。它用各种标签将页面中的元素组织起来，告诉浏览器如何显示内容。其中，“不严谨”是指，HTML 标签使用标准多，即使不加结尾也可以正常运行。</p>
+<h2 id="css">CSS</h2>
+<p>即层叠样式表（Cascading Style Sheets），是用来修饰 HTML 文件样式、控制网页外观的语言，负责字体、颜色、位置等外观的描述。其中，CSS 的“层叠”（cascading）表示“样式”（style）作用在同一个 HTML 元素的同一个属性时，具有优先级的层次结构，会依据层叠规则（权重）来处理冲突，优先选择应用权重更高的 CSS 选择器所指定的属性。</p>
+<p>在 Hexo 博客中，要修改的 CSS 文件就是各主题文件里面的对应文件。具体到 NeXT 主题，就是 <code>\themes\next\source\css\main.styl</code> 文件。</p>
+<h2 id="javascript">JavaScript</h2>
+<p>一种嵌入到 HTML 页面中的脚本语言，简写为 JS，是用来做交互的。由浏览器一边解释一边执行，既可以运行在客户端（前端）也可以运行在服务器端（后端），用于扩展文档交互能力，使静态的 HTML 具有一定的动态功能（比如表单提交、动画特效、弹窗等）。注意，<strong>JavaScript 与 Java 完全没有关系</strong>，两者只是名称刚好相近（就像雷锋和雷锋塔）。</p>
+<p>Hexo 中的 JS 文件主要就是 <code>layout</code> 文件夹中的各文件，具体到 NeXT 主题，就是 <code>\themes\next\layout</code> 里的各个 <code>.swig</code> 文件（swig 是一种 JS 模板引擎，见下文）。</p>
+<h3 id="与-node.js-关系">与 Node.js 关系</h3>
+<p>JavaScript 是一种主要用于前端 Web 开发的<strong>脚本语言</strong>，而 Node.js 是一个后端用于运行 JavaScript 的<strong>环境</strong>，是适合初学者的流行且轻量级的 Web 框架，使得用户可以在任何浏览器上使用 JavaScript（包括前端、中间件、后端，以及 Linux、macOS、Windows）。</p>
+<p>更具体一点，目前支持 JavaScript 的引擎（JS 引擎独立于它所在的浏览器，只不过各浏览器厂商倾向于用他们自己提出的 JS 引擎）主要有 Safari 的 JavaScript Core、FireFox 的 Spider Money、Google Chrome 的 V8 三种。而提供运行 JavaScript 环境的 Node.js，本质上用的就是 V8 引擎。</p>
+<h3 id="swig-模板引擎">Swig 模板引擎</h3>
+<p>模板引擎本身是一个跨领域、跨平台的概念，在 Asp、PHP、C#、JavaScript 开发时都会用到模板引擎技术，其作用是将业务数据代码（内容）与界面逻辑代码（显示）分开，从而提高开发效率，降低项目维护难度。</p>
+<p>具体到 Web 开发中的 JavaScript（JS）的模板引擎而言，JS 模板引擎是用于动态生成 HTML 的工具，负责将数据和模板结合。常见的 JS 模板引擎有很多，基本都可以直接通过 npm install 安装，以下就随便列几种：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://ejs.co/">EJS</a>（Embedded JS）</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/dscape/jade">Jade</a></li>
+<li><a target="_blank" rel="noopener" href="https://haml.info/">Haml</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/aui/art-template">artTemplate</a>（腾讯的）</li>
+<li><a target="_blank" rel="noopener" href="https://node-swig.github.io/swig-templates/">Swig</a><span class="github-emoji"><span>🌟</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f31f.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></li>
+</ul>
+<p>其中，Hexo 默认使用 Swig 模板引擎，上手会简单一点。此外也可以另外安装插件了获得 EJS、Haml、Jade 的支持，Hexo 会根据模板文件的扩展名来决定所使用的目标引擎，例如：<code>layout.ejs</code>，<code>layout.swig</code>。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/05/23/2023-0523-Hexo%E9%A6%96%E8%A1%8C%E7%BC%A9%E8%BF%9B/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -770,110 +880,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/05/18/2023-0518-StableDiffusion%E7%9A%84%E5%87%A0%E7%A7%8D%E6%A8%A1%E5%9E%8B/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="zhb">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="zhb木木三的个人网页">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/05/18/2023-0518-StableDiffusion%E7%9A%84%E5%87%A0%E7%A7%8D%E6%A8%A1%E5%9E%8B/" class="post-title-link" itemprop="url">StableDiffusion的几种模型</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-05-18 00:35:00" itemprop="dateCreated datePublished" datetime="2023-05-18T00:35:00+08:00">2023-05-18</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-06-09 11:34:42" itemprop="dateModified" datetime="2023-06-09T11:34:42+08:00">2023-06-09</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%90%9E%E7%82%B9%E8%AF%BE%E5%A4%96%E7%9F%A5%E8%AF%86/" itemprop="url" rel="index"><span itemprop="name">搞点课外知识</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>2.1k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>7 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>为了避免一篇博文太长，想了想还是决定把 Stable Diffusion 涉及的几种常见模型单独列出来讲。在 SD 的安装教程中只提到 SD 提供的基础 checkpoint（如 sd-v1.4.ckpt），但实际还有一大堆大神弄出来的各种其他模型以及对应的微调工具，这可不得不了解一下。</p>
-<p>Stable Diffusion 框架会用到几类模型，基本都可以从万能的 c 站（www.civitai.com）下载（从网页右上角的 filter 中也可以看到模型的分类），这几种常见模型类型的区别可以参考 <a target="_blank" rel="noopener" href="https://blog.csdn.net/snans/article/details/129838033">一篇 CSDN 博文</a> 或者 <a target="_blank" rel="noopener" href="https://github.com/civitai/civitai/wiki/How-to-use-models">civitai 的说明</a>。访问 c 站的时候可以右上角登录自己的 google 账号，然后记得将 Browsing Mode 调成 Safe，不然就会有一大堆 NSFW（Not Safe For Work）的内容出现，谨慎呀！</p>
-<p><img src="/ref_pic/civitai界面.png"></p>
-<h2 id="checkpoint主模型star2">checkpoint（主模型）<span class="github-emoji"><span>🌟</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f31f.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></h2>
-<p>在深度学习中，checkpoint 是一个用于描述每次训练完后保存模型参数、权重操作的术语，就像在游戏中的存档点，而在 AI 绘图中，更像是一个画师（后续的其他类型模型则属于调整和优化主模型的工具）。在前文的 WebUI 安装中提到的 "No checkpoints found" 错误即是缺失主模型文件。checkpoint 也就是 StableDiffusion 里所谓的大模型，或者说基础模型，比如 SD 官方自带的 sd-v1.5.ckpt（我 2 月份下载的时候还是 sd-v1.4.ckpt）。这类模型都是由 <strong>dreambooth 技术</strong>，经过大量数据训练得到的，可以用于生成各类常见元素的图片，算是一个全能工具。因此不可缺少，至少有一个，不然 SD 不能启动。</p>
-<p>SD 官方的 checkpoint 可以从 <a target="_blank" rel="noopener" href="https://cyberes.github.io/stable-diffusion-models/">这里</a> 下载（我也不知道这个是不是官方链接），而之前火出圈的真人绘图则主要是基于 <a target="_blank" rel="noopener" href="https://civitai.com/models/6424/chilloutmix">ChilloutMix 模型</a>，基本在 civitai 里都能找到。下载好 checkpoint 文件后，存放位置是 <code>/models/Stable-diffusion</code> 文件夹，文件的后缀一般为 .ckpt 或 .safetensions，这种文件一般为 4GB 左右的大小。</p>
-<h2 id="embedding文本转换textual-inversions">Embedding（文本转换，Textual Inversions）</h2>
-<p>Embedding 是指将自然语言文本（如句子或段落）转换为计算机可以理解的数值向量表示形式的过程，这种向量表示法通常称为嵌入（embedding），可以在许多自然语言处理（NLP）任务中使用，例如语言模型、情感分析、问答系统等。在Stable Diffusion中，用户可以使用内置的嵌入模型或创建自定义的嵌入模型来生成嵌入，<strong>但最终效果特别依赖 checkpoint，一定要看清适用于什么 checkpoint</strong>。下载好 embedding 文件后，存放位置是 <code>/embeddings</code> 文件夹，文件的后缀一般为 .pt，这种文件一般在 1MB 以内。</p>
-<h2 id="lorastar2">LoRA<span class="github-emoji"><span>🌟</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f31f.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></h2>
-<p>LoRA 全称为 Low-Rank Adaptation of Large Language Models（大语言模型的低阶适应），最初是由微软为了解决大语言模型的微调微调而开发出来的一项技术。在 Stable Diffusion 中使用时相当于绘画风格滤镜，对我这种小白用户来说是<strong>最重要</strong>的一类模型，因为往往只需要使用不同的 LoRA 模型就能满足相应绘画需求了。下载好 LoRA 文件后，存放位置是 <code>/models/Lora</code> 文件夹，文件的后缀一般为 .pt 或 .safetensions，这种文件一般为 144MB 左右的大小。</p>
-<h2 id="hypernetwork">Hypernetwork</h2>
-<p>在 Stable Diffusion 中，Hypernetwork 是一种用于训练大型神经网络的技术，是一种生成网络的网络，可以通过它来生成其他网络的权重。相比 LoRA，多了一些步骤，更适合风景绘图，而不适合特定具象的物体，使用的人也比较少。下载好 Hypernetwork 文件后，存放位置是 <code>/models/hypernetworks</code> 文件夹，文件的后缀一般为 .pt，一般为 100MB 左右的大小。</p>
-<h2 id="vae">VAE</h2>
-<p>在Stable Diffusion中，VAE 是另一种用于训练大型神经网络的技术，与 Hypernetwork 一样也是一种生成网络的网络。其功能是增强模型的色彩、光照等表现效果，相当于给模型加了美颜滤镜（如果模型生成的图发灰，可以检查一下 Vae 文件是否勾选），不过大都会集成在主模型 checkpoint 中，一般也不会单独列出。下载好 Vae 文件后，存放位置是 <code>/models/VAE</code> 文件夹。</p>
-<h2 id="小结">小结</h2>
-<p>主要还得看 LoRA 模型，其次就是再关注一下 checkpoint 和 Embedding，剩下的模型都是非热门的，只想浅尝辄止的话就可以不用管了（大伙会用下载量投票的）。还有就是要注意一下本地文件的存放的位置，不要放错地方了哦。</p>
-<p><img src="/ref_pic/staleDiffusion模型存放位置及小结.png"></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -943,7 +949,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">86</span>
+          <span class="site-state-item-count">87</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
