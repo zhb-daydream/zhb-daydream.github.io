@@ -158,6 +158,100 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/07/09/2023-0709-LaTeX%E7%94%9F%E6%88%90%E6%9C%AF%E8%AF%AD%E8%A1%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="zhb">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="zhb木木三的个人网页">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/07/09/2023-0709-LaTeX%E7%94%9F%E6%88%90%E6%9C%AF%E8%AF%AD%E8%A1%A8/" class="post-title-link" itemprop="url">LaTeX生成术语表</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2023-07-09 17:35:00 / 修改时间：17:35:41" itemprop="dateCreated datePublished" datetime="2023-07-09T17:35:00+08:00">2023-07-09</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%AD%A6%E6%9C%AF%E6%A8%A1%E5%9D%97/" itemprop="url" rel="index"><span itemprop="name">学术模块</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>849</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>3 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>在使用 LaTeX 写学术论文的时候，有些期刊会要求提供缩写词汇对应表（List of Abbreviations）、术语表（List of Terminology），一般就是通过调用一些库函数来实现的。</p>
+<h2 id="三种package">三种package</h2>
+<p>常用的库函数有 <strong>Nomenclature</strong>：<code>\usepackage{nomencl}</code>、<strong>Glossaries</strong>：<code>\usepackage{glossaries}</code>，但这两种库函数在线上的 LaTeX 编辑器（如Overleaf）中不需要额外的操作，但在本地编译的时候，需要通过 cmd 进行额外的编译操作（如 makeindex、makeglossaries），而不能直接在 VS Code 中保存-自动编译-预览。为了在本地编译的时候减少步骤，这里使用了UIUC的一个 <strong>Acro</strong> 库：<code>\usepackage{acro}</code>。</p>
+<h2 id="acro使用方法">Acro使用方法</h2>
+<p>使用方法和选项可以参考官方文档：https://ctan.math.illinois.edu/macros/latex/contrib/acro/acro-manual.pdf</p>
+<figure class="highlight latex"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\documentclass</span>{article}</span><br><span class="line"></span><br><span class="line"><span class="keyword">\usepackage</span>{longtable}<span class="comment">%acro的一种排版模板,用于对齐</span></span><br><span class="line"><span class="keyword">\usepackage</span>{array}<span class="comment">%longtable依赖的库函数</span></span><br><span class="line"><span class="keyword">\usepackage</span>{acro}</span><br><span class="line"></span><br><span class="line"><span class="comment">%提前定义术语对应关系</span></span><br><span class="line"><span class="keyword">\DeclareAcronym</span>{usa}{</span><br><span class="line">  short=USA,</span><br><span class="line">  long=United States of America,</span><br><span class="line">}</span><br><span class="line"><span class="keyword">\DeclareAcronym</span>{eu}{</span><br><span class="line">  short=EU,</span><br><span class="line">  long=European Union,</span><br><span class="line">}</span><br><span class="line"><span class="keyword">\DeclareAcronym</span>{ussr}{</span><br><span class="line">  short=USSR,</span><br><span class="line">  long=Union of Soviet Socialist Republics,</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">\begin</span>{document}</span><br><span class="line"></span><br><span class="line"><span class="keyword">\printacronyms</span>[display=all,name=Abbreviations,template=longtable]</span><br><span class="line"><span class="comment">%display=all：用于展示所有定义的术语，即使它没在正文段出现过</span></span><br><span class="line"><span class="comment">%name=Abbreviations：定义该小节的名字为Abbreviations</span></span><br><span class="line"><span class="comment">%template=longtable：使用对齐的排版方式</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">\end</span>{document}</span><br></pre></td></tr></tbody></table></figure>
+<p><img src="/ref_pic/LaTeX生成术语表.png"></p>
+<h2 id="参考资料">参考资料</h2>
+<p>《LaTeX技巧889: 用LaTeX生成术语表》：https://www.latexstudio.net/archives/9704.html</p>
+<p>《LaTeX 术语表 Glossaries》：https://blog.csdn.net/xovee/article/details/118548271</p>
+<p>《Latex添加缩略词列表》：https://blog.csdn.net/shuaicenglou3032/article/details/128565320</p>
+<p>《LaTeX使用nomencl制作术语表》：<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_46046053/article/details/121183785?spm=1001.2101.3001.6650.1&amp;utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-121183785-blog-128565320.235%5Ev38%5Epc_relevant_sort_base1&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-121183785-blog-128565320.235%5Ev38%5Epc_relevant_sort_base1&amp;utm_relevant_index=2">网址</a></p>
+<p>《UIUC的Acro官方文档》：https://ctan.math.illinois.edu/macros/latex/contrib/acro/acro-manual.pdf</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/07/08/2023-0708-ChatGPT%E4%B8%8ENewBing%E7%9A%84AI%E8%81%8A%E5%A4%A9%E5%BC%95%E6%93%8E%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -909,151 +1003,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/07/04/2023-0704-%E4%B8%AD%E5%8F%A4%E6%88%98%E9%94%A4%E9%98%B5%E8%90%A5/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="zhb">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="zhb木木三的个人网页">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/07/04/2023-0704-%E4%B8%AD%E5%8F%A4%E6%88%98%E9%94%A4%E9%98%B5%E8%90%A5/" class="post-title-link" itemprop="url">中古战锤阵营</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2023-07-04 11:10:00 / 修改时间：11:11:28" itemprop="dateCreated datePublished" datetime="2023-07-04T11:10:00+08:00">2023-07-04</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%B8%B8%E6%88%8F/" itemprop="url" rel="index"><span itemprop="name">游戏</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>269</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="主要种族">主要种族</h2>
-<table>
-<thead>
-<tr class="header">
-<th>秩序阵营</th>
-<th>中立阵营</th>
-<th>混沌阵营</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>蜥蜴人</td>
-<td>古墓王</td>
-<td>混沌恶魔</td>
-</tr>
-<tr class="even">
-<td>高等精灵</td>
-<td>食人魔</td>
-<td>斯卡文鼠人</td>
-</tr>
-<tr class="odd">
-<td>巴托尼亚</td>
-<td>黑暗精灵</td>
-<td>吸血鬼伯爵</td>
-</tr>
-<tr class="even">
-<td>木精灵</td>
-<td></td>
-<td>野兽人</td>
-</tr>
-<tr class="odd">
-<td>矮人</td>
-<td></td>
-<td>绿皮部落</td>
-</tr>
-<tr class="even">
-<td>人类帝国-西格玛</td>
-<td></td>
-<td>混沌勇士-诺斯卡</td>
-</tr>
-<tr class="odd">
-<td>震旦</td>
-<td></td>
-<td>恐孽-四神</td>
-</tr>
-<tr class="even">
-<td>基斯里夫</td>
-<td></td>
-<td>纳垢-四神</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td></td>
-<td>奸奇-四神</td>
-</tr>
-<tr class="even">
-<td></td>
-<td></td>
-<td>色孽-四神</td>
-</tr>
-</tbody>
-</table>
-<h2 id="参考资料">参考资料</h2>
-<p>《中古战锤-百度百科》：https://baike.baidu.com/item/%E4%B8%AD%E5%8F%A4%E6%88%98%E9%94%A4/3721968?fr=aladdin</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1123,7 +1072,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">91</span>
+          <span class="site-state-item-count">92</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>

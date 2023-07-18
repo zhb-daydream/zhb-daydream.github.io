@@ -270,6 +270,119 @@ mjx-container[display="true"] + br {
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/05/17/2023-0517-StableDiffusion%E5%AE%89%E8%A3%85/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="zhb">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="zhb木木三的个人网页">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/05/17/2023-0517-StableDiffusion%E5%AE%89%E8%A3%85/" class="post-title-link" itemprop="url">StableDiffusion安装</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-05-17 22:36:00" itemprop="dateCreated datePublished" datetime="2023-05-17T22:36:00+08:00">2023-05-17</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-06-09 11:34:42" itemprop="dateModified" datetime="2023-06-09T11:34:42+08:00">2023-06-09</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%90%9E%E7%82%B9%E8%AF%BE%E5%A4%96%E7%9F%A5%E8%AF%86/" itemprop="url" rel="index"><span itemprop="name">搞点课外知识</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>2.4k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>8 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="写在前面">写在前面</h2>
+<p>害，前段时间 AI 画图特别火，为了不让自己落后于时代，我也跟着教程去下了个 Stable-Diffusion，然后就丢文件夹里吃灰了<span class="github-emoji"><span>😓</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f613.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>。本来想趁还记得，赶紧写个博客的，结果 2023-0224 安装好，一直拖到接近 3 个月之后才记录，太懒惰了。好像 4 月份又出了个上手更快一点的 midjourney，看来到时候也得了解一下了。（再扩展地想一想，最近 NLP 的 AI 也是特别火，从最开始 OpenAI 的 ChatGPT，到后面必应的 New Bing、百度的文心一言、谷歌的 Google bard，是不是也得了解一下呀。）</p>
+<p>本文的主题是 Stable Diffusion AI 画图的安装，当初学的时候主要就是参考 b 站 <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1JY411q7Sh/?spm_id_from=333.337.search-card.all.click&amp;vd_source=9f42c74d38b311d152245e7c84682d01">爱吃鱼的番茄</a> 的视频，这种热门技术的安装教程应该也一搜一大堆的。基于 diffusion 扩散模型（DDPM）的方法在 2020 年就被提出来了，是 AIGC 的主流模型，主要用来生成图片，然后在去年（2020 年）又提出了 stable diffusion，是一种将文本转换为图片（text-to-image）的模型，而真正让这个 AI 绘画火出圈的应当是后续的真人模型<del>（lsp 的胜利）</del>，训练得到的不同风格模型会产生不同的图片。因而，安装过程也可以分为类似的几个模块讲。</p>
+<h2 id="python3.10">1 python3.10</h2>
+<p>基础代码平台是 python 3.10.6（更早版本的 python 不支持 torch 库，更新的版本可能不稳定，所以还是直接 3.10.6 吧），直接从 python 官网<a target="_blank" rel="noopener" href="https://www.python.org/downloads/release/python-3106/">下载</a>就行，在安装的时候要注意添加环境变量。如果碰见一个电脑上需要装多个 python 版本的话，可以用 Anaconda 来管理？我这部分也没太搞懂，目前我电脑就是装了有一个 py310 的版本，但平常用的还是 py3.8的。</p>
+<p><img src="/ref_pic/python310安装注意添加路径.png"></p>
+<h2 id="stable-diffusion-webui">2 Stable-Diffusion-WebUI</h2>
+<p>首先要明确的是，Stable Diffusion 是类似于一个引擎、框架，现在大家用的基本是一个 github 大佬开发的 WebUI 版本，其特性就是可以本地部署，用网页界面交互、用自己的 GPU 生成图片，而不需要去其他的网页（比如 <a target="_blank" rel="noopener" href="https://beta.dreamstudio.ai/generate">DreamStudio</a> ）中注册账号受限使用。安装 Stable Diffusion WebUI 时，可以去它的 <a target="_blank" rel="noopener" href="https://github.com/AUTOMATIC1111/stable-diffusion-webui">github 主页</a> 手动下载，或者自己进行 git clone，或者找别人已经打包好的安装包。在本地安装的时候，记得留个相对较大的地方，虽然 Stable Diffusion WebUI 作者在 github 上的源码一共也就 2MB 不到，但后续还需要往这个文件夹里放各种模型以及生成的图片，我目前该文件夹就已经用了 14.3 GB 了。</p>
+<p>然后需要配置 <code>stable-diffusion-webui/webui-user.bat</code> 文件，其实就是加三个路径，如下。</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"></span><br><span class="line"><span class="built_in">set</span> PYTHON=F:\Anaconda\envs\py310\python.exe %python310的安装路径%</span><br><span class="line"><span class="built_in">set</span> GIT=</span><br><span class="line"><span class="built_in">set</span> VENV_DIR=UserPackage %自定义的英文名,用于存储下载的依赖包,我这里填UserPackage%</span><br><span class="line"><span class="built_in">set</span> COMMANDLINE_ARGS=--medvram --reinstall-xformers --xformers %用于解决显存不够和xformer出错问题%</span><br><span class="line"></span><br><span class="line">call webui.bat</span><br></pre></td></tr></tbody></table></figure>
+<p>接着双击该 <code>webui-user.bat</code> 文件来启动该引擎。要注意的是，第一次启动时，会自动安装所需的依赖包到上面定义的 VENV_DIR 中（大概 4.8GB），安装过程可能会出错（pip 版本不对、没挂代理导致出错等），具体出错原因就面向搜索引擎解决吧！<span class="github-emoji"><span>😄</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f604.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></p>
+<p>最后不出意外的话，会只剩下 "No checkpoints found" 的错误，这表示确实基础的模型。</p>
+<p><img src="/ref_pic/staleDiffusionWebUI安装报错.png"></p>
+<h2 id="checkpoints">3 checkpoints</h2>
+<p>checkpoint 是 Stable Diffusion 框架所需要的大模型，是由 <strong>dreambooth 技术</strong>，经过大量数据训练得到的，可以用于生成各类常见元素的图片，算是一个全能工具，因此不可缺少，至少有一个，不然 SD 不能启动。 SD 官方的 checkpoint 可以从这个 <a target="_blank" rel="noopener" href="https://cyberes.github.io/stable-diffusion-models/">不知道是不是官方链接</a> 里下载，比如 sd-v1.5.ckpt（我 2 月份下载的时候还是 sd-v1.4.ckpt），大概是 3.97GB。下载好 checkpoint 文件后，存放位置在 <code>stable-diffusion-webui//models/Stable-diffusion</code> 文件夹。</p>
+<h2 id="运行并配置中文">4 运行并配置中文</h2>
+<p>再次运行 <code>stable-diffusion-webui/webui-user.bat</code> 文件，顺利的话就会出现以下界面啦，将显示的本地 URL 复制到任意浏览器中，就算是完成安装啦！</p>
+<p><img src="/ref_pic/staleDiffusionWebUI启动.png"></p>
+<p>但此时还有个重要的问题，那就是默认下全！是！英！文！虽说英文对于过了四六级的大学生来说也不是不能看，但这么多专业名词，中文都不一定懂，还看英文那不是折寿嘛，所以汉化完才算是安装完毕能交付的。</p>
+<p>要安装中文插件，也不需要额外找，就用 Stable Diffusion WebUI 大佬提供的就行。打开网页，然后按下图顺序先后选择 Extension—— Available —— 取消勾选 localization（即取消隐藏各语言的汉化包）——点击 Load from。</p>
+<p><img src="/ref_pic/staleDiffusionWebUI汉化-1.png"></p>
+<p>接着在该页面的下方就会有一堆的 Extension，直接 Ctrl+F 找到 <code>zh_CN Localization</code> 的插件并安装（这个是简体中文的，还有另一个是 <code>zh_TW Localization</code> 的是繁体中文，但这个 TW 又是什么鬼？）</p>
+<p><img src="/ref_pic/staleDiffusionWebUI汉化-2.png"></p>
+<p>安装好之后，可以先去 Extension —— Installed 那里看看有没有勾上汉化包，然后再点 Apply and restart UI。</p>
+<p><img src="/ref_pic/staleDiffusionWebUI汉化-3.png"></p>
+<p>如果还没生效的话，就去 Settings —— User interface 的最下方找 <code>Localization (requires restart)</code> 选项（也可以在左侧点 Show all pages 然后全文搜索），最后回到上方点个 Apply settings 然后 Reload UI 就行啦！我这里就懒得放图污染文章了。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/05/17/2023-0517-Hexo%E5%A2%9E%E5%8A%A0%E5%AD%97%E6%95%B0%E7%BB%9F%E8%AE%A1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -829,113 +942,6 @@ mjx-container[display="true"] + br {
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/05/05/2023-0505-%E7%A3%81%E5%85%B1%E6%8C%AF%E7%9B%B8%E5%85%B3%E7%9A%84python%E5%BA%93/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="zhb">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="zhb木木三的个人网页">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/05/05/2023-0505-%E7%A3%81%E5%85%B1%E6%8C%AF%E7%9B%B8%E5%85%B3%E7%9A%84python%E5%BA%93/" class="post-title-link" itemprop="url">磁共振相关的python库</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-05-05 18:33:00" itemprop="dateCreated datePublished" datetime="2023-05-05T18:33:00+08:00">2023-05-05</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-06-09 11:34:42" itemprop="dateModified" datetime="2023-06-09T11:34:42+08:00">2023-06-09</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>1.5k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>5 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>作为一个 python 小白，要做的第一件事就是找轮子。最近在弄 radial 的重建，在 MATLAB 上是已经找到了 NUFTT 的重建代码，调试好传入传出变量之后就无脑使用就行了，而 python 中用的比较多的 BART 却是只支持 Linux 的，感觉没必要专门为了一个网格化重建函数包就去专门弄个虚拟机吧？（虽然 Windows 的 WSL 好像也没那么复杂）所以还是得找一找相关的第三方库，顺带挖个坑，如果以后还用到其他库，就一并列进来好了。</p>
-<h2 id="nufft">NUFFT</h2>
-<p>参考 <a target="_blank" rel="noopener" href="https://github.com/jyhmiinlin/pynufft">PyNUFFT-jyhmiinlin</a> 的说明，有如下一些 python 中含有 nufft 库：</p>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://sigpy.readthedocs.io/en/latest/index.html">SigPy</a> (Ong, F., and M. Lustig. "SigPy: a python package for high performance iterative reconstruction." )</li>
-<li><a target="_blank" rel="noopener" href="https://github.com/andyschwarzl/gpuNUFFT">gpuNUFFT</a> (Knoll, Florian, et al. "gpuNUFFT-an open source GPU library for 3D regridding with direct Matlab interface." )</li>
-<li><a target="_blank" rel="noopener" href="https://github.com/mritools/mrrt.nufft">mrrt.nufft</a> (mrrt.mri demos for the ISMRM 2020 Data Sampling Workshop in Sedona, AZ with raw cuda kernels)</li>
-<li><a target="_blank" rel="noopener" href="https://github.com/pyNFFT/pyNFFT">pyNFFT</a> (Keiner, J., Kunis, S., and Potts, D. ''Using NFFT 3 - a software library for various non-equispaced fast Fourier transforms'' )</li>
-<li><a target="_blank" rel="noopener" href="https://github.com/dfm/python-nufft">python-NUFFT</a> (Dan Foreman-Mackey, Thomas Arildsen, and Marc T. Henry de Frahan, but the code that actually does the work is from the Greengard lab at NYU)</li>
-<li>finufft (Barnett, Alexander H., Jeremy Magland, and Ludvig af Klinteberg. "A Parallel Nonuniform Fast Fourier Transform Library Based on an “Exponential of Semicircle" Kernel." )</li>
-<li><a target="_blank" rel="noopener" href="https://pypi.org/project/torchkbnufft/">torchkbnufft</a> (M. J. Muckley, R. Stern, T. Murrell, F. Knoll, TorchKbNufft: A High-Level, Hardware-Agnostic Non-Uniform Fast Fourier Transform)</li>
-<li><a target="_blank" rel="noopener" href="https://github.com/zaccharieramzi/tfkbnufft">tfkbnufft</a> (adapt torchkbnufft for TensorFlow)</li>
-<li><a target="_blank" rel="noopener" href="https://github.com/yf0726/TFNUFFT">TFNUFFT</a> (adapt the min-max interpolator in PyNUFFT for tensorflow)</li>
-<li><a target="_blank" rel="noopener" href="https://github.com/mrphys/tensorflow-nufft">tensorflow-nufft</a></li>
-</ul>
-<h2 id="其他">其他</h2>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://mrirecon.github.io/bart/">Bart</a>（UCB 开发的 MRI 重建库，包含了 SMS、pMRI 等一堆前沿重建方法，缺点是暂时只能在 Linux 下运行）</li>
-<li><a target="_blank" rel="noopener" href="https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/">FSL</a>（英国牛津大学开发的专门用于 fMRI 的库，包含了图像配准的一些预处理方法，缺点也是只能在 Linux 下运行）</li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1005,7 +1011,7 @@ mjx-container[display="true"] + br {
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">91</span>
+          <span class="site-state-item-count">92</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
