@@ -270,6 +270,110 @@ mjx-container[display="true"] + br {
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/05/18/2023-0518-StableDiffusion%E7%9A%84%E5%87%A0%E7%A7%8D%E6%A8%A1%E5%9E%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="zhb">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="zhb木木三的个人网页">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/05/18/2023-0518-StableDiffusion%E7%9A%84%E5%87%A0%E7%A7%8D%E6%A8%A1%E5%9E%8B/" class="post-title-link" itemprop="url">StableDiffusion的几种模型</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-05-18 00:35:00" itemprop="dateCreated datePublished" datetime="2023-05-18T00:35:00+08:00">2023-05-18</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-06-09 11:34:42" itemprop="dateModified" datetime="2023-06-09T11:34:42+08:00">2023-06-09</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%90%9E%E7%82%B9%E8%AF%BE%E5%A4%96%E7%9F%A5%E8%AF%86/" itemprop="url" rel="index"><span itemprop="name">搞点课外知识</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>2.1k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>7 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>为了避免一篇博文太长，想了想还是决定把 Stable Diffusion 涉及的几种常见模型单独列出来讲。在 SD 的安装教程中只提到 SD 提供的基础 checkpoint（如 sd-v1.4.ckpt），但实际还有一大堆大神弄出来的各种其他模型以及对应的微调工具，这可不得不了解一下。</p>
+<p>Stable Diffusion 框架会用到几类模型，基本都可以从万能的 c 站（www.civitai.com）下载（从网页右上角的 filter 中也可以看到模型的分类），这几种常见模型类型的区别可以参考 <a target="_blank" rel="noopener" href="https://blog.csdn.net/snans/article/details/129838033">一篇 CSDN 博文</a> 或者 <a target="_blank" rel="noopener" href="https://github.com/civitai/civitai/wiki/How-to-use-models">civitai 的说明</a>。访问 c 站的时候可以右上角登录自己的 google 账号，然后记得将 Browsing Mode 调成 Safe，不然就会有一大堆 NSFW（Not Safe For Work）的内容出现，谨慎呀！</p>
+<p><img src="/ref_pic/civitai界面.png"></p>
+<h2 id="checkpoint主模型star2">checkpoint（主模型）<span class="github-emoji"><span>🌟</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f31f.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></h2>
+<p>在深度学习中，checkpoint 是一个用于描述每次训练完后保存模型参数、权重操作的术语，就像在游戏中的存档点，而在 AI 绘图中，更像是一个画师（后续的其他类型模型则属于调整和优化主模型的工具）。在前文的 WebUI 安装中提到的 "No checkpoints found" 错误即是缺失主模型文件。checkpoint 也就是 StableDiffusion 里所谓的大模型，或者说基础模型，比如 SD 官方自带的 sd-v1.5.ckpt（我 2 月份下载的时候还是 sd-v1.4.ckpt）。这类模型都是由 <strong>dreambooth 技术</strong>，经过大量数据训练得到的，可以用于生成各类常见元素的图片，算是一个全能工具。因此不可缺少，至少有一个，不然 SD 不能启动。</p>
+<p>SD 官方的 checkpoint 可以从 <a target="_blank" rel="noopener" href="https://cyberes.github.io/stable-diffusion-models/">这里</a> 下载（我也不知道这个是不是官方链接），而之前火出圈的真人绘图则主要是基于 <a target="_blank" rel="noopener" href="https://civitai.com/models/6424/chilloutmix">ChilloutMix 模型</a>，基本在 civitai 里都能找到。下载好 checkpoint 文件后，存放位置是 <code>/models/Stable-diffusion</code> 文件夹，文件的后缀一般为 .ckpt 或 .safetensions，这种文件一般为 4GB 左右的大小。</p>
+<h2 id="embedding文本转换textual-inversions">Embedding（文本转换，Textual Inversions）</h2>
+<p>Embedding 是指将自然语言文本（如句子或段落）转换为计算机可以理解的数值向量表示形式的过程，这种向量表示法通常称为嵌入（embedding），可以在许多自然语言处理（NLP）任务中使用，例如语言模型、情感分析、问答系统等。在Stable Diffusion中，用户可以使用内置的嵌入模型或创建自定义的嵌入模型来生成嵌入，<strong>但最终效果特别依赖 checkpoint，一定要看清适用于什么 checkpoint</strong>。下载好 embedding 文件后，存放位置是 <code>/embeddings</code> 文件夹，文件的后缀一般为 .pt，这种文件一般在 1MB 以内。</p>
+<h2 id="lorastar2">LoRA<span class="github-emoji"><span>🌟</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f31f.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></h2>
+<p>LoRA 全称为 Low-Rank Adaptation of Large Language Models（大语言模型的低阶适应），最初是由微软为了解决大语言模型的微调微调而开发出来的一项技术。在 Stable Diffusion 中使用时相当于绘画风格滤镜，对我这种小白用户来说是<strong>最重要</strong>的一类模型，因为往往只需要使用不同的 LoRA 模型就能满足相应绘画需求了。下载好 LoRA 文件后，存放位置是 <code>/models/Lora</code> 文件夹，文件的后缀一般为 .pt 或 .safetensions，这种文件一般为 144MB 左右的大小。</p>
+<h2 id="hypernetwork">Hypernetwork</h2>
+<p>在 Stable Diffusion 中，Hypernetwork 是一种用于训练大型神经网络的技术，是一种生成网络的网络，可以通过它来生成其他网络的权重。相比 LoRA，多了一些步骤，更适合风景绘图，而不适合特定具象的物体，使用的人也比较少。下载好 Hypernetwork 文件后，存放位置是 <code>/models/hypernetworks</code> 文件夹，文件的后缀一般为 .pt，一般为 100MB 左右的大小。</p>
+<h2 id="vae">VAE</h2>
+<p>在Stable Diffusion中，VAE 是另一种用于训练大型神经网络的技术，与 Hypernetwork 一样也是一种生成网络的网络。其功能是增强模型的色彩、光照等表现效果，相当于给模型加了美颜滤镜（如果模型生成的图发灰，可以检查一下 Vae 文件是否勾选），不过大都会集成在主模型 checkpoint 中，一般也不会单独列出。下载好 Vae 文件后，存放位置是 <code>/models/VAE</code> 文件夹。</p>
+<h2 id="小结">小结</h2>
+<p>主要还得看 LoRA 模型，其次就是再关注一下 checkpoint 和 Embedding，剩下的模型都是非热门的，只想浅尝辄止的话就可以不用管了（大伙会用下载量投票的）。还有就是要注意一下本地文件的存放的位置，不要放错地方了哦。</p>
+<p><img src="/ref_pic/staleDiffusion模型存放位置及小结.png"></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/05/17/2023-0517-StableDiffusion%E5%AE%89%E8%A3%85/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -850,98 +954,6 @@ mjx-container[display="true"] + br {
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/05/09/2023-0509-%E6%97%A5%E8%AE%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="zhb">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="zhb木木三的个人网页">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/05/09/2023-0509-%E6%97%A5%E8%AE%B0/" class="post-title-link" itemprop="url">2023-0509日记</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-05-09 01:19:00" itemprop="dateCreated datePublished" datetime="2023-05-09T01:19:00+08:00">2023-05-09</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-06-28 22:57:14" itemprop="dateModified" datetime="2023-06-28T22:57:14+08:00">2023-06-28</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%97%A5%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">日记</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>674</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>2 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>好久没写随笔了，感觉五一都荒废了呢，之前想补的《git、github 概念》、《stable diffusion 等几种 AI 画图介绍》的博文居然都没写（一定是米哈游干的，都怪星穹铁道.jpg），而且好像也该开始弄入党积极分子的东西了。现在插图都顺带手动加个斜杠好了，这样可以少运行一次那个 replaceRefPic.py。</p>
-<p><img src="/ref_pic/一定是米哈游干的.jpg"></p>
-<p>今晚还算舒服点，虽然调了一天的用 scipy.spatial.Voronoi 生成 radial 的密度补偿系数，大眼瞪小眼，但刚刚终于调通了呢！不得不说 stackoverflow.com 论文里面大佬真多，写的代码又好。想起来，我现在对 voronoi 图还是一知半解，只知道给定一堆点的坐标，然后就会给它们计算出对应的分区，稀疏的点分区就大一点，最后就根据各个点所在区域的面积来作为该点的密度补偿值了。说是这么说，计算面积的代码也已经在 MATLAB 里有现成的 John Pauly 著作、Michael Lustig 改进的 DensityVoronoi.m，但调用其 Voronoi 的时候还是出问题，检查半天发现 python 和 MATLAB 输入都一样，但输出就不同，那一定就是 Voronoi 的问题！</p>
-<p>接着看了两篇回答的代码，都不行，拼起来改一改参数（其中一个重排的代码好像会减少一个 region 导致最后报错），诶嘿！突然就正常重建了，有点秃然，有点稀里糊涂，但还是挺开心的呢。所以，保持这份积极的心情去睡觉，明天再说！（不得不说，去 <a target="_blank" rel="noopener" href="https://imgflip.com/memegenerator">meme表情包网站</a> 生成自己的表情包还是挺好玩的）</p>
-<p><img src="/ref_pic/明天再说.jpg"></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1011,7 +1023,7 @@ mjx-container[display="true"] + br {
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">92</span>
+          <span class="site-state-item-count">93</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1060,7 +1072,7 @@ mjx-container[display="true"] + br {
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">115k</span>
+    <span title="站点总字数">118k</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
   </div>
