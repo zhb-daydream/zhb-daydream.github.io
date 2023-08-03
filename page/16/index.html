@@ -270,6 +270,143 @@ mjx-container[display="true"] + br {
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/04/21/2023-0421-Hexo%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="zhb">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="zhb木木三的个人网页">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/04/21/2023-0421-Hexo%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/" class="post-title-link" itemprop="url">Hexo插入图片</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-04-21 15:30:00" itemprop="dateCreated datePublished" datetime="2023-04-21T15:30:00+08:00">2023-04-21</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-06-09 11:34:42" itemprop="dateModified" datetime="2023-06-09T11:34:42+08:00">2023-06-09</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" itemprop="url" rel="index"><span itemprop="name">博客搭建</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.9k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>6 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Hexo 的静态网页是通过 Markdown 格式的文本文件生成的，而在 Markdown 文件中插入图片的语法为 <code>![图片描述](图片路径)</code>，其中图片路径可以分为以下三种。</p>
+<ul>
+<li>网络路径：以网址形式存储，十分方便，但源图片失效或网站限制（如微信公众号）时会无法加载图片，且访问速度较慢</li>
+<li>绝对路径：在计算机的绝对位置，不适用于博客的部署</li>
+<li>相对路径：相对于当前文件的路径</li>
+</ul>
+<p>若要使用图片相对路径，则需要进行相应的配置，因为 Hexo 并不支持相对路径的引用。</p>
+<h2 id="统一存放">统一存放</h2>
+<p><img src="/ref_pic/图片相对路径存放位置示意图.jpg"></p>
+<p>可以将图片统一存放在 <code>\source\images</code> 文件夹中，然后通过以下方式引用图片 <code>\source\images\image.jpg</code>：</p>
+<figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">图片描述</span>](<span class="link">/images/image.jpg</span>)</span><br></pre></td></tr></tbody></table></figure>
+<p>要注意的是：</p>
+<ul>
+<li>除了 <code>images</code> 文件夹名字外，也可以是其他的文件夹名字</li>
+<li>Markdown 文件中的 / 所对应的<strong>当前目录</strong>是资源文件的根目录，默认为 source 文件夹的位置，可以通过 <code>_config.yml</code> 文件中的 <code>source_dir</code> 来修改资源文件夹根目录的默认位置</li>
+</ul>
+<p>此时图片既可以在首页内容中访问到，也可以在文章正文中访问到。</p>
+<h3 id="与-typora-结合">与 Typora 结合</h3>
+<p>从上面可看出，Hexo 规则下的图片相对路径是相对于 source 文件夹的，而在一般的 Markdown 编辑器（如 Typora ）中的图片相对路径则是相对于当前 .md 文件所在的文件夹，因而上述设置无法在编辑器中直接显示。</p>
+<p>为了能正常在 Typora 编辑时显示图片，只需在 .md 文件的开头中设置对应的根目录位置，如下所示：</p>
+<figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: Hexo插入图片</span><br><span class="line">date: 2023-04-21</span><br><span class="line">categories:</span><br><span class="line"><span class="bullet">-</span> 博客搭建</span><br><span class="line"><span class="section">typora-root-url: ../</span></span><br><span class="line"><span class="section">---</span></span><br></pre></td></tr></tbody></table></figure>
+<p>即能将当前 .md 文件所对应的根目录设置为 .md 文件所在目录的上一级目录，即 source 目录。随后即能在 .md 文件中通过下式引用图片，同时在编辑器中实时预览。</p>
+<figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![](<span class="link">/images/image.jpg</span>)</span><br></pre></td></tr></tbody></table></figure>
+<p>注意：在 Typora 等编辑器中自动添加图片时，需要将图片都放置在对应的文件夹中，一定要检查图片路径是否出错。</p>
+<h3 id="根据习惯调整">根据习惯调整</h3>
+<p>上述存储方式实际上是与我自己的写作习惯冲突的：</p>
+<ul>
+<li>个人写作习惯：在 Typora 直接粘贴图片，图片默认保存路径为 <code>ref_pic/imag.jpg</code> 或 <code>./ref_pic/imag.jpg</code>（后者需要将 Typora 升级到 1.4.3 之后的版本）</li>
+<li>Hexo 图片索引规则：以 source 为根目录进行索引，且只能识别以斜杠 <code>/</code> 开头的相对路径。</li>
+</ul>
+<p>接下来的改进需求是：</p>
+<ul>
+<li>核心需求：不改变以往的图片导入习惯，让 Hexo 能自动识别无 <code>/</code> 开头的图片相对路径</li>
+<li>次要需求：只维护一个图片保存文件夹，且该文件夹位置按照以往习惯保存在 .md 文件同目录下（即 <code>\source\_post\</code> 下）</li>
+</ul>
+<p>目前（2023-0423）只能满足核心需求：同时维护 <code>\source\ref_pic</code> 和 <code>\source\_post\ref_pic</code> 两个文件夹，前者用于 Hexo 识别，后者为了符合 Typora 使用习惯。此外引入 python 脚本，自动将 <code>](/ref_pic/</code> 或 <code>](/ref_pic</code> 替换成 <code>](/ref_pic</code>，需要每次 Hexo 编译前运行一次脚本。</p>
+<h2 id="分别存放">分别存放</h2>
+<p>在 Hexo 根目录的 <code>_config.yml</code> 中修改以下命令来启用<strong>文章资源文件夹</strong>。</p>
+<figure class="highlight yaml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">post_asset_folder:</span> <span class="literal">true</span></span><br></pre></td></tr></tbody></table></figure>
+<p>随后使用 <code>hexo new</code> 命令创建新文章时（如 <code>post_name.md</code>），就会在 <code>\source\_posts</code> 中生成相同名字的文件夹（如 <code>\source\_posts\post_name</code> ），用于存储对应图片（如 <code>\source\_posts\post_name\image.jpg</code>），随后通过以下方式引用图片：</p>
+<figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">图片描述</span>](<span class="link">image.jpg</span>)</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="修改1">修改1</h3>
+<p>上述是 Markdown 的引用方式，但图片只能在文章中显示，但无法在首页中正常显示。如果希望图片在文章和首页中同时显示，可以使用标签插件语法来代替 <code>~[]()</code> 的方式进行引用：</p>
+<figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">{% asset<span class="emphasis">_img image.jpg This is an image %}</span></span><br></pre></td></tr></tbody></table></figure>
+<h3 id="修改2">修改2</h3>
+<p>若不想使用以上的标签插件语法，则可以使用 hexo-renderer-marked 插件进行设置。首先在 bash 中安装该渲染器：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-renderer-marked</span><br></pre></td></tr></tbody></table></figure>
+<p>随后在根目录下的 <code>_config.yml</code> 中更改配置如下：</p>
+<figure class="highlight yaml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">post_asset_folder:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">marked:</span></span><br><span class="line">  <span class="attr">prependRoot:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">postAsset:</span> <span class="literal">true</span></span><br></pre></td></tr></tbody></table></figure>
+<p>启用后，资源图片将会被自动解析为其对应文章的路径。例如： <code>image.jpg</code> 位置为 <code>/2020/01/02/foo/image.jpg</code> ，这表示它是 <code>/2020/01/02/foo/</code> 文章的一张资源图片， <code>![](image.jpg)</code> 将会被解析为 <code>&lt;img src="/2020/01/02/foo/image.jpg"&gt;</code> 。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/04/21/2023-0421-%E5%A5%87%E5%BC%82%E5%80%BC%E4%B8%8E%E7%89%B9%E5%BE%81%E5%80%BC/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -809,261 +946,6 @@ mjx-container[display="true"] + br {
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/04/05/2023-0405-%E5%87%A0%E7%A7%8D%E7%A3%81%E5%85%B1%E6%8C%AF%E9%A2%86%E5%9F%9F%E7%9A%84sci%E6%9C%9F%E5%88%8A/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="zhb">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="zhb木木三的个人网页">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/04/05/2023-0405-%E5%87%A0%E7%A7%8D%E7%A3%81%E5%85%B1%E6%8C%AF%E9%A2%86%E5%9F%9F%E7%9A%84sci%E6%9C%9F%E5%88%8A/" class="post-title-link" itemprop="url">几种磁共振领域的sci期刊</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-04-05 23:05:18" itemprop="dateCreated datePublished" datetime="2023-04-05T23:05:18+08:00">2023-04-05</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-07-17 01:49:34" itemprop="dateModified" datetime="2023-07-17T01:49:34+08:00">2023-07-17</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%AD%A6%E6%9C%AF%E6%A8%A1%E5%9D%97/" itemprop="url" rel="index"><span itemprop="name">学术模块</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>1.3k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>4 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>在 <a target="_blank" rel="noopener" href="http://www.letpub.com.cn/index.php?page=journalapp&amp;view=search">LetPub</a> 上就能查到各期刊的相关信息。</p>
-<table>
-<colgroup>
-<col style="width: 5%">
-<col style="width: 34%">
-<col style="width: 17%">
-<col style="width: 6%">
-<col style="width: 34%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>中科院分区</th>
-<th>期刊名</th>
-<th>2023-0616实时影响因子(IF)<span class="github-emoji"><span>⭐</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></th>
-<th>引用分数(CS)</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>一区</td>
-<td>Radiology</td>
-<td>16.956</td>
-<td>34.2</td>
-<td></td>
-</tr>
-<tr class="even">
-<td></td>
-<td>Medical Image Analysis</td>
-<td>10.796</td>
-<td>19.9</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>IEEE Transactions on medical imaging</td>
-<td>10.329</td>
-<td>20.1</td>
-<td></td>
-</tr>
-<tr class="even">
-<td></td>
-<td>NeuroImage</td>
-<td>5.648</td>
-<td>11.6</td>
-<td>OA，有时候是二区，较难，约2个月</td>
-</tr>
-<tr class="odd">
-<td>二区</td>
-<td>JMRI（Journal of Magnetic Resonance Imaging）</td>
-<td>4.311</td>
-<td>9.9</td>
-<td>平均2月，录用比例65%</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>Physics in Medicine and Biology</td>
-<td>3.439</td>
-<td>6.9</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>三区</td>
-<td>Frontiers in Medicine<span class="github-emoji"><span>💧</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f4a7.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></td>
-<td>3.752</td>
-<td>3.6</td>
-<td>OA，上过预警名单，审稿人无拒稿选项，甚至可能会让作者审自己的论文</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>Medical Physics</td>
-<td>3.629</td>
-<td>7.2</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>MRM（Magnetic Resonance in Medicine）</td>
-<td>3.258</td>
-<td>6.7</td>
-<td></td>
-</tr>
-<tr class="even">
-<td></td>
-<td>Plos One</td>
-<td>3.635</td>
-<td>6</td>
-<td>OA</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>IEEE Access<span class="github-emoji"><span>💧</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f4a7.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></td>
-<td>3.839</td>
-<td>9</td>
-<td>OA（$1950），水，但是预警名单</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>Biomedical Engineering Online<span class="github-emoji"><span>💧</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f4a7.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></td>
-<td>3.763</td>
-<td>7</td>
-<td>OA（$2290）</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>JMR（Journal of Magnetic Resonance）</td>
-<td>2.154</td>
-<td>4.7</td>
-<td>可OA（$3550）</td>
-</tr>
-<tr class="even">
-<td>四区</td>
-<td>Magnetic Resonance Imaging</td>
-<td>2.387</td>
-<td>5.6</td>
-<td>可OA（$3430）</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>IEEE Instrumentation &amp; Measurement Magazine</td>
-<td>2.024</td>
-<td>3.3</td>
-<td>偏introduction和overview（不要求有创新理论）</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>International Journal of RF and Microwave Computer-Aided Engineering</td>
-<td>1.573</td>
-<td>3.8</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>IEEE Transactions on Magnetics</td>
-<td>1.939</td>
-<td>4</td>
-<td>JCR是Q2分区，但偏纯硬件</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>Nuclear Instruments &amp; Methods in Physics Research Section B-Beam Interactions with Materials and Atoms</td>
-<td>1.332</td>
-<td>3.1</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>Concepts in Magnetic Resonance Part B - Magnetic Resonance Engineering</td>
-<td>0.857</td>
-<td>2.6</td>
-<td>容易，&gt;12周，或约稿</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>IEEE Industry Applications Magazine</td>
-<td>0.652</td>
-<td>1.3</td>
-<td>需要先把论文发在IAS的会议上，收到投稿邀请才能投</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>IEEE Pulse</td>
-<td>0.455</td>
-<td>1.4</td>
-<td>没找到投稿入口</td>
-</tr>
-</tbody>
-</table>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1133,7 +1015,7 @@ mjx-container[display="true"] + br {
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">99</span>
+          <span class="site-state-item-count">100</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1146,7 +1028,7 @@ mjx-container[display="true"] + br {
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">15</span>
+        <span class="site-state-item-count">16</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -1182,7 +1064,7 @@ mjx-container[display="true"] + br {
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">128k</span>
+    <span title="站点总字数">130k</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
   </div>

@@ -158,6 +158,98 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/05/23/2023-0523-Hexo%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="zhb">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="zhb木木三的个人网页">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/05/23/2023-0523-Hexo%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/" class="post-title-link" itemprop="url">Hexo目录结构</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-05-23 12:30:00" itemprop="dateCreated datePublished" datetime="2023-05-23T12:30:00+08:00">2023-05-23</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-06-09 11:34:42" itemprop="dateModified" datetime="2023-06-09T11:34:42+08:00">2023-06-09</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" itemprop="url" rel="index"><span itemprop="name">博客搭建</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>168</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="hexo-根目录">Hexo 根目录</h2>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">├── .deploy_git      		部署到github后自动创建,里面所有内容即为github站点中的repository内容,与public文件夹基本一致</span><br><span class="line">├── node_modules     		存放安装的hexo扩展</span><br><span class="line">├────── .bin</span><br><span class="line">├────── hexo				   Hexo主程序</span><br><span class="line">├────── hexo-deployer-git		git部署插件</span><br><span class="line">├────── hexo-generator-archive	存档页面生成器</span><br><span class="line">├────── hexo-generator-category	类别生成器</span><br><span class="line">├────── hexo-generator-index	index生成器</span><br><span class="line">├────── hexo-generator-tag		tag生成器</span><br><span class="line">├────── hexo-renderer-ejs		一个渲染器</span><br><span class="line">├────── hexo-renderer-pandoc	一个公式渲染器</span><br><span class="line">├────── hexo-server				服务器,实现hexo s本地预览博客的功能</span><br><span class="line">├────── ...					    (还有好多其他的扩展就不列举了)</span><br><span class="line">├── public					执行hexo g后生成的静态网页内容目录,执行hexo d后会将该文件夹内容复制到.deploy_git</span><br><span class="line">├── scaffolds				模板文件夹,用hexo n新建文章时,会根据scaffold生成.md文件</span><br><span class="line">├── source				    存放用户资源</span><br><span class="line">├────── _post			    存放博客文章(其他以_开头的文件夹不会被解析为HTML,可以存放未完成的草稿)</span><br><span class="line">├────── categories			用里面的index.md定义分类条目</span><br><span class="line">├────── tags				用里面的index.md定义tags条目</span><br><span class="line">├────── ref_pic				[我自定义的]文章插图存放处,在_post里面也有一个完全一致的ref_pic</span><br><span class="line">├── themes				    主题文件夹,所有主题都放入该文件夹下维护</span><br><span class="line">├────── landscape			Hexo默认安装的landscape主题</span><br><span class="line">├────── next			    本博客使用的NeXT主题</span><br><span class="line">├── _config.yml    			初始化时自动创建,网站的配置信息文件,在此配置大部分的参数</span><br><span class="line">├── package.json   			初始化时自动创建,存储应用程序的信息,可以查看hexo版本及安装的扩展版本</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="next-主题文件根目录">NeXT 主题文件根目录</h2>
+<p>NeXT（版本 7.8.0） 主题文件夹下的根目录结构如下（根目录位置为 <code>\themes\next\</code>）。要注意的是，下面用的都是 .swig 文件，表明使用的是 Swig 作为 JS 引擎（Hexo 会根据文件扩展名决定所使用的模板引擎，例如 _layout.ejs 是使用 EJS）。</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">├── languages       		语言文件，用于国际化</span><br><span class="line">├────── default.yml 		默认语言</span><br><span class="line">├────── zh-CN.yml		    简体中文</span><br><span class="line">├── layout                   存储页面模板文件</span><br><span class="line">├────── _macro			    可以自己修改的模板,覆盖原有模板</span><br><span class="line">├────────── post.swig		文章模板</span><br><span class="line">├────────── reward.swig		打赏模板</span><br><span class="line">├────────── sidebar.swig	侧边栏模板</span><br><span class="line">├────── _partials		  局部的布局</span><br><span class="line">├────── _scripts		  局部的布局</span><br><span class="line">├────── _third-party	   第三方模板</span><br><span class="line">├────── _layout.swig       主页面模板</span><br><span class="line">├────── archive.swig       归档页</span><br><span class="line">├────── category.swig      分类页</span><br><span class="line">├────── index.swig		  主页面模板,url 根目录默认加载首页</span><br><span class="line">├────── page.swig          页面详情，像404、友链这种自定义页面都是在 page 页面</span><br><span class="line">├────── post.swig          文章页</span><br><span class="line">├────── tag.swig           标签页</span><br><span class="line">├── scripts    			  脚本文件夹，在启动时，Hexo 会载入此文件夹内的 JavaScript 文件</span><br><span class="line">├── source     			  主题资源文件，包括页面样式，脚本，字体等</span><br><span class="line">├────── css				  大都为styl文件</span><br><span class="line">├────────── _common		   *.styl的基础css</span><br><span class="line">├────────── _schemes</span><br><span class="line">├────────── _variables</span><br><span class="line">├────────── _colors.styl</span><br><span class="line">├────────── _mixins.styl</span><br><span class="line">├────────── main.styl	   添加自定义的部分</span><br><span class="line">├────── images		</span><br><span class="line">├────── js				  javascript源码</span><br><span class="line">├────── lib</span><br><span class="line">├── _config.yml			   用于配置NeXT主题参数的配置文件</span><br><span class="line">├── package.json		   用于查看NeXT版本及相应的扩展</span><br><span class="line">├── README.md			   作者的说明文档</span><br><span class="line"></span><br><span class="line">内容来自</span><br><span class="line">https://www.cnblogs.com/mrwuzs/p/7954438.html</span><br></pre></td></tr></tbody></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/05/23/2023-0523-HTML-CSS-JS%E7%9A%84%E5%85%B3%E7%B3%BB/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -773,113 +865,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/05/18/2023-0518-%E8%87%B4%E9%BB%AF%E6%B7%A1%E6%98%9F/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="zhb">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="zhb木木三的个人网页">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/05/18/2023-0518-%E8%87%B4%E9%BB%AF%E6%B7%A1%E6%98%9F/" class="post-title-link" itemprop="url">致黯淡星</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-05-18 23:25:00" itemprop="dateCreated datePublished" datetime="2023-05-18T23:25:00+08:00">2023-05-18</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-06-17 22:12:31" itemprop="dateModified" datetime="2023-06-17T22:12:31+08:00">2023-06-17</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%B8%B8%E6%88%8F/" itemprop="url" rel="index"><span itemprop="name">游戏</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>590</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>2 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><img src="/ref_pic/致黯淡星.jpg"></p>
-<p>“不好意思——但不论你是谁，遇见莉莉记得帮我转告她，洛奇会在 [黑塔] 等你”</p>
-<p>“即使隔着数万光年的距离，她也会回复我的消息，只是这次...”</p>
-<p>“怎么会这样...莱斯莉答应了我的表白，但是星震那部分...”</p>
-<p>“她的时间每过去一个月，我的时间就会过去数十年。那岂不是等她回来，我已经像师父一样老了。”</p>
-<p>“她，去了未来。而我，留在现在...是这样吗？”</p>
-<p>“那我想念她的漫长时间，对她来说，岂不只是一个毫不起眼的瞬息吗？”</p>
-<p>“所以，指望她回来是不现实了。就算她行进数月，跨越光年，在我的时间坐标里，我已经成了老头一个。”</p>
-<p>“用一辈子的时间去等一个人，忍受无尽的思念与孤独...”</p>
-<p>“老实说，哥们儿，你不会真以为我那么天真吧？”</p>
-<p>“哈哈！我当然是不会等她的！我不会等！”</p>
-<p>“我是不会等...”</p>
-<p>“但我要去追她。我要去，追赶时间！”</p>
-<p>“既然她的时间曲线已经成了一座大峡谷，那与其盼着她出来，由我去翻越这座大峡谷不就行了吗？”</p>
-<p>“也许我会花十年时间找到刚度过一个月的她，但我们的时间流速就能从此同频，总比在这里坐以待毙来的好。”</p>
-<p>“身为 [黑塔.寰宇地概科] 的成员，连真正的银河都没见过，说出去早晚笑掉别人的大牙。”</p>
-<p>“等我找到莱斯莉，总有一天，我会回来告诉你我在这趟旅程所看到的一切...”</p>
-<p>“那么，这首诗送给你，再见了，我的朋友。”</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">《再见黑塔》</span><br><span class="line"></span><br><span class="line">黑暗在远方列队。用近乎残忍的方式</span><br><span class="line">解剖着时间。询问爱情的花瓣俯下嘴唇</span><br><span class="line">如同无限时空中、滴答的钟声。我们别无选择</span><br><span class="line">只能滑入宇宙那不详的颤抖、如同滑下一道黄昏的斜坡</span><br><span class="line">就这样，群星依旧在头顶赏乐，沿途将是它们优雅的倦容。</span><br><span class="line"></span><br><span class="line">————洛奇.马丁内斯</span><br></pre></td></tr></tbody></table></figure>
-<p>（注：摘自崩坏-星穹铁道的黑塔空间站支线任务）</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -949,7 +934,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">99</span>
+          <span class="site-state-item-count">100</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -962,7 +947,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">15</span>
+        <span class="site-state-item-count">16</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -998,7 +983,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">128k</span>
+    <span title="站点总字数">130k</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
   </div>

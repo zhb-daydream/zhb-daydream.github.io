@@ -20,29 +20,22 @@
     var CONFIG = {"hostname":"zhb-daydream.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="写在前面 害，前段时间 AI 画图特别火，为了不让自己落后于时代，我也跟着教程去下了个 Stable-Diffusion，然后就丢文件夹里吃灰了😓。本来想趁还记得，赶紧写个博客的，结果 2023-0224 安装好，一直拖到接近 3 个月之后才记录，太懒惰了。好像 4 月份又出了个上手更快一点的 midjourney，看来到时候也得了解一下了。（再扩展地想一想，最近 NLP 的 AI 也是特别火，">
+  <meta name="description" content="最近总能看到新闻，说现在全球经济大环境不好，包括美国在内的大部分国家都在加息，而中国却在逆势降息。除了加息与降息，有时候还经常接触到通胀和通缩，为了更好地刷知乎、刷新闻，感觉还是得了解一下这四个经济学里面的概念。 通胀与通缩的定义    经济学现象 定义 根本原因 具体表现 影响     通货膨胀 货币贬值 货币流通量&gt;货币需求量 物价上涨 刺激消费、扩大内需   通货紧缩 货币升值 货币流">
 <meta property="og:type" content="article">
-<meta property="og:title" content="StableDiffusion安装">
-<meta property="og:url" content="https://zhb-daydream.github.io/2023/05/17/2023-0517-StableDiffusion%E5%AE%89%E8%A3%85/index.html">
+<meta property="og:title" content="通胀与通缩-加息与降息">
+<meta property="og:url" content="https://zhb-daydream.github.io/2023/08/03/2023-0803-%E9%80%9A%E8%83%80%E4%B8%8E%E9%80%9A%E7%BC%A9-%E5%8A%A0%E6%81%AF%E4%B8%8E%E9%99%8D%E6%81%AF/index.html">
 <meta property="og:site_name" content="zhb木木三的个人网页">
-<meta property="og:description" content="写在前面 害，前段时间 AI 画图特别火，为了不让自己落后于时代，我也跟着教程去下了个 Stable-Diffusion，然后就丢文件夹里吃灰了😓。本来想趁还记得，赶紧写个博客的，结果 2023-0224 安装好，一直拖到接近 3 个月之后才记录，太懒惰了。好像 4 月份又出了个上手更快一点的 midjourney，看来到时候也得了解一下了。（再扩展地想一想，最近 NLP 的 AI 也是特别火，">
+<meta property="og:description" content="最近总能看到新闻，说现在全球经济大环境不好，包括美国在内的大部分国家都在加息，而中国却在逆势降息。除了加息与降息，有时候还经常接触到通胀和通缩，为了更好地刷知乎、刷新闻，感觉还是得了解一下这四个经济学里面的概念。 通胀与通缩的定义    经济学现象 定义 根本原因 具体表现 影响     通货膨胀 货币贬值 货币流通量&gt;货币需求量 物价上涨 刺激消费、扩大内需   通货紧缩 货币升值 货币流">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://github.githubassets.com/images/icons/emoji/unicode/1f613.png?v8">
-<meta property="og:image" content="https://zhb-daydream.github.io/ref_pic/python310安装注意添加路径.png">
-<meta property="og:image" content="https://github.githubassets.com/images/icons/emoji/unicode/1f604.png?v8">
-<meta property="og:image" content="https://zhb-daydream.github.io/ref_pic/staleDiffusionWebUI安装报错.png">
-<meta property="og:image" content="https://zhb-daydream.github.io/ref_pic/staleDiffusionWebUI启动.png">
-<meta property="og:image" content="https://zhb-daydream.github.io/ref_pic/staleDiffusionWebUI汉化-1.png">
-<meta property="og:image" content="https://zhb-daydream.github.io/ref_pic/staleDiffusionWebUI汉化-2.png">
-<meta property="og:image" content="https://zhb-daydream.github.io/ref_pic/staleDiffusionWebUI汉化-3.png">
-<meta property="article:published_time" content="2023-05-17T14:36:00.000Z">
-<meta property="article:modified_time" content="2023-06-09T03:34:42.082Z">
+<meta property="og:image" content="https://zhb-daydream.github.io/ref_pic/各国货币的放水大战.png">
+<meta property="article:published_time" content="2023-08-03T08:00:00.000Z">
+<meta property="article:modified_time" content="2023-08-03T08:13:58.453Z">
 <meta property="article:author" content="zhb">
-<meta property="article:tag" content="AI绘画">
+<meta property="article:tag" content="市场">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://github.githubassets.com/images/icons/emoji/unicode/1f613.png?v8">
+<meta name="twitter:image" content="https://zhb-daydream.github.io/ref_pic/各国货币的放水大战.png">
 
-<link rel="canonical" href="https://zhb-daydream.github.io/2023/05/17/2023-0517-StableDiffusion%E5%AE%89%E8%A3%85/">
+<link rel="canonical" href="https://zhb-daydream.github.io/2023/08/03/2023-0803-%E9%80%9A%E8%83%80%E4%B8%8E%E9%80%9A%E7%BC%A9-%E5%8A%A0%E6%81%AF%E4%B8%8E%E9%99%8D%E6%81%AF/">
 
 
 <script id="page-configurations">
@@ -55,7 +48,7 @@
   };
 </script>
 
-  <title>StableDiffusion安装 | zhb木木三的个人网页</title>
+  <title>通胀与通缩-加息与降息 | zhb木木三的个人网页</title>
   
 
 
@@ -173,7 +166,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/05/17/2023-0517-StableDiffusion%E5%AE%89%E8%A3%85/">
+    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/08/03/2023-0803-%E9%80%9A%E8%83%80%E4%B8%8E%E9%80%9A%E7%BC%A9-%E5%8A%A0%E6%81%AF%E4%B8%8E%E9%99%8D%E6%81%AF/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -186,7 +179,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          StableDiffusion安装
+          通胀与通缩-加息与降息
         </h1>
 
         <div class="post-meta">
@@ -195,16 +188,10 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2023-05-17 22:36:00" itemprop="dateCreated datePublished" datetime="2023-05-17T22:36:00+08:00">2023-05-17</time>
+              <time title="创建时间：2023-08-03 16:00:00 / 修改时间：16:13:58" itemprop="dateCreated datePublished" datetime="2023-08-03T16:00:00+08:00">2023-08-03</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-06-09 11:34:42" itemprop="dateModified" datetime="2023-06-09T11:34:42+08:00">2023-06-09</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -221,14 +208,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>2.4k</span>
+              <span>1.8k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>8 分钟</span>
+              <span>6 分钟</span>
             </span>
 
         </div>
@@ -240,32 +227,118 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="写在前面">写在前面</h2>
-<p>害，前段时间 AI 画图特别火，为了不让自己落后于时代，我也跟着教程去下了个 Stable-Diffusion，然后就丢文件夹里吃灰了<span class="github-emoji"><span>😓</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f613.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>。本来想趁还记得，赶紧写个博客的，结果 2023-0224 安装好，一直拖到接近 3 个月之后才记录，太懒惰了。好像 4 月份又出了个上手更快一点的 midjourney，看来到时候也得了解一下了。（再扩展地想一想，最近 NLP 的 AI 也是特别火，从最开始 OpenAI 的 ChatGPT，到后面必应的 New Bing、百度的文心一言、谷歌的 Google bard，是不是也得了解一下呀。）</p>
-<p>本文的主题是 Stable Diffusion AI 画图的安装，当初学的时候主要就是参考 b 站 <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1JY411q7Sh/?spm_id_from=333.337.search-card.all.click&amp;vd_source=9f42c74d38b311d152245e7c84682d01">爱吃鱼的番茄</a> 的视频，这种热门技术的安装教程应该也一搜一大堆的。基于 diffusion 扩散模型（DDPM）的方法在 2020 年就被提出来了，是 AIGC 的主流模型，主要用来生成图片，然后在去年（2020 年）又提出了 stable diffusion，是一种将文本转换为图片（text-to-image）的模型，而真正让这个 AI 绘画火出圈的应当是后续的真人模型<del>（lsp 的胜利）</del>，训练得到的不同风格模型会产生不同的图片。因而，安装过程也可以分为类似的几个模块讲。</p>
-<h2 id="python3.10">1 python3.10</h2>
-<p>基础代码平台是 python 3.10.6（更早版本的 python 不支持 torch 库，更新的版本可能不稳定，所以还是直接 3.10.6 吧），直接从 python 官网<a target="_blank" rel="noopener" href="https://www.python.org/downloads/release/python-3106/">下载</a>就行，在安装的时候要注意添加环境变量。如果碰见一个电脑上需要装多个 python 版本的话，可以用 Anaconda 来管理？我这部分也没太搞懂，目前我电脑就是装了有一个 py310 的版本，但平常用的还是 py3.8的。</p>
-<p><img src="/ref_pic/python310安装注意添加路径.png"></p>
-<h2 id="stable-diffusion-webui">2 Stable-Diffusion-WebUI</h2>
-<p>首先要明确的是，Stable Diffusion 是类似于一个引擎、框架，现在大家用的基本是一个 github 大佬开发的 WebUI 版本，其特性就是可以本地部署，用网页界面交互、用自己的 GPU 生成图片，而不需要去其他的网页（比如 <a target="_blank" rel="noopener" href="https://beta.dreamstudio.ai/generate">DreamStudio</a> ）中注册账号受限使用。安装 Stable Diffusion WebUI 时，可以去它的 <a target="_blank" rel="noopener" href="https://github.com/AUTOMATIC1111/stable-diffusion-webui">github 主页</a> 手动下载，或者自己进行 git clone，或者找别人已经打包好的安装包。在本地安装的时候，记得留个相对较大的地方，虽然 Stable Diffusion WebUI 作者在 github 上的源码一共也就 2MB 不到，但后续还需要往这个文件夹里放各种模型以及生成的图片，我目前该文件夹就已经用了 14.3 GB 了。</p>
-<p>然后需要配置 <code>stable-diffusion-webui/webui-user.bat</code> 文件，其实就是加三个路径，如下。</p>
-<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"></span><br><span class="line"><span class="built_in">set</span> PYTHON=F:\Anaconda\envs\py310\python.exe %python310的安装路径%</span><br><span class="line"><span class="built_in">set</span> GIT=</span><br><span class="line"><span class="built_in">set</span> VENV_DIR=UserPackage %自定义的英文名,用于存储下载的依赖包,我这里填UserPackage%</span><br><span class="line"><span class="built_in">set</span> COMMANDLINE_ARGS=--medvram --reinstall-xformers --xformers %用于解决显存不够和xformer出错问题%</span><br><span class="line"></span><br><span class="line">call webui.bat</span><br></pre></td></tr></tbody></table></figure>
-<p>接着双击该 <code>webui-user.bat</code> 文件来启动该引擎。要注意的是，第一次启动时，会自动安装所需的依赖包到上面定义的 VENV_DIR 中（大概 4.8GB），安装过程可能会出错（pip 版本不对、没挂代理导致出错等），具体出错原因就面向搜索引擎解决吧！<span class="github-emoji"><span>😄</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f604.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></p>
-<p>最后不出意外的话，会只剩下 "No checkpoints found" 的错误，这表示确实基础的模型。</p>
-<p><img src="/ref_pic/staleDiffusionWebUI安装报错.png"></p>
-<h2 id="checkpoints">3 checkpoints</h2>
-<p>checkpoint 是 Stable Diffusion 框架所需要的大模型，是由 <strong>dreambooth 技术</strong>，经过大量数据训练得到的，可以用于生成各类常见元素的图片，算是一个全能工具，因此不可缺少，至少有一个，不然 SD 不能启动。 SD 官方的 checkpoint 可以从这个 <a target="_blank" rel="noopener" href="https://cyberes.github.io/stable-diffusion-models/">不知道是不是官方链接</a> 里下载，比如 sd-v1.5.ckpt（我 2 月份下载的时候还是 sd-v1.4.ckpt），大概是 3.97GB。下载好 checkpoint 文件后，存放位置在 <code>stable-diffusion-webui//models/Stable-diffusion</code> 文件夹。</p>
-<h2 id="运行并配置中文">4 运行并配置中文</h2>
-<p>再次运行 <code>stable-diffusion-webui/webui-user.bat</code> 文件，顺利的话就会出现以下界面啦，将显示的本地 URL 复制到任意浏览器中，就算是完成安装啦！</p>
-<p><img src="/ref_pic/staleDiffusionWebUI启动.png"></p>
-<p>但此时还有个重要的问题，那就是默认下全！是！英！文！虽说英文对于过了四六级的大学生来说也不是不能看，但这么多专业名词，中文都不一定懂，还看英文那不是折寿嘛，所以汉化完才算是安装完毕能交付的。</p>
-<p>要安装中文插件，也不需要额外找，就用 Stable Diffusion WebUI 大佬提供的就行。打开网页，然后按下图顺序先后选择 Extension—— Available —— 取消勾选 localization（即取消隐藏各语言的汉化包）——点击 Load from。</p>
-<p><img src="/ref_pic/staleDiffusionWebUI汉化-1.png"></p>
-<p>接着在该页面的下方就会有一堆的 Extension，直接 Ctrl+F 找到 <code>zh_CN Localization</code> 的插件并安装（这个是简体中文的，还有另一个是 <code>zh_TW Localization</code> 的是繁体中文，但这个 TW 又是什么鬼？）</p>
-<p><img src="/ref_pic/staleDiffusionWebUI汉化-2.png"></p>
-<p>安装好之后，可以先去 Extension —— Installed 那里看看有没有勾上汉化包，然后再点 Apply and restart UI。</p>
-<p><img src="/ref_pic/staleDiffusionWebUI汉化-3.png"></p>
-<p>如果还没生效的话，就去 Settings —— User interface 的最下方找 <code>Localization (requires restart)</code> 选项（也可以在左侧点 Show all pages 然后全文搜索），最后回到上方点个 Apply settings 然后 Reload UI 就行啦！我这里就懒得放图污染文章了。</p>
+        <p>最近总能看到新闻，说现在全球经济大环境不好，包括美国在内的大部分国家都在加息，而中国却在逆势降息。除了加息与降息，有时候还经常接触到通胀和通缩，为了更好地刷知乎、刷新闻，感觉还是得了解一下这四个经济学里面的概念。</p>
+<h2 id="通胀与通缩的定义">通胀与通缩的定义</h2>
+<table>
+<thead>
+<tr class="header">
+<th>经济学现象</th>
+<th>定义</th>
+<th>根本原因</th>
+<th>具体表现</th>
+<th>影响</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>通货膨胀</td>
+<td>货币贬值</td>
+<td>货币流通量&gt;货币需求量</td>
+<td>物价上涨</td>
+<td>刺激消费、扩大内需</td>
+</tr>
+<tr class="even">
+<td>通货紧缩</td>
+<td>货币升值</td>
+<td>货币流通量&lt;货币需求量</td>
+<td>物价下跌</td>
+<td>消费下降、经济衰退</td>
+</tr>
+</tbody>
+</table>
+<p>从上表可以看到，通胀或者通缩是由<strong>货币流通量</strong>以及<strong>货币需求量</strong>共同决定的，前者会受到各国中央银行的货币发行量（俗称放水）、外币兑换量、居民储蓄率等因素影响，后者则是由当前社会的商品生产量与价值决定的。理想情况下，货币的购买力与商品的产出供给匹配，那就相安无事。如果货币超发<strong>且其余因素不变</strong>，则会突然有大量的货币流通于市面上，但商品产值又没有发生变化，那么货币本身的价值就会降低。</p>
+<p><img src="/ref_pic/各国货币的放水大战.png"></p>
+<h2 id="通胀与通缩的评估cpi">通胀与通缩的评估：CPI</h2>
+<p>评估通胀或通缩的主要指标是CPI（社会消费者物价指数，Consumer Price Index），其高低表示物价的上涨程度，也表示通货膨胀的程度。一般在<a target="_blank" rel="noopener" href="http://www.stats.gov.cn/zs/tjll/tjzs/202302/t20230224_1918473.html">国家统计局</a>等公开平台就能查到统计数据。</p>
+<table>
+<thead>
+<tr class="header">
+<th>CPI指数</th>
+<th>状态</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>&lt;2%</td>
+<td>通货紧缩</td>
+</tr>
+<tr class="even">
+<td>2%-3%</td>
+<td>正常水平</td>
+</tr>
+<tr class="odd">
+<td>3%-6%</td>
+<td>通货膨胀</td>
+</tr>
+<tr class="even">
+<td>&gt;6%</td>
+<td>严重通货膨胀</td>
+</tr>
+</tbody>
+</table>
+<h2 id="通胀与通缩的影响">通胀与通缩的影响</h2>
+<p>首先要明确的是，无论是通胀还是通缩，都是宏观经济运行的病态特征，有积极的一面，也会有对应的消极副作用，基本就是一种双刃剑。</p>
+<h3 id="通货膨胀">通货膨胀</h3>
+<p>积极：</p>
+<ul>
+<li><strong>投资行为增加</strong>。此时货币捏在手上就会贬值，而商品价值又在上涨，因而投资者更倾向于将手中的货币投入到社会生产中来避免资产贬值、实现资产增值。</li>
+<li><strong>消费需求增加</strong>。最典型的例子就是居民预测商品房会涨价时，就会把所有积蓄都拿出来进行“消费”，甚至贷款去“消费”。</li>
+<li><strong>扩大企业生产</strong>。当生产的商品价格在上涨时，企业会选择扩大生产规模以获取更大利润。</li>
+</ul>
+<p>消极：</p>
+<ul>
+<li><strong>居民资产缩水</strong>。此时货币购买力下降，居民储蓄能兑换的商品总额是在变少的，等价于资产在缩水。如果不能靠商品房等消费/投资行为实现资产增值，那最终就是资产越来越少。</li>
+<li><strong>生产结构失调</strong>。资本是逐利的，企业会一直扩大生产规模，直到商品供应过剩，此时就可能会往通货紧缩演化。</li>
+</ul>
+<h3 id="通货紧缩">通货紧缩</h3>
+<p>积极：</p>
+<ul>
+<li><strong>减少经济泡沫</strong>。通过加剧市场竞争，在企业“你死我活”的竞争中促进企业改进产品和服务质量，从而调整经济结构。</li>
+</ul>
+<p>消极：</p>
+<ul>
+<li><strong>投资行为减少</strong>。此时货币本身在升值，手持货币啥也不干所获得的收益可能还高于具有风险的投资。</li>
+<li><strong>消费水平下降</strong>。此时物价下降，消费者也预期商品价格会进一步下降，所以会持观望状，减少消费，这会进一步使得货币流通量降低，通缩加剧并进一步降低物价，形成恶性循环。</li>
+<li><strong>失业人口增加</strong>。此时整个社会的商品需求处于萎缩期，生产商、服务商就会进行裁员，这种经济衰退自然会导致大量的失业人口。</li>
+</ul>
+<h2 id="加息与降息">加息与降息</h2>
+<p>不同于通货膨胀与通货紧缩这两个经济学现象，加息与降息是各国或地区的中央银行调整利息（存款利息和贷款利息）的行为，属于一种策略、手段。不过对于普通老百姓而言，通过观察各国地区的加息与降息状况，也能一部分反推出央行的意图，进而判断经济形势（然后和人吹牛逼）。</p>
+<table>
+<thead>
+<tr class="header">
+<th>操作</th>
+<th>定义</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>加息</td>
+<td>提高存款、贷款利率</td>
+<td>抑制通货膨胀</td>
+</tr>
+<tr class="even">
+<td>降息</td>
+<td>降低存款、贷款利率</td>
+<td>刺激消费与投资</td>
+</tr>
+</tbody>
+</table>
+<p>加息是一个国家或地区的中央银行提高利息的行为，会使商业银行对中央银行的借贷成本提高，进而迫使市场的利息也进行增加（不然大家都跑去市场里面借钱了）。加息最终可以减少货币流通量、抑制消费、控制通货膨胀、鼓励存款、减缓市场投机等等。</p>
+<p>降息是与加息是逆向的操作，也是一种改变现金流动的金融方式。降息对于金融机构而言，放贷利率下降，融资的成本降低，因而就会促进投资行为。于普通个人而言，把资金存入银行的收益减少，因而会倾向于将资金从银行取出，将存款拿去投资或消费，最终结果是资金流动性增加。</p>
+<h2 id="参考资料">参考资料</h2>
+<p>《为什么全球都在加息 中国逆势降息》：https://baijiahao.baidu.com/s?id=1769289156919986192&amp;wfr=spider&amp;for=pc</p>
+<p>《“加息、降息”的含义？影响那些方面？如何应对？》：https://zhuanlan.zhihu.com/p/646788172</p>
 
     </div>
 
@@ -276,7 +349,7 @@
       <footer class="post-footer">
           
           <div class="post-tags">
-              <a href="/tags/AI%E7%BB%98%E7%94%BB/" rel="tag"><i class="fa fa-tag"></i> AI绘画</a>
+              <a href="/tags/%E5%B8%82%E5%9C%BA/" rel="tag"><i class="fa fa-tag"></i> 市场</a>
           </div>
 
         
@@ -285,13 +358,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2023/05/17/2023-0517-Hexo%E5%A2%9E%E5%8A%A0%E5%AD%97%E6%95%B0%E7%BB%9F%E8%AE%A1/" rel="prev" title="Hexo增加字数统计">
-      <i class="fa fa-chevron-left"></i> Hexo增加字数统计
+    <a href="/2023/08/03/2023-0803-%E5%9B%BE%E7%89%87%E5%8E%8B%E7%BC%A9%EF%BC%88JPEG%E4%B8%8EPNG%EF%BC%89/" rel="prev" title="图片压缩（JPEG与PNG）">
+      <i class="fa fa-chevron-left"></i> 图片压缩（JPEG与PNG）
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2023/05/18/2023-0518-StableDiffusion%E7%9A%84%E5%87%A0%E7%A7%8D%E6%A8%A1%E5%9E%8B/" rel="next" title="StableDiffusion的几种模型">
-      StableDiffusion的几种模型 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -350,7 +420,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%99%E5%9C%A8%E5%89%8D%E9%9D%A2"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#python3.10"><span class="nav-number">2.</span> <span class="nav-text">1 python3.10</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#stable-diffusion-webui"><span class="nav-number">3.</span> <span class="nav-text">2 Stable-Diffusion-WebUI</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#checkpoints"><span class="nav-number">4.</span> <span class="nav-text">3 checkpoints</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%90%E8%A1%8C%E5%B9%B6%E9%85%8D%E7%BD%AE%E4%B8%AD%E6%96%87"><span class="nav-number">5.</span> <span class="nav-text">4 运行并配置中文</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%9A%E8%83%80%E4%B8%8E%E9%80%9A%E7%BC%A9%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="nav-number">1.</span> <span class="nav-text">通胀与通缩的定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%9A%E8%83%80%E4%B8%8E%E9%80%9A%E7%BC%A9%E7%9A%84%E8%AF%84%E4%BC%B0cpi"><span class="nav-number">2.</span> <span class="nav-text">通胀与通缩的评估：CPI</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%9A%E8%83%80%E4%B8%8E%E9%80%9A%E7%BC%A9%E7%9A%84%E5%BD%B1%E5%93%8D"><span class="nav-number">3.</span> <span class="nav-text">通胀与通缩的影响</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%9A%E8%B4%A7%E8%86%A8%E8%83%80"><span class="nav-number">3.1.</span> <span class="nav-text">通货膨胀</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%9A%E8%B4%A7%E7%B4%A7%E7%BC%A9"><span class="nav-number">3.2.</span> <span class="nav-text">通货紧缩</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%A0%E6%81%AF%E4%B8%8E%E9%99%8D%E6%81%AF"><span class="nav-number">4.</span> <span class="nav-text">加息与降息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="nav-number">5.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
