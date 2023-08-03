@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="fonts.lug.ustc.edu.cn/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"zhb-daydream.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="估值准则 估值不是算出来的，而是由企业和投资机构双方进行询价协商的结果，一般是企业方根据相对估值法报价，投资机构再根据调查情况进行砍价，最后得到一个双方都能接收的结果。 从企业方的角度，倾向于将估值做高，可以融到更多的钱；从投资人的角度，倾向于将估值压低，可以用更少的钱获得更大的股份比例。因而两者诉求相悖，最终的估值也存在博弈。一个合理的评判标准是：基于该估值，投资人是否能获得合理的投资回报。 对">
+<meta property="og:type" content="article">
+<meta property="og:title" content="上市公司估值">
+<meta property="og:url" content="https://zhb-daydream.github.io/2023/08/03/2023-0803-%E4%B8%8A%E5%B8%82%E5%85%AC%E5%8F%B8%E4%BC%B0%E5%80%BC/index.html">
+<meta property="og:site_name" content="zhb木木三的个人网页">
+<meta property="og:description" content="估值准则 估值不是算出来的，而是由企业和投资机构双方进行询价协商的结果，一般是企业方根据相对估值法报价，投资机构再根据调查情况进行砍价，最后得到一个双方都能接收的结果。 从企业方的角度，倾向于将估值做高，可以融到更多的钱；从投资人的角度，倾向于将估值压低，可以用更少的钱获得更大的股份比例。因而两者诉求相悖，最终的估值也存在博弈。一个合理的评判标准是：基于该估值，投资人是否能获得合理的投资回报。 对">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-08-02T19:00:00.000Z">
+<meta property="article:modified_time" content="2023-08-03T03:24:59.298Z">
+<meta property="article:author" content="zhb">
+<meta property="article:tag" content="市场">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://zhb-daydream.github.io/2023/08/03/2023-0803-%E4%B8%8A%E5%B8%82%E5%85%AC%E5%8F%B8%E4%BC%B0%E5%80%BC/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>上市公司估值 | zhb木木三的个人网页</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">zhb木木三的个人网页</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">个人博客的新尝试（页面渲染需要时间，请耐心等待）</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/08/03/2023-0803-%E4%B8%8A%E5%B8%82%E5%85%AC%E5%8F%B8%E4%BC%B0%E5%80%BC/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="zhb">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="zhb木木三的个人网页">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          上市公司估值
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2023-08-03 03:00:00 / 修改时间：11:24:59" itemprop="dateCreated datePublished" datetime="2023-08-03T03:00:00+08:00">2023-08-03</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%90%9E%E7%82%B9%E8%AF%BE%E5%A4%96%E7%9F%A5%E8%AF%86/" itemprop="url" rel="index"><span itemprop="name">搞点课外知识</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.7k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>6 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="估值准则">估值准则</h2>
+<p>估值<strong>不是算出来</strong>的，而是由企业和投资机构双方进行询价协商的结果，一般是企业方根据相对估值法报价，投资机构再根据调查情况进行砍价，最后得到一个双方都能接收的结果。</p>
+<p>从企业方的角度，倾向于将估值做高，可以融到更多的钱；从投资人的角度，倾向于将估值压低，可以用更少的钱获得更大的股份比例。因而两者诉求相悖，最终的估值也存在博弈。一个合理的评判标准是：<strong>基于该估值，投资人是否能获得合理的投资回报</strong>。</p>
+<p>对于投资人而言，通过股权投资赚百倍、千倍的利润是不切实际的，投资回报率不是越高越好，因为高回报率伴随着高风险，反之亦然。只要能达到一定的回报率，且投资过程的风险控制在合理区间，那投资目标就是完成了。因而，<strong>合理的投资回报</strong>主要有两点考量：</p>
+<ul>
+<li><strong>投资回报率</strong>：投资回报与投资金额的比例。一般而言，银行的1年储蓄利率为1.8%，信托投资收益率为9%，如果风险更大的股权投资回报率还低于其他稳健的投资方式，那就完全失去了投资的意义。</li>
+<li><strong>收益风险比</strong>：潜在盈利与潜在亏损的比例。例如，投资四次，有三次亏损，有一次赚100%，那么收益风险比就是3:1，对应的总收益率就是0。常用的计算指标/计算方法是夏普比率/指数。</li>
+</ul>
+<h2 id="估值倍率市盈率">估值倍率/市盈率</h2>
+<p>要再次强调的是，估值行为是投资方与被投资方的协商博弈过程，并没有最优算法，计算的结果也只是一个心理价位。</p>
+<p>企业估值的最简单的方法就是直接对目前企业的净利润进行倍率放大，这个放大倍率也称<strong>市盈率</strong>（PE，Price Earning ratio），可以用来对上市前的企业进行估值，也可以用来评估上市企业的股票是否值得投资。市盈率主要有以下两种计算方式，对于第二种方式中的<strong>每股收益</strong>（EPS，Earning Per Share），一般是根据市场内同类企业来估计的值。</p>
+<ol type="1">
+<li>市盈率PE = 总市值 ÷ 税后净利润（不考虑股票数量）</li>
+<li>市盈率PE = 股价 ÷ 每股收益（考虑股票数量）</li>
+</ol>
+<h2 id="常见估值倍率">常见估值倍率</h2>
+<p>对于成长股，一般以<strong>20-30倍PE</strong>（即当年的税后净利润的20-30倍）估计市值，该倍率也是有一定依据的，例如下表，2019年的市值都是2018年利润的20倍以上，这大致表明了该公司的发展速度。</p>
+<table>
+<thead>
+<tr class="header">
+<th>公司</th>
+<th>2018年利润/亿</th>
+<th>2019年市值/亿</th>
+<th>倍率</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>海天味业</td>
+<td>43.65</td>
+<td>2787</td>
+<td>63.8</td>
+</tr>
+<tr class="even">
+<td>片仔癀</td>
+<td>11.43</td>
+<td>596</td>
+<td>52.1</td>
+</tr>
+<tr class="odd">
+<td>涪陵榨菜</td>
+<td>6.62</td>
+<td>175</td>
+<td>26.4</td>
+</tr>
+<tr class="even">
+<td>海康威视</td>
+<td>114</td>
+<td>2805</td>
+<td>24.6</td>
+</tr>
+<tr class="odd">
+<td>贵州茅台</td>
+<td>352</td>
+<td>13200</td>
+<td>37.5</td>
+</tr>
+</tbody>
+</table>
+<p>但麦哲伦基金的“传奇”基金经理彼得·林奇也说过，“任何超过40倍市盈率的股票，都有很大风险，无论它有多高的成长性”。以巴菲特以下的几个投资经历大致可以看出，他对于前景一般的企业，投资的市盈率不超过5倍，而对于高品质的优质股，市盈率则不超过15倍。尽管如今时代不同，但过高的市盈率（如30倍以上）仍可能意味着价值的高估，往往会导致投资亏损。</p>
+<table>
+<thead>
+<tr class="header">
+<th>年份-公司</th>
+<th>买入-当年净利润（万美元）</th>
+<th>市盈率</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1967-国民保险公司</td>
+<td>860-160</td>
+<td>5.4</td>
+</tr>
+<tr class="even">
+<td>1972-喜诗糖果</td>
+<td>2500-210</td>
+<td>11.9</td>
+</tr>
+<tr class="odd">
+<td>1973-华盛顿邮报</td>
+<td></td>
+<td>10.9</td>
+</tr>
+<tr class="even">
+<td>1983-内布拉斯加家具卖场（80%股权）</td>
+<td>5500-810</td>
+<td>8.5</td>
+</tr>
+<tr class="odd">
+<td>1985-大都会广播</td>
+<td></td>
+<td>14.4</td>
+</tr>
+</tbody>
+</table>
+<h2 id="参考资料">参考资料</h2>
+<p>《PE、VC 及天使投资人是如何对所投资的互联网公司估值的？》：https://www.zhihu.com/question/33922440/answer/2623633453?utm_id=0</p>
+<p>《市盈率超过20倍，应该算是投机！》：https://zhuanlan.zhihu.com/p/112995662</p>
+<p>《估值=拍脑袋？从13家IPO公司估值数据看每一轮投资估值应该涨多少倍》：https://zhuanlan.zhihu.com/p/104682427</p>
+<p>《对于“成长股”，30倍PE的估值意味着什么？》：http://www.360doc.com/content/19/1204/19/905523_877432679.shtml</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/%E5%B8%82%E5%9C%BA/" rel="tag"><i class="fa fa-tag"></i> 市场</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2023/08/02/2023-0802-%E4%B8%8A%E5%B8%82IPO%E6%B5%81%E7%A8%8B/" rel="prev" title="上市IPO流程">
+      <i class="fa fa-chevron-left"></i> 上市IPO流程
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2023/08/03/2023-0803-%E5%9B%BE%E7%89%87%E5%8E%8B%E7%BC%A9%EF%BC%88JPEG%E4%B8%8EPNG%EF%BC%89/" rel="next" title="图片压缩（JPEG与PNG）">
+      图片压缩（JPEG与PNG） <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BC%B0%E5%80%BC%E5%87%86%E5%88%99"><span class="nav-number">1.</span> <span class="nav-text">估值准则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BC%B0%E5%80%BC%E5%80%8D%E7%8E%87%E5%B8%82%E7%9B%88%E7%8E%87"><span class="nav-number">2.</span> <span class="nav-text">估值倍率&#x2F;市盈率</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E4%BC%B0%E5%80%BC%E5%80%8D%E7%8E%87"><span class="nav-number">3.</span> <span class="nav-text">常见估值倍率</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="nav-number">4.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">zhb</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">99</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">15</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">zhb</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">128k</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'forest',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+          load: ['[tex]/mhchem'],
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+          packages: {'[+]': ['mhchem']},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+</body>
+</html>
