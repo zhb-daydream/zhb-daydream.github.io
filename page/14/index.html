@@ -72,6 +72,8 @@
   </style>
 </noscript>
 
+
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
 <style>mjx-container[jax="SVG"] {
   direction: ltr;
 }
@@ -184,9 +186,7 @@ mjx-container[display="true"] {
 mjx-container[display="true"] + br {
   display: none;
 }
-</style>
-<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-</head>
+</style></head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
   <div class="container use-motion">
@@ -266,6 +266,101 @@ mjx-container[display="true"] + br {
 
           <div class="content index posts-expand">
             
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/05/17/2023-0517-Hexo%E5%A2%9E%E5%8A%A0%E5%AD%97%E6%95%B0%E7%BB%9F%E8%AE%A1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="zhb">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="zhb木木三的个人网页">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/05/17/2023-0517-Hexo%E5%A2%9E%E5%8A%A0%E5%AD%97%E6%95%B0%E7%BB%9F%E8%AE%A1/" class="post-title-link" itemprop="url">Hexo增加字数统计</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-05-17 13:29:00" itemprop="dateCreated datePublished" datetime="2023-05-17T13:29:00+08:00">2023-05-17</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-06-09 11:34:42" itemprop="dateModified" datetime="2023-06-09T11:34:42+08:00">2023-06-09</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" itemprop="url" rel="index"><span itemprop="name">博客搭建</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>342</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>自 NexT 6.0 发行版之后第三方插件 <strong>hexo-wordcount</strong> 就被 <strong>symbols_count_time</strong> 取缔了，相比之下 <strong>symbols_count_time</strong> 没有额外的依赖，性能更加强大，而 NexT 主题的配置文件 <code>_config.yml</code> 中也默认使用了该插件进行字数统计。更具体的使用说明可参考<a target="_blank" rel="noopener" href="https://github.com/theme-next/hexo-symbols-count-time">官方文档</a>。</p>
+<p>（1）安装如下</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-symbols-count-time --save</span><br></pre></td></tr></tbody></table></figure>
+<p>（2）在 Hexo 根目录下的 _config.yml 文件中，新增以下的配置项：</p>
+<figure class="highlight yaml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">symbols_count_time:</span></span><br><span class="line">  <span class="attr">symbols:</span> <span class="literal">true</span> <span class="comment"># 文章字数统计</span></span><br><span class="line">  <span class="attr">time:</span> <span class="literal">true</span> <span class="comment"># 文章阅读时间统计</span></span><br><span class="line">  <span class="attr">total_symbols:</span> <span class="literal">false</span> <span class="comment"># 站点总字数统计</span></span><br><span class="line">  <span class="attr">total_time:</span> <span class="literal">false</span> <span class="comment"># 站点总阅读时间统计</span></span><br><span class="line">  <span class="attr">exclude_codeblock:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">awl:</span> <span class="number">4</span> <span class="comment"># 平均字长</span></span><br><span class="line">  <span class="attr">wpm:</span> <span class="number">275</span> <span class="comment"># 每分钟阅读字数</span></span><br></pre></td></tr></tbody></table></figure>
+<p>（3）在对应主题配置文件的 _config.yml 文件中，新增/修改以下的配置项：</p>
+<figure class="highlight yaml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">symbols_count_time:</span></span><br><span class="line">  <span class="attr">separated_meta:</span> <span class="literal">true</span> <span class="comment"># 是否另起一行（true的话不和发表时间等同一行）</span></span><br><span class="line">  <span class="attr">item_text_post:</span> <span class="literal">true</span> <span class="comment"># 首页文章统计数量前是否显示文字描述（本文字数、阅读时长）</span></span><br><span class="line">  <span class="attr">item_text_total:</span> <span class="literal">false</span> <span class="comment"># 页面底部统计数量前是否显示文字描述（站点总字数、站点阅读时长）</span></span><br></pre></td></tr></tbody></table></figure>
+<p>要注意的是，阅读时间是根据配置文件中的 wpm（word per minute）估计的，而总字数是根据 awl（a word length）计算的，故都不一定准确。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
       
   
   
@@ -841,113 +936,10 @@ mjx-container[display="true"] + br {
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/05/04/2023-0504-%E6%9F%A5%E6%89%BEpython%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="zhb">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="zhb木木三的个人网页">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/05/04/2023-0504-%E6%9F%A5%E6%89%BEpython%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93/" class="post-title-link" itemprop="url">查找python第三方库</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-05-04 14:05:00" itemprop="dateCreated datePublished" datetime="2023-05-04T14:05:00+08:00">2023-05-04</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-06-09 11:34:42" itemprop="dateModified" datetime="2023-06-09T11:34:42+08:00">2023-06-09</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>1.4k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>5 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="查找-python-第三方库">查找 python 第三方库</h1>
-<p>Python 的一大特性在于有大量的用户群基数以及庞大的社区，也有很多善心大发的大佬免费将对应的代码整理为完善的第三方库以供使用，因而使用 python 时的一个重要特性就是 <strong>不要重复造轮子</strong>，有现成的函数库就用现成的，若是真的不好用、有定制需求才开始自己写（当然，如果你是大佬能随便手撕代码的话那也无所谓了）。</p>
-<p>磁共振领域里，有挺多的第三方库，比如 <a target="_blank" rel="noopener" href="https://mrirecon.github.io/bart/">Bart</a>（UCB 开发的 MRI 重建库，包含了 SMS、pMRI 等一堆前沿重建方法，缺点是暂时只能在 Linux 下运行）、<a target="_blank" rel="noopener" href="https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/">FSL</a>（英国牛津大学开发的专门用于 fMRI 的库，包含了图像配准的一些预处理方法，缺点也是只能在 Linux 下运行）等等。<del>更多的我也列举不出来了，不然我也不会想去搜其他第三方库，也就不会有这篇博文了。</del></p>
-<p>虽然网络里都是宝，但也要学会如何去找 python 的第三方库，除了直接问师兄师姐这种吃人嘴短的（呜呜，有人带、有现成的代码库还是很羡慕的好吧）方法以外，大概有这么以下三种途径：</p>
-<h2 id="搜索引擎">1 搜索引擎</h2>
-<p>在百度、必应、谷歌上去搜信息是最直接也最简单的方法，核心就是要有正确的关键词。首先要明确自己的需求，打算用 Python 来干什么，力求简短明了，比如需要使用 NUFFT 的操作，则搜索以下关键词（用空格连接），一般情况下就会出现很多博客或知乎回答推荐的第三方库，再看看是否适合自己，进而再去搜索该库所对应的主页（一般大佬都会专门弄个域名和在线文档以供教学）。</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Python nufft 第三方库</span><br></pre></td></tr></tbody></table></figure>
-<p>但这种方法有时候很难精准搜索，而且很多冷门库没什么内容，搜索引擎自然无法抓取到你想要的库。</p>
-<h2 id="pypi">2 PyPi</h2>
-<p><a target="_blank" rel="noopener" href="https://pypi.org/">PyPi</a> 是 Python 的包索引平台，全称 Python Package Index，所有的第三方库都在里面，估计有上万个。在主页处就有搜索功能，可以搜索你想要的库，也可以通过功能区索引查询相关的库。</p>
-<p><img src="/ref_pic/Pypi界面.png"></p>
-<p>点击 browse projects 会进入检索页面，里面有 topic 检索，也就是根据库的主题来查找（比如，想查找关于金融方面的 Python 第三方库时，可以先找到 Financial，然后点击，就会出现所有金融相关的库，同时也可以进行组合搜索，比如金融+会计）。选好一个库后，点进去会看到该库的详细介绍和简单的教程。</p>
-<p>总的来说，PyPi 是查询 Python 第三方库最好的平台，因为最全、最新、最详细，但缺点就是同一类目库太多了，新手很难去甄别哪个更适合用。</p>
-<h2 id="github">3 Github</h2>
-<p>万能的 <a target="_blank" rel="noopener" href="https://github.com/">Github</a> 是全球最大的代码托管网站，里面聚集了全球的码农和最优秀的代码项目，很多 Python 库的代码都托管在 Github 里，比如 pandas、matplotlib、tensorflow 等，同时 Github 里也有很多Python爱好者开发的资源项目，包括很多库的应用以及整合。</p>
-<p>比如有个项目叫 awesome-python，就分门别类整理了几百个热门库及其简介，涉及Web 框架、网络爬虫、网络内容提取、模板引擎、数据库、数据可视化、图片处理、文本处理、自然语言处理、机器学习、日志、代码分析等十几个场景。还有个有趣的项目是 HelloGithub，作者每周一期收集了 Github 上各种有趣的项目，其中就包括Python的各种库。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/13/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><span class="page-number current">14</span><a class="page-number" href="/page/15/">15</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><a class="extend next" rel="next" href="/page/15/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/13/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><span class="page-number current">14</span><a class="page-number" href="/page/15/">15</a><span class="space">&hellip;</span><a class="page-number" href="/page/18/">18</a><a class="extend next" rel="next" href="/page/15/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -1013,7 +1005,7 @@ mjx-container[display="true"] + br {
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">102</span>
+          <span class="site-state-item-count">103</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1062,7 +1054,7 @@ mjx-container[display="true"] + br {
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">133k</span>
+    <span title="站点总字数">134k</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
   </div>

@@ -158,6 +158,107 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/08/05/2023-0805-LaTeX%E6%9C%AC%E5%9C%B0%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="zhb">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="zhb木木三的个人网页">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/08/05/2023-0805-LaTeX%E6%9C%AC%E5%9C%B0%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95/" class="post-title-link" itemprop="url">LaTeX本地安装方法</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2023-08-05 02:00:00 / 修改时间：02:54:03" itemprop="dateCreated datePublished" datetime="2023-08-05T02:00:00+08:00">2023-08-05</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%AD%A6%E6%9C%AF%E6%A8%A1%E5%9D%97/" itemprop="url" rel="index"><span itemprop="name">学术模块</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.1k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>4 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>LaTeX的官网是https://www.latex-project.org/，在另一篇博客《LaTeX与TeX的关系》也提到，LaTeX是使用TeX排版引擎生成PDF文件的一种语言，所以要使用LaTeX，就要有两个环境：（1）含有TeX引擎的TeX发行版，（2）一个LaTeX文本编辑器。</p>
+<p>目前LaTeX可以在Linux、MacOS、Windows操作系统下部署并运行，也可以通过<a target="_blank" rel="noopener" href="https://www.overleaf.com/">Overleaf</a>、<a target="_blank" rel="noopener" href="https://papeeria.com/">Papeeria</a>、<a target="_blank" rel="noopener" href="https://latexbase.com/">LaTeX base</a>等在平台使用。对于在线使用而言，只需要一个浏览器进行在线的文本编辑就可以编译所需的PDF文件并下载，不需要额外安装TeX引擎并进行配置。但缺点也很明显，如果断网、网络不好，那用起来就很抓狂，所以这里我就只列LaTeX的本地（Windows）配置。</p>
+<h2 id="安装tex排版引擎">安装TeX排版引擎</h2>
+<p>对于Windows用户而言，可以无脑选择<a target="_blank" rel="noopener" href="https://www.tug.org/texlive/">TeXLive</a>，可以直接点开该TeXLive的官网链接，也可以在<a target="_blank" rel="noopener" href="https://www.latex-project.org">LaTeX官网</a>中进行跳转。</p>
+<p><img src="/ref_pic/LaTeX本地安装-1.png"></p>
+<p>下载并解压文件后，点击运行程序（一般是<code>instal-tl-windows.bat</code>），然后会在线下载、安装3G左右的内容，基本就是全自动完成的。</p>
+<h2 id="latex编辑器-vscode">LaTeX编辑器-VSCode</h2>
+<p>LaTeX的编辑器我就只推荐<a target="_blank" rel="noopener" href="https://code.visualstudio.com/">VSCode</a>了，颜值又高，功能又多（平常也是用这个IDE写python的），此外还有个<a target="_blank" rel="noopener" href="https://texstudio.sourceforge.net/">TeXStudio</a>，好像UI界面不太好看，而且我没用过。</p>
+<p>VSCode（Visual Studio Code）的安装基本就是去官网下载安装包，然后一键安装。然后就是安装LaTeX的扩展插件，按如下图所示，只需要安装一个<code>LaTeX Workshop</code>的插件就能用了。</p>
+<p><img src="/ref_pic/LaTeX本地安装-2.png"></p>
+<h2 id="使用方法">使用方法</h2>
+<p>打开一个.tex主文件（比如这里使用的是IEEE Access提供的模板文件），通过侧边菜单栏进行LaTeX文件的编译，即可在左下角看到<code>Build</code>。此外也可以直接使用保存的快捷键ctrl+s就能进行编译。</p>
+<p><img src="/ref_pic/LaTeX本地安装-3.png"></p>
+<p>编译后，在.tex文件的同目录下就会出现编译好的PDF文件，可以直接在VSCode里面预览，点击右上角的预览按钮（也可以用侧边栏里面的<code>View LaTeX PDF</code>选项）。</p>
+<p><img src="/ref_pic/LaTeX本地安装-4.png"></p>
+<p>然后就能愉快地边编辑、边预览编译结果了。</p>
+<p><img src="/ref_pic/LaTeX本地安装-5.png"></p>
+<h2 id="参考资料">参考资料</h2>
+<p>《Latex安装与使用》：https://blog.csdn.net/u014297502/article/details/126411943</p>
+<p>《vscode中配置latex》：https://blog.csdn.net/Ruins_LEE/article/details/123555016</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/08/04/2023-0804-LaTeX%E4%B8%8EMarkdown/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -899,212 +1000,10 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/08/02/2023-0802-%E4%B8%8A%E5%B8%82IPO%E6%B5%81%E7%A8%8B/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="zhb">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="zhb木木三的个人网页">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/08/02/2023-0802-%E4%B8%8A%E5%B8%82IPO%E6%B5%81%E7%A8%8B/" class="post-title-link" itemprop="url">上市IPO流程</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-08-02 22:30:00" itemprop="dateCreated datePublished" datetime="2023-08-02T22:30:00+08:00">2023-08-02</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-08-03 02:40:28" itemprop="dateModified" datetime="2023-08-03T02:40:28+08:00">2023-08-03</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%90%9E%E7%82%B9%E8%AF%BE%E5%A4%96%E7%9F%A5%E8%AF%86/" itemprop="url" rel="index"><span itemprop="name">搞点课外知识</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>1.3k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>4 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="融资轮次">融资轮次</h2>
-<p>一般而言，一个企业的生命周期会经历：萌芽——诞生——发展——繁荣——衰退，五个阶段。其中，在从萌芽到繁荣阶段，一般是一个螺旋式上升的过程，也对应着不同的投资阶段/轮次。对于一部分企业而言，需要通过融资来获得额外资金进行发展，而一般讲的<strong>IPO</strong>、<strong>上市</strong>，就是指融资的最终阶段。融资轮次一般分为6个阶段：种子轮——天使轮——风险轮（A/B/C轮）——私募——公募——退市。</p>
-<table>
-<thead>
-<tr class="header">
-<th>融资轮次</th>
-<th>投资量级</th>
-<th>投资人/投资机构</th>
-<th>公司阶段</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>种子融资</td>
-<td>10万-100万</td>
-<td>创业者、朋友、种子投资人/机构</td>
-<td>只有<strong>想法/概念</strong></td>
-</tr>
-<tr class="even">
-<td>天使投资</td>
-<td>100万-1000万</td>
-<td>天使投资人/机构</td>
-<td>有了初步的<strong>商业模式</strong></td>
-</tr>
-<tr class="odd">
-<td>A轮风险投资</td>
-<td>1000万-1亿</td>
-<td>风险投资机构（VC）</td>
-<td>有了成熟的<strong>产品</strong></td>
-</tr>
-<tr class="even">
-<td>B轮风险投资</td>
-<td>2亿</td>
-<td>VC、私募股权投资机构（PE）</td>
-<td>开始<strong>盈利</strong></td>
-</tr>
-<tr class="odd">
-<td>C轮风险投资</td>
-<td>&gt;10亿</td>
-<td>VC、PE</td>
-<td><strong>收入</strong>稳定，行业第一梯队</td>
-</tr>
-<tr class="even">
-<td>D/E/F轮</td>
-<td></td>
-<td></td>
-<td>稳定<strong>盈利</strong>，需要并购重组等</td>
-</tr>
-<tr class="odd">
-<td>IPO</td>
-<td>数十倍-数百倍</td>
-<td>二级市场的股民</td>
-<td>满足连续三年盈利等<strong>指标</strong></td>
-</tr>
-<tr class="even">
-<td>ST/退市</td>
-<td></td>
-<td></td>
-<td>连续亏损，证监会判定不行</td>
-</tr>
-</tbody>
-</table>
-<h2 id="代表性投资人机构">代表性投资人/机构</h2>
-<table>
-<thead>
-<tr class="header">
-<th>融资轮次</th>
-<th>投资量级</th>
-<th>投资人</th>
-<th>投资机构</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>种子融资</td>
-<td>10万-100万</td>
-<td>亲朋好友</td>
-<td>创客平台、自然科学基金</td>
-</tr>
-<tr class="even">
-<td>天使投资</td>
-<td>100万-1000万</td>
-<td>徐小平、薛蛮子、李开复</td>
-<td>天使湾、创新工场</td>
-</tr>
-<tr class="odd">
-<td>A轮风险投资</td>
-<td>1000万-1亿</td>
-<td></td>
-<td>IDG、红杉中国</td>
-</tr>
-<tr class="even">
-<td>B轮</td>
-<td>2亿</td>
-<td></td>
-<td>BAT</td>
-</tr>
-<tr class="odd">
-<td>C轮</td>
-<td>&gt;10亿</td>
-<td></td>
-<td>腾讯、阿里</td>
-</tr>
-</tbody>
-</table>
-<h2 id="名词解释">名词解释</h2>
-<ul>
-<li>风投（VC）：Venture Capital，风险投资、创业投资。指投资人或投资机构向初创企业进行股权投资的行为，主要是针对成长性的中小企业，尤其是科级型中小企业。</li>
-<li>私募（PE）：Private Equity Fund，私募股权基金。指从事私人股权（非上市公司股权）投资的基金，主要包括<strong>投资非上市公司股权</strong>或<strong>上市公司非公开交易股权</strong>两种。追求的不是股权收益，而是通过上市、管理层收购和并购等股权转让路径出售股权而获利。</li>
-<li>公募（IPO）：Initial Public Offering，首次公开募股，俗称的<strong>上市</strong>。指一家企业第一次将它的股份<strong>向公众出售</strong>，需要相应证监会出具招股书，并审批允许到证券交易所或报价系统上进行挂牌交易。如果项目熬到了IPO，投资人基本上就可以套现（数十倍甚至数百倍利润）退出了，套现的数量、退出方式由融资协议规定。</li>
-<li>退市风险（ST）：Special Treatment，特别处理/退市风险警示。指证券交易所对于财务状况（如连续三年亏损）或其他状况出现异常的上市公司的股票交易进行特别处理。如果企业可以通过变卖资产、资产重组、借壳上市等方式扭亏为盈，则可以取消ST标识，否则就要退市。</li>
-</ul>
-<h2 id="参考资料">参考资料</h2>
-<p>《投资分哪几轮，什么天使，种子等等有什么区别，谁前谁后？？》：https://www.zhihu.com/question/22408740/answer/2983926874?utm_id=0</p>
-<p>《股权融资：种子轮、天使轮、ABC轮融资有哪些区别？》：https://zhuanlan.zhihu.com/p/496619356?utm_id=0</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/18/">18</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -1170,7 +1069,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">102</span>
+          <span class="site-state-item-count">103</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1219,7 +1118,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">133k</span>
+    <span title="站点总字数">134k</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
   </div>
