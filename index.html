@@ -158,6 +158,270 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/08/04/2023-0804-LaTeX%E4%B8%8EMarkdown/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="zhb">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="zhb木木三的个人网页">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/08/04/2023-0804-LaTeX%E4%B8%8EMarkdown/" class="post-title-link" itemprop="url">LaTeX与Markdown</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2023-08-04 11:30:00 / 修改时间：11:30:38" itemprop="dateCreated datePublished" datetime="2023-08-04T11:30:00+08:00">2023-08-04</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%AD%A6%E6%9C%AF%E6%A8%A1%E5%9D%97/" itemprop="url" rel="index"><span itemprop="name">学术模块</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>898</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>3 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Markdown和LaTeX是两种完全不同的<strong>标记语言</strong>，每一种都有其特定的用途和优势，前者相当于是轻量化版本的word，后者是用于生成规范化PDF文件的排版语言。</p>
+<h2 id="markdown">Markdown</h2>
+<p><img src="/ref_pic/MarkdownLogo.png"></p>
+<p><a target="_blank" rel="noopener" href="https://www.markdownguide.org/">Markdown</a>是一种轻量级的标记语言，主要用于创建格式化的文本。</p>
+<ul>
+<li>它被设计为易读且易写，以便尽可能无障碍地进行文字表达</li>
+<li>有极简的语法，以纯文本方式书写，可以快速转化为HTML格式</li>
+<li>可以用来创建列表、链接、图片、代码块、标题、强调文本等</li>
+<li>大多数情况下在网络上编写和共享文档时使用，例如GitHub的README、博客和论坛上的说明文档</li>
+</ul>
+<h2 id="latex">LaTeX</h2>
+<p><img src="/ref_pic/LaTeXLogo.png"></p>
+<p><a target="_blank" rel="noopener" href="https://www.latex-project.org/">LaTeX</a>是一种基于TeX的排版系统，被广泛用于科学、数学和技术文档的制作。</p>
+<ul>
+<li>提供了对复杂表格和数学公式的高级处理能力，以及对参考文献和索引的自动处理等功能</li>
+<li>语法更复杂，也有着更强的功能和灵活性</li>
+</ul>
+<h2 id="两者的主要差异">两者的主要差异</h2>
+<table>
+<thead>
+<tr class="header">
+<th>特性</th>
+<th>Markdown</th>
+<th>LaTeX</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>易用性</strong></td>
+<td>语法相对<strong>简单</strong>，适合于编写简单的文档和笔记</td>
+<td>提供了许多用于创建复杂文档的工具和选项，但需要更多的学习和理解</td>
+</tr>
+<tr class="even">
+<td><strong>灵活性</strong></td>
+<td>主要关注内容本身，而不是样式</td>
+<td>提供了对文档样式的深度控制，包括页眉、页脚、边距、脚注、参考文献等</td>
+</tr>
+<tr class="odd">
+<td><strong>公式表格处理</strong></td>
+<td>数学公式处理能力较弱，适合简单的表格</td>
+<td>处理复杂数学公式和表格的<strong>最佳选择</strong>，其公式排版优美，符合学术要求</td>
+</tr>
+<tr class="even">
+<td><strong>用途</strong></td>
+<td>更常用于编写网页、博客文章、演示文稿等</td>
+<td>用于创建专业级别的科学和数学文档，如学术论文、技术报告、书籍等</td>
+</tr>
+<tr class="odd">
+<td><strong>输出格式</strong></td>
+<td>主要用于生成 HTML，但也可以通过一些工具转换为其他格式</td>
+<td>可以输出到多种格式，如 PDF、HTML、RTF 等</td>
+</tr>
+</tbody>
+</table>
+<p>总的来说，Markdown和LaTeX两者各有所长，选择使用哪一种主要取决于个人需求。如果需要编写一个简单的文档，那么Markdown 可能是一个更好的选择。如果需要创建一个包含复杂表格和数学公式的专业级别的文档，那么LaTeX可能是一个更好的选择。</p>
+<h2 id="参考资料">参考资料</h2>
+<p>《Markdown 语法技巧点，以及和 LateX 的区别》：https://zhuanlan.zhihu.com/p/637627317</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/08/04/2023-0804-LaTeX%E4%B8%8ETeX%E7%9A%84%E5%85%B3%E7%B3%BB/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="zhb">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="zhb木木三的个人网页">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/08/04/2023-0804-LaTeX%E4%B8%8ETeX%E7%9A%84%E5%85%B3%E7%B3%BB/" class="post-title-link" itemprop="url">LaTeX与TeX的关系</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2023-08-04 11:15:00 / 修改时间：11:15:34" itemprop="dateCreated datePublished" datetime="2023-08-04T11:15:00+08:00">2023-08-04</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%AD%A6%E6%9C%AF%E6%A8%A1%E5%9D%97/" itemprop="url" rel="index"><span itemprop="name">学术模块</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.9k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>6 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>平常写论文有时候会接触到LaTeX和TeX两个概念，除此之外还会有pdfLaTeX、XeLaTeX、CTeX等等，这些名词之间大概是什么关系呢？</p>
+<h2 id="tex排版引擎">TeX排版引擎</h2>
+<p>TeX是一种<strong>宏语言</strong>，同时也是一种<strong>排版引擎</strong>，最初开发的时候就是为了能更方便地对文本进行排版，生成类似于PDF那样的规范化文件。TeX系统只有300多个元命令（primitive），十分短小精悍，但也很晦涩难读，一个简单的符号可能就需要多个命令来实现。</p>
+<h3 id="排版引擎">排版引擎</h3>
+<p>这里提及的排版引擎是底层的程序，其作用就是将输入语法进行解释，并把字排成行，把行排成页，涉及到断字、断行、分页等算法。最原始的排版引擎是TeX，此外还有其他排版引擎：</p>
+<ul>
+<li>TeX：1978年由Donald Erwin Knuth开发，是后来大部分TeX相关的基础。它生成dvi文件，然后经由其他程序转换为pdf文件。</li>
+<li>pdfTeX：TeX语言的一个实现，将TeX代码直接编译成PDF文件。</li>
+<li>XeTeX：TeX语言的一个实现，支持Unicode编码和直接访问操作系统字体。</li>
+<li>LuaTeX：TeX语言的一个完整的有扩展的实现。LuaTeX支持Unicode、系统字体和内嵌语言扩展，能直接输出PDF格式文件，也可以仍然输出 DVI 格式。</li>
+</ul>
+<h3 id="发行版">发行版</h3>
+<p>一个完整的TeX需要最基本的TeX引擎、格式支持、各种辅助宏语言包、一些转换程序、GUI、编辑器、文档查看器等等，将所有的程序、文件进行相应的组合，就形成了不同的<strong>发行版</strong>（一般都是用TeX Live）：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.tug.org/texlive/">TeX Live</a><span class="github-emoji"><span>⭐</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>：支持Linux，Windows，Mac OS</li>
+<li><a target="_blank" rel="noopener" href="https://tug.org/mactex/">MacTeX</a>：只支持Mac</li>
+<li><a target="_blank" rel="noopener" href="https://ctex.org/">CTeX</a>：只支持Windows，加入了中文的支持，可以很好地支持中文的宏包</li>
+</ul>
+<h2 id="latex格式">LaTeX格式</h2>
+<h3 id="格式">格式</h3>
+<p>因为TeX本身很难用，所以后续就有LaTeX等其他基于TeX的语言，通过将最基本的TeX命令封装为各个更简便的宏命令，这些简写的合集就称为<strong>格式</strong>。LaTeX本身属于宏语言，也是一种格式。与TeX排版引擎一样，除了LaTeX以外，还有其他的格式（可以基于不同的排版引擎）：</p>
+<ul>
+<li>LaTeX：更易于使用的宏集，最常见的一种格式。</li>
+<li>Plain TeX：由Don Knuth提供的最小的宏集合。</li>
+<li>ConTeXt：另一种常见的格式。</li>
+</ul>
+<h3 id="宏包">宏包</h3>
+<p>使用LaTeX的时候，还会有一些辅助文件来定义格式，这些辅助文件即为<strong>宏包</strong>（在LaTeX中叫做packages，在ConTeXt中叫做modules）。在LaTeX格式中，导言区的<code>\usepackage</code>的作用就是引入各种宏包。宏包其实也是一堆基本的TeX命令的集合，只是其不够全，所以称之为宏包而不是格式。</p>
+<h3 id="相关文件">相关文件</h3>
+<p>LaTeX的最终目的是将文本按照特定的格式编译为PDF文件，同时为了简便使用，会把待编译的文本与排版格式分离开，因此就会有一个专门写文本的tex主文件，以及一系列定义排版格式的bib、sty等文件。</p>
+<ul>
+<li><p>.tex文件：写文档内容的主文件，其余的辅助文件均在这里声明</p></li>
+<li><p>.bib文件：写参考文献的文档，使用<code>\bibligraphy</code>方式导入参考文献时会用到</p></li>
+<li><p>.bbl文件：.bib文件编译之后形成的文件，可以将里面的文本内容直接复制粘贴进.tex中</p></li>
+<li><p>.sty文件：包文件，通常使用，定义各种排版风格</p></li>
+<li><p>.cls文件：类文件，通过文档最前面的</p></li>
+<li><p>.bst文件：定义参考文献格式的风格文件，一般各个期刊会有对应的文件（比如 ieeetran.bst）</p></li>
+</ul>
+<h2 id="latex与tex">LaTeX与TeX</h2>
+<p>LaTeX与TeX分别是格式与排版引擎，后者是底层运行的框架，前者则是基于TeX的几百个元命令所封装起来的语言，两者之间的关系类似于汇编语言与二进制语言。因此，在使用LaTeX时，本质上是在调用TeX的元命令，不过对于使用者来说则完全不需要考虑TeX的语法。</p>
+<h2 id="参考资料">参考资料</h2>
+<p>《tex ,latex等分类及其区别》：https://blog.csdn.net/qq_35478750/article/details/107151304</p>
+<p>《TeX和LaTeX关系：原生TeX实现LaTeX命令》：https://zhuanlan.zhihu.com/p/202799658?utm_id=0</p>
+<p>《Latex安装与使用》：https://blog.csdn.net/u014297502/article/details/126411943</p>
+<p>【LaTex】cls文件编写和使用入门：https://zhuanlan.zhihu.com/p/77537952</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/08/03/2023-0803-%E9%80%9A%E8%83%80%E4%B8%8E%E9%80%9A%E7%BC%A9-%E5%8A%A0%E6%81%AF%E4%B8%8E%E9%99%8D%E6%81%AF/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -837,393 +1101,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/07/27/2023-0727-%E5%9C%A8%E6%89%8B%E6%9C%BA%E4%B8%8A%E5%88%B7sci%E8%AE%BA%E6%96%87/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="zhb">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="zhb木木三的个人网页">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/07/27/2023-0727-%E5%9C%A8%E6%89%8B%E6%9C%BA%E4%B8%8A%E5%88%B7sci%E8%AE%BA%E6%96%87/" class="post-title-link" itemprop="url">在手机上刷sci论文</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-07-27 15:45:00" itemprop="dateCreated datePublished" datetime="2023-07-27T15:45:00+08:00">2023-07-27</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-08-03 15:47:42" itemprop="dateModified" datetime="2023-08-03T15:47:42+08:00">2023-08-03</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%AD%A6%E6%9C%AF%E6%A8%A1%E5%9D%97/" itemprop="url" rel="index"><span itemprop="name">学术模块</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>1.9k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>6 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="写在前面">写在前面</h2>
-<p>在外面无聊的时候一般就会刷知乎、刷b站来打发时间，刷久了就会想干点正事，比如看看论文什么的，但平常看论文都是在PC端用浏览器查看abstract觉得合适后，再去scihub之类的地方下载pdf文件，在本地用福昕之类的pdf编辑器看，然后做笔记。这个过程对于手机端而言，似乎就只有通过浏览器观看这个途径，很不方便。所以也想找个类似于知乎之类的轻量化APP，可以让自己摸鱼的时候也能稍微学点东西（希望）。直接在应用商店里面找文献相关的APP，那些知网、全球学术快报都是国内期刊为主，并不满足我的需求。下面就介绍两个应该比较好用的手机端看论文的APP。</p>
-<h2 id="x-mol">X-MOL</h2>
-<p><a target="_blank" rel="noopener" href="https://www.x-mol.com/">X-MOL学术平台</a> 是北京衮雪科技有限公司（成立与2006年）创办的面向学术工作者的免费平台，目前有近百人的团队。该平台可以网页访问、也可以在官网下载APP使用，APP大小只有5MB左右，界面与移动端浏览器访问的界面基本一致。使用手机号即可快速注册/登录。该平台有很多功能，因为刚开始用，我就只挑基础的论文检索功能讲了。</p>
-<p>X-MOL的APP没有广告，选定某个领域（比如下面是“医学”）后就会显示一堆论文。点击下方的“<strong>订阅</strong>”按钮就会跳转到个人所关注的期刊、关键词筛选下的论文列表中。再点击右上角的“<strong>关注</strong>”，就可以设置想看的期刊与关键词（例如研究领域、作者名等）</p>
-<p><img src="/ref_pic/XMOL-1.png"></p>
-<p>设置好之后，就可以在“订阅”栏目中查看想关注的研究领域论文了。</p>
-<p><img src="/ref_pic/XMOL-2.png"></p>
-<p>点开想要看的论文，就会显示其Abstract，再点开“查看原文”，就会在浏览器（可以用手机的浏览器，也可以用APP内置的浏览器）中打开原文链接，比如下面这篇是Wiley Online Library的OA文章，就可以直接获取原文。</p>
-<p><img src="/ref_pic/XMOL-3.png"></p>
-<p>以上功能就可以完全满足我的（1）在外摸鱼的时候看点论文，（2）用手机设备快捷访问，（3）可以设置感兴趣的期刊与领域，（4）看看论文摘要，这四个需求了。此外，该APP还内置有中文翻译器，可以自动翻译一下标题、摘要，或许有时候会降低阅读门槛，更加满足轻量化、碎片化的刷手机环境。</p>
-<h2 id="stork文献鸟">stork文献鸟</h2>
-<p><a target="_blank" rel="noopener" href="https://www.storkapp.me/main.php">文献鸟</a> 这个论文平台本质上是一个邮件订阅的平台，在官网中设置关键词（期刊、作者、领域名字、年份等），然后会定期查阅对应的最新文献，并按着设置频率发送到设置的邮箱中（下图为网页端截图）。</p>
-<p><img src="/ref_pic/文献鸟-1.png"></p>
-<p>获取邮件时就会有APP的下载链接，以及根据设置的关键词所得到的最新文章列表。</p>
-<p><img src="/ref_pic/文献鸟-2.png"></p>
-<p>而对于安卓下的APP而言，注册并登陆账号后，界面也很简洁。首先是“Papers”界面，显示的是最近一次发送到邮箱中的所有文献列表。</p>
-<p>在“Keywords”界面，则是设置的关键词（普通的免费用户最多只能设置5个关键词，再多就要加钱了）与发送邮件的时间，如果更新了关键词，还可以点击“search now”立刻再发送一份新的邮件。</p>
-<p>点开某一个关键词，就会列出较最新的一些相关期刊。</p>
-<p><img src="/ref_pic/文献鸟-3.png"></p>
-<p>在APP中点开某一篇文献，就会展示其Abstract的内容，以及原文链接、DOI。</p>
-<p><img src="/ref_pic/文献鸟-4.jpg"></p>
-<p>如果是在邮箱中点开链接，则也能展示该论文的摘要界面。</p>
-<p><img src="/ref_pic/文献鸟-5.jpg"></p>
-<p>此外，在APP的“Advanced”界面还有一些其他功能（有些需要收费），不过我还没试过。</p>
-<p><img src="/ref_pic/文献鸟-6.png"></p>
-<h2 id="researcher需谷歌框架">Researcher（需谷歌框架）</h2>
-<p><strong>注：这个APP虽然很好用，但是需要谷歌服务/谷歌框架，而目前看，华为设备使用谷歌服务似乎很不方便，因此我也不想在自己设备上为了安装这个APP而去折腾谷歌框架了。</strong></p>
-<p><img src="/ref_pic/researcher-1.png"></p>
-<p>Researcher存有3000多种期刊，包括Nature Springer，ACS，Elsevier，Wiley，Taylor和Francis，RSC，IEEE，arXiv，PubMed，PLOS，Science AAAS等网站上的所有顶级期刊和论文。注册之后在期刊列表里Follow想要的期刊，就能在“My Journals”里面实时收到感兴趣的期刊更新。</p>
-<p><img src="/ref_pic/researcher-2.png"></p>
-<p>此外，还可以增加关键词，用于过滤特定研究领域的论文</p>
-<p><img src="/ref_pic/researcher-3.png"></p>
-<p>进入感兴趣的文章详情页面后，可以下载PDF、文献内容或者标记为书签。有一些是只提供了摘要和原文链接，想要获取全文还需要登录网站。</p>
-<p><img src="/ref_pic/researcher-4.png"></p>
-<p>该APP还支持与Mendeley、Zotero等文献管理软件进行绑定，可以自动同步到对应账号上。</p>
-<p><img src="/ref_pic/researcher-5.png"></p>
-<h2 id="参考资料">参考资料</h2>
-<p>《比"知网"更强大的学术神器Researcher，你了解多少？》：https://zhuanlan.zhihu.com/p/57399431</p>
-<p>《2022华为Google框架安装方法》：https://zhuanlan.zhihu.com/p/506891751?utm_id=0</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/07/25/2023-0725-%E7%A3%81%E5%85%B1%E6%8C%AF%E5%8E%82%E5%95%86%E4%BB%8B%E7%BB%8D/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="zhb">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="zhb木木三的个人网页">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/07/25/2023-0725-%E7%A3%81%E5%85%B1%E6%8C%AF%E5%8E%82%E5%95%86%E4%BB%8B%E7%BB%8D/" class="post-title-link" itemprop="url">磁共振厂商介绍</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-07-25 16:30:00" itemprop="dateCreated datePublished" datetime="2023-07-25T16:30:00+08:00">2023-07-25</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-08-01 19:36:26" itemprop="dateModified" datetime="2023-08-01T19:36:26+08:00">2023-08-01</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/MRI/" itemprop="url" rel="index"><span itemprop="name">MRI</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>1.6k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>5 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="写在前面">写在前面</h2>
-<p>首先，某个行业的行业报告内容首先应该包括各个厂商，其次就是对应的产品特性，再深层次一点则是各家厂商的战略决策、发展方向。</p>
-<p>其次，研究/了解这些行业报告的作用，对个人来说可能就是选择更好的就业环境，对公司而言就是利用这些信息帮助自己做决策和战略调整，而对于投资人/局外人来说就是更快地对该行业有一个了解，从而判断是否要进行投资或者加入该领域。不同领域的人对行业报告的深浅度需求也会不一样，因而也需要不同层次的行业报告</p>
-<p>最后，行业报告本质上是一个信息汇总，与学术圈的文献综述是一样的，但区别在于行业状况里涉及很多市场、战略的情报，这些往往是非公开或者半公开的信息，需要有一定经验才能总结出一个比较准确的行业报告，否则解读、结论、判断就可能与实际情况不符。一般的情报来源就是金融投资领域里的报告信息，其次就是天眼查、企查查的内容，再者就是行业内部人士（如销售）提供的一手情报。</p>
-<p>我这里也只是根据网上信息大概总结一下都有哪些磁共振厂商，只当自娱自乐了。由于磁共振范畴比较大，从各部件供应商到整机供应商，从科研用的小样品NMR到人体诊断的MRI都有很多厂商，这里就主要列一些比较出名的<strong>用于人体扫描的整机磁共振供应商</strong>。</p>
-<h2 id="人体mri厂商">人体MRI厂商</h2>
-<p>注：这里上市公司的业务范围不仅限于 MRI，梯队排行榜也是瞎列的。</p>
-<table>
-<thead>
-<tr class="header">
-<th>梯队</th>
-<th>厂商</th>
-<th>备注</th>
-<th>时间</th>
-<th>上市</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>第一梯队</strong></td>
-<td>GE</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td></td>
-<td>Philips</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>Siemens</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td></td>
-<td><a target="_blank" rel="noopener" href="https://www.united-imaging.com/zh-cn/">联影</a>-上海</td>
-<td>1.5T、3T、5T、PET/MR 3T</td>
-<td>2011</td>
-<td>2022</td>
-</tr>
-<tr class="odd">
-<td><strong>第二梯队</strong></td>
-<td><a target="_blank" rel="noopener" href="http://www.alltechmed.com/products">奥泰</a>-成都</td>
-<td>从线圈生产商做起，1T与1.5T，曾入驻过301解放医院，但最近快解散了</td>
-<td>2005</td>
-<td></td>
-</tr>
-<tr class="even">
-<td></td>
-<td><a target="_blank" rel="noopener" href="https://www.wandong.com.cn/list-4-1.html">万东</a>-北京</td>
-<td>永磁、1.5T、无液氦</td>
-<td>1997</td>
-<td>1997</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td><a target="_blank" rel="noopener" href="http://www.neusoftmedical.com/">东软</a>-沈阳</td>
-<td>1.5T和0.35T，东北大学教授创立</td>
-<td>1991</td>
-<td>1996</td>
-</tr>
-<tr class="even">
-<td></td>
-<td><a target="_blank" rel="noopener" href="https://www.china-mri.com/products.html?productCateId=5">鑫高益</a>-宁波</td>
-<td>永磁、1.5T超导、3T超导，最近在做无液氦超导</td>
-<td>1998</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td></td>
-<td><a target="_blank" rel="noopener" href="https://www.lonwin.org/wanciwang.html">朗润</a>-苏州</td>
-<td>1.5T，北大医学物理实验室团队</td>
-<td>2007</td>
-<td></td>
-</tr>
-<tr class="even">
-<td></td>
-<td><a target="_blank" rel="noopener" href="https://www.anke.com/cn">安科</a>-深圳</td>
-<td>永磁、1.5T，最早的国产</td>
-<td>1986</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td></td>
-<td><a target="_blank" rel="noopener" href="http://www.xboms.com/about.html">稀宝博为</a>-包头</td>
-<td>永磁、车载</td>
-<td>2010</td>
-<td></td>
-</tr>
-<tr class="even">
-<td></td>
-<td><a target="_blank" rel="noopener" href="https://www.esaote.com/dedicated-mri/">Esaote</a>-意大利</td>
-<td>永磁，可旋转式</td>
-<td>1982</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td></td>
-<td><a target="_blank" rel="noopener" href="https://us.medical.canon/products/magnetic-resonance/vantage-fortian/">佳能医疗</a>-日本</td>
-<td>1.5T、3T</td>
-<td>1979</td>
-<td></td>
-</tr>
-<tr class="even">
-<td></td>
-<td><a target="_blank" rel="noopener" href="https://cn.time-medical.com/">美时</a>-江苏</td>
-<td>永磁、1.5T，有乳腺、儿科专用的1.5T</td>
-<td>2009</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td><strong>第三梯队</strong></td>
-<td><a target="_blank" rel="noopener" href="https://hyperfine.io/">Hyperfine</a>-美国</td>
-<td>0.064T的手推式床旁脑部磁共振，第一款床旁MRI</td>
-<td>2014</td>
-<td></td>
-</tr>
-<tr class="even">
-<td></td>
-<td><a target="_blank" rel="noopener" href="https://www.asgsuperconductors.com/magnets-systems">ASG超导</a>-意大利</td>
-<td>永磁，后续主要做超导磁体的部件供应商，2022年与西门子合作开发11.74T脑部MRI的磁体</td>
-<td>2000</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td></td>
-<td><a target="_blank" rel="noopener" href="https://www.kuanteng.com/index/list?catid=20">宽腾</a>-北京</td>
-<td>永磁、1.5T</td>
-<td>2011</td>
-<td></td>
-</tr>
-<tr class="even">
-<td></td>
-<td><a target="_blank" rel="noopener" href="http://www.kangdaim.com/pro.aspx?FId=n3:3:3">康达洲际</a>-宁波</td>
-<td>0.7T超导、1.5T</td>
-<td>2015</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td></td>
-<td><a target="_blank" rel="noopener" href="http://www.basda.com.cn/">贝斯达</a>-深圳</td>
-<td>永磁、1.5T、3T</td>
-<td>2000</td>
-<td></td>
-</tr>
-<tr class="even">
-<td></td>
-<td><a href="(https://www.magspintech.com/cpzx)">麦格思频</a>-江苏</td>
-<td>2022年搬迁到昆山，做0.25T的肢体专科磁共振</td>
-<td>2011</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td></td>
-<td><a target="_blank" rel="noopener" href="http://www.ahshuojin.com/index.php/Show/pro/id/59">硕金</a>-合肥</td>
-<td>1T超导，介入MRI</td>
-<td>2015</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h2 id="参考资料">参考资料</h2>
-<p>mriquestions网页的统计：https://mriquestions.com/brands-of-scanners.html</p>
-<p>天眼查（可以查到各个企业的详细信息，甚至精确到员工个数）：https://www.tianyancha.com/</p>
-<p><strong>MedicalExpo</strong>医疗器械在线展会（可以查看各医疗器械产品）：https://www.medicalexpo.com.cn/zhizaoshang-yiliao/mri-xi-15892.html</p>
-<p>百度股市通（查上市时间）：https://gushitong.baidu.com/</p>
-<p>《全球五大顶尖的磁共振技术强国》：https://baijiahao.baidu.com/s?id=1735140468357503016&amp;wfr=spider&amp;for=pc</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1293,7 +1170,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">100</span>
+          <span class="site-state-item-count">102</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1342,7 +1219,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">130k</span>
+    <span title="站点总字数">133k</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
   </div>
