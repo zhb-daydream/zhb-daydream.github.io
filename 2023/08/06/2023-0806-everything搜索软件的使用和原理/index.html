@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="fonts.lug.ustc.edu.cn/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"zhb-daydream.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="现在的面向大众的电脑硬盘容量越来越大，特别是最近长江存储颗粒的固态硬盘，2T的容量只要惊人的350块。但硬盘容量上去了，文件数量变多了，文件搜索也是一个大问题。除了使用规范化的文件夹命名、打开文件夹手动查找文件的方式以外，有时候还会使用Windows自带的文件搜索器，但这个搜索往往很耗时。所以这里就介绍一个可以充当Windows搜索功能的上位替代品的软件。 Everything Everythin">
+<meta property="og:type" content="article">
+<meta property="og:title" content="everything搜索软件的使用和原理">
+<meta property="og:url" content="https://zhb-daydream.github.io/2023/08/06/2023-0806-everything%E6%90%9C%E7%B4%A2%E8%BD%AF%E4%BB%B6%E7%9A%84%E4%BD%BF%E7%94%A8%E5%92%8C%E5%8E%9F%E7%90%86/index.html">
+<meta property="og:site_name" content="zhb木木三的个人网页">
+<meta property="og:description" content="现在的面向大众的电脑硬盘容量越来越大，特别是最近长江存储颗粒的固态硬盘，2T的容量只要惊人的350块。但硬盘容量上去了，文件数量变多了，文件搜索也是一个大问题。除了使用规范化的文件夹命名、打开文件夹手动查找文件的方式以外，有时候还会使用Windows自带的文件搜索器，但这个搜索往往很耗时。所以这里就介绍一个可以充当Windows搜索功能的上位替代品的软件。 Everything Everythin">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://zhb-daydream.github.io/ref_pic/everything搜索-1.png">
+<meta property="og:image" content="https://zhb-daydream.github.io/ref_pic/everything搜索-2.png">
+<meta property="og:image" content="https://zhb-daydream.github.io/ref_pic/everything搜索-3.png">
+<meta property="og:image" content="https://zhb-daydream.github.io/ref_pic/everything搜索-4.png">
+<meta property="article:published_time" content="2023-08-05T18:00:00.000Z">
+<meta property="article:modified_time" content="2023-08-05T19:36:13.403Z">
+<meta property="article:author" content="zhb">
+<meta property="article:tag" content="实用小工具">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://zhb-daydream.github.io/ref_pic/everything搜索-1.png">
+
+<link rel="canonical" href="https://zhb-daydream.github.io/2023/08/06/2023-0806-everything%E6%90%9C%E7%B4%A2%E8%BD%AF%E4%BB%B6%E7%9A%84%E4%BD%BF%E7%94%A8%E5%92%8C%E5%8E%9F%E7%90%86/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>everything搜索软件的使用和原理 | zhb木木三的个人网页</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">zhb木木三的个人网页</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">个人博客的新尝试（页面渲染需要时间，请耐心等待）</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/08/06/2023-0806-everything%E6%90%9C%E7%B4%A2%E8%BD%AF%E4%BB%B6%E7%9A%84%E4%BD%BF%E7%94%A8%E5%92%8C%E5%8E%9F%E7%90%86/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="zhb">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="zhb木木三的个人网页">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          everything搜索软件的使用和原理
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2023-08-06 02:00:00 / 修改时间：03:36:13" itemprop="dateCreated datePublished" datetime="2023-08-06T02:00:00+08:00">2023-08-06</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%90%9E%E7%82%B9%E8%AF%BE%E5%A4%96%E7%9F%A5%E8%AF%86/" itemprop="url" rel="index"><span itemprop="name">搞点课外知识</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>2.3k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>8 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>现在的面向大众的电脑硬盘容量越来越大，特别是最近长江存储颗粒的固态硬盘，2T的容量只要惊人的350块。但硬盘容量上去了，文件数量变多了，文件搜索也是一个大问题。除了使用规范化的文件夹命名、打开文件夹<strong>手动查找</strong>文件的方式以外，有时候还会使用<strong>Windows自带的文件搜索器</strong>，但这个搜索往往很耗时。所以这里就介绍一个可以充当Windows搜索功能的上位替代品的软件。</p>
+<h2 id="everything">Everything</h2>
+<p><a target="_blank" rel="noopener" href="https://www.voidtools.com/zh-cn/">Everything</a>是Voidtools制作组开发的文件搜索工具，官网描述为<strong>基于名称的实时文件和目录定位</strong>（Locate files and folders by name instantl），在2004年时创立项目，2008年推出了完善的1.0版本，目前最新的是2023年5月26更新的1.4.1.1024版本。</p>
+<p>Everything（也称Everything Search Engine）软件堪称搜索界的神器，它是一个第三方的搜索软件，<strong>搜索速度特别快</strong>，而且CPU<strong>占用特别低</strong>，例如使用Windows系统自带搜索功能去搜索全盘，CPU、磁盘读写可能都会占用100%，且需要持续若干分钟，此时Everything只占用0.1%的CPU和磁盘读写，且只需持续个0.001秒，即使待搜索文件有几百万个，且对结果排序（例如按大小排序）都是毫秒级响应，使用时也不需要管理员权限。</p>
+<h2 id="使用方法">使用方法</h2>
+<p>使用的时候也很简单，从官网的<a target="_blank" rel="noopener" href="https://www.voidtools.com/zh-cn/">下载地址</a>获取免安装的<strong>便携版</strong>，解压之后直接运行.exe文件，在首次或者隔一段时间后就会花个大概10秒钟进行硬盘数据的扫描（我的固态电脑大概366万的对象用了10秒不到的时间完成索引库的建立）。</p>
+<p><img src="/ref_pic/everything搜索-1.png"></p>
+<p>如果是第一次运行，可能会弹出以下提示框，选择<strong>安装“Everything”服务</strong>即可。</p>
+<p><img src="/ref_pic/everything搜索-2.png"></p>
+<p>接着在搜索框内输入待检索的内容（可以是文件/文件夹名字，也可以是.pdf等后缀扩展名），就能几乎是秒出排序结果了。</p>
+<p><img src="/ref_pic/everything搜索-3.png"></p>
+<p>除了上面这种最近的搜索功能以外，还支持正则表达式、自定义的高级搜索等功能，不过这些我都没怎么用过。</p>
+<p><img src="/ref_pic/everything搜索-4.png"></p>
+<h2 id="快速搜索原理">快速搜索原理</h2>
+<p>Everything在第一次打开使用的时候，它会扫描整个硬盘，然后建立一个索引数据库（大小和电脑文件的数量有直接关系）。索引数据库建立之后，每次搜索文件，everything就在它的数据库里搜索，而不需要重新扫描整个硬盘，这也是everything和Windows系统自带搜索的本质区别。而everything之所有能快速地建立起这么小的索引数据库，主要得益于Windows对NTFS（New Technology File System，一种磁盘格式，除此之外还有FAT32等磁盘格式/文件系统）的支持。</p>
+<h3 id="mft数据表">MFT数据表</h3>
+<p>对于NTFS文件系统下的所有数据，都会有一个<strong>MFT数据表</strong>（Master File Table），该表记录了NTFS磁盘上所有文件的文件信息，且访问速度很快，Windows提供了各种API给开发者去直接调用并访问MFT数据表，不需要遍历文件系统就能获取当前卷/磁盘里的所有文件名称和路径。</p>
+<h3 id="usn-journal">USN Journal</h3>
+<p>除了MFT数据表以外，NTFS文件系统还有一个日志功能，即所有对文件系统有修改的操作都会被记录在<strong>USN Journal日志文件</strong>中，且该日志文件是实时、同步更新的。</p>
+<h3 id="everything实现">Everything实现</h3>
+<p>Everything搜索引擎主要就是利用了NTFS文件系统中<strong>MFT</strong>和<strong>USN Journal</strong>的特性：</p>
+<ol type="1">
+<li>在程序启动时，<strong>扫描</strong>所有NTFS卷/磁盘的MTF表</li>
+<li>将MTF表里面的文件名称以一种利于字符串检索的算法形式化存储在<strong>索引数据库</strong>中（在退出程序后就会看到有个大概一百多MB的Everything.db文件）</li>
+<li>后台运行时，Everything会监控NTFS卷的USN Journal日志文件，<strong>实时更新</strong>该索引数据库</li>
+<li>用户搜索文件时，Everything利用其字符串查找算法，在索引数据库里查找</li>
+</ol>
+<p>从上面的实现过程可以看出，everything的搜索速度快、占用小，除了得益于其索引数据库生成算法和字符串查找算法以外，主要还是利用了MTF表的易于访问的特性。也正是因为这样，everything只能检索NTFS磁盘的文件，而不能检索其他如FAT32、exFAT等文件系统。</p>
+<p>虽然everything比Windows自动的搜索功能快几个量级，但Windows也没有采取这种方法，可能主要原因还是因为文件系统的兼容性不足（仅局限于NTFS系统），且不支持搜索文件内容、附加属性。此外，微软自家的ActiveDirectory软件其实也有在使用MTF特性来快速检索文件。</p>
+<h2 id="参考材料">参考材料</h2>
+<p>《秒搜神器everything背后的索引原理》：https://cloud.tencent.com/developer/article/1848667</p>
+<p>《Everything Search Engine这款软件如何做到如此快速的搜索的？》：https://www.zhihu.com/question/22862246</p>
+<p>《高效搜索神器Everything最全使用技巧(一篇看全)及详细功能帮助教程(更新第10次)》：https://www.zhihu.com/tardis/bd/art/409783518?source_id=1001</p>
+<p>《Everything等本地搜索软件为什么比windows自带的搜索工具快那么多？》：https://www.zhihu.com/question/378399106/answer/2518408735</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/%E5%AE%9E%E7%94%A8%E5%B0%8F%E5%B7%A5%E5%85%B7/" rel="tag"><i class="fa fa-tag"></i> 实用小工具</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2023/08/05/2023-0805-LaTeX%E6%9C%AC%E5%9C%B0%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95/" rel="prev" title="LaTeX本地安装方法">
+      <i class="fa fa-chevron-left"></i> LaTeX本地安装方法
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2023/08/06/2023-0806-%E4%BA%94%E4%B8%AA%E4%B8%96%E7%95%8C%E7%A5%9E%E8%AF%9D%E4%BD%93%E7%B3%BB/" rel="next" title="五个世界神话体系">
+      五个世界神话体系 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#everything"><span class="nav-number">1.</span> <span class="nav-text">Everything</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95"><span class="nav-number">2.</span> <span class="nav-text">使用方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BF%AB%E9%80%9F%E6%90%9C%E7%B4%A2%E5%8E%9F%E7%90%86"><span class="nav-number">3.</span> <span class="nav-text">快速搜索原理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#mft%E6%95%B0%E6%8D%AE%E8%A1%A8"><span class="nav-number">3.1.</span> <span class="nav-text">MFT数据表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#usn-journal"><span class="nav-number">3.2.</span> <span class="nav-text">USN Journal</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#everything%E5%AE%9E%E7%8E%B0"><span class="nav-number">3.3.</span> <span class="nav-text">Everything实现</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%9D%90%E6%96%99"><span class="nav-number">4.</span> <span class="nav-text">参考材料</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">zhb</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">105</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">17</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">zhb</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">140k</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'forest',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+          load: ['[tex]/mhchem'],
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+          packages: {'[+]': ['mhchem']},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+</body>
+</html>

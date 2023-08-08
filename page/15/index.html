@@ -270,6 +270,205 @@ mjx-container[display="true"] + br {
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/05/09/2023-0509-%E6%97%A5%E8%AE%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="zhb">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="zhb木木三的个人网页">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/05/09/2023-0509-%E6%97%A5%E8%AE%B0/" class="post-title-link" itemprop="url">2023-0509日记</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-05-09 01:19:00" itemprop="dateCreated datePublished" datetime="2023-05-09T01:19:00+08:00">2023-05-09</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-06-28 22:57:14" itemprop="dateModified" datetime="2023-06-28T22:57:14+08:00">2023-06-28</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%97%A5%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">日记</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>674</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>2 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>好久没写随笔了，感觉五一都荒废了呢，之前想补的《git、github 概念》、《stable diffusion 等几种 AI 画图介绍》的博文居然都没写（一定是米哈游干的，都怪星穹铁道.jpg），而且好像也该开始弄入党积极分子的东西了。现在插图都顺带手动加个斜杠好了，这样可以少运行一次那个 replaceRefPic.py。</p>
+<p><img src="/ref_pic/一定是米哈游干的.jpg"></p>
+<p>今晚还算舒服点，虽然调了一天的用 scipy.spatial.Voronoi 生成 radial 的密度补偿系数，大眼瞪小眼，但刚刚终于调通了呢！不得不说 stackoverflow.com 论文里面大佬真多，写的代码又好。想起来，我现在对 voronoi 图还是一知半解，只知道给定一堆点的坐标，然后就会给它们计算出对应的分区，稀疏的点分区就大一点，最后就根据各个点所在区域的面积来作为该点的密度补偿值了。说是这么说，计算面积的代码也已经在 MATLAB 里有现成的 John Pauly 著作、Michael Lustig 改进的 DensityVoronoi.m，但调用其 Voronoi 的时候还是出问题，检查半天发现 python 和 MATLAB 输入都一样，但输出就不同，那一定就是 Voronoi 的问题！</p>
+<p>接着看了两篇回答的代码，都不行，拼起来改一改参数（其中一个重排的代码好像会减少一个 region 导致最后报错），诶嘿！突然就正常重建了，有点秃然，有点稀里糊涂，但还是挺开心的呢。所以，保持这份积极的心情去睡觉，明天再说！（不得不说，去 <a target="_blank" rel="noopener" href="https://imgflip.com/memegenerator">meme表情包网站</a> 生成自己的表情包还是挺好玩的）</p>
+<p><img src="/ref_pic/明天再说.jpg"></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/05/05/2023-0505-%E7%A3%81%E5%85%B1%E6%8C%AF%E7%9B%B8%E5%85%B3%E7%9A%84python%E5%BA%93/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="zhb">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="zhb木木三的个人网页">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/05/05/2023-0505-%E7%A3%81%E5%85%B1%E6%8C%AF%E7%9B%B8%E5%85%B3%E7%9A%84python%E5%BA%93/" class="post-title-link" itemprop="url">磁共振相关的python库</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-05-05 18:33:00" itemprop="dateCreated datePublished" datetime="2023-05-05T18:33:00+08:00">2023-05-05</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-06-09 11:34:42" itemprop="dateModified" datetime="2023-06-09T11:34:42+08:00">2023-06-09</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.5k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>5 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>作为一个 python 小白，要做的第一件事就是找轮子。最近在弄 radial 的重建，在 MATLAB 上是已经找到了 NUFTT 的重建代码，调试好传入传出变量之后就无脑使用就行了，而 python 中用的比较多的 BART 却是只支持 Linux 的，感觉没必要专门为了一个网格化重建函数包就去专门弄个虚拟机吧？（虽然 Windows 的 WSL 好像也没那么复杂）所以还是得找一找相关的第三方库，顺带挖个坑，如果以后还用到其他库，就一并列进来好了。</p>
+<h2 id="nufft">NUFFT</h2>
+<p>参考 <a target="_blank" rel="noopener" href="https://github.com/jyhmiinlin/pynufft">PyNUFFT-jyhmiinlin</a> 的说明，有如下一些 python 中含有 nufft 库：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://sigpy.readthedocs.io/en/latest/index.html">SigPy</a> (Ong, F., and M. Lustig. "SigPy: a python package for high performance iterative reconstruction." )</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/andyschwarzl/gpuNUFFT">gpuNUFFT</a> (Knoll, Florian, et al. "gpuNUFFT-an open source GPU library for 3D regridding with direct Matlab interface." )</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/mritools/mrrt.nufft">mrrt.nufft</a> (mrrt.mri demos for the ISMRM 2020 Data Sampling Workshop in Sedona, AZ with raw cuda kernels)</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/pyNFFT/pyNFFT">pyNFFT</a> (Keiner, J., Kunis, S., and Potts, D. ''Using NFFT 3 - a software library for various non-equispaced fast Fourier transforms'' )</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/dfm/python-nufft">python-NUFFT</a> (Dan Foreman-Mackey, Thomas Arildsen, and Marc T. Henry de Frahan, but the code that actually does the work is from the Greengard lab at NYU)</li>
+<li>finufft (Barnett, Alexander H., Jeremy Magland, and Ludvig af Klinteberg. "A Parallel Nonuniform Fast Fourier Transform Library Based on an “Exponential of Semicircle" Kernel." )</li>
+<li><a target="_blank" rel="noopener" href="https://pypi.org/project/torchkbnufft/">torchkbnufft</a> (M. J. Muckley, R. Stern, T. Murrell, F. Knoll, TorchKbNufft: A High-Level, Hardware-Agnostic Non-Uniform Fast Fourier Transform)</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/zaccharieramzi/tfkbnufft">tfkbnufft</a> (adapt torchkbnufft for TensorFlow)</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/yf0726/TFNUFFT">TFNUFFT</a> (adapt the min-max interpolator in PyNUFFT for tensorflow)</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/mrphys/tensorflow-nufft">tensorflow-nufft</a></li>
+</ul>
+<h2 id="其他">其他</h2>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://mrirecon.github.io/bart/">Bart</a>（UCB 开发的 MRI 重建库，包含了 SMS、pMRI 等一堆前沿重建方法，缺点是暂时只能在 Linux 下运行）</li>
+<li><a target="_blank" rel="noopener" href="https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/">FSL</a>（英国牛津大学开发的专门用于 fMRI 的库，包含了图像配准的一些预处理方法，缺点也是只能在 Linux 下运行）</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/05/04/2023-0504-%E6%9F%A5%E6%89%BEpython%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -787,220 +986,6 @@ alg=4: 使用 multiplicative half-quadratic 算法来求解，使用有近似值
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/04/24/2023-0424-%E6%97%A5%E8%AE%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="zhb">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="zhb木木三的个人网页">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/04/24/2023-0424-%E6%97%A5%E8%AE%B0/" class="post-title-link" itemprop="url">2023-0424日记</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-04-24 17:23:00" itemprop="dateCreated datePublished" datetime="2023-04-24T17:23:00+08:00">2023-04-24</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-06-28 22:56:58" itemprop="dateModified" datetime="2023-06-28T22:56:58+08:00">2023-06-28</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%97%A5%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">日记</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>408</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>唉，一天又过去惹，早上想摸鱼整理了个《如何确定研究领域大牛》的文章，本来都还挺顺利，到一点半就弄完了的，结果编译的时候一直卡在 “图片相对路径错误”、“公式编译错误”两个地方，而且还是偶发性的。最后检查发现就是 hexo-renderer-marked 的问题，本来指望这个渲染器来处理前者的图片路径问题，结果它本身又会导致公式编译出错。</p>
-<p>最后呢，卸载了 hexo-renderer-marked，既然不想更改 Typora 的使用习惯（使用 ./ref_pic 或者 /ref_pic 引用），又没法改 Hexo 的逻辑（只能识别 /ref_pic），那就只能加个批处理文件，修改一下 .md 里面的文本咯。</p>
-<p>现在暂时是通过 python 脚本实现（python 还是方便呀！可惜我不会用），感觉是可以用 js 实现的（毕竟 Hexo 根目录里面还有个 node_modules 文件夹呢），但。。那也以后再说吧</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/04/24/2023-0424-%E5%A6%82%E4%BD%95%E7%A1%AE%E5%AE%9A%E7%A0%94%E7%A9%B6%E9%A2%86%E5%9F%9F%E5%A4%A7%E7%89%9B/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="zhb">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="zhb木木三的个人网页">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/04/24/2023-0424-%E5%A6%82%E4%BD%95%E7%A1%AE%E5%AE%9A%E7%A0%94%E7%A9%B6%E9%A2%86%E5%9F%9F%E5%A4%A7%E7%89%9B/" class="post-title-link" itemprop="url">如何确定研究领域大牛</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-04-24 10:18:00" itemprop="dateCreated datePublished" datetime="2023-04-24T10:18:00+08:00">2023-04-24</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-06-09 11:34:42" itemprop="dateModified" datetime="2023-06-09T11:34:42+08:00">2023-06-09</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%AD%A6%E6%9C%AF%E6%A8%A1%E5%9D%97/" itemprop="url" rel="index"><span itemprop="name">学术模块</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>2.5k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>8 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="写在前面">写在前面</h2>
-<p><img src="/ref_pic/又到周一了.png"></p>
-<p>又到周一了，这周五就提前开溜回家，迎来（翘班获得的）五一小长假，再加上最近看文献、调代码都比较乱，也没有指导纲领，所以现在完全没有科研动力捏（理直气壮.jpg）。所以，来搞点摸鱼、但又没那么摸鱼的事情，也就是学一学怎么确定某个研究领域的大牛都有哪些。有这个想法主要是因为昨晚学习磁共振的低秩重建时，发现了不少该领域的教授/团队，比如 UCB 的 Lustig（之前做过 CS-MRI 的）、USC 的 Haldar（居然还做过不少 SMS 的工作）、厦门大学的屈小波（整个实验室发的文章都很好，真羡慕啊），然后总结了一下，第一次感觉对这个领域有了更深的理解。或许要掌握一个领域（不管是学术的还是非学术的），除了要搞清具体的技术、物质层面上的概念和原理以外，人脉关系网也是一大重要的切入点呢！（或许也是看《显微镜下的大明》有感吧）</p>
-<p>确定某个研究领域的大牛、实验团队，本质上就是一个学术搜索的事情。与论文搜索不同，确定研究领域的大牛需要更广泛、更综合的搜索才能得出结论，而前者一般只需要知道一个题目或者 DOI，即能在 scholar.google.com 或者 scihub 上定位并检索到。正是因为这种复杂特性，依靠自己多读文献或者多看综述这种方法注定不是最高效的方法，毕竟人工队师傅比不上机器队师傅嘛，因而掌握一些学术检索工具是非常重要的（而其他如公务员职场、金融市场下要如何获得对应情报，就得以后接触到的时候再学习了）。</p>
-<p>这里给自己再强调一下，再好用的检索工具都只是一个情报搜索功能，只有自己认认真真看文献才能真正系统地建立起知识体系。</p>
-<h2 id="web-of-science">Web of Science</h2>
-<p>首先，WoS （www.webofscience.com）是一个对（至少是理科的）研究生而言特别重要的搜索引擎，其重要性甚至超过知网，因为其收录的国际期刊是更全的，而可预见的一段时间内，学术研究肯定还是以英文期刊为前沿的。要正常使用 WoS 的功能，要么使用带权限的账号（自己直接邮箱注册肯定没有的，这时候应该求助万能的淘宝），要么使用一般学校都会有的带权限账号，即通过中国高校联盟（CHINA CERNET Federation）登录（这里还有另一个叫 China CSTCloud ID-CAS 的选项，似乎是对应中国科技云通行证和身份认证联盟，应该和中国高校关系不大）。</p>
-<p><img src="/ref_pic/确定研究领域-1.png"></p>
-<p>然后选择 WoS 核心合集并进行文献主题的检索（目前为止的步骤仍与普通的论文检索一致）</p>
-<p><img src="/ref_pic/确定研究领域-2.png"></p>
-<p>检索出 1926 条结果后，点“分析检索结果”，</p>
-<p><img src="/ref_pic/确定研究领域-3.png"></p>
-<p>随后便可查看按照 WoS 类别或作者进行分类的文献分析结果了，还可以点击“下载”按钮下载当前的截图。</p>
-<p><img src="/ref_pic/确定研究领域-4.png"></p>
-<p><img src="/ref_pic/确定研究领域-5.png"></p>
-<p>选中查看某个作者的记录并进入其个人主页（可以查看他所有的文章，以下选的是做 LORAKS 框架的 USC 教授 Haldar）后，可以在右侧查看其引文报告，从分析图中了解该作者的科研信息。</p>
-<p><img src="/ref_pic/确定研究领域-6.png"></p>
-<p><img src="/ref_pic/确定研究领域-7.png"></p>
-<p>图中 h-index 的 h 意思是 h 篇文章被引用了至少 h 次，h ＞30 就属于很厉害的程度了。</p>
-<h2 id="aminer-平台">AMiner 平台</h2>
-<p>AMiner（https://www.aminer.cn/）是清华唐杰教授开发的科技情报分析与挖掘平台，结合了 AI 的搜索和分析功能，自 2006 年上线，目前还为中国工程院、国家自然基金委、科技部等科研管理部门提供服务，除了常规的学术搜索功能以外，还能提供计算机顶级会议（好像对磁共振没啥用？）的 ddl 及链接入口、各领域必读论文、研究热点分析的功能，感觉有空的时候可以去瞄几眼。今天测试的时候（2023-0424）整个检索过程是可以免费使用的，不清楚以后会不会收费（我感觉是不会的，毕竟都这么多年了）。</p>
-<p>回到本文的主题，在检索了研究领域主题之后选择专家，便能显示相关的作者清单，使用起来还是很方便的，不过结果可视化方面感觉没有 WoS 好看。</p>
-<p><img src="/ref_pic/确定研究领域-8.png"></p>
-<h2 id="conneted-papers">Conneted Papers</h2>
-<p>Conneted Papers（www.connectedpapers.com/）使用特别方便，文献之间关联的可视化效果做得特别好，它主要是通过某一篇具体的文章来搜索相关的领域（而不是直接检索一组研究领域关键词对应的文章），然后生成对应的文献关系图，进而间接地分析实验团队。该搜索平台在 2020 年 6 月上线，后续还在 2023 年 3 月更新了用户认证（具体发行历史可参考 https://connectedpapers.notion.site/Connected-Papers-Release-Notes-f758d434dfcc45e2b8ed3d0452739982），一般情况下需要注册使用，普通用户每个月只有 5 次免费机会，无限制账号的费用为 3 美元/月（非盈利或个人账号）或 10 美元/月（企业账号）。<u>不过，可以在 Chrome 中通过 <code>ctrl + shift + N</code> 打开无痕窗口，即可不登录（也就无次数限制）使用，今天（2023-0424）亲测可用。</u></p>
-<p>使用时在检索框内输入某一篇文章，然后生成统计分析图</p>
-<p><img src="/ref_pic/确定研究领域-9.png"></p>
-<p>随后就能查看拓扑结构中各节点的具体信息了，十分的好用</p>
-<p><img src="/ref_pic/确定研究领域-10.png"></p>
-<h2 id="其他文献计量学软件">其他文献计量学软件</h2>
-<p>文献计量软件就是专门用来对文献数据进行系统地分类管理、统计分析的一类软件，其中就包括了 EndNote 等文献管理软件。而不管是哪一款文献计量软件，数据获取是很关键的一步，每个软件规定的格式不尽相同（比如有些软件无法识别知网 CNKI 的数据格式），但大都可以识别 WoS 平台的数据格式，只有在导入了正确格式的数据库信息之后才能进行分析。以下是几种能分析文献信息的软件使用说明（其实和确定研究领域大牛/团队的关系不大，应当另起一个主题的，先挖个坑之后再填）</p>
-<ul>
-<li>HistCite：https://zhuanlan.zhihu.com/p/20902898</li>
-<li>VOSviewer：https://mp.weixin.qq.com/s/HipfzWB8mLoGl-l1y2IH1w</li>
-</ul>
-<p><img src="/ref_pic/文献计量学软件-1.png"></p>
-<p><img src="/ref_pic/文献计量学软件-2.png"></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1070,7 +1055,7 @@ alg=4: 使用 multiplicative half-quadratic 算法来求解，使用有近似值
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">103</span>
+          <span class="site-state-item-count">105</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1083,7 +1068,7 @@ alg=4: 使用 multiplicative half-quadratic 算法来求解，使用有近似值
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-count">17</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -1119,7 +1104,7 @@ alg=4: 使用 multiplicative half-quadratic 算法来求解，使用有近似值
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">134k</span>
+    <span title="站点总字数">140k</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
   </div>
