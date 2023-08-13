@@ -158,6 +158,124 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/08/13/2023-0813-%E5%A6%99%E9%B8%AD%E7%9B%B8%E6%9C%BA%E7%AD%89AI%E5%86%99%E7%9C%9F%E8%BD%AF%E4%BB%B6%E5%8E%9F%E7%90%86/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="zhb">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="zhb木木三的个人网页">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/08/13/2023-0813-%E5%A6%99%E9%B8%AD%E7%9B%B8%E6%9C%BA%E7%AD%89AI%E5%86%99%E7%9C%9F%E8%BD%AF%E4%BB%B6%E5%8E%9F%E7%90%86/" class="post-title-link" itemprop="url">妙鸭相机等AI写真软件原理</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2023-08-13 19:55:00 / 修改时间：20:03:53" itemprop="dateCreated datePublished" datetime="2023-08-13T19:55:00+08:00">2023-08-13</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%90%9E%E7%82%B9%E8%AF%BE%E5%A4%96%E7%9F%A5%E8%AF%86/" itemprop="url" rel="index"><span itemprop="name">搞点课外知识</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.7k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>6 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>2023 年 7 月 17 日正式上线的妙鸭相机在最近挺火的，它主打的就是一个方便快捷，只要 9.9 元以及上传大概 20 张图片，就能生成个人的<strong>数字分身</strong>，并一键生成商务照、证件照等各种风格的<strong>个人写真照</strong>，在微信小程序上搜一下就能用了。</p>
+<p><img src="/ref_pic/妙鸭相机-1.png"></p>
+<p>像妙鸭相机、45AI 写真这一类的 AI 小程序算是 AI 绘画技术风口下的第一批商业产品，这一类互联网产品只要底层的软件写好，使用量上去之后，边际成本是几乎为零的，剩下的事情主要就是营销推广以及用户留存率了。不过这里主要还是想了解一下这种 AI 写真软件的原理，理论上就和 Stable Diffusion 中训练 LoRA 模型是相通的。</p>
+<h2 id="原理">原理</h2>
+<p>“投入少量图片，经过一定训练时间生成自定义的不同风格的写真照片”，该效果描述基本就是今年年初火起来的 LoRA（Low-Rank Adaptation of Large Language Models（大语言模型的低阶适应） AI 画图模型，其效果就是在 Checkpoint 等大的主模型基础上，利用少量数据训练处一种画风/IP/人物，实现定制化需求。正因为它所需的训练资源比其他模型要少很多，所以非常适合社区使用者和个人开发者。</p>
+<p>而妙鸭相机等 AI 写真软件就是基于开源的 Stable Diffusion 来进行 LoRA 模型的精调，相当于是把科学上网、找资源、本地部署 Stable Diffusion、配置插件环境、输入调试提示词 Prompt 等等这些步骤全都集成化到一个在线使用的小程序上，而且操作简单、收费低（9.9 元），确实能直击用户痛点。</p>
+<h2 id="妙鸭相机使用方式">妙鸭相机使用方式</h2>
+<p>使用的时候也很简单，首先去微信小程序（不需要下载 APP）搜索并点开。</p>
+<p><img src="/ref_pic/妙鸭相机-2.png"></p>
+<h3 id="上传单张照片">上传单张照片</h3>
+<p>然后需要使用一张图片作为输入，按照 Stable Diffusion 的逻辑，这一张照片应该就类似于一键换头、局部重绘之类的输入图片。</p>
+<p><img src="/ref_pic/妙鸭相机-3.png"></p>
+<p>这里提到“<strong>婴儿、老年人、眼镜等特征效果有不稳定性，我们正在努力优化</strong>”，如果该软件用的是开源的 Stable Diffusion 以及相应的 Check Point 大模型，那么该团队实际上是没有能力去优化这些特征效果的，可能就是圈一波钱就跑路那种模式。</p>
+<h3 id="补充20张正面照">补充20张正面照</h3>
+<p><img src="/ref_pic/妙鸭相机-4.png"></p>
+<p>这里使用的多张照片，猜测实际上就是用来重新训练 LoRA 模型。像是美图秀秀、B612 等软件会要求更少的 3-15 张，生成的图片可能没那么与本人相似。此外，这些训练数据也有一定的质量要求，要保证面部特征清晰、单人、多角度等，才属于<strong>优质数据</strong>，否则训练出来的 AI 模型很可能也不行。</p>
+<h3 id="付费并等待">付费并等待</h3>
+<p>挑选并上传完图片后，就会提示付费并生成图片。（真会玩，要等用户投入了时间之后再提示要花钱，在沉没成本下或许大部分人都会选择掏个 9.9 元吧）。</p>
+<p><img src="/ref_pic/妙鸭相机-5.png"></p>
+<p>付费成功后，一般还要排队等待。根据<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/QcPd0EnE9KylCB2C5VtKuw">科技每日推送的一篇博文</a>，要大概 3 小时。</p>
+<h3 id="自定义写真">自定义写真</h3>
+<p>等待结束后，能看到制作好的数字分身以及几张范例照片。</p>
+<p><img src="/ref_pic/妙鸭相机-6.jpg"></p>
+<p>后续就能够根据一些模板调整出对应的写真照片了。</p>
+<p><img src="/ref_pic/妙鸭相机-7.jpg"></p>
+<h2 id="软件评价">软件评价</h2>
+<h3 id="隐私泄露">隐私泄露</h3>
+<p>要训练 AI 模型就需要上传个人照片，而这个过程是在云端数据库进行的，并不能在客户端的本地运行（其实也合理，毕竟主打一个方便快捷，那麻烦的运算操作肯定都统一放在云端）。而这必然就会引起个人隐私数据泄露的风险，而且最初的《用户须知》里面的授权许可款项，让用户授予了软件开发方的很多权利。</p>
+<p><img src="/ref_pic/妙鸭相机-8.png"></p>
+<p>尽管后续发了一份道歉声明以及删除承诺，但其原理决定了这种隐患无法被消除。</p>
+<p><img src="/ref_pic/妙鸭相机-9.png"></p>
+<h3 id="生成效果的稳定性">生成效果的稳定性</h3>
+<p>AI 本质上还是个黑盒子，虽然目前确实能生成出让人眼前一亮的照片，但也经常会出现照片细节不好的问题。但对于用户来说，并不会理会那么多原理性的细节，只要出来的图不好、生成错误、客服跟不上，那就很容易给差评。</p>
+<p><img src="/ref_pic/妙鸭相机-10.png"></p>
+<h2 id="参考材料">参考材料</h2>
+<p>《AI 生成写真照爆火，未来会替代海马体等写真照相馆吗？》：https://www.zhihu.com/question/613669268/answer/3144497297</p>
+<p>《在妙鸭相机，我花9块9，把自己给卖了》：https://mp.weixin.qq.com/s/QcPd0EnE9KylCB2C5VtKuw</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/08/13/2023-0813-%E5%B0%81%E7%A5%9E%E6%BC%94%E4%B9%89%E7%9A%84%E7%AD%89%E7%BA%A7%E5%88%B6%E5%BA%A6/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1012,144 +1130,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/08/04/2023-0804-LaTeX%E4%B8%8EMarkdown/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="zhb">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="zhb木木三的个人网页">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/08/04/2023-0804-LaTeX%E4%B8%8EMarkdown/" class="post-title-link" itemprop="url">LaTeX与Markdown</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2023-08-04 11:30:00 / 修改时间：11:30:38" itemprop="dateCreated datePublished" datetime="2023-08-04T11:30:00+08:00">2023-08-04</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%AD%A6%E6%9C%AF%E6%A8%A1%E5%9D%97/" itemprop="url" rel="index"><span itemprop="name">学术模块</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>898</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>3 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Markdown和LaTeX是两种完全不同的<strong>标记语言</strong>，每一种都有其特定的用途和优势，前者相当于是轻量化版本的word，后者是用于生成规范化PDF文件的排版语言。</p>
-<h2 id="markdown">Markdown</h2>
-<p><img src="/ref_pic/MarkdownLogo.png"></p>
-<p><a target="_blank" rel="noopener" href="https://www.markdownguide.org/">Markdown</a>是一种轻量级的标记语言，主要用于创建格式化的文本。</p>
-<ul>
-<li>它被设计为易读且易写，以便尽可能无障碍地进行文字表达</li>
-<li>有极简的语法，以纯文本方式书写，可以快速转化为HTML格式</li>
-<li>可以用来创建列表、链接、图片、代码块、标题、强调文本等</li>
-<li>大多数情况下在网络上编写和共享文档时使用，例如GitHub的README、博客和论坛上的说明文档</li>
-</ul>
-<h2 id="latex">LaTeX</h2>
-<p><img src="/ref_pic/LaTeXLogo.png"></p>
-<p><a target="_blank" rel="noopener" href="https://www.latex-project.org/">LaTeX</a>是一种基于TeX的排版系统，被广泛用于科学、数学和技术文档的制作。</p>
-<ul>
-<li>提供了对复杂表格和数学公式的高级处理能力，以及对参考文献和索引的自动处理等功能</li>
-<li>语法更复杂，也有着更强的功能和灵活性</li>
-</ul>
-<h2 id="两者的主要差异">两者的主要差异</h2>
-<table>
-<thead>
-<tr class="header">
-<th>特性</th>
-<th>Markdown</th>
-<th>LaTeX</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>易用性</strong></td>
-<td>语法相对<strong>简单</strong>，适合于编写简单的文档和笔记</td>
-<td>提供了许多用于创建复杂文档的工具和选项，但需要更多的学习和理解</td>
-</tr>
-<tr class="even">
-<td><strong>灵活性</strong></td>
-<td>主要关注内容本身，而不是样式</td>
-<td>提供了对文档样式的深度控制，包括页眉、页脚、边距、脚注、参考文献等</td>
-</tr>
-<tr class="odd">
-<td><strong>公式表格处理</strong></td>
-<td>数学公式处理能力较弱，适合简单的表格</td>
-<td>处理复杂数学公式和表格的<strong>最佳选择</strong>，其公式排版优美，符合学术要求</td>
-</tr>
-<tr class="even">
-<td><strong>用途</strong></td>
-<td>更常用于编写网页、博客文章、演示文稿等</td>
-<td>用于创建专业级别的科学和数学文档，如学术论文、技术报告、书籍等</td>
-</tr>
-<tr class="odd">
-<td><strong>输出格式</strong></td>
-<td>主要用于生成 HTML，但也可以通过一些工具转换为其他格式</td>
-<td>可以输出到多种格式，如 PDF、HTML、RTF 等</td>
-</tr>
-</tbody>
-</table>
-<p>总的来说，Markdown和LaTeX两者各有所长，选择使用哪一种主要取决于个人需求。如果需要编写一个简单的文档，那么Markdown 可能是一个更好的选择。如果需要创建一个包含复杂表格和数学公式的专业级别的文档，那么LaTeX可能是一个更好的选择。</p>
-<h2 id="参考资料">参考资料</h2>
-<p>《Markdown 语法技巧点，以及和 LateX 的区别》：https://zhuanlan.zhihu.com/p/637627317</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1219,7 +1199,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">107</span>
+          <span class="site-state-item-count">108</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1268,7 +1248,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">143k</span>
+    <span title="站点总字数">145k</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
   </div>
