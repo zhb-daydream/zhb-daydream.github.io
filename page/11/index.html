@@ -1,1469 +1,255 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.4.2">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
-
-<link rel="stylesheet" href="/css/main.css">
-
-<link rel="stylesheet" href="fonts.lug.ustc.edu.cn/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"zhb-daydream.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
-  </script>
-
-  <meta property="og:type" content="website">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>zhb木木三的个人网页 - 个人博客的新尝试（页面渲染需要时间，请耐心等待）</title><meta name="author" content="zhb"><meta name="copyright" content="zhb"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
 <meta property="og:title" content="zhb木木三的个人网页">
 <meta property="og:url" content="https://zhb-daydream.github.io/page/11/index.html">
 <meta property="og:site_name" content="zhb木木三的个人网页">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
 <meta property="article:author" content="zhb">
 <meta name="twitter:card" content="summary">
-
-<link rel="canonical" href="https://zhb-daydream.github.io/page/11/">
-
-
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : true,
-    isPost : false,
-    lang   : 'zh-CN'
-  };
-</script>
-
-  <title>zhb木木三的个人网页</title>
-  
-
-
-
-
-
-
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
+<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://zhb-daydream.github.io/page/11/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'zhb木木三的个人网页',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2023-08-21 23:56:17'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
   }
 
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
 
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
 
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.2">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
-
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
-    </div>
-  </div>
-
-  <div class="site-meta">
-
-    <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">zhb木木三的个人网页</h1>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-      <p class="site-subtitle" itemprop="description">个人博客的新尝试（页面渲染需要时间，请耐心等待）</p>
-  </div>
-
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-    </div>
-  </div>
-</div>
-
-
-
-
-<nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
-
-  </li>
-  </ul>
-</nav>
-
-
-
-
-</div>
-    </header>
-
-    
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
-
-
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
-
-          <div class="content index posts-expand">
-            
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/06/13/2023-0613-%E6%97%A5%E8%AE%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="zhb">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="zhb木木三的个人网页">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/06/13/2023-0613-%E6%97%A5%E8%AE%B0/" class="post-title-link" itemprop="url">2023-0613日记</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-06-13 00:45:00" itemprop="dateCreated datePublished" datetime="2023-06-13T00:45:00+08:00">2023-06-13</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-06-28 22:57:35" itemprop="dateModified" datetime="2023-06-28T22:57:35+08:00">2023-06-28</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%97%A5%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">日记</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>421</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>改论文真的太痛苦了，主要还是不想改、心理抗拒。不得不说，在便笺里面列个 To do list、写个大纲注明第一句、第二句要写什么内容，还是会有点帮助的。尽管有时候列完了大纲，明确了确实就该这么写，还是不想动笔，这种感觉太糟糕了。或许该出去走走，然后心里一直惦记这个事，边走边自言自语，看看有没有效果。</p>
-<p>翻了一下，之前投稿的文章 Abstract 里面，乍一眼就能看到 3 处拼写错误！vaule、adn、expermental，我真是服了，难道当时都没用 Grammarly 完整查一遍的吗？就这态度，还能有一个 accept 的审稿意见，也是够可以的了。如果是低级错误，好点的期刊大概看都不看直接跳过了吧。唉，愚蠢的欧多多啊！（不过好像说，拼写错误不归审稿人管，在论文接收后会有专门的编辑来检查。）</p>
-<p>人为了逃避做一件事，真的会做好多其他的事。现在博客自定义的 _draft 文件夹里，已经存了 15 个想写的博文主题，等我改完论文就开写！</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/06/01/2023-0601-%E6%97%A5%E8%AE%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="zhb">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="zhb木木三的个人网页">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/06/01/2023-0601-%E6%97%A5%E8%AE%B0/" class="post-title-link" itemprop="url">2023-0601日记</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-06-01 23:12:00" itemprop="dateCreated datePublished" datetime="2023-06-01T23:12:00+08:00">2023-06-01</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-06-28 22:57:26" itemprop="dateModified" datetime="2023-06-28T22:57:26+08:00">2023-06-28</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%97%A5%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">日记</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>411</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>不知不觉就到六月份了，不知不觉也有了 49 篇博文了，惆怅有一点，感慨也有一点。这段时间精神状态都不太好，五月是博文的高频写作期，一共写了 29 篇，但里面的个人随笔部分却是越来越少，逐渐变成了一个无情的写作机器，很大原因就是因为写博客变成了一种逃避改小论文的途径（不过有一说一，至少比打通一个全战或者群星的新档然后陷入更大的迷茫要强）。虽然逃避不能解决问题，但多少算是恢复了点精力，希望能尽快把拖更已久的小论文改了然后继续发表吧（之后就又能愉快地写博客了，大概）。</p>
-<p>博文数量多了之后，有些之前没碰见的问题也会随之而来，一个主要就是如何管理这些文档。目前暂时是通过【日期+标题】的命名方式来管理，此外同一类型的博文也添加了一些 tags 标签。相比于 categories 分类，tags 标签的好处可能在于比较随意一点？（虽然两个本质上可能没什么差别）。等内容写得差不多之后，也差不多该开始搞点炫酷的装饰美化效果了呢。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/05/29/2023-0529-%E6%B8%B8%E6%88%8F%E8%A1%8C%E4%B8%9A%E9%94%80%E5%94%AE%E8%A7%84%E6%A8%A1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="zhb">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="zhb木木三的个人网页">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/05/29/2023-0529-%E6%B8%B8%E6%88%8F%E8%A1%8C%E4%B8%9A%E9%94%80%E5%94%AE%E8%A7%84%E6%A8%A1/" class="post-title-link" itemprop="url">游戏行业销售规模</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-05-29 22:36:00" itemprop="dateCreated datePublished" datetime="2023-05-29T22:36:00+08:00">2023-05-29</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-06-09 11:34:42" itemprop="dateModified" datetime="2023-06-09T11:34:42+08:00">2023-06-09</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%90%9E%E7%82%B9%E8%AF%BE%E5%A4%96%E7%9F%A5%E8%AF%86/" itemprop="url" rel="index"><span itemprop="name">搞点课外知识</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>2.7k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>9 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>前段时间（2023-05-12）《塞尔达传说：王国之泪》正式发售后，就很多新闻说它销量打破了任天堂系列游戏的记录，前三天就卖了 1000 万份（按￥450 一份算，大概￥45 亿？！），然而懵懂无知的我对这些数量级完全没有概念，于是就想着去稍微了解一下游戏行业的收入吧！不过各游戏的收入就和互联网公司里的收入一样，不是内部人员的话大概率都拿不到第一手数据。</p>
-<p><strong>渠道一</strong>：游戏公司的年度财报（比如腾讯），但只有上市公司需要定期公布财报来向股东汇报公司运营状况（也有一定的造假空间），像米哈游这种非上市公司就没有义务公布收益和利润情况，也就无从下手获取数据了（另一方面来说，上市了就一定会受到市场的束缚，进而影响产品质量）。</p>
-<p><strong>渠道二</strong>：<a target="_blank" rel="noopener" href="https://app.chandashi.com/new/ranking/hotapp?genreId=6014&amp;dateType=week&amp;date=2023-05-22">蝉大师</a>、<a target="_blank" rel="noopener" href="https://www.qimai.cn/">七麦数据</a> 等第三方的数据分析平台，它们的数据来源不得而知（毕竟是人家谋生工具），不过我感觉主要就是实时监控一些应用商店的榜单（比如 iOS 平台要充值都得统一经过 iOS App Store，其榜单就比较靠谱，而 PC、安卓端就不太好找来源，因而这些第三方数据分析平台也是以 iOS 数据去估计其他平台）。</p>
-<p><strong>渠道三</strong>：发行商统计数据。比如任天堂、Epic、Steam 上面的统计结果，一般会列出该发行平台下的热销绑单，不过这个一般就是看买断制单机游戏的榜单。此外在 <a target="_blank" rel="noopener" href="https://www.vgchartz.com/gamedb/">VGChartz</a>、<a target="_blank" rel="noopener" href="https://www.ali213.net/paihb.html">游侠网</a>、<a target="_blank" rel="noopener" href="https://www.gamersky.com/top/">游民星空</a>、<a target="_blank" rel="noopener" href="https://www.3dmgame.com/phb.html">3dm</a>等游戏攻略网站也会有一些排行榜，但似乎没有具体数值。</p>
-<p><strong>渠道四</strong>：在 b 站、知乎等地方找别人现成的分析结果（不得不说，这段时间写博客才意识到，从头做一期统计分析还是一件比较费时费力的事情），搜索的关键词基本就是<strong>流水</strong>、<strong>销售额</strong>、<strong>收入</strong>。顺带提一句，在 b 站有个频道叫<a target="_blank" rel="noopener" href="https://www.bilibili.com/v/channel/605361?tab=featured">数据可视化</a>，里面就有不少有趣的数据统计视频。</p>
-<h2 id="概念">概念</h2>
-<ul>
-<li>销量：指的就是游戏卖出去了多少份，比如“XX游戏销量达到一百万”指的就是这款游戏卖到玩家手上的数量是一百万份。</li>
-<li>出货量：游戏卖到渠道商和授权经销商的数量（一般指非直销模式的游戏），比如“出货量一百万”指的是一共卖了一百万份给发行商，而一部分可能已经被玩家买走，另一部分则可能还在库里或货架上。一般会大于销量。</li>
-<li>流水：营业额，从手游时代开始的概念，是指游戏内所有玩家的付费总额，且根据宣传、统计需求的不同，有“月流水”、“首日流水”、“24小时流水”等。</li>
-</ul>
-<p>因为信息来源比较多，我下面就随便列一列了，也不管出处、准确性和计算方式了，统计的都是收入，其研发成本、推广成本我肯定不知道，利润也就无从计算了。</p>
-<h2 id="买断制游戏">买断制游戏</h2>
-<ul>
-<li>宝可梦全系列（任天堂）：￥960亿（4亿8000万份）</li>
-<li>使命召唤全系列（Activision）：￥800亿（4亿份）</li>
-<li>Minecraft（Mojang）：￥238亿（2亿3800万份）</li>
-<li>刺客信条全系列（Ubisoft）：￥400亿（2亿份）</li>
-<li>模拟人生全系列（EA）：￥100亿（2亿份）</li>
-<li>GTA 5（Rockstar Games）：￥240亿（1亿8000万份）</li>
-<li>最终幻想全系列（Square）：￥3464亿（1亿7320万份）</li>
-<li>极品飞车全系列（EA）：￥150亿（1亿5000万份）</li>
-<li>switch 硬件（任天堂）：￥2768亿（1亿2255 万台）</li>
-<li>PUBG（PUBG Corporation）：￥75亿（7500万份）</li>
-<li>荒野大镖客2（Rockstar Games）￥106亿：（5300万份）</li>
-<li>马里奥赛车8 豪华版（任天堂）：￥145亿（5200万份）</li>
-<li>巫师3（CD Projekt）：￥40亿（4000万份）</li>
-<li>动物森友会（任天堂）：￥145亿（4159万份）</li>
-<li>上古卷轴5（Bethesda Softworks）：￥30亿（3000万份）</li>
-<li>使命召唤黑色行动2（Activision）：￥60亿（3000万份）</li>
-<li>塞尔达传说：旷野之息（任天堂）：￥92亿（2900万份）</li>
-<li>无主之地3（2K Games）：￥54亿（2700万份）</li>
-<li>战神4（Sony Entertainment）：￥46亿（2300万份）</li>
-<li>艾尔登法环（Bandai Namco Entertainment）：￥61.5亿（2050万份）</li>
-<li>赛博朋克2077（CD Projekt）：￥40亿（2000万份）</li>
-<li>消逝的光芒（Warner Bros.Entertainment）：￥20亿（2000万份）</li>
-<li>神秘海域4（Sony Entertainment）：￥16.25亿（1625万份）</li>
-<li>战地3（EA）：￥45亿（1500万份）</li>
-<li>星露谷物语（Chucklefish）：￥6.5亿（1300万份）</li>
-<li>求生之路（Valve）：￥4.8亿（1200万份）</li>
-<li>都市天际线（Paradox Interactive）：￥12亿（1200万份）</li>
-<li>怪物猎人崛起（Capcom）：￥24亿（1200万份）</li>
-<li>文明6（Microprose）：￥5亿（1100万份）</li>
-<li>模拟人生3（EA）：￥10亿（1000万份）</li>
-<li>双人成行（EA）：￥20亿（1000万份）</li>
-<li>孤岛惊魂5（Ubisoft）：￥20亿（1000万份）</li>
-<li>合金装备5幻痛（Konami）：￥18亿（600万份）</li>
-<li>只狼（Activision）：￥10亿（500万份）</li>
-<li>全战战锤1（Sega）：￥40亿（200万份）</li>
-</ul>
-<h2 id="手游流水">手游流水</h2>
-<p><strong>统计结果1</strong>（Appmagic 统计的不知道哪些平台的数据）</p>
-<ul>
-<li>王者荣耀 2022 年：￥155.61亿（$22.23亿）</li>
-<li>和平精英 2022 年：￥120.75亿（$17.25亿）</li>
-<li>原神 2022 年：￥109.27亿（$15.61亿）</li>
-</ul>
-<p><strong>统计结果2</strong>（包含了 PC、PS 平台）：</p>
-<ul>
-<li>原神 2021 年：￥299.24亿</li>
-<li>原神 2022 年：￥377.52亿</li>
-<li>原神 2023 年 4 月：￥33亿</li>
-<li>崩坏星穹铁道（2023.4.26 至 2023.4.30）￥14亿</li>
-</ul>
-<p><strong>统计结果3</strong>（排除腾讯之后的国产二次元手游）</p>
-<p><img src="/ref_pic/二次元手游2022排行榜.png"></p>
-<h2 id="参考来源">参考来源</h2>
-<p>各买断制游戏的排行榜： <a target="_blank" rel="noopener" href="https://www.vgchartz.com/gamedb/">VGChartz</a></p>
-<p>各搜索引擎、知乎</p>
-<h2 id="碎碎念">碎碎念</h2>
-<p>这玩意真的比互联网大厂薪资级别还难统计！买断制游戏还好说，主要统计出货量就行，然后根据价格大概估算一下。而手游的话，各家有各家的统计结果，有时候这边说了个数字，又对不上那边的数字了。只能说用同一个统计方式来横向对比一下大概的相对差距，再用各种统计结果来估算量级。总之就是给自己看的东西，完全不准的。</p>
-<p>不得不说，腾讯的王者荣耀、和平精英真是个怪物，收入这么多。当然，原神也是个大怪物，居然能超出其他二次元手游这么多。最后就是，手游也是个怪物！人家巫师 3 这种经典大作也才不到 50 亿人民币，这王者荣耀一年流水就能顶好几个巫师 3 了，手游市场规模还是大啊！</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/05/29/2023-0529-%E4%BA%92%E8%81%94%E7%BD%91%E5%85%AC%E5%8F%B8%E7%9A%84%E7%AD%89%E7%BA%A7%E5%88%B6%E5%BA%A6/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="zhb">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="zhb木木三的个人网页">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/05/29/2023-0529-%E4%BA%92%E8%81%94%E7%BD%91%E5%85%AC%E5%8F%B8%E7%9A%84%E7%AD%89%E7%BA%A7%E5%88%B6%E5%BA%A6/" class="post-title-link" itemprop="url">互联网公司的等级制度</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-05-29 00:30:00" itemprop="dateCreated datePublished" datetime="2023-05-29T00:30:00+08:00">2023-05-29</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-06-09 11:34:42" itemprop="dateModified" datetime="2023-06-09T11:34:42+08:00">2023-06-09</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%90%9E%E7%82%B9%E8%AF%BE%E5%A4%96%E7%9F%A5%E8%AF%86/" itemprop="url" rel="index"><span itemprop="name">搞点课外知识</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>2.5k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>8 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>一般而言，公司内部的职位等级制度不会像国家职称那样直接公开出来，大部分的消息来源就是各公司内网和不知道真假的口口相传，这种<strong>职级管理体系</strong>相关的内容要想获取内部的一手信息、政策文件也真是太为难我小胖虎了。所以下文也主要是从搜索引擎、小红书、知乎、简书等地方搜罗来的消息，权当个参考，不是严谨的介绍。</p>
-<h2 id="传统架构">传统架构</h2>
-<p><img src="/ref_pic/公司等级架构-1.png"></p>
-<p>这里顺带讲一下 CXO。它是现代公司制度下的产物，体现了所有权与经营权相分离的一种制度形式。CXO 中的 X 是一种代称，代表公司里的一种特定职务，而 C 表示首席(Chief)，O 表示官员(Officer)。</p>
-<ul>
-<li>COO : Chief Operation Officer，首席运营官。负责制定企业长远战略和企业运营，对 CEO 负责。</li>
-<li>CEO : Chief Executive Officer，首席执行官。在一个企业中负责日常事务的最高行政官员，又称作行政总裁、总经理或者最高执行长，有最终的执行、经营、管理和决策的权利。</li>
-<li>CTO : Chief Technology Officer， 首席技术官。企业内技术的最高负责人，类似于总工程师。</li>
-<li>CFO : Chief Financial Officer，首席财务官。如果公司上市就应当是由首席财务官全权负责</li>
-<li>CMO : Chief Marketing Officer，首席营销官。负责市场运营工作的高级管理人员，对企业营销思想进行定位，又称作市场部经理、营销总监。</li>
-</ul>
-<h2 id="互联网公司">互联网公司</h2>
-<p>互联网大厂三巨头 BAT，国内最大的三个互联网公司，其公司架构也最具有参考性</p>
-<ul>
-<li><strong>百度</strong>（Baidu，北京，搜索引擎）</li>
-<li><strong>阿里巴巴</strong>（Alibaba，浙江杭州，电子商务）</li>
-<li><strong>腾讯</strong>（Tencent，广东深圳，开放平台）</li>
-</ul>
-<p>互联网小三巨头 TMD，第二梯队（其实梯队排名可能年年都会变，还有<strong>字节跳动</strong>、<strong>京东</strong>、<strong>网易</strong>、<strong>快手</strong>、<strong>拼多多</strong>等）</p>
-<ul>
-<li><strong>今日头条</strong>（归属字节跳动的移动端搜索引擎，北京）</li>
-<li><strong>美团</strong>（团购，北京）</li>
-<li><strong>滴滴</strong>（移动出行，北京）</li>
-</ul>
-<h2 id="岗位类型">岗位类型</h2>
-<p>每个公司的岗位类型肯定多少会有点出入，这里就只列 BAT 的主要岗位类型。对于一般的理科、工科学生而言，就主要看里面的技术岗。</p>
-<p>（1）百度</p>
-<ul>
-<li>管理层 M (Manager)</li>
-<li>技术 T (Technique)</li>
-<li>产品 P (Product)</li>
-</ul>
-<p>（2）阿里巴巴</p>
-<ul>
-<li>管理层 M (Manager)</li>
-<li>技术 P (Profession)</li>
-</ul>
-<p>（3）腾讯</p>
-<ul>
-<li>技术 T (Technique)：包括研发、视觉设计、交互、运维等</li>
-<li>产品 P (Product)：包括策划、运营、项目管理等</li>
-<li>市场 M (Market)：包括市场、战略、网站编辑、商务拓展等</li>
-<li>专业 S (Specialist)：包括行政、秘书、采购、法务、财务、会计、人力资源、公关等</li>
-</ul>
-<h2 id="岗位等级">岗位等级</h2>
-<h3 id="百度">百度</h3>
-<table>
-<thead>
-<tr class="header">
-<th>技术岗层级</th>
-<th>Title</th>
-<th>管理岗层级</th>
-<th>Title</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>T11</td>
-<td>首席科学家</td>
-<td>M5</td>
-<td>李彦宏</td>
-</tr>
-<tr class="even">
-<td>T10</td>
-<td>技术总监</td>
-<td>M4.2</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>T9</td>
-<td>研究员</td>
-<td>M4.1</td>
-<td></td>
-</tr>
-<tr class="even">
-<td>T8</td>
-<td>资深专家</td>
-<td>M3.2</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>T7</td>
-<td>高级专家</td>
-<td>M3.1</td>
-<td></td>
-</tr>
-<tr class="even">
-<td>T6</td>
-<td>技术专家</td>
-<td>M2.2</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>T5</td>
-<td>资深工程师</td>
-<td>M2.1</td>
-<td></td>
-</tr>
-<tr class="even">
-<td>T4</td>
-<td>高级工程师</td>
-<td>M1.2</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>T3</td>
-<td>专员</td>
-<td>M1.1</td>
-<td></td>
-</tr>
-<tr class="even">
-<td>T2</td>
-<td>助理</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>T1</td>
-<td>[低端岗位]</td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>T 序列与 M 序列无对应关系</li>
-<li>应届生一般入职一年多就可以从 T1 升到 T4</li>
-<li>T7 以上就要带团队、做管理，基本不写代码</li>
-<li>T10-12 很少，代表性的人物有前百度首席科学家吴恩达、百度最年轻 T10 楼天城等</li>
-<li>M1.1 至少是部门二把手，M5 是李彦宏</li>
-<li>从 M3 开始就有机会加入 E-Staff，类似于阿里的合伙人会议，属于最高战略决策层</li>
-</ul>
-<h3 id="阿里巴巴">阿里巴巴</h3>
-<table>
-<thead>
-<tr class="header">
-<th>技术岗层级</th>
-<th>Title</th>
-<th>管理岗层级</th>
-<th>Title</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td></td>
-<td></td>
-<td>M10</td>
-<td>董事长(Chairman)——如马云</td>
-</tr>
-<tr class="even">
-<td>P14</td>
-<td>资深科学家</td>
-<td>M9</td>
-<td>副董事长(Vice Chairman)</td>
-</tr>
-<tr class="odd">
-<td>P13</td>
-<td>科学家</td>
-<td>M8</td>
-<td>执行副总裁(Executive Vice President)、子公司 CEO</td>
-</tr>
-<tr class="even">
-<td>P12</td>
-<td>资深研究员</td>
-<td>M7</td>
-<td>资深副总裁(Senior Vice President)</td>
-</tr>
-<tr class="odd">
-<td>P11</td>
-<td>高级研究员</td>
-<td>M6</td>
-<td>副总裁(Vice President)</td>
-</tr>
-<tr class="even">
-<td>P10</td>
-<td>研究员</td>
-<td>M5</td>
-<td>资深总监</td>
-</tr>
-<tr class="odd">
-<td>P9</td>
-<td>资深专家</td>
-<td>M4</td>
-<td>总监</td>
-</tr>
-<tr class="even">
-<td>P8</td>
-<td>高级专家</td>
-<td>M3</td>
-<td>资深经理</td>
-</tr>
-<tr class="odd">
-<td>P7</td>
-<td>专家</td>
-<td>M2</td>
-<td>经理</td>
-</tr>
-<tr class="even">
-<td>P6</td>
-<td>高级工程师</td>
-<td>M1</td>
-<td>主管</td>
-</tr>
-<tr class="odd">
-<td>P5</td>
-<td>中级工程师</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>P4</td>
-<td>初级工程师</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>P1-3</td>
-<td>[低端岗位]</td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>P 序列与 M 序列有大概的对应关系，例如 P6 对应 M1</li>
-<li>应届毕业生一般 P4、P5</li>
-<li>社招一般 P6、P7、P8，需求量最大，业务中坚</li>
-</ul>
-<h3 id="腾讯">腾讯</h3>
-<table>
-<thead>
-<tr class="header">
-<th>技术岗层级</th>
-<th>Title</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>T4 —— 13 级</td>
-<td>专家——基本没有</td>
-</tr>
-<tr class="even">
-<td>T3.3 —— 12 级</td>
-<td>总监</td>
-</tr>
-<tr class="odd">
-<td>T3.2 —— 11 级</td>
-<td>技术专家</td>
-</tr>
-<tr class="even">
-<td>T3.1 —— 10 级</td>
-<td>资深工程师</td>
-</tr>
-<tr class="odd">
-<td>T2.3 —— 9 级</td>
-<td>工程师</td>
-</tr>
-<tr class="even">
-<td>T2.2 —— 8 级</td>
-<td>工程师</td>
-</tr>
-<tr class="odd">
-<td>T2.1 —— 7 级</td>
-<td>应届博士生</td>
-</tr>
-<tr class="even">
-<td>T1.3 —— 6 级</td>
-<td>应届研究生</td>
-</tr>
-<tr class="odd">
-<td>T1.2 —— 5 级</td>
-<td>应届本科生</td>
-</tr>
-<tr class="even">
-<td>T1.1 —— 4 级</td>
-<td>[低端岗位]</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>毕业 1-2 年的社招一般 T2.1 - T2.2，毕业 3 年及以上的社招一般 T2.2 - T2.3</li>
-<li>一般毕业 1 年半可升到 T2.2</li>
-<li>T3 开始就属于管理类</li>
-</ul>
-<h2 id="薪资对应关系">薪资对应关系</h2>
-<p><img src="/ref_pic/公司等级架构-2.png"></p>
-<p><img src="/ref_pic/公司等级架构-3.png"></p>
-<h2 id="参考资料">参考资料</h2>
-<p>比较全的知乎文章：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/388536875">《大厂职级、薪资一览表，你处在哪一级？（BAT/TMD/华为）》</a>，</p>
-<p>表格很清晰的知乎文章：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/29145413">《程序员的打怪升级路，你知道BAT技术岗的职级划分么？》</a></p>
-<p>相对较清晰的 CSDN 文章：<a target="_blank" rel="noopener" href="https://blog.csdn.net/BTUJACK/article/details/80165926">《BAT级别划分和KPI考核等消息》</a></p>
-<p>不同大厂薪资统计的知乎文章：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/110443296">《互联网大厂各职级薪资对应关系图（更新于 2022 年 9 月）》</a></p>
-<p>不同大厂薪资统计的简书文章：<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/4eb5bacfa036">《互联网公司职级 2021-02-19》</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/05/28/2023-0528-%E5%A6%82%E4%BD%95%E6%AD%A3%E7%A1%AE%E5%9C%B0%E6%9F%A5%E6%89%BE%E6%96%87%E7%8C%AE/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="zhb">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="zhb木木三的个人网页">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/05/28/2023-0528-%E5%A6%82%E4%BD%95%E6%AD%A3%E7%A1%AE%E5%9C%B0%E6%9F%A5%E6%89%BE%E6%96%87%E7%8C%AE/" class="post-title-link" itemprop="url">文献的正确查找方式和打开方式</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-05-28 17:30:00" itemprop="dateCreated datePublished" datetime="2023-05-28T17:30:00+08:00">2023-05-28</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-06-09 11:34:42" itemprop="dateModified" datetime="2023-06-09T11:34:42+08:00">2023-06-09</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%AD%A6%E6%9C%AF%E6%A8%A1%E5%9D%97/" itemprop="url" rel="index"><span itemprop="name">学术模块</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>1.3k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>4 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>查找文献和管理文献是每个研究生的必修课程，这也涉及到信息搜集能力和文件归档管理能力这两个重要技能，前者影响一个人如何在信息时代里更舒服的生存，后者则影响一个人如何高效地生活（比如平常聊天的时候，找一张表情包，找半天都找不到就很尴尬了）。本文只介绍最基础的文献搜索和文献管理方法，某种程度上讲，是写给当初研一刚入学、啥也不懂的过去的我看的。</p>
-<h2 id="文献查找方式">文献查找方式</h2>
-<p>首先，这里讨论的是寻找某个领域内的文献（比如 MRI 重建中的 SENSE 算法相关的论文），而且为了方便我写，以下只推荐使用 <a target="_blank" rel="noopener" href="https://scholar.google.com.hk/">google scholar</a>，不推荐其他的。直接搜关键词，搜索引擎的使用方法得另外查，我基本就是用空格连接多个关键词来查找的了，然后搜索过程就结束了。关于下图有几个要点：</p>
-<ul>
-<li>左边的侧边栏可以筛选搜索结果</li>
-<li>通过 “被引用次数” 判断该论文的价值，但该值可能不准</li>
-<li>点击 “被引用次数” 按钮，可以查看引用该篇论文的其他文献</li>
-<li>直接点开论文链接，可以查看该论文的相关信息，最重要的是它的 doi.org 链接</li>
-</ul>
-<p><img src="/ref_pic/查找及管理文献-1.png"></p>
-<h2 id="文献打开方式">文献打开方式</h2>
-<p>再次，为了方便我写，下面只推荐使用 EndNote20 作为文献管理软件，可以从<a target="_blank" rel="noopener" href="https://i.ustc.edu.cn">科大信息平台</a>的正版软件里下载，不过没有官方汉化，可以去找别人汉化好的版本。</p>
-<p>首先点击搜索结果中的 “引用”，下载 <code>.enw</code> 文件，里面就包括了该引用文献的核心信息，比如作者、标题、期刊名、期刊页面等。</p>
-<p><img src="/ref_pic/查找及管理文献-2.png"></p>
-<p>双击 <code>.enw</code> 文件，默认会用 EndNote20 打开，随后可以将对应的 .pdf 文件（需要自行下载）附加进该条目中，然后右键将该文献添加进自定义分组里。</p>
-<p><img src="/ref_pic/查找及管理文献-3.png"></p>
-<h3 id="下载文献pdf文件">下载文献pdf文件</h3>
-<p>有时候从 google scholar 搜出来的论文链接里点进去就能免费获取论文 PDF 文件，而更常见的方式是将论文链接（含有 DOI 号）直接粘贴进 <a target="_blank" rel="noopener" href="https://sci-hub.se/">Sci-Hub</a> 里，就能获取该论文的 PDF 文件了。</p>
-<p><img src="/ref_pic/查找及管理文献-4.png"></p>
-<h3 id="设置文献笔记显示">设置文献笔记显示</h3>
-<p>（1）在 EndNote20 中选择某篇论文，在详情页选择 Edit，在 Research Notes 内编辑自己的笔记</p>
-<p><img src="/ref_pic/查找及管理文献-5.png"></p>
-<p>（2）编辑文献输出样式。在 Tools——Output Styles 中编辑现成的某一个文献输出格式（这里已经有 "Annotated"，如果没有的话就去 Open Style Manager 里面挑一个 style 进行 Edit），点开 Bibiography（文献目录）——Templates，然后右侧就是各种文献类型（比如 Book 书籍、Conference Proceedings 会议摘要、Journal Article 期刊论文等，类型在 .enw 的第一行就能看到）所要显示的内容。在常用的几种文献类型条目（不嫌麻烦的话也可以编辑所有的文献类型条目）里回车并添加 <code>Research Notes</code> 关键词，想要显示简洁点的话也可以删改 <code>Author</code>、<code>Publisher</code> 等条目。</p>
-<p><img src="/ref_pic/查找及管理文献-6.png"></p>
-<p>（3）另存为文献输出样式。点击 File——Save As 保存为新的 style，我这里设置的 style name 是 <code>Annotated Research Notes</code>。</p>
-<p><img src="/ref_pic/查找及管理文献-7.png"></p>
-<p>（4）选择文献目录输出样式并显示编辑的笔记。</p>
-<p><img src="/ref_pic/查找及管理文献-8.png"></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/05/26/2023-0526-%E5%85%AC%E5%8A%A1%E5%91%98%E7%9A%84%E7%AD%89%E7%BA%A7%E5%88%B6%E5%BA%A6/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="zhb">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="zhb木木三的个人网页">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/05/26/2023-0526-%E5%85%AC%E5%8A%A1%E5%91%98%E7%9A%84%E7%AD%89%E7%BA%A7%E5%88%B6%E5%BA%A6/" class="post-title-link" itemprop="url">公务员的等级制度</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-05-26 13:30:00" itemprop="dateCreated datePublished" datetime="2023-05-26T13:30:00+08:00">2023-05-26</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-06-09 11:34:42" itemprop="dateModified" datetime="2023-06-09T11:34:42+08:00">2023-06-09</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%90%9E%E7%82%B9%E8%AF%BE%E5%A4%96%E7%9F%A5%E8%AF%86/" itemprop="url" rel="index"><span itemprop="name">搞点课外知识</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>1.6k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>5 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>根据中共中央办公厅 2019 年印发的<a target="_blank" rel="noopener" href="https://www.gov.cn/zhengce/2019-03/27/content_5377422.htm">《公务员职务与职级并行规定》</a>以及 2020 年发布的<a target="_blank" rel="noopener" href="https://www.gov.cn/xinwen/2020-03/15/content_5491492.htm">《公务员职务、职级与级别管理办法》</a>，公务员<strong>级别</strong>由低至高依次为二十七级至一级，同时公务员职位分为<strong>领导职务</strong>和<strong>职级</strong>两类，职级是一种公务员的等级序列，是与领导职务并行的晋升通道，不具有领导职责。</p>
-<h2 id="级别领导职务职级">级别、领导职务、职级</h2>
-<p>级别、领导职务、职级三者的概念与对应关系如下：</p>
-<ul>
-<li><p>级别：也称行政级别，共 27 个等级（一级最高，二十七级最低），是划分公务员地位等级的量化指标，每个级别会有对应的工资档次。</p></li>
-<li><p>领导职务：公务员职位的一类，共 10 个等级。</p></li>
-<li><p>职级：公务员职级，在 2019 年以前也称非领导职务，公务员职位的一种，可以细分为<strong>综合管理类</strong>（共 12 个等级）、<strong>专业技术类</strong>（共 11 个等级）、<strong>行政执法类</strong>（共 11 个等级）三类，但平常最多提到的还是综合管理类。</p></li>
-</ul>
-<table>
-<thead>
-<tr class="header">
-<th>级别</th>
-<th>领导职务</th>
-<th>综合管理类职级</th>
-<th>行政执法类职级</th>
-<th>专业技术类职级</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>一级</td>
-<td>国家级正职</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>四级至二级</td>
-<td>国家级副职</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>八级至四级</td>
-<td>省部级正职</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>十级至六级</td>
-<td>省部级副职</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>十三级至八级</td>
-<td>厅局级正职</td>
-<td>一级巡视员</td>
-<td></td>
-<td>一级总监</td>
-</tr>
-<tr class="even">
-<td>十五级至十级</td>
-<td>厅局级副职</td>
-<td>二级巡视员</td>
-<td>督办</td>
-<td>二级总监</td>
-</tr>
-<tr class="odd">
-<td>十七级至十一级</td>
-<td></td>
-<td>一级调研员</td>
-<td>一级高级主办</td>
-<td>一级高级主管</td>
-</tr>
-<tr class="even">
-<td>十八级至十二级</td>
-<td>县处级正职</td>
-<td>二级调研员</td>
-<td>二级高级主办</td>
-<td>二级高级主管</td>
-</tr>
-<tr class="odd">
-<td>十九级至十三级</td>
-<td></td>
-<td>三级调研员</td>
-<td>三级高级主办</td>
-<td>三级高级主管</td>
-</tr>
-<tr class="even">
-<td>二十级至十四级</td>
-<td>县处级副职</td>
-<td>四级调研员</td>
-<td>四级高级主办</td>
-<td>四级高级主管</td>
-</tr>
-<tr class="odd">
-<td>二十一级至十五级</td>
-<td></td>
-<td>一级主任科员</td>
-<td>一级主办</td>
-<td>一级主管</td>
-</tr>
-<tr class="even">
-<td>二十二级至十六级</td>
-<td>乡科级正职</td>
-<td>二级主任科员</td>
-<td>二级主办</td>
-<td>二级主管</td>
-</tr>
-<tr class="odd">
-<td>二十三级至十七级</td>
-<td></td>
-<td>三级主任科员</td>
-<td>三级主办</td>
-<td>三级主管</td>
-</tr>
-<tr class="even">
-<td>二十四级至十八级</td>
-<td>乡科级副职</td>
-<td>四级主任科员</td>
-<td>四级主办</td>
-<td>四级主管</td>
-</tr>
-<tr class="odd">
-<td>二十六级至十八级</td>
-<td></td>
-<td>一级科员</td>
-<td>一级行政执法员</td>
-<td>专业技术员</td>
-</tr>
-<tr class="even">
-<td>二十七级至十九级</td>
-<td></td>
-<td>二级科员</td>
-<td>二级行政执法员</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p>（信息来源：2016 年印发的<a target="_blank" rel="noopener" href="https://www.gov.cn/xinwen/2016-07/14/content_5091353.htm">《专业技术类公务员管理规定（试行）》和《行政执法类公务员管理规定（试行）》</a> 、2019 年印发的<a target="_blank" rel="noopener" href="https://www.gov.cn/zhengce/2019-03/27/content_5377422.htm">《公务员职务与职级并行规定》</a>、2020 年引发的<a target="_blank" rel="noopener" href="https://www.gov.cn/xinwen/2020-03/15/content_5491492.htm">《公务员职务、职级与级别管理办法》</a>）</p>
-<h2 id="行政机关的级别">行政机关的级别</h2>
-<p>以上介绍的行政级别（及其对应的职务、职级）反应的是官员的地位，而官员所在的行政机构也有一套等级制度，与领导职务类似，不过机关具体名字会不一样，如下图所示。</p>
-<ul>
-<li>左侧为五种领导职务，右侧为行政机关。比如外交部由新闻司等几个司构成。</li>
-<li>同一行的是一个行政级，对应的官员也是同一级。比如省长（省级政府头头）与部长（部委头头）是平级，市长（地级政府头头）与司长（司局头头）、厅长（厅局头头）是平级。</li>
-<li>除了国务院下面的一列，其他的应算是地方行政单位。</li>
-</ul>
-<p><img src="/ref_pic/行政机关级别.png"></p>
-<p>​</p>
-<h2 id="一些碎碎念">一些碎碎念</h2>
-<p>领导职务中的（省部级、厅局级、县处级、乡科级）也被称为（部、厅、处、科），对应于（部长、厅长/司长、处长、科长）或（部级领导干部、厅级领导干部、处级领导干部、科级领导干部）称呼。此外，虽然《公务员法》中未明确规定股级干部，但实际工作中还是存在这个级别的。</p>
-<p>找资料的时候发现，政策文件这东西，<strong>时效性很重要</strong>，一定要注意信息来源，有时候看了半天，发现对应的文件已经被废止，有了新版本的文件政策。比如，2006 年发布的《公务员职务与级别管理规定》里的第 6 条写了“公务员职务分为<strong>领导职务</strong>和<strong>非领导职务</strong>”，但 2019 年新发布的《公务员职务与职级并行规定》里却没有了“<strong>非领导职务</strong>”的概念，取而代之的是<strong>职级</strong>的称呼。只要找对了资料，最后的有效信息其实也就一张表的内容。</p>
-<p>整理资料的时候还接触到了国家级（国务院）、省部级（部委、省级政府）、司局级（司局、厅局、地级政府）、县处级（处室、处局、县级政府）、乡科级（科室、科局、乡级政府）、股级（股、所）等机关的概念，让我想起以前历史课背三省六部的中央官职时候的痛苦日子。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/10/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><span class="page-number current">11</span><a class="page-number" href="/page/12/">12</a><span class="space">&hellip;</span><a class="page-number" href="/page/19/">19</a><a class="extend next" rel="next" href="/page/12/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
-  </nav>
-
-
-
-          </div>
-          
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
-
-        </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">zhb</p>
-  <div class="site-description" itemprop="description"></div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">109</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-          
-        <span class="site-state-item-count">10</span>
-        <span class="site-state-item-name">分类</span></a>
-      </div>
-      <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-          
-        <span class="site-state-item-count">17</span>
-        <span class="site-state-item-name">标签</span></a>
-      </div>
-  </nav>
-</div>
-
-
-
-      </div>
-
-    </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        
-
-<div class="copyright">
-  
-  &copy; 
-  <span itemprop="copyrightYear">2023</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">zhb</span>
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item-icon">
-      <i class="fa fa-chart-area"></i>
-    </span>
-    <span title="站点总字数">145k</span>
-</div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
-  </div>
-
-        
-
-
-
-
-
-
-
-
-      </div>
-    </footer>
-  </div>
-
-  
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
-
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/muse.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-<script>
-if (document.querySelectorAll('pre.mermaid').length) {
-  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
-    mermaid.initialize({
-      theme    : 'forest',
-      logLevel : 3,
-      flowchart: { curve     : 'linear' },
-      gantt    : { axisFormat: '%m/%d/%Y' },
-      sequence : { actorMargin: 50 }
-    });
-  }, window.mermaid);
-}
-</script>
-
-
-  
-
-  
-      
-
-<script>
-  if (typeof MathJax === 'undefined') {
-    window.MathJax = {
-      loader: {
-          load: ['[tex]/mhchem'],
-        source: {
-          '[tex]/amsCd': '[tex]/amscd',
-          '[tex]/AMScd': '[tex]/amscd'
-        }
-      },
-      tex: {
-        inlineMath: {'[+]': [['$', '$']]},
-          packages: {'[+]': ['mhchem']},
-        tags: 'ams'
-      },
-      options: {
-        renderActions: {
-          findScript: [10, doc => {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
-              const display = !!node.type.match(/; *mode=display/);
-              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-              const text = document.createTextNode('');
-              node.parentNode.replaceChild(text, node);
-              math.start = {node: text, delim: '', n: 0};
-              math.end = {node: text, delim: '', n: 0};
-              doc.math.push(math);
-            });
-          }, '', false],
-          insertedScript: [200, () => {
-            document.querySelectorAll('mjx-container').forEach(node => {
-              let target = node.parentNode;
-              if (target.nodeName.toLowerCase() === 'li') {
-                target.parentNode.classList.add('has-jax');
-              }
-            });
-          }, '', false]
-        }
-      }
-    };
-    (function () {
-      var script = document.createElement('script');
-      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
-      script.defer = true;
-      document.head.appendChild(script);
-    })();
-  } else {
-    MathJax.startup.document.state(0);
-    MathJax.texReset();
-    MathJax.typeset();
-  }
-</script>
-
-    
-
-  
-
-</body>
-</html>
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">111</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">22</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">10</div></a></div><hr class="custom-hr"/></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="zhb木木三的个人网页"><span class="site-name">zhb木木三的个人网页</span></a></span><div id="menus"><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">zhb木木三的个人网页</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/06/16/2023-0616-%E4%B8%93%E5%88%A9%E7%94%B3%E8%AF%B7%E6%B5%81%E7%A8%8B/" title="专利申请流程">专利申请流程</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-06-16T09:52:00.000Z" title="发表于 2023-06-16 17:52:00">2023-06-16</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%90%9E%E7%82%B9%E8%AF%BE%E5%A4%96%E7%9F%A5%E8%AF%86/">搞点课外知识</a></span></div><div class="content">专利类型
+
+发明专利：针对产品、方法或者产品、方法的改进所提出的新的技术方案。
+实用新型专利：针对产品的形状、构造或者其结合所提出的适于实用的新的技术方案。
+外观设计专利：针对产品的形状、图案或者其结合以及色彩与形状、图案的结合所作出的富有美感并适于工业应用的新设计。
+
+涉及的人员类型
+
+发明人：即作者（第一发明人对应于论文的一作）。必须是法人，一篇专利可有多个发明人。
+申请人：拥有专利权利的所有人及持有人（专利授权前的称呼）。也称专利申请权人，包括自然人、各单位、院校、企业。
+专利权人：拥有专利权利的所有人及持有人（专利授权后的称呼）。包括自然人、各单位、院校、企业。
+代理人：受申请人委托，为其办理专利申请、转让、许可等事务的代办人
+
+专利申请流程
+对于发明专利而言：
+
+提出申请
+专利局受理
+初步审查
+公布阶段
+实质审查（含第一次审查意见等）
+授权公告
+
+对于实用新型专利和外观设计专利而言：
+
+提出申请
+专利局受理
+初步审查
+授权公告
+
+审查周期
+
+
+
+
+普通申请通道审查周期
+优先审查通道审查周期
+快速预审通道审查周期
+
+
+
+
+发明
+18-26个月
+7-12个月
+3-6个月
+
+
+实用 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/06/16/2023-0616-%E5%A6%82%E4%BD%95%E6%9F%A5%E9%98%85%E4%B8%93%E5%88%A9/" title="如何查阅专利">如何查阅专利</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-06-16T08:27:00.000Z" title="发表于 2023-06-16 16:27:00">2023-06-16</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%90%9E%E7%82%B9%E8%AF%BE%E5%A4%96%E7%9F%A5%E8%AF%86/">搞点课外知识</a></span></div><div class="content">一篇专利，除了其正文内容比较重要以外，它的申请人、发明人、申请时间、法律状态等信息也同样重要，因此一个方便好用（甚至免费）的查询渠道就比较关键。
+推荐平台
+专利汇⭐
+网址是：www.patenthub.cn（看起来和代码管理的 github、文献下载的 scihub 一样，都有个 hub，比较好记）。
+很推荐该平台，主打一个免费方便，能满足大部分的使用需求。
+
+注册即用
+响应速度（比官方的查阅系统）快
+PDF 文件下载无限制
+数据更新快（能查到一篇 10 天前刚授权的专利）
+筛选功能全
+
+
+知嘟嘟
+网址是：https://www.iprdb.com/。
+推荐作为专利汇的备选，注册即用，响应速度很快。
+政府平台（不太好用）
+中国专利公布公告
+网址是：http://epub.cnipa.gov.cn/，属于国家知识产权局下的政府网站，主办单位：国家知识产权局　软件维护：知识产权出版社。
+不推荐使用，免注册、检索速度慢（一分钟过去可能还是啥也没有）。放这里纯是当一个反面例子。
+中国及多国专利审查信息查询
+网址是：https://link.zhihu.com/?target=http%3A// ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/06/13/2023-0613-%E6%97%A5%E8%AE%B0/" title="2023-0613日记">2023-0613日记</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-06-12T16:45:00.000Z" title="发表于 2023-06-13 00:45:00">2023-06-13</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%97%A5%E8%AE%B0/">日记</a></span></div><div class="content">改论文真的太痛苦了，主要还是不想改、心理抗拒。不得不说，在便笺里面列个 To do list、写个大纲注明第一句、第二句要写什么内容，还是会有点帮助的。尽管有时候列完了大纲，明确了确实就该这么写，还是不想动笔，这种感觉太糟糕了。或许该出去走走，然后心里一直惦记这个事，边走边自言自语，看看有没有效果。
+翻了一下，之前投稿的文章 Abstract 里面，乍一眼就能看到 3 处拼写错误！vaule、adn、expermental，我真是服了，难道当时都没用 Grammarly 完整查一遍的吗？就这态度，还能有一个 accept 的审稿意见，也是够可以的了。如果是低级错误，好点的期刊大概看都不看直接跳过了吧。唉，愚蠢的欧多多啊！（不过好像说，拼写错误不归审稿人管，在论文接收后会有专门的编辑来检查。）
+人为了逃避做一件事，真的会做好多其他的事。现在博客自定义的 _draft 文件夹里，已经存了 15 个想写的博文主题，等我改完论文就开写！
+</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/06/01/2023-0601-%E6%97%A5%E8%AE%B0/" title="2023-0601日记">2023-0601日记</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-06-01T15:12:00.000Z" title="发表于 2023-06-01 23:12:00">2023-06-01</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%97%A5%E8%AE%B0/">日记</a></span></div><div class="content">不知不觉就到六月份了，不知不觉也有了 49 篇博文了，惆怅有一点，感慨也有一点。这段时间精神状态都不太好，五月是博文的高频写作期，一共写了 29 篇，但里面的个人随笔部分却是越来越少，逐渐变成了一个无情的写作机器，很大原因就是因为写博客变成了一种逃避改小论文的途径（不过有一说一，至少比打通一个全战或者群星的新档然后陷入更大的迷茫要强）。虽然逃避不能解决问题，但多少算是恢复了点精力，希望能尽快把拖更已久的小论文改了然后继续发表吧（之后就又能愉快地写博客了，大概）。
+博文数量多了之后，有些之前没碰见的问题也会随之而来，一个主要就是如何管理这些文档。目前暂时是通过【日期+标题】的命名方式来管理，此外同一类型的博文也添加了一些 tags 标签。相比于 categories 分类，tags 标签的好处可能在于比较随意一点？（虽然两个本质上可能没什么差别）。等内容写得差不多之后，也差不多该开始搞点炫酷的装饰美化效果了呢。
+</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/05/29/2023-0529-%E6%B8%B8%E6%88%8F%E8%A1%8C%E4%B8%9A%E9%94%80%E5%94%AE%E8%A7%84%E6%A8%A1/" title="游戏行业销售规模">游戏行业销售规模</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-05-29T14:36:00.000Z" title="发表于 2023-05-29 22:36:00">2023-05-29</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%90%9E%E7%82%B9%E8%AF%BE%E5%A4%96%E7%9F%A5%E8%AF%86/">搞点课外知识</a></span></div><div class="content">前段时间（2023-05-12）《塞尔达传说：王国之泪》正式发售后，就很多新闻说它销量打破了任天堂系列游戏的记录，前三天就卖了 1000 万份（按￥450 一份算，大概￥45 亿？！），然而懵懂无知的我对这些数量级完全没有概念，于是就想着去稍微了解一下游戏行业的收入吧！不过各游戏的收入就和互联网公司里的收入一样，不是内部人员的话大概率都拿不到第一手数据。
+渠道一：游戏公司的年度财报（比如腾讯），但只有上市公司需要定期公布财报来向股东汇报公司运营状况（也有一定的造假空间），像米哈游这种非上市公司就没有义务公布收益和利润情况，也就无从下手获取数据了（另一方面来说，上市了就一定会受到市场的束缚，进而影响产品质量）。
+渠道二：蝉大师、七麦数据 等第三方的数据分析平台，它们的数据来源不得而知（毕竟是人家谋生工具），不过我感觉主要就是实时监控一些应用商店的榜单（比如 iOS 平台要充值都得统一经过 iOS App Store，其榜单就比较靠谱，而 PC、安卓端就不太好找来源，因而这些第三方数据分析平台也是以 iOS 数据去估计其他平台）。
+渠道三：发行商统计数据。比如任天堂、Epic、Steam  ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/05/29/2023-0529-%E4%BA%92%E8%81%94%E7%BD%91%E5%85%AC%E5%8F%B8%E7%9A%84%E7%AD%89%E7%BA%A7%E5%88%B6%E5%BA%A6/" title="互联网公司的等级制度">互联网公司的等级制度</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-05-28T16:30:00.000Z" title="发表于 2023-05-29 00:30:00">2023-05-29</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%90%9E%E7%82%B9%E8%AF%BE%E5%A4%96%E7%9F%A5%E8%AF%86/">搞点课外知识</a></span></div><div class="content">一般而言，公司内部的职位等级制度不会像国家职称那样直接公开出来，大部分的消息来源就是各公司内网和不知道真假的口口相传，这种职级管理体系相关的内容要想获取内部的一手信息、政策文件也真是太为难我小胖虎了。所以下文也主要是从搜索引擎、小红书、知乎、简书等地方搜罗来的消息，权当个参考，不是严谨的介绍。
+传统架构
+
+这里顺带讲一下 CXO。它是现代公司制度下的产物，体现了所有权与经营权相分离的一种制度形式。CXO 中的 X 是一种代称，代表公司里的一种特定职务，而 C 表示首席(Chief)，O 表示官员(Officer)。
+
+COO : Chief Operation Officer，首席运营官。负责制定企业长远战略和企业运营，对 CEO 负责。
+CEO : Chief Executive Officer，首席执行官。在一个企业中负责日常事务的最高行政官员，又称作行政总裁、总经理或者最高执行长，有最终的执行、经营、管理和决策的权利。
+CTO : Chief Technology Officer， 首席技术官。企业内技术的最高负责人，类似于总工程师。
+CFO : Chief Financial  ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/10/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/#content-inner">10</a><span class="page-number current">11</span><a class="page-number" href="/page/12/#content-inner">12</a><span class="space">&hellip;</span><a class="page-number" href="/page/19/#content-inner">19</a><a class="extend next" rel="next" href="/page/12/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">zhb</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">111</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">22</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">10</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/08/21/2023-0821-%E7%82%AE%E5%A1%94%E8%BD%AC%E9%80%9F%E4%B8%8E%E5%9D%A6%E5%85%8B%E8%BD%AC%E5%9C%88%E6%88%98%E6%9C%AF/" title="坦克转圈战术与炮塔转速">坦克转圈战术与炮塔转速</a><time datetime="2023-08-21T15:55:00.000Z" title="发表于 2023-08-21 23:55:00">2023-08-21</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/08/16/2023-0816-Hexo%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98/" title="Hexo更换主题">Hexo更换主题</a><time datetime="2023-08-15T17:30:00.000Z" title="发表于 2023-08-16 01:30:00">2023-08-16</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/08/13/2023-0813-ChatPDF%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/" title="ChatPDF使用方法">ChatPDF使用方法</a><time datetime="2023-08-13T12:50:00.000Z" title="发表于 2023-08-13 20:50:00">2023-08-13</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/08/13/2023-0813-%E5%A6%99%E9%B8%AD%E7%9B%B8%E6%9C%BA%E7%AD%89AI%E5%86%99%E7%9C%9F%E8%BD%AF%E4%BB%B6%E5%8E%9F%E7%90%86/" title="妙鸭相机等AI写真软件原理">妙鸭相机等AI写真软件原理</a><time datetime="2023-08-13T11:55:00.000Z" title="发表于 2023-08-13 19:55:00">2023-08-13</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/08/13/2023-0813-%E5%B0%81%E7%A5%9E%E6%BC%94%E4%B9%89%E7%9A%84%E7%AD%89%E7%BA%A7%E5%88%B6%E5%BA%A6/" title="封神演义的等级制度">封神演义的等级制度</a><time datetime="2023-08-13T08:30:00.000Z" title="发表于 2023-08-13 16:30:00">2023-08-13</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            <a class="card-more-btn" href="/categories/" title="查看更多">
+    <i class="fas fa-angle-right"></i></a>
+            </div>
+            <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/MRI/"><span class="card-category-list-name">MRI</span><span class="card-category-list-count">10</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/python/"><span class="card-category-list-name">python</span><span class="card-category-list-count">3</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E4%B8%AA%E4%BA%BA%E5%90%90%E6%A7%BD/"><span class="card-category-list-name">个人吐槽</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"><span class="card-category-list-name">博客搭建</span><span class="card-category-list-count">17</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%AD%A6%E6%9C%AF%E6%A8%A1%E5%9D%97/"><span class="card-category-list-name">学术模块</span><span class="card-category-list-count">23</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%90%9E%E7%82%B9%E8%AF%BE%E5%A4%96%E7%9F%A5%E8%AF%86/"><span class="card-category-list-name">搞点课外知识</span><span class="card-category-list-count">31</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%97%A5%E8%AE%B0/"><span class="card-category-list-name">日记</span><span class="card-category-list-count">10</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%B8%B8%E6%88%8F/"><span class="card-category-list-name">游戏</span><span class="card-category-list-count">7</span></a></li>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/%E5%AE%9E%E7%94%A8%E5%B0%8F%E5%B7%A5%E5%85%B7/" style="font-size: 1.27em; color: #99a0a9">实用小工具</a> <a href="/tags/%E7%94%9F%E6%B4%BB%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE/" style="font-size: 1.16em; color: #999b9e">生活中的数据</a> <a href="/tags/%E6%98%9F%E7%A9%B9%E9%93%81%E9%81%93/" style="font-size: 1.27em; color: #99a0a9">星穹铁道</a> <a href="/tags/%E6%AF%94%E8%B5%9B/" style="font-size: 1.21em; color: #999ea4">比赛</a> <a href="/tags/sci%E8%AE%BA%E6%96%87/" style="font-size: 1.44em; color: #99a7ba">sci论文</a> <a href="/tags/markdown/" style="font-size: 1.16em; color: #999b9e">markdown</a> <a href="/tags/%E5%B8%82%E5%9C%BA%E8%A7%84%E6%A8%A1/" style="font-size: 1.1em; color: #999">市场规模</a> <a href="/tags/%E6%9C%AA%E5%88%86%E7%B1%BB/" style="font-size: 1.5em; color: #99a9bf">未分类</a> <a href="/tags/%E5%B8%82%E5%9C%BA/" style="font-size: 1.33em; color: #99a2af">市场</a> <a href="/tags/%E6%97%85%E6%B8%B8%E6%B5%81%E6%B0%B4%E8%B4%A6/" style="font-size: 1.39em; color: #99a4b4">旅游流水账</a> <a href="/tags/MATLAB/" style="font-size: 1.1em; color: #999">MATLAB</a> <a href="/tags/%E4%B8%93%E5%88%A9/" style="font-size: 1.16em; color: #999b9e">专利</a> <a href="/tags/AI%E6%96%87%E6%9C%AC%E5%A4%84%E7%90%86/" style="font-size: 1.27em; color: #99a0a9">AI文本处理</a> <a href="/tags/%E6%88%98%E9%94%A4/" style="font-size: 1.16em; color: #999b9e">战锤</a> <a href="/tags/typora/" style="font-size: 1.1em; color: #999">typora</a> <a href="/tags/%E7%AD%89%E7%BA%A7%E5%88%B6%E5%BA%A6/" style="font-size: 1.33em; color: #99a2af">等级制度</a> <a href="/tags/AI%E7%BB%98%E7%94%BB/" style="font-size: 1.33em; color: #99a2af">AI绘画</a> <a href="/tags/%E5%BF%83%E7%90%86%E5%AD%A6/" style="font-size: 1.16em; color: #999b9e">心理学</a> <a href="/tags/%E5%8E%9F%E7%A5%9E/" style="font-size: 1.1em; color: #999">原神</a> <a href="/tags/%E7%A5%9E%E8%AF%9D/" style="font-size: 1.16em; color: #999b9e">神话</a> <a href="/tags/%E6%96%87%E7%8C%AE/" style="font-size: 1.27em; color: #99a0a9">文献</a> <a href="/tags/LaTeX/" style="font-size: 1.33em; color: #99a2af">LaTeX</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/08/"><span class="card-archive-list-date">八月 2023</span><span class="card-archive-list-count">15</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/07/"><span class="card-archive-list-date">七月 2023</span><span class="card-archive-list-count">29</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/06/"><span class="card-archive-list-date">六月 2023</span><span class="card-archive-list-count">20</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/05/"><span class="card-archive-list-date">五月 2023</span><span class="card-archive-list-count">29</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/04/"><span class="card-archive-list-date">四月 2023</span><span class="card-archive-list-count">15</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/03/"><span class="card-archive-list-date">三月 2023</span><span class="card-archive-list-count">3</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">111</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2023-08-21T15:56:17.410Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By zhb</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

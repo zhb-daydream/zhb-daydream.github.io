@@ -1,1143 +1,212 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.4.2">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
-
-<link rel="stylesheet" href="/css/main.css">
-
-<link rel="stylesheet" href="fonts.lug.ustc.edu.cn/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"zhb-daydream.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
-  </script>
-
-  <meta property="og:type" content="website">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>zhb木木三的个人网页 - 个人博客的新尝试（页面渲染需要时间，请耐心等待）</title><meta name="author" content="zhb"><meta name="copyright" content="zhb"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
 <meta property="og:title" content="zhb木木三的个人网页">
 <meta property="og:url" content="https://zhb-daydream.github.io/page/14/index.html">
 <meta property="og:site_name" content="zhb木木三的个人网页">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
 <meta property="article:author" content="zhb">
 <meta name="twitter:card" content="summary">
-
-<link rel="canonical" href="https://zhb-daydream.github.io/page/14/">
-
-
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : true,
-    isPost : false,
-    lang   : 'zh-CN'
-  };
-</script>
-
-  <title>zhb木木三的个人网页</title>
-  
-
-
-
-
-
-
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
+<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://zhb-daydream.github.io/page/14/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'zhb木木三的个人网页',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2023-08-21 23:56:17'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
   }
 
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
 
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
 
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.2">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
-
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
-    </div>
-  </div>
-
-  <div class="site-meta">
-
-    <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">zhb木木三的个人网页</h1>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-      <p class="site-subtitle" itemprop="description">个人博客的新尝试（页面渲染需要时间，请耐心等待）</p>
-  </div>
-
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-    </div>
-  </div>
-</div>
-
-
-
-
-<nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
-
-  </li>
-  </ul>
-</nav>
-
-
-
-
-</div>
-    </header>
-
-    
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
-
-
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
-
-          <div class="content index posts-expand">
-            
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/05/22/2023-0522-SD%E4%B8%8E%E9%AA%A8%E6%9E%B6%E6%8F%92%E4%BB%B6ControlNet/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="zhb">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="zhb木木三的个人网页">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/05/22/2023-0522-SD%E4%B8%8E%E9%AA%A8%E6%9E%B6%E6%8F%92%E4%BB%B6ControlNet/" class="post-title-link" itemprop="url">SD与骨架插件ControlNet</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-05-22 14:01:00" itemprop="dateCreated datePublished" datetime="2023-05-22T14:01:00+08:00">2023-05-22</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-06-09 11:34:42" itemprop="dateModified" datetime="2023-06-09T11:34:42+08:00">2023-06-09</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%90%9E%E7%82%B9%E8%AF%BE%E5%A4%96%E7%9F%A5%E8%AF%86/" itemprop="url" rel="index"><span itemprop="name">搞点课外知识</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>2.1k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>7 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Stable Diffusion（SD）提出之初还是主要靠 prompt（关键词）来进行绘画，同一组关键词往往会有不同的输出，最终就有点像是抽盲盒一样。但随着 AI 绘画模型的开源和插件化，个人也可以通过开源的代码库和插件训练并定制高质量的 AI 图像，此时关键词已经没那么重要了，比拼的是大模型以及各种模型、插件的综合运用。</p>
-<p>ControlNet 就是其中一个很好用的 AI 绘画插件（<a target="_blank" rel="noopener" href="https://github.com/lllyasviel/ControlNet">Github 主页</a>），可以通过骨骼绑定、控线来几乎完美地控制画面，在 2023 的 2 月中旬也一度成为最大热点。基本模式是输入一张参考图（甚至可以是简单的人物线条），然后插件根据参考图按一定模式预处理一张新图作为初始值，再由 AI 模型根据两幅图绘制出成品。</p>
-<p><img src="/ref_pic/staleDiffusion-ControlNet使用-1.png"></p>
-<h2 id="安装">安装</h2>
-<h3 id="插件">插件</h3>
-<p>与汉化插件一样，可以在 SD-WebUI 的扩展界面从作者的 github 项目中加载可供下载的插件，搜索 <code>sd-webui-controlnet</code> 并安装（如果挂梯子也装得很慢，也可以通过 Install from URL 页面手动安装。插件地址是：https://github.com/Mikubill/sd-webui-controlnet）。</p>
-<p><img src="/ref_pic/staleDiffusion-ControlNet使用-2.png"></p>
-<p>同时，还可以顺便安装 <code>OpenPose Editor</code> 插件，方便后续自己编辑自定义的姿势（pose）。</p>
-<p><img src="/ref_pic/staleDiffusion-ControlNet使用-3.png"></p>
-<p>最后，再装一个能支持 ControlNet 的汉化插件（stable-diffusion-webui-chinese）。这次该插件无法从 SD-WebUI 作者的 github 项目中加载，因而要去“从网址安装”那里输入该插件的 github 地址（https://github.com/VinsonLaro/stable-diffusion-webui-chinese）然后安装。再去设置——用户界面——（最下方的）语言文件处，将语言文件从之前的 zh_CN 切换到该汉化插件（chinese-all-0512）。</p>
-<p><img src="/ref_pic/staleDiffusion-ControlNet使用-4.png"></p>
-<h3 id="controlnet-应用模型">ControlNet 应用模型</h3>
-<p>ControlNet 是需要专用模型的，否则无法使用相关功能引导画面。模型的下载路径为 <a target="_blank" rel="noopener" href="https://huggingface.co/lllyasviel/ControlNet-v1-1/tree/main">IIIyasviel 的 huggingface 主页</a>，其中 8 个常用的应用模型介绍如下（图文可参考一篇<a target="_blank" rel="noopener" href="http://www.shejixf.com/shejijiaocheng/shouhui/9627.html">使用指南</a>或<a target="_blank" rel="noopener" href="https://github.com/lllyasviel/ControlNet-v1-1-nightly">作者说明文档</a>），每个应用模型（文件后缀 <code>.pth</code>）为 1.45GB，有对应配套使用的 .yaml 文件作为预处理器文件（即 WebUI 中的预处理器选项），所有应用模型文件下载后的存放路径都为 <code>\extensions\sd-webui-controlnet\models</code>。尽管 civitai 里有 <a target="_blank" rel="noopener" href="https://civitai.com/models/9251?modelVersionId=11017">theally</a> 提供了压缩版本的模型文件（后缀为 <code>.safetensors</code>，每个文件只要 689MB），但没有对应的 .yaml 文件，使用的时候可能会出现对应错误的情况，因而还是建议使用 IIIyasviel 版本的。此外还可以下载 <a target="_blank" rel="noopener" href="https://huggingface.co/TencentARC/T2I-Adapter/tree/main/models">T2I- Adapter</a> 版本的 ControlNet 模型。</p>
-<ul>
-<li><span class="github-emoji"><span>⭐</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>OpenPose：识别参考图像的姿势，提取出对应的骨骼姿势（甚至是手部骨骼），达到精准控制人体动作的效果。</li>
-<li><span class="github-emoji"><span>⭐</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>Canny：识别参考图像的边缘，提取出线稿，再根据提示词生成同样构图的画面，也可以达成给线稿上色的效果。</li>
-<li>HED：与 Canny 类似的边缘检测，但自由发挥程度更高，保留了更多参考图像的细节，绘制的人物明暗对比明显、轮廓感强</li>
-<li><span class="github-emoji"><span>⭐</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>Scribble：提取参考图像的黑白涂鸦稿，自由发挥程度比 Canny、HED 更高</li>
-<li>Mlsd：主要用于提取建筑的线条结构和几何形状，以构建出建筑外框</li>
-<li>Seg：通过对参考图像进行语义分割，区分画面色块，适用于大场景的画风更改</li>
-<li>Normal Map：提取参考图像中的 3D 物体的法线向量，使新图的光影效果与参考图像一致</li>
-<li>Depth：提取参考图像的深度信息，生成具有同样深度结构的图或场景</li>
-</ul>
-<p><img src="/ref_pic/staleDiffusion-ControlNet使用-5.png"></p>
-<h3 id="预处理模型">预处理模型</h3>
-<p>第一次使用时都会自动下载预处理（preprocessor）所需要的模型并放到 <code>\extensions\sd-webui-controlnet\annotator</code> 的对应文件夹里，如果下载速度太慢也可以手动下载，参考<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Wo4y1i77v/?vd_source=9f42c74d38b311d152245e7c84682d01">秋叶的 b 站视频</a>或者直接从<a target="_blank" rel="noopener" href="https://huggingface.co/lllyasviel/ControlNet/tree/main">lllyasviel 主页</a>的 <code>annotator</code> 目录下载人体检测预处理模型（body_pose_model.pth 和 hand_pose_model.pth）至 <code>/annotator/openpose</code>、以及深度图模型（dpt_hybrid-midas-501f0c75.pt）至 <code>/annotator/midas</code>。</p>
-<h2 id="使用">使用</h2>
-<p>上面配置正常的情况下，在 WebUI 界面就会出现 ControlNet 的选项。使用的时候，只是额外多了导入一张参考图片的步骤，并选择预处理器为 openpose，模型也为 openpose，其他的按照默认不用改动。</p>
-<p><img src="/ref_pic/staleDiffusion-ControlNet使用-6.png"></p>
-<p>随后照常输入关键词，就能生成类似姿势的图像了。</p>
-<p><img src="/ref_pic/staleDiffusion-ControlNet使用-7.png"></p>
-<p>注：ControlNet 依赖 xformers 算法框架及 Nvidia 显卡，因而使用 Mac 系统的用户使用效果可能只能有 70-80 分，而且速度慢，较难达到文档描述那种哇塞的效果。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/05/22/2023-0522-StableDiffusion%E7%9A%84%E4%BD%BF%E7%94%A8/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="zhb">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="zhb木木三的个人网页">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/05/22/2023-0522-StableDiffusion%E7%9A%84%E4%BD%BF%E7%94%A8/" class="post-title-link" itemprop="url">StableDiffusion的使用</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-05-22 00:01:00" itemprop="dateCreated datePublished" datetime="2023-05-22T00:01:00+08:00">2023-05-22</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-06-09 11:34:42" itemprop="dateModified" datetime="2023-06-09T11:34:42+08:00">2023-06-09</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%90%9E%E7%82%B9%E8%AF%BE%E5%A4%96%E7%9F%A5%E8%AF%86/" itemprop="url" rel="index"><span itemprop="name">搞点课外知识</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>3.6k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>12 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>要使用 Stable Diffusion WebUI，只需要运行 <code>stable-diffusion-webui/webui-user.bat</code> 文件就可以了（里面的配置都已经在之前的安装博文里面设置好了），将其中显示的本地 URL 复制到任意浏览器中，进入一下的核心产图界面。</p>
-<p><img src="/ref_pic/staleDiffusionWebUI使用-1.png"></p>
-<h2 id="大模型选择">大模型选择</h2>
-<p>stable-diffusion 生成图像时主要依据大模型，这个倒没什么好说的，普通人一般用的就是著名的 <a target="_blank" rel="noopener" href="https://civitai.com/models/6424/chilloutmix">ChilloutMix</a>，无脑选就行。</p>
-<h2 id="提示词设置">提示词设置</h2>
-<p><strong>这里只讲文生图的部分</strong>。要知道，基于 AIGC 的主流模型 Diffusion 提出来的 Stable Diffusion，是一种将文本转换为图片（text-to-image）的模型，因而提示词（prompt）差不多是仅次于大模型的最重要的参数。当然，由于 AI 所特有的黑匣子特性，产图过程是封闭的，就和魔法一样，因而提示词也常被称为“咒语”。而这些提示词/咒语/ tags 不知道怎么使用的话，优先参考 <a target="_blank" rel="noopener" href="https://civitai.com">civitai</a> 里面的 demo 参数，其次就是像 <a target="_blank" rel="noopener" href="https://wolfchen.top/tag/">NovelAI Tag</a>、<a target="_blank" rel="noopener" href="https://aitag.top/">魔咒百科词典</a>这种热心大佬总结的网站。</p>
-<p>除去直接套用现成的提示词以外，还是有几个小知识点可以掌握的，这里主要参考一篇<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_43223007/article/details/130262615">青松pine的 CSDN 博文</a>以及 <a target="_blank" rel="noopener" href="https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Features#prompt-matrix">WebUI 的 Wiki 说明</a>。</p>
-<h3 id="语法">语法</h3>
-<ul>
-<li>英文输入，支持自然语言描述（不过还是推荐使用多个关键词来描述）</li>
-<li>英文逗号分隔（前后的空格、换行不影响）不同的关键词，而用 | 分隔的关键词表示同比例混合（若有多个关键词，则是包含了所有关键词的任意排列组合），一个例子如下：</li>
-</ul>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1girl,loli,long hair,low twintails 表示: 1个女孩，loli，长发，低双马尾</span><br><span class="line">1girl,red|blue hair, long hair 表示 1个女孩，红色与蓝色头发混合，长发</span><br></pre></td></tr></tbody></table></figure>
-<ul>
-<li>提示词权重有两种写法，第一种是 <code>(提示词:权重数值)</code>，权重数值范围是 [0.1,100]，默认为 1，低于 1 为减弱，反之加强。第二种写法是外面嵌套括号，每套一层 () 括号是增强 1.1 倍，每套一层 [] 括号是减弱 1.1 倍，例如 <code>(((提示词)))</code> 表示加强 1.1^3=1.331 倍。</li>
-<li>渐变：<code>[关键词1:关键词2:数字]</code> 表示先按照关键词 1 生成图像，等迭代 x 步数（x 小于 1 时为总迭代步数的前 x% 步）后开始往关键词 2 生成图像。</li>
-</ul>
-<p><strong>书写要点</strong></p>
-<ul>
-<li>不是越长的魔咒（提示词）生成的图片越厉害，请尽量将关键词控制在75个（100个）以内。</li>
-<li>越关键的词，越往前放。</li>
-<li>相似的同类，放在一起。</li>
-<li>只写必要的关键词。</li>
-</ul>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_43223007/article/details/130262615">青松pine的 CSDN 博文</a> 推荐的写法：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">画质词&gt;&gt;</span><br><span class="line">这个一般比较固定，无非是，杰作，最高画质，分辨率超级大之类的</span><br><span class="line"></span><br><span class="line">风格词艺术风格词&gt;&gt;</span><br><span class="line">比如是照片还是插画还是动画</span><br><span class="line"></span><br><span class="line">图片的主题&gt;&gt;</span><br><span class="line">比如这个画的主体是一个女孩，还是一只猫，是儿童还是萝莉还是少女，是猫娘还是犬娘还是福瑞，是白领还是学生</span><br><span class="line"></span><br><span class="line">他们的外表&gt;&gt;</span><br><span class="line">注意整体和细节都是从上到下描述，比如</span><br><span class="line">发型（呆毛，耳后有头发，盖住眼睛的刘海，低双马尾，大波浪卷发），</span><br><span class="line">发色（顶发金色，末端挑染彩色），</span><br><span class="line">衣服（长裙，蕾丝边，低胸，半透明，内穿蓝色胸罩，蓝色内裤，半长袖，过膝袜，室内鞋），</span><br><span class="line">头部（猫耳,红色眼睛），</span><br><span class="line">颈部（项链），</span><br><span class="line">手臂（露肩），</span><br><span class="line">胸部（贫乳），</span><br><span class="line">腹部（可看到肚脐），</span><br><span class="line">屁股（骆驼耻），</span><br><span class="line">腿部（长腿），</span><br><span class="line">脚步（裸足）</span><br><span class="line"></span><br><span class="line">他们的情绪&gt;&gt;</span><br><span class="line">表述表情</span><br><span class="line"></span><br><span class="line">他们的姿势&gt;&gt;</span><br><span class="line">基础动作（站，坐，跑，走，蹲，趴，跪），</span><br><span class="line">头动作（歪头，仰头，低头），</span><br><span class="line">手动作（手在拢头发，放在胸前 ，举手），</span><br><span class="line">腰动作（弯腰，跨坐，鸭子坐，鞠躬），</span><br><span class="line">腿动作（交叉站，二郎腿，M形开腿，盘腿，跪坐），</span><br><span class="line">复合动作（战斗姿态，JOJO立，背对背站，脱衣服）</span><br><span class="line"></span><br><span class="line">图片的背景&gt;&gt;</span><br><span class="line">室内，室外，树林，沙滩，星空下，太阳下，天气如何</span><br><span class="line"></span><br><span class="line">杂项&gt;&gt;</span><br><span class="line">比如NSFW，眼睛描绘详细</span><br></pre></td></tr></tbody></table></figure>
-<h3 id="反向提示词negative-prompt">反向提示词(Negative Prompt)</h3>
-<p>AI 出的图是可能很丑的（比如三头六臂），需要用文字描述不希望在图像中出现的东西。反向提示词在 AI 中的大致流程是这样的：</p>
-<ol type="1">
-<li>对图片进行去噪处理，使其看起来更像你的提示词。</li>
-<li>对图片进行去噪处理，使其看起来更像你的反向提示词（无条件条件）。</li>
-<li>观察这两者之间的差异，并利用它来产生一组对噪声图片的改变</li>
-<li>尝试将最终结果移向前者而远离后者</li>
-<li>一个相对比较通用的负面提示词设置</li>
-</ol>
-<p>实际使用时，除了常规的关键词外，还可以使用一些如 <a target="_blank" rel="noopener" href="https://civitai.com/models/4629/deep-negative-v1x">NG_DeepNegative_V1_75T</a>、<a target="_blank" rel="noopener" href="https://civitai.com/models/16993/badhandv4-animeillustdiffusion">badhandv4</a> 等的 Textual Inversion 文本嵌入词包（要下载然后放到本地的 <code>/embeddings</code> 文件夹里），调用的时候只需要把该词包名当做一个单独的关键词使用即可，一个使用了 ng_deepnegative_v1_75t、badhandv4（权重 1.2） 的反向提示词 demo 如下：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nsfw, lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, bad feet, ng_deepnegative_v1_75t, (badhandv4:1.2)</span><br></pre></td></tr></tbody></table></figure>
-<p>其中，NSFW 表示 Not Safe For Work，基本就是 18+ 那些黄暴等不适合在公众场合看的关键词，这个放在反向提示词里至少能保证不会社死。</p>
-<h3 id="lora-模型">Lora 模型</h3>
-<p>这个一般是在正向提示词（Prompt）里输入的。使用时与 Textual Inversion 一样，当做一个单独的关键词输入，不过使用时需要用尖括号，而且<strong>不能放到 Negative Prompt 里</strong>（Textual Inversion 则可以放在 Negative Prompt 和 Prompt 里），具体语法为：<code>&lt;lora:filename:multiplier&gt;</code>，其中 <code>filename</code> 是下载的本地 LoRA 文件的实际文件名，<code>multiplier</code> 一般是 [0,1] 间表示该 LoRA 权重的数值。使用 LoRA 时不支持用 | 连接进行混用，多个 LoRA 只能使用英文逗号连接。</p>
-<h2 id="其他绘图参数">其他绘图参数</h2>
-<h3 id="采样方法-sampling-method">采样方法 Sampling method</h3>
-<p>关于采样器方法的选择，可以参考别的大佬做出的详细总结：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/612572004">stable diffusion webui如何工作以及采样方法的对比</a>。常用的采样器如下：</p>
-<ul>
-<li>Euler a ：富有创造力，不同步数可以生产出不同的图片。 超过30~40步基本就没什么增益了。</li>
-<li>Euler：最最常见基础的算法，最简单的，也是最快的。</li>
-<li>DDIM：收敛快，一般20步就差不多了。</li>
-<li>LMS：eular的延伸算法，相对更稳定一点，30步就比较稳定了</li>
-<li>PLMS：再改进一点LMS</li>
-<li>DPM2：DDIM的一种改进版，它的速度大约是 DDIM 的两倍</li>
-</ul>
-<h3 id="采样迭代步数-sampling-steps">采样迭代步数 Sampling Steps</h3>
-<p>一般使用默认的 20 步就行。AI 绘画的大致原理是先生成噪声图片，然后再逐步往提示词方向调整图片，迭代步数越多，每次调整量就越小越精确。大部分采样器超过 50 步之后的意义都不大。下图是一组提示词在第 1 步到第 20 步的图像变化过程，可以看到差不多是 10 步之后结果就收敛了。</p>
-<p><img src="/ref_pic/staleDiffusionWebUI使用-2.png"></p>
-<h3 id="面部修复-restore-faces">面部修复 Restore faces</h3>
-<p>对生成图片任务的面部进行修复，对真人效果好，很占显存。</p>
-<h3 id="可平铺-tiling">可平铺 Tiling</h3>
-<p>生成可以往左右、上下连续拼接的图像</p>
-<h3 id="高清修复-hires.-fix">高清修复 Hires. fix</h3>
-<p><img src="/ref_pic/staleDiffusionWebUI使用-3.png"></p>
-<p>作用是将图片按照设置的放大倍率重新绘制图片内容。在勾选了 Hires.fix 选项后，会多出两行的选项</p>
-<ul>
-<li><strong>放大算法</strong>：不知道选什么就选“ESRGAN_4x ”</li>
-<li><strong>高清修复采样次数 Hires steps</strong>: 20 就行</li>
-<li><strong>重绘幅度 Denoising</strong>：放大后细节的修改程度，从 0 到 1，数值越大，AI 随机程度越大，也就越偏离原图， 一般 0.5 - 0.7 就行</li>
-<li><strong>放大倍率</strong>：即图像放大倍率，数值越大，对显卡能力要求越高</li>
-</ul>
-<h3 id="宽高-width-height">宽&amp;高 Width &amp; Height</h3>
-<p>单位像素。适当增加尺寸，AI 就会试图填充更多细节。较小的尺寸（小于 256 X 256）会让 AI 没地方发挥而导致图像质量下降；较大的尺寸（大于 1024 X 1024）也会让 AI 因乱发挥而导致图像质量下降。4GB 显存的极限大概是 1280 X 1280。常见的模型基本都是在 512 X 512、768 X 768 的基础上训练的，因而自己用的时候也可以用这种尺寸的配置，再用 Hires.fix 来生成高分辨率图像。</p>
-<h3 id="生成批次-batch-count-n_iter">生成批次 Batch count / n_iter</h3>
-<p>用同样的参数循环跑的次数，每次产图时的随机种子都不一样，如果指定了随机种子，则相邻批次产图的种子数＋1。该选项是为了产生多个备选图像以供选择（毕竟 AI 不能保证每次出图都是好图）</p>
-<h3 id="每批数量-batch-size">每批数量 Batch size</h3>
-<p>每个批次下同时生成的图片数量，每次产图时的随机种子都不一样，每张的种子数＋1。与生成批次不同的是，增加这个值可以并行计算。例如，512 X 512 的图，使用 SD1.4 模型，Euler a 采样器，4G 显存可以并行 2 张图，8G 显存可以并行 8 张。</p>
-<h3 id="提示词相关性-cfg-scale">提示词相关性 CFG Scale</h3>
-<p>图像域提示词的匹配程度。一般取 [5,15] 的值，常用的值是 7，9，12，过高的值会让图像色彩过于饱和而降低了图像质量（此时，也可以通过增加采样迭代步数来抵消画质劣化）。</p>
-<h3 id="随机种子-seed">随机种子 Seed</h3>
-<p>AI 绘图的原理是先随机出一个噪声图片，再进行后续计算，该噪声图片作为初始输入就会影响最终的产图，而随机种子就是控制该随机过程的参数（计算机不存在真随机）。如果保持随机种子不变，则相同的模型、参数会大概率生成相同的图像，但要注意的是，即使采用完全一致的参数、模型，不同型号的显卡也可能会生成完全不同的图。</p>
-<p><img src="/ref_pic/staleDiffusionWebUI使用-4.png"></p>
-<p>上图中，骰子图标表示快速输入 -1（随机值），绿色图标表示自动填写最近生成的图片的种子值。勾选右侧选项后会出现额外参数设置，其中差异随机种子 Variation seed 可以是 -1，也可以是固定值；差异强度 Variation strength 表示最终随机数是更偏向<strong>随机种子</strong>还是<strong>差异随机种子</strong>，值越大则最终的随机数越接近差异随机种子，值越小则越偏向随机种子。</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">eg：我生成了一个贼好看的图片，我想生成和这张相似的其他图片</span><br><span class="line">随机种子设为（你觉得好看的那张图的）随机种子固定值，差异随机种子-1，差异强度低一点，就能生成一系列相似图片</span><br><span class="line">eg：我生成了两张（相同tag参数的）都很好看的图片，我想生成和这两张差不多的图片</span><br><span class="line">随机种子设为（你觉得好看的那张图的）随机种子固定值，差异随机种子设为（你觉得另一张好看的那张图的随机种子）的值，差异强度适中，就能生成一系列介于两张图片之间的图片</span><br></pre></td></tr></tbody></table></figure>
-<h2 id="示例">示例</h2>
-<p><img src="/ref_pic/staleDiffusionWebUI使用-5.png"></p>
-<p>注意，第一次运行面部修复的时候会自动下载额外的库，如果提前中断的话，后续可能会报错，这时候可以找<a target="_blank" rel="noopener" href="https://www.bilibili.com/read/cv22280569/">相关教程</a>手动下载对应的 .pth 文件。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/05/19/2023-0519-%E5%87%A0%E7%A7%8Dgit%E7%9B%B8%E5%85%B3%E5%90%8D%E8%AF%8D%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="zhb">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="zhb木木三的个人网页">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/05/19/2023-0519-%E5%87%A0%E7%A7%8Dgit%E7%9B%B8%E5%85%B3%E5%90%8D%E8%AF%8D%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" class="post-title-link" itemprop="url">几种git相关名词的基本概念</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-05-19 16:15:00" itemprop="dateCreated datePublished" datetime="2023-05-19T16:15:00+08:00">2023-05-19</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-06-09 11:34:42" itemprop="dateModified" datetime="2023-06-09T11:34:42+08:00">2023-06-09</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%AD%A6%E6%9C%AF%E6%A8%A1%E5%9D%97/" itemprop="url" rel="index"><span itemprop="name">学术模块</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>1.3k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>4 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>进了互联网公司，核心产能就是代码，而管理多个人、多个项目的代码就基本是使用 Git。同时，搜索现成代码的时候，绕不开的一个平台就是 github，而有时候又会听人说用的是 gitlab 来管理代码，那么这些与 git 相关的概念都是什么意思呢？</p>
-<h2 id="git">Git</h2>
-<p>总的来说，Git 是一款免费、开源的<strong>分布式</strong>版本控制系统/工具。每个人的设备就是一个完整的版本库，支持离线工作，当需要多人协作、维护共同的版本库时，可以通过将各自的版本库 push 到统一的云端服务器/远程仓库进行管理。</p>
-<p>与 Git 相对应的另一个概念就是 SVN（SubVersioN，版本控制系统），这是<strong>集中式</strong>版本控制系统。从名字上看可知，Git 与 SVN 的最主要区别就是 Git 是分布式的，SVN 是集中式的。对于 SVN 来说，版本库是集中放在中央服务器的，因而写代码时要一直联网工作，更适合与局域网下的协同工作。相比 SVN，Git 的概念更复杂、功能更丰富，因而 Git 出现后，慢慢地取代 SVN 成为主流。</p>
-<p>与 python 一样，要在本地使用 Git 工具管理的话，也是需要去 <a target="_blank" rel="noopener" href="https://git-scm.com/">Git 官网</a>下载并安装的，之后就可以通过 Git Bash 调出控制台用命令行调用了（当然，还得配置一下），这也是 GitHub Desktop 等客户端的使用基础。</p>
-<h2 id="github">GitHub</h2>
-<p><img src="/ref_pic/github_logo.jpg"></p>
-<p>就和 Sci-Hub 一样，xx-hub 里的 hub 表示的就是某个中心、社区的意思，而 <a target="_blank" rel="noopener" href="https://github.com/">GitHub</a> 就是一个基于 Git 实现的在线代码平台，也是目前全球最大的代码托管平台，服务器都在美国（所以国内裸连速度会比较慢）。在 2008 年 4 月 10 日正式上线，许多大开源项目都在上面托管，可以提供免费的公共仓库、私有仓库，但涉及多成员协作的企业账号则需要收费。</p>
-<h2 id="gitee码云">Gitee（码云）</h2>
-<p><img src="/ref_pic/gitee_logo.png"></p>
-<p><a target="_blank" rel="noopener" href="https://gitee.com/">Gitee</a>（也称码云，但这个名字真的不是马云谐音吗？） 是由 <a target="_blank" rel="noopener" href="https://oschina.net/">OSCHINA</a> （深圳奥思网络科技有限公司，成立于 2008 年，是国内大型综合开源技术社区）推出的基于 Git 的代码托管平台，在 2016 年推出免费的企业版，相当于服务器在国内的 GitHub，区别是 Gitee 的企业账号不收钱。</p>
-<h2 id="gitlab">GitLab</h2>
-<p><img src="/ref_pic/gitlab_logo.jpg"></p>
-<p><a target="_blank" rel="noopener" href="https://about.gitlab.com/">GitLab</a> 是基于 Git 实现的在线代码仓库软件，有官方的服务器，可以像 GitHub 一样通过 <a target="_blank" rel="noopener" href="https://gitlab.com">网页</a> 将代码存储在它的官方服务器上，此外还可以在企业、学校等内部网络上用 GitLab <strong>自行搭建</strong>出基于 Git 的服务器（相当于是一种搭建 GitHub 私服的工具），具体的搭建、安装、使用可以参考 GitLab 官网的 <a target="_blank" rel="noopener" href="https://about.gitlab.com/install/">下载页面</a> 中的一些超链接。GitLab 最开始由 Ruby 语言写成，后面一些部分用 Go 语言重写，它核心的优势就是可以自己搭建封闭的代码管理平台，而不用使用 GitHub 的付费企业账号。</p>
-<h2 id="小结">小结</h2>
-<table>
-<thead>
-<tr class="header">
-<th>名词</th>
-<th>含义</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><a target="_blank" rel="noopener" href="https://git-scm.com/">Git</a></td>
-<td>一种版本控制系统、一种工具</td>
-</tr>
-<tr class="even">
-<td><a target="_blank" rel="noopener" href="https://github.com/">GitHub</a></td>
-<td>基于 Git 实现的在线代码托管平台，企业版要收费</td>
-</tr>
-<tr class="odd">
-<td><a target="_blank" rel="noopener" href="https://gitee.com/">Gitee</a></td>
-<td>基于 Git 实现的在线代码托管平台，企业版不收费</td>
-</tr>
-<tr class="even">
-<td><a target="_blank" rel="noopener" href="https://gitlab.com">GitLab</a></td>
-<td>基于 Git 实现的在线代码托管平台和软件，可以自己搭服务器</td>
-</tr>
-</tbody>
-</table>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/05/18/2023-0518-%E8%87%B4%E9%BB%AF%E6%B7%A1%E6%98%9F/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="zhb">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="zhb木木三的个人网页">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/05/18/2023-0518-%E8%87%B4%E9%BB%AF%E6%B7%A1%E6%98%9F/" class="post-title-link" itemprop="url">致黯淡星</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-05-18 23:25:00" itemprop="dateCreated datePublished" datetime="2023-05-18T23:25:00+08:00">2023-05-18</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-06-17 22:12:31" itemprop="dateModified" datetime="2023-06-17T22:12:31+08:00">2023-06-17</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%B8%B8%E6%88%8F/" itemprop="url" rel="index"><span itemprop="name">游戏</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>590</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>2 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><img src="/ref_pic/致黯淡星.jpg"></p>
-<p>“不好意思——但不论你是谁，遇见莉莉记得帮我转告她，洛奇会在 [黑塔] 等你”</p>
-<p>“即使隔着数万光年的距离，她也会回复我的消息，只是这次...”</p>
-<p>“怎么会这样...莱斯莉答应了我的表白，但是星震那部分...”</p>
-<p>“她的时间每过去一个月，我的时间就会过去数十年。那岂不是等她回来，我已经像师父一样老了。”</p>
-<p>“她，去了未来。而我，留在现在...是这样吗？”</p>
-<p>“那我想念她的漫长时间，对她来说，岂不只是一个毫不起眼的瞬息吗？”</p>
-<p>“所以，指望她回来是不现实了。就算她行进数月，跨越光年，在我的时间坐标里，我已经成了老头一个。”</p>
-<p>“用一辈子的时间去等一个人，忍受无尽的思念与孤独...”</p>
-<p>“老实说，哥们儿，你不会真以为我那么天真吧？”</p>
-<p>“哈哈！我当然是不会等她的！我不会等！”</p>
-<p>“我是不会等...”</p>
-<p>“但我要去追她。我要去，追赶时间！”</p>
-<p>“既然她的时间曲线已经成了一座大峡谷，那与其盼着她出来，由我去翻越这座大峡谷不就行了吗？”</p>
-<p>“也许我会花十年时间找到刚度过一个月的她，但我们的时间流速就能从此同频，总比在这里坐以待毙来的好。”</p>
-<p>“身为 [黑塔.寰宇地概科] 的成员，连真正的银河都没见过，说出去早晚笑掉别人的大牙。”</p>
-<p>“等我找到莱斯莉，总有一天，我会回来告诉你我在这趟旅程所看到的一切...”</p>
-<p>“那么，这首诗送给你，再见了，我的朋友。”</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">《再见黑塔》</span><br><span class="line"></span><br><span class="line">黑暗在远方列队。用近乎残忍的方式</span><br><span class="line">解剖着时间。询问爱情的花瓣俯下嘴唇</span><br><span class="line">如同无限时空中、滴答的钟声。我们别无选择</span><br><span class="line">只能滑入宇宙那不详的颤抖、如同滑下一道黄昏的斜坡</span><br><span class="line">就这样，群星依旧在头顶赏乐，沿途将是它们优雅的倦容。</span><br><span class="line"></span><br><span class="line">————洛奇.马丁内斯</span><br></pre></td></tr></tbody></table></figure>
-<p>（注：摘自崩坏-星穹铁道的黑塔空间站支线任务）</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/05/18/2023-0518-StableDiffusion%E7%9A%84%E5%87%A0%E7%A7%8D%E6%A8%A1%E5%9E%8B/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="zhb">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="zhb木木三的个人网页">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/05/18/2023-0518-StableDiffusion%E7%9A%84%E5%87%A0%E7%A7%8D%E6%A8%A1%E5%9E%8B/" class="post-title-link" itemprop="url">StableDiffusion的几种模型</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-05-18 00:35:00" itemprop="dateCreated datePublished" datetime="2023-05-18T00:35:00+08:00">2023-05-18</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-06-09 11:34:42" itemprop="dateModified" datetime="2023-06-09T11:34:42+08:00">2023-06-09</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%90%9E%E7%82%B9%E8%AF%BE%E5%A4%96%E7%9F%A5%E8%AF%86/" itemprop="url" rel="index"><span itemprop="name">搞点课外知识</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>2.1k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>7 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>为了避免一篇博文太长，想了想还是决定把 Stable Diffusion 涉及的几种常见模型单独列出来讲。在 SD 的安装教程中只提到 SD 提供的基础 checkpoint（如 sd-v1.4.ckpt），但实际还有一大堆大神弄出来的各种其他模型以及对应的微调工具，这可不得不了解一下。</p>
-<p>Stable Diffusion 框架会用到几类模型，基本都可以从万能的 c 站（www.civitai.com）下载（从网页右上角的 filter 中也可以看到模型的分类），这几种常见模型类型的区别可以参考 <a target="_blank" rel="noopener" href="https://blog.csdn.net/snans/article/details/129838033">一篇 CSDN 博文</a> 或者 <a target="_blank" rel="noopener" href="https://github.com/civitai/civitai/wiki/How-to-use-models">civitai 的说明</a>。访问 c 站的时候可以右上角登录自己的 google 账号，然后记得将 Browsing Mode 调成 Safe，不然就会有一大堆 NSFW（Not Safe For Work）的内容出现，谨慎呀！</p>
-<p><img src="/ref_pic/civitai界面.png"></p>
-<h2 id="checkpoint主模型star2">checkpoint（主模型）<span class="github-emoji"><span>🌟</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f31f.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></h2>
-<p>在深度学习中，checkpoint 是一个用于描述每次训练完后保存模型参数、权重操作的术语，就像在游戏中的存档点，而在 AI 绘图中，更像是一个画师（后续的其他类型模型则属于调整和优化主模型的工具）。在前文的 WebUI 安装中提到的 "No checkpoints found" 错误即是缺失主模型文件。checkpoint 也就是 StableDiffusion 里所谓的大模型，或者说基础模型，比如 SD 官方自带的 sd-v1.5.ckpt（我 2 月份下载的时候还是 sd-v1.4.ckpt）。这类模型都是由 <strong>dreambooth 技术</strong>，经过大量数据训练得到的，可以用于生成各类常见元素的图片，算是一个全能工具。因此不可缺少，至少有一个，不然 SD 不能启动。</p>
-<p>SD 官方的 checkpoint 可以从 <a target="_blank" rel="noopener" href="https://cyberes.github.io/stable-diffusion-models/">这里</a> 下载（我也不知道这个是不是官方链接），而之前火出圈的真人绘图则主要是基于 <a target="_blank" rel="noopener" href="https://civitai.com/models/6424/chilloutmix">ChilloutMix 模型</a>，基本在 civitai 里都能找到。下载好 checkpoint 文件后，存放位置是 <code>/models/Stable-diffusion</code> 文件夹，文件的后缀一般为 .ckpt 或 .safetensions，这种文件一般为 4GB 左右的大小。</p>
-<h2 id="embedding文本转换textual-inversions">Embedding（文本转换，Textual Inversions）</h2>
-<p>Embedding 是指将自然语言文本（如句子或段落）转换为计算机可以理解的数值向量表示形式的过程，这种向量表示法通常称为嵌入（embedding），可以在许多自然语言处理（NLP）任务中使用，例如语言模型、情感分析、问答系统等。在Stable Diffusion中，用户可以使用内置的嵌入模型或创建自定义的嵌入模型来生成嵌入，<strong>但最终效果特别依赖 checkpoint，一定要看清适用于什么 checkpoint</strong>。下载好 embedding 文件后，存放位置是 <code>/embeddings</code> 文件夹，文件的后缀一般为 .pt，这种文件一般在 1MB 以内。</p>
-<h2 id="lorastar2">LoRA<span class="github-emoji"><span>🌟</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f31f.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></h2>
-<p>LoRA 全称为 Low-Rank Adaptation of Large Language Models（大语言模型的低阶适应），最初是由微软为了解决大语言模型的微调微调而开发出来的一项技术。在 Stable Diffusion 中使用时相当于绘画风格滤镜，对我这种小白用户来说是<strong>最重要</strong>的一类模型，因为往往只需要使用不同的 LoRA 模型就能满足相应绘画需求了。下载好 LoRA 文件后，存放位置是 <code>/models/Lora</code> 文件夹，文件的后缀一般为 .pt 或 .safetensions，这种文件一般为 144MB 左右的大小。</p>
-<h2 id="hypernetwork">Hypernetwork</h2>
-<p>在 Stable Diffusion 中，Hypernetwork 是一种用于训练大型神经网络的技术，是一种生成网络的网络，可以通过它来生成其他网络的权重。相比 LoRA，多了一些步骤，更适合风景绘图，而不适合特定具象的物体，使用的人也比较少。下载好 Hypernetwork 文件后，存放位置是 <code>/models/hypernetworks</code> 文件夹，文件的后缀一般为 .pt，一般为 100MB 左右的大小。</p>
-<h2 id="vae">VAE</h2>
-<p>在Stable Diffusion中，VAE 是另一种用于训练大型神经网络的技术，与 Hypernetwork 一样也是一种生成网络的网络。其功能是增强模型的色彩、光照等表现效果，相当于给模型加了美颜滤镜（如果模型生成的图发灰，可以检查一下 Vae 文件是否勾选），不过大都会集成在主模型 checkpoint 中，一般也不会单独列出。下载好 Vae 文件后，存放位置是 <code>/models/VAE</code> 文件夹。</p>
-<h2 id="小结">小结</h2>
-<p>主要还得看 LoRA 模型，其次就是再关注一下 checkpoint 和 Embedding，剩下的模型都是非热门的，只想浅尝辄止的话就可以不用管了（大伙会用下载量投票的）。还有就是要注意一下本地文件的存放的位置，不要放错地方了哦。</p>
-<p><img src="/ref_pic/staleDiffusion模型存放位置及小结.png"></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/05/17/2023-0517-StableDiffusion%E5%AE%89%E8%A3%85/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="zhb">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="zhb木木三的个人网页">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/05/17/2023-0517-StableDiffusion%E5%AE%89%E8%A3%85/" class="post-title-link" itemprop="url">StableDiffusion安装</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-05-17 22:36:00" itemprop="dateCreated datePublished" datetime="2023-05-17T22:36:00+08:00">2023-05-17</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-06-09 11:34:42" itemprop="dateModified" datetime="2023-06-09T11:34:42+08:00">2023-06-09</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%90%9E%E7%82%B9%E8%AF%BE%E5%A4%96%E7%9F%A5%E8%AF%86/" itemprop="url" rel="index"><span itemprop="name">搞点课外知识</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>2.4k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>8 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="写在前面">写在前面</h2>
-<p>害，前段时间 AI 画图特别火，为了不让自己落后于时代，我也跟着教程去下了个 Stable-Diffusion，然后就丢文件夹里吃灰了<span class="github-emoji"><span>😓</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f613.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>。本来想趁还记得，赶紧写个博客的，结果 2023-0224 安装好，一直拖到接近 3 个月之后才记录，太懒惰了。好像 4 月份又出了个上手更快一点的 midjourney，看来到时候也得了解一下了。（再扩展地想一想，最近 NLP 的 AI 也是特别火，从最开始 OpenAI 的 ChatGPT，到后面必应的 New Bing、百度的文心一言、谷歌的 Google bard，是不是也得了解一下呀。）</p>
-<p>本文的主题是 Stable Diffusion AI 画图的安装，当初学的时候主要就是参考 b 站 <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1JY411q7Sh/?spm_id_from=333.337.search-card.all.click&amp;vd_source=9f42c74d38b311d152245e7c84682d01">爱吃鱼的番茄</a> 的视频，这种热门技术的安装教程应该也一搜一大堆的。基于 diffusion 扩散模型（DDPM）的方法在 2020 年就被提出来了，是 AIGC 的主流模型，主要用来生成图片，然后在去年（2020 年）又提出了 stable diffusion，是一种将文本转换为图片（text-to-image）的模型，而真正让这个 AI 绘画火出圈的应当是后续的真人模型<del>（lsp 的胜利）</del>，训练得到的不同风格模型会产生不同的图片。因而，安装过程也可以分为类似的几个模块讲。</p>
-<h2 id="python3.10">1 python3.10</h2>
-<p>基础代码平台是 python 3.10.6（更早版本的 python 不支持 torch 库，更新的版本可能不稳定，所以还是直接 3.10.6 吧），直接从 python 官网<a target="_blank" rel="noopener" href="https://www.python.org/downloads/release/python-3106/">下载</a>就行，在安装的时候要注意添加环境变量。如果碰见一个电脑上需要装多个 python 版本的话，可以用 Anaconda 来管理？我这部分也没太搞懂，目前我电脑就是装了有一个 py310 的版本，但平常用的还是 py3.8的。</p>
-<p><img src="/ref_pic/python310安装注意添加路径.png"></p>
-<h2 id="stable-diffusion-webui">2 Stable-Diffusion-WebUI</h2>
-<p>首先要明确的是，Stable Diffusion 是类似于一个引擎、框架，现在大家用的基本是一个 github 大佬开发的 WebUI 版本，其特性就是可以本地部署，用网页界面交互、用自己的 GPU 生成图片，而不需要去其他的网页（比如 <a target="_blank" rel="noopener" href="https://beta.dreamstudio.ai/generate">DreamStudio</a> ）中注册账号受限使用。安装 Stable Diffusion WebUI 时，可以去它的 <a target="_blank" rel="noopener" href="https://github.com/AUTOMATIC1111/stable-diffusion-webui">github 主页</a> 手动下载，或者自己进行 git clone，或者找别人已经打包好的安装包。在本地安装的时候，记得留个相对较大的地方，虽然 Stable Diffusion WebUI 作者在 github 上的源码一共也就 2MB 不到，但后续还需要往这个文件夹里放各种模型以及生成的图片，我目前该文件夹就已经用了 14.3 GB 了。</p>
-<p>然后需要配置 <code>stable-diffusion-webui/webui-user.bat</code> 文件，其实就是加三个路径，如下。</p>
-<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"></span><br><span class="line"><span class="built_in">set</span> PYTHON=F:\Anaconda\envs\py310\python.exe %python310的安装路径%</span><br><span class="line"><span class="built_in">set</span> GIT=</span><br><span class="line"><span class="built_in">set</span> VENV_DIR=UserPackage %自定义的英文名,用于存储下载的依赖包,我这里填UserPackage%</span><br><span class="line"><span class="built_in">set</span> COMMANDLINE_ARGS=--medvram --reinstall-xformers --xformers %用于解决显存不够和xformer出错问题%</span><br><span class="line"></span><br><span class="line">call webui.bat</span><br></pre></td></tr></tbody></table></figure>
-<p>接着双击该 <code>webui-user.bat</code> 文件来启动该引擎。要注意的是，第一次启动时，会自动安装所需的依赖包到上面定义的 VENV_DIR 中（大概 4.8GB），安装过程可能会出错（pip 版本不对、没挂代理导致出错等），具体出错原因就面向搜索引擎解决吧！<span class="github-emoji"><span>😄</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f604.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></p>
-<p>最后不出意外的话，会只剩下 "No checkpoints found" 的错误，这表示确实基础的模型。</p>
-<p><img src="/ref_pic/staleDiffusionWebUI安装报错.png"></p>
-<h2 id="checkpoints">3 checkpoints</h2>
-<p>checkpoint 是 Stable Diffusion 框架所需要的大模型，是由 <strong>dreambooth 技术</strong>，经过大量数据训练得到的，可以用于生成各类常见元素的图片，算是一个全能工具，因此不可缺少，至少有一个，不然 SD 不能启动。 SD 官方的 checkpoint 可以从这个 <a target="_blank" rel="noopener" href="https://cyberes.github.io/stable-diffusion-models/">不知道是不是官方链接</a> 里下载，比如 sd-v1.5.ckpt（我 2 月份下载的时候还是 sd-v1.4.ckpt），大概是 3.97GB。下载好 checkpoint 文件后，存放位置在 <code>stable-diffusion-webui//models/Stable-diffusion</code> 文件夹。</p>
-<h2 id="运行并配置中文">4 运行并配置中文</h2>
-<p>再次运行 <code>stable-diffusion-webui/webui-user.bat</code> 文件，顺利的话就会出现以下界面啦，将显示的本地 URL 复制到任意浏览器中，就算是完成安装啦！</p>
-<p><img src="/ref_pic/staleDiffusionWebUI启动.png"></p>
-<p>但此时还有个重要的问题，那就是默认下全！是！英！文！虽说英文对于过了四六级的大学生来说也不是不能看，但这么多专业名词，中文都不一定懂，还看英文那不是折寿嘛，所以汉化完才算是安装完毕能交付的。</p>
-<p>要安装中文插件，也不需要额外找，就用 Stable Diffusion WebUI 大佬提供的就行。打开网页，然后按下图顺序先后选择 Extension—— Available —— 取消勾选 localization（即取消隐藏各语言的汉化包）——点击 Load from。</p>
-<p><img src="/ref_pic/staleDiffusionWebUI汉化-1.png"></p>
-<p>接着在该页面的下方就会有一堆的 Extension，直接 Ctrl+F 找到 <code>zh_CN Localization</code> 的插件并安装（这个是简体中文的，还有另一个是 <code>zh_TW Localization</code> 的是繁体中文，但这个 TW 又是什么鬼？）</p>
-<p><img src="/ref_pic/staleDiffusionWebUI汉化-2.png"></p>
-<p>安装好之后，可以先去 Extension —— Installed 那里看看有没有勾上汉化包，然后再点 Apply and restart UI。</p>
-<p><img src="/ref_pic/staleDiffusionWebUI汉化-3.png"></p>
-<p>如果还没生效的话，就去 Settings —— User interface 的最下方找 <code>Localization (requires restart)</code> 选项（也可以在左侧点 Show all pages 然后全文搜索），最后回到上方点个 Apply settings 然后 Reload UI 就行啦！我这里就懒得放图污染文章了。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/13/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><span class="page-number current">14</span><a class="page-number" href="/page/15/">15</a><span class="space">&hellip;</span><a class="page-number" href="/page/19/">19</a><a class="extend next" rel="next" href="/page/15/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
-  </nav>
-
-
-
-          </div>
-          
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
-
-        </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">zhb</p>
-  <div class="site-description" itemprop="description"></div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">109</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-          
-        <span class="site-state-item-count">10</span>
-        <span class="site-state-item-name">分类</span></a>
-      </div>
-      <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-          
-        <span class="site-state-item-count">17</span>
-        <span class="site-state-item-name">标签</span></a>
-      </div>
-  </nav>
-</div>
-
-
-
-      </div>
-
-    </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        
-
-<div class="copyright">
-  
-  &copy; 
-  <span itemprop="copyrightYear">2023</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">zhb</span>
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item-icon">
-      <i class="fa fa-chart-area"></i>
-    </span>
-    <span title="站点总字数">145k</span>
-</div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
-  </div>
-
-        
-
-
-
-
-
-
-
-
-      </div>
-    </footer>
-  </div>
-
-  
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
-
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/muse.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-<script>
-if (document.querySelectorAll('pre.mermaid').length) {
-  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
-    mermaid.initialize({
-      theme    : 'forest',
-      logLevel : 3,
-      flowchart: { curve     : 'linear' },
-      gantt    : { axisFormat: '%m/%d/%Y' },
-      sequence : { actorMargin: 50 }
-    });
-  }, window.mermaid);
-}
-</script>
-
-
-  
-
-  
-      
-
-<script>
-  if (typeof MathJax === 'undefined') {
-    window.MathJax = {
-      loader: {
-          load: ['[tex]/mhchem'],
-        source: {
-          '[tex]/amsCd': '[tex]/amscd',
-          '[tex]/AMScd': '[tex]/amscd'
-        }
-      },
-      tex: {
-        inlineMath: {'[+]': [['$', '$']]},
-          packages: {'[+]': ['mhchem']},
-        tags: 'ams'
-      },
-      options: {
-        renderActions: {
-          findScript: [10, doc => {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
-              const display = !!node.type.match(/; *mode=display/);
-              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-              const text = document.createTextNode('');
-              node.parentNode.replaceChild(text, node);
-              math.start = {node: text, delim: '', n: 0};
-              math.end = {node: text, delim: '', n: 0};
-              doc.math.push(math);
-            });
-          }, '', false],
-          insertedScript: [200, () => {
-            document.querySelectorAll('mjx-container').forEach(node => {
-              let target = node.parentNode;
-              if (target.nodeName.toLowerCase() === 'li') {
-                target.parentNode.classList.add('has-jax');
-              }
-            });
-          }, '', false]
-        }
-      }
-    };
-    (function () {
-      var script = document.createElement('script');
-      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
-      script.defer = true;
-      document.head.appendChild(script);
-    })();
-  } else {
-    MathJax.startup.document.state(0);
-    MathJax.texReset();
-    MathJax.typeset();
-  }
-</script>
-
-    
-
-  
-
-</body>
-</html>
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">111</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">22</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">10</div></a></div><hr class="custom-hr"/></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="zhb木木三的个人网页"><span class="site-name">zhb木木三的个人网页</span></a></span><div id="menus"><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">zhb木木三的个人网页</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/05/23/2023-0523-HTML-CSS-JS%E7%9A%84%E5%85%B3%E7%B3%BB/" title="HTML-CSS-JS的关系">HTML-CSS-JS的关系</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-05-22T17:01:00.000Z" title="发表于 2023-05-23 01:01:00">2023-05-23</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">博客搭建</a></span></div><div class="content">一般下，Web 前端有三剑客：HTML、CSS、JavaScript，这是三种不同的技术，实际应用时还需要相互搭配使用。
+HTML
+即超文本标记语言（Hyper Text Markup Language），是一种不严谨、简单的描述性语言。它用各种标签将页面中的元素组织起来，告诉浏览器如何显示内容。其中，“不严谨”是指，HTML 标签使用标准多，即使不加结尾也可以正常运行。
+CSS
+即层叠样式表（Cascading Style Sheets），是用来修饰 HTML 文件样式、控制网页外观的语言，负责字体、颜色、位置等外观的描述。其中，CSS 的“层叠”（cascading）表示“样式”（style）作用在同一个 HTML 元素的同一个属性时，具有优先级的层次结构，会依据层叠规则（权重）来处理冲突，优先选择应用权重更高的 CSS 选择器所指定的属性。
+在 Hexo 博客中，要修改的 CSS 文件就是各主题文件里面的对应文件。具体到 NeXT 主题，就是 \themes\next\source\css\main.styl 文件。
+JavaScript
+一种嵌入到 HTML 页面中的脚本语言， ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/05/23/2023-0523-Hexo%E9%A6%96%E8%A1%8C%E7%BC%A9%E8%BF%9B/" title="Hexo首行缩进">Hexo首行缩进</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-05-22T16:30:00.000Z" title="发表于 2023-05-23 00:30:00">2023-05-23</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">博客搭建</a></span></div><div class="content">首先，需求是让 Hexo 生成的静态网页的正文段中，每段的首行都能缩进。而 Markdown 本身秉持的主旨就是只管文本，不怎么管格式。在网页中，大概也有类似的文本、样式分离的模式，其中 CSS（层叠样式表）就是用来修改样式、控制网页外观的。因而，“首行缩进”的需求最终也应是由 CSS 实现。
+在 Hexo NeXT 主题的作者问答板块中有提到说使用如下的 css 代码实现缩进，但一直苦于不知道要具体修改哪个文件。
+1.post-body p { text-indent: 2em; }
+直到找到了这一篇 CSDN 博文，才总算是解决了问题！而且意识到接下来可能还得去了解一下 HTML、CSS、JS 的关系才行。此外，之后的博客美化也可以很大程度地参考这篇博文。
+回到本博客主题，要实现首行缩进，需要去主题文件夹中的自定义 CSS 文件里修改。新版本的 hexo 自定义 CSS 文件是 \themes\next\source\css\main.styl，自定义的部分加在 // Custom Layer 注释之后，加入上面提到的 CSS 代码即能实现。特别简单。
+</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/05/22/2023-0522-SD%E4%B8%8E%E9%AA%A8%E6%9E%B6%E6%8F%92%E4%BB%B6ControlNet/" title="SD与骨架插件ControlNet">SD与骨架插件ControlNet</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-05-22T06:01:00.000Z" title="发表于 2023-05-22 14:01:00">2023-05-22</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%90%9E%E7%82%B9%E8%AF%BE%E5%A4%96%E7%9F%A5%E8%AF%86/">搞点课外知识</a></span></div><div class="content">Stable Diffusion（SD）提出之初还是主要靠 prompt（关键词）来进行绘画，同一组关键词往往会有不同的输出，最终就有点像是抽盲盒一样。但随着 AI 绘画模型的开源和插件化，个人也可以通过开源的代码库和插件训练并定制高质量的 AI 图像，此时关键词已经没那么重要了，比拼的是大模型以及各种模型、插件的综合运用。
+ControlNet 就是其中一个很好用的 AI 绘画插件（Github 主页），可以通过骨骼绑定、控线来几乎完美地控制画面，在 2023 的 2 月中旬也一度成为最大热点。基本模式是输入一张参考图（甚至可以是简单的人物线条），然后插件根据参考图按一定模式预处理一张新图作为初始值，再由 AI 模型根据两幅图绘制出成品。
+
+安装
+插件
+与汉化插件一样，可以在 SD-WebUI 的扩展界面从作者的 github 项目中加载可供下载的插件，搜索 sd-webui-controlnet 并安装（如果挂梯子也装得很慢，也可以通过 Install from URL 页面手动安装。插件地址是：https://github.com/Mikubill/sd-webui-contro ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/05/22/2023-0522-StableDiffusion%E7%9A%84%E4%BD%BF%E7%94%A8/" title="StableDiffusion的使用">StableDiffusion的使用</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-05-21T16:01:00.000Z" title="发表于 2023-05-22 00:01:00">2023-05-22</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%90%9E%E7%82%B9%E8%AF%BE%E5%A4%96%E7%9F%A5%E8%AF%86/">搞点课外知识</a></span></div><div class="content">要使用 Stable Diffusion WebUI，只需要运行 stable-diffusion-webui/webui-user.bat 文件就可以了（里面的配置都已经在之前的安装博文里面设置好了），将其中显示的本地 URL 复制到任意浏览器中，进入一下的核心产图界面。
+
+大模型选择
+stable-diffusion 生成图像时主要依据大模型，这个倒没什么好说的，普通人一般用的就是著名的 ChilloutMix，无脑选就行。
+提示词设置
+这里只讲文生图的部分。要知道，基于 AIGC 的主流模型 Diffusion 提出来的 Stable Diffusion，是一种将文本转换为图片（text-to-image）的模型，因而提示词（prompt）差不多是仅次于大模型的最重要的参数。当然，由于 AI 所特有的黑匣子特性，产图过程是封闭的，就和魔法一样，因而提示词也常被称为“咒语”。而这些提示词/咒语/ tags 不知道怎么使用的话，优先参考 civitai 里面的 demo 参数，其次就是像 NovelAI Tag、魔咒百科词典这种热心大佬总结的网站。
+除去直接套用现成的提示词以外，还是 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/05/19/2023-0519-%E5%87%A0%E7%A7%8Dgit%E7%9B%B8%E5%85%B3%E5%90%8D%E8%AF%8D%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" title="几种git相关名词的基本概念">几种git相关名词的基本概念</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-05-19T08:15:00.000Z" title="发表于 2023-05-19 16:15:00">2023-05-19</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%AD%A6%E6%9C%AF%E6%A8%A1%E5%9D%97/">学术模块</a></span></div><div class="content">进了互联网公司，核心产能就是代码，而管理多个人、多个项目的代码就基本是使用 Git。同时，搜索现成代码的时候，绕不开的一个平台就是 github，而有时候又会听人说用的是 gitlab 来管理代码，那么这些与 git 相关的概念都是什么意思呢？
+Git
+总的来说，Git 是一款免费、开源的分布式版本控制系统/工具。每个人的设备就是一个完整的版本库，支持离线工作，当需要多人协作、维护共同的版本库时，可以通过将各自的版本库 push 到统一的云端服务器/远程仓库进行管理。
+与 Git 相对应的另一个概念就是 SVN（SubVersioN，版本控制系统），这是集中式版本控制系统。从名字上看可知，Git 与 SVN 的最主要区别就是 Git 是分布式的，SVN 是集中式的。对于 SVN 来说，版本库是集中放在中央服务器的，因而写代码时要一直联网工作，更适合与局域网下的协同工作。相比 SVN，Git 的概念更复杂、功能更丰富，因而 Git 出现后，慢慢地取代 SVN 成为主流。
+与 python 一样，要在本地使用 Git 工具管理的话，也是需要去 Git 官网下载并安装的，之后就可以通过 Gi ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/05/18/2023-0518-%E8%87%B4%E9%BB%AF%E6%B7%A1%E6%98%9F/" title="致黯淡星">致黯淡星</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-05-18T15:25:00.000Z" title="发表于 2023-05-18 23:25:00">2023-05-18</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%B8%B8%E6%88%8F/">游戏</a></span></div><div class="content">
+“不好意思——但不论你是谁，遇见莉莉记得帮我转告她，洛奇会在 [黑塔] 等你”
+“即使隔着数万光年的距离，她也会回复我的消息，只是这次...”
+“怎么会这样...莱斯莉答应了我的表白，但是星震那部分...”
+“她的时间每过去一个月，我的时间就会过去数十年。那岂不是等她回来，我已经像师父一样老了。”
+“她，去了未来。而我，留在现在...是这样吗？”
+“那我想念她的漫长时间，对她来说，岂不只是一个毫不起眼的瞬息吗？”
+“所以，指望她回来是不现实了。就算她行进数月，跨越光年，在我的时间坐标里，我已经成了老头一个。”
+“用一辈子的时间去等一个人，忍受无尽的思念与孤独...”
+“老实说，哥们儿，你不会真以为我那么天真吧？”
+“哈哈！我当然是不会等她的！我不会等！”
+“我是不会等...”
+“但我要去追她。我要去，追赶时间！”
+“既然她的时间曲线已经成了一座大峡谷，那与其盼着她出来，由我去翻越这座大峡谷不就行了吗？”
+“也许我会花十年时间找到刚度过一个月的她，但我们的时间流速就能从此同频，总比在这里坐以待毙来的好。”
+“身为 [黑塔.寰宇地概科] 的成员，连真正的银河都没见过，说出去早晚笑掉别人的 ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/13/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/#content-inner">13</a><span class="page-number current">14</span><a class="page-number" href="/page/15/#content-inner">15</a><span class="space">&hellip;</span><a class="page-number" href="/page/19/#content-inner">19</a><a class="extend next" rel="next" href="/page/15/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">zhb</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">111</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">22</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">10</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/08/21/2023-0821-%E7%82%AE%E5%A1%94%E8%BD%AC%E9%80%9F%E4%B8%8E%E5%9D%A6%E5%85%8B%E8%BD%AC%E5%9C%88%E6%88%98%E6%9C%AF/" title="坦克转圈战术与炮塔转速">坦克转圈战术与炮塔转速</a><time datetime="2023-08-21T15:55:00.000Z" title="发表于 2023-08-21 23:55:00">2023-08-21</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/08/16/2023-0816-Hexo%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98/" title="Hexo更换主题">Hexo更换主题</a><time datetime="2023-08-15T17:30:00.000Z" title="发表于 2023-08-16 01:30:00">2023-08-16</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/08/13/2023-0813-ChatPDF%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/" title="ChatPDF使用方法">ChatPDF使用方法</a><time datetime="2023-08-13T12:50:00.000Z" title="发表于 2023-08-13 20:50:00">2023-08-13</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/08/13/2023-0813-%E5%A6%99%E9%B8%AD%E7%9B%B8%E6%9C%BA%E7%AD%89AI%E5%86%99%E7%9C%9F%E8%BD%AF%E4%BB%B6%E5%8E%9F%E7%90%86/" title="妙鸭相机等AI写真软件原理">妙鸭相机等AI写真软件原理</a><time datetime="2023-08-13T11:55:00.000Z" title="发表于 2023-08-13 19:55:00">2023-08-13</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/08/13/2023-0813-%E5%B0%81%E7%A5%9E%E6%BC%94%E4%B9%89%E7%9A%84%E7%AD%89%E7%BA%A7%E5%88%B6%E5%BA%A6/" title="封神演义的等级制度">封神演义的等级制度</a><time datetime="2023-08-13T08:30:00.000Z" title="发表于 2023-08-13 16:30:00">2023-08-13</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            <a class="card-more-btn" href="/categories/" title="查看更多">
+    <i class="fas fa-angle-right"></i></a>
+            </div>
+            <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/MRI/"><span class="card-category-list-name">MRI</span><span class="card-category-list-count">10</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/python/"><span class="card-category-list-name">python</span><span class="card-category-list-count">3</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E4%B8%AA%E4%BA%BA%E5%90%90%E6%A7%BD/"><span class="card-category-list-name">个人吐槽</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"><span class="card-category-list-name">博客搭建</span><span class="card-category-list-count">17</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%AD%A6%E6%9C%AF%E6%A8%A1%E5%9D%97/"><span class="card-category-list-name">学术模块</span><span class="card-category-list-count">23</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%90%9E%E7%82%B9%E8%AF%BE%E5%A4%96%E7%9F%A5%E8%AF%86/"><span class="card-category-list-name">搞点课外知识</span><span class="card-category-list-count">31</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%97%A5%E8%AE%B0/"><span class="card-category-list-name">日记</span><span class="card-category-list-count">10</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%B8%B8%E6%88%8F/"><span class="card-category-list-name">游戏</span><span class="card-category-list-count">7</span></a></li>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/%E5%AE%9E%E7%94%A8%E5%B0%8F%E5%B7%A5%E5%85%B7/" style="font-size: 1.27em; color: #99a0a9">实用小工具</a> <a href="/tags/%E7%94%9F%E6%B4%BB%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE/" style="font-size: 1.16em; color: #999b9e">生活中的数据</a> <a href="/tags/%E6%98%9F%E7%A9%B9%E9%93%81%E9%81%93/" style="font-size: 1.27em; color: #99a0a9">星穹铁道</a> <a href="/tags/%E6%AF%94%E8%B5%9B/" style="font-size: 1.21em; color: #999ea4">比赛</a> <a href="/tags/sci%E8%AE%BA%E6%96%87/" style="font-size: 1.44em; color: #99a7ba">sci论文</a> <a href="/tags/markdown/" style="font-size: 1.16em; color: #999b9e">markdown</a> <a href="/tags/%E5%B8%82%E5%9C%BA%E8%A7%84%E6%A8%A1/" style="font-size: 1.1em; color: #999">市场规模</a> <a href="/tags/%E6%9C%AA%E5%88%86%E7%B1%BB/" style="font-size: 1.5em; color: #99a9bf">未分类</a> <a href="/tags/%E5%B8%82%E5%9C%BA/" style="font-size: 1.33em; color: #99a2af">市场</a> <a href="/tags/%E6%97%85%E6%B8%B8%E6%B5%81%E6%B0%B4%E8%B4%A6/" style="font-size: 1.39em; color: #99a4b4">旅游流水账</a> <a href="/tags/MATLAB/" style="font-size: 1.1em; color: #999">MATLAB</a> <a href="/tags/%E4%B8%93%E5%88%A9/" style="font-size: 1.16em; color: #999b9e">专利</a> <a href="/tags/AI%E6%96%87%E6%9C%AC%E5%A4%84%E7%90%86/" style="font-size: 1.27em; color: #99a0a9">AI文本处理</a> <a href="/tags/%E6%88%98%E9%94%A4/" style="font-size: 1.16em; color: #999b9e">战锤</a> <a href="/tags/typora/" style="font-size: 1.1em; color: #999">typora</a> <a href="/tags/%E7%AD%89%E7%BA%A7%E5%88%B6%E5%BA%A6/" style="font-size: 1.33em; color: #99a2af">等级制度</a> <a href="/tags/AI%E7%BB%98%E7%94%BB/" style="font-size: 1.33em; color: #99a2af">AI绘画</a> <a href="/tags/%E5%BF%83%E7%90%86%E5%AD%A6/" style="font-size: 1.16em; color: #999b9e">心理学</a> <a href="/tags/%E5%8E%9F%E7%A5%9E/" style="font-size: 1.1em; color: #999">原神</a> <a href="/tags/%E7%A5%9E%E8%AF%9D/" style="font-size: 1.16em; color: #999b9e">神话</a> <a href="/tags/%E6%96%87%E7%8C%AE/" style="font-size: 1.27em; color: #99a0a9">文献</a> <a href="/tags/LaTeX/" style="font-size: 1.33em; color: #99a2af">LaTeX</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/08/"><span class="card-archive-list-date">八月 2023</span><span class="card-archive-list-count">15</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/07/"><span class="card-archive-list-date">七月 2023</span><span class="card-archive-list-count">29</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/06/"><span class="card-archive-list-date">六月 2023</span><span class="card-archive-list-count">20</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/05/"><span class="card-archive-list-date">五月 2023</span><span class="card-archive-list-count">29</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/04/"><span class="card-archive-list-date">四月 2023</span><span class="card-archive-list-count">15</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/03/"><span class="card-archive-list-date">三月 2023</span><span class="card-archive-list-count">3</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">111</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2023-08-21T15:56:17.410Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By zhb</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

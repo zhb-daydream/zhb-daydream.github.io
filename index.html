@@ -1,1371 +1,375 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.4.2">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
-
-<link rel="stylesheet" href="/css/main.css">
-
-<link rel="stylesheet" href="fonts.lug.ustc.edu.cn/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"zhb-daydream.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
-  </script>
-
-  <meta property="og:type" content="website">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>zhb木木三的个人网页 - 个人博客的新尝试（页面渲染需要时间，请耐心等待）</title><meta name="author" content="zhb"><meta name="copyright" content="zhb"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
 <meta property="og:title" content="zhb木木三的个人网页">
 <meta property="og:url" content="https://zhb-daydream.github.io/index.html">
 <meta property="og:site_name" content="zhb木木三的个人网页">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
 <meta property="article:author" content="zhb">
 <meta name="twitter:card" content="summary">
-
-<link rel="canonical" href="https://zhb-daydream.github.io/">
-
-
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : true,
-    isPost : false,
-    lang   : 'zh-CN'
-  };
-</script>
-
-  <title>zhb木木三的个人网页</title>
-  
-
-
-
-
-
-
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
+<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://zhb-daydream.github.io/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'zhb木木三的个人网页',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2023-08-21 23:56:17'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
   }
 
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
 
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
 
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.2">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
-
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
-    </div>
-  </div>
-
-  <div class="site-meta">
-
-    <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">zhb木木三的个人网页</h1>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-      <p class="site-subtitle" itemprop="description">个人博客的新尝试（页面渲染需要时间，请耐心等待）</p>
-  </div>
-
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-    </div>
-  </div>
-</div>
-
-
-
-
-<nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
-
-  </li>
-  </ul>
-</nav>
-
-
-
-
-</div>
-    </header>
-
-    
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
-
-
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
-
-          <div class="content index posts-expand">
-            
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/08/13/2023-0813-ChatPDF%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="zhb">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="zhb木木三的个人网页">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/08/13/2023-0813-ChatPDF%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/" class="post-title-link" itemprop="url">ChatPDF使用方法</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2023-08-13 20:50:00 / 修改时间：20:43:48" itemprop="dateCreated datePublished" datetime="2023-08-13T20:50:00+08:00">2023-08-13</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%90%9E%E7%82%B9%E8%AF%BE%E5%A4%96%E7%9F%A5%E8%AF%86/" itemprop="url" rel="index"><span itemprop="name">搞点课外知识</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>479</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>2 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>ChatGPT 是 NLP 的一个大模型，专门用于文本处理与分析，而在社会生产中，一个很直接的地方就是科研论文的统计与分析，ChatPDF 就是这么个在线免费的论文辅助阅读工具。</p>
-<h2 id="上传论文pdf">上传论文PDF</h2>
-<p>首先，打开网址：https://www.chatpdf.com/，上传下载好的 PDF 论文文件（也可以用 URL，不过好像非开源的论文 URL 大部分都识别不出来。</p>
-<p><img src="/ref_pic/ChatPDF-1.png"></p>
-<h2 id="提问">提问</h2>
-<p>读取成功后，会列出论文的一些基本信息。</p>
-<p><img src="/ref_pic/ChatPDF-2.png"></p>
-<p>然后就可以提问了。</p>
-<p><img src="/ref_pic/ChatPDF-3.png"></p>
-<p>基本用法就是这么简单，好像也没什么特殊的了，主要就是用来精一点的略读（毕竟有些原理性的回答还是不太行），了解个大概的论文背景，尤其是 introduction 部分，全是文本、没有公式，特别适合用 AI 来总结。</p>
-<h2 id="中文版chatpdf">中文版ChatPDF</h2>
-<p>写博客的时候发现上面这个英文版的 <a target="_blank" rel="noopener" href="https://www.chatpdf.com/">ChatPDF</a> 响应速度大大变慢了，而且也没法正常上传读取 PDF 并浏览以前的记录了。翻了一下，有个深圳公司开发的中文版的 ChatPDF （https://www.chatpdfs.cn/）好像还行，但就是要微信扫码登录，不知道以后会不会收费。</p>
-<p><img src="/ref_pic/ChatPDF-4.png"></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/08/13/2023-0813-%E5%A6%99%E9%B8%AD%E7%9B%B8%E6%9C%BA%E7%AD%89AI%E5%86%99%E7%9C%9F%E8%BD%AF%E4%BB%B6%E5%8E%9F%E7%90%86/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="zhb">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="zhb木木三的个人网页">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/08/13/2023-0813-%E5%A6%99%E9%B8%AD%E7%9B%B8%E6%9C%BA%E7%AD%89AI%E5%86%99%E7%9C%9F%E8%BD%AF%E4%BB%B6%E5%8E%9F%E7%90%86/" class="post-title-link" itemprop="url">妙鸭相机等AI写真软件原理</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2023-08-13 19:55:00 / 修改时间：20:03:53" itemprop="dateCreated datePublished" datetime="2023-08-13T19:55:00+08:00">2023-08-13</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%90%9E%E7%82%B9%E8%AF%BE%E5%A4%96%E7%9F%A5%E8%AF%86/" itemprop="url" rel="index"><span itemprop="name">搞点课外知识</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>1.7k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>6 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>2023 年 7 月 17 日正式上线的妙鸭相机在最近挺火的，它主打的就是一个方便快捷，只要 9.9 元以及上传大概 20 张图片，就能生成个人的<strong>数字分身</strong>，并一键生成商务照、证件照等各种风格的<strong>个人写真照</strong>，在微信小程序上搜一下就能用了。</p>
-<p><img src="/ref_pic/妙鸭相机-1.png"></p>
-<p>像妙鸭相机、45AI 写真这一类的 AI 小程序算是 AI 绘画技术风口下的第一批商业产品，这一类互联网产品只要底层的软件写好，使用量上去之后，边际成本是几乎为零的，剩下的事情主要就是营销推广以及用户留存率了。不过这里主要还是想了解一下这种 AI 写真软件的原理，理论上就和 Stable Diffusion 中训练 LoRA 模型是相通的。</p>
-<h2 id="原理">原理</h2>
-<p>“投入少量图片，经过一定训练时间生成自定义的不同风格的写真照片”，该效果描述基本就是今年年初火起来的 LoRA（Low-Rank Adaptation of Large Language Models（大语言模型的低阶适应） AI 画图模型，其效果就是在 Checkpoint 等大的主模型基础上，利用少量数据训练处一种画风/IP/人物，实现定制化需求。正因为它所需的训练资源比其他模型要少很多，所以非常适合社区使用者和个人开发者。</p>
-<p>而妙鸭相机等 AI 写真软件就是基于开源的 Stable Diffusion 来进行 LoRA 模型的精调，相当于是把科学上网、找资源、本地部署 Stable Diffusion、配置插件环境、输入调试提示词 Prompt 等等这些步骤全都集成化到一个在线使用的小程序上，而且操作简单、收费低（9.9 元），确实能直击用户痛点。</p>
-<h2 id="妙鸭相机使用方式">妙鸭相机使用方式</h2>
-<p>使用的时候也很简单，首先去微信小程序（不需要下载 APP）搜索并点开。</p>
-<p><img src="/ref_pic/妙鸭相机-2.png"></p>
-<h3 id="上传单张照片">上传单张照片</h3>
-<p>然后需要使用一张图片作为输入，按照 Stable Diffusion 的逻辑，这一张照片应该就类似于一键换头、局部重绘之类的输入图片。</p>
-<p><img src="/ref_pic/妙鸭相机-3.png"></p>
-<p>这里提到“<strong>婴儿、老年人、眼镜等特征效果有不稳定性，我们正在努力优化</strong>”，如果该软件用的是开源的 Stable Diffusion 以及相应的 Check Point 大模型，那么该团队实际上是没有能力去优化这些特征效果的，可能就是圈一波钱就跑路那种模式。</p>
-<h3 id="补充20张正面照">补充20张正面照</h3>
-<p><img src="/ref_pic/妙鸭相机-4.png"></p>
-<p>这里使用的多张照片，猜测实际上就是用来重新训练 LoRA 模型。像是美图秀秀、B612 等软件会要求更少的 3-15 张，生成的图片可能没那么与本人相似。此外，这些训练数据也有一定的质量要求，要保证面部特征清晰、单人、多角度等，才属于<strong>优质数据</strong>，否则训练出来的 AI 模型很可能也不行。</p>
-<h3 id="付费并等待">付费并等待</h3>
-<p>挑选并上传完图片后，就会提示付费并生成图片。（真会玩，要等用户投入了时间之后再提示要花钱，在沉没成本下或许大部分人都会选择掏个 9.9 元吧）。</p>
-<p><img src="/ref_pic/妙鸭相机-5.png"></p>
-<p>付费成功后，一般还要排队等待。根据<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/QcPd0EnE9KylCB2C5VtKuw">科技每日推送的一篇博文</a>，要大概 3 小时。</p>
-<h3 id="自定义写真">自定义写真</h3>
-<p>等待结束后，能看到制作好的数字分身以及几张范例照片。</p>
-<p><img src="/ref_pic/妙鸭相机-6.jpg"></p>
-<p>后续就能够根据一些模板调整出对应的写真照片了。</p>
-<p><img src="/ref_pic/妙鸭相机-7.jpg"></p>
-<h2 id="软件评价">软件评价</h2>
-<h3 id="隐私泄露">隐私泄露</h3>
-<p>要训练 AI 模型就需要上传个人照片，而这个过程是在云端数据库进行的，并不能在客户端的本地运行（其实也合理，毕竟主打一个方便快捷，那麻烦的运算操作肯定都统一放在云端）。而这必然就会引起个人隐私数据泄露的风险，而且最初的《用户须知》里面的授权许可款项，让用户授予了软件开发方的很多权利。</p>
-<p><img src="/ref_pic/妙鸭相机-8.png"></p>
-<p>尽管后续发了一份道歉声明以及删除承诺，但其原理决定了这种隐患无法被消除。</p>
-<p><img src="/ref_pic/妙鸭相机-9.png"></p>
-<h3 id="生成效果的稳定性">生成效果的稳定性</h3>
-<p>AI 本质上还是个黑盒子，虽然目前确实能生成出让人眼前一亮的照片，但也经常会出现照片细节不好的问题。但对于用户来说，并不会理会那么多原理性的细节，只要出来的图不好、生成错误、客服跟不上，那就很容易给差评。</p>
-<p><img src="/ref_pic/妙鸭相机-10.png"></p>
-<h2 id="参考材料">参考材料</h2>
-<p>《AI 生成写真照爆火，未来会替代海马体等写真照相馆吗？》：https://www.zhihu.com/question/613669268/answer/3144497297</p>
-<p>《在妙鸭相机，我花9块9，把自己给卖了》：https://mp.weixin.qq.com/s/QcPd0EnE9KylCB2C5VtKuw</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/08/13/2023-0813-%E5%B0%81%E7%A5%9E%E6%BC%94%E4%B9%89%E7%9A%84%E7%AD%89%E7%BA%A7%E5%88%B6%E5%BA%A6/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="zhb">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="zhb木木三的个人网页">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/08/13/2023-0813-%E5%B0%81%E7%A5%9E%E6%BC%94%E4%B9%89%E7%9A%84%E7%AD%89%E7%BA%A7%E5%88%B6%E5%BA%A6/" class="post-title-link" itemprop="url">封神演义的等级制度</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2023-08-13 16:30:00 / 修改时间：20:30:54" itemprop="dateCreated datePublished" datetime="2023-08-13T16:30:00+08:00">2023-08-13</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%90%9E%E7%82%B9%E8%AF%BE%E5%A4%96%E7%9F%A5%E8%AF%86/" itemprop="url" rel="index"><span itemprop="name">搞点课外知识</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>1.5k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>5 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>最近看了《封神榜-第一部》的电影，感觉商周大战+（背后）阐截大战这种世界观很有意思，再加上现在网文里有一大流派叫“<strong>洪荒流</strong>”，大概就是以《封神演义》为世界观的一类小说，而我之前看过的很喜欢的一篇叫《我的师兄实在太稳健了》就是这个流派里面的，里面看阐截教如何勾心斗角、人教如何试图把西方教给拉进劫中、纣王帝辛如何逆天道（灭商兴周）而行，很有意思。所以还是想略微把这个世界观给列一列，顺便熟悉一下之前学的 Mermaid 写法。</p>
-<h2 id="何为封神">何为封神</h2>
-<p>《封神演义》（俗称《封神榜》，又名《商周列国全传》、《武王伐纣外史》等）是明代的一个虚构长篇小说，共一百回，前三十回讲商超末代君主纣王的暴虐，后七十回讲商、周两国的战争，以纣王自焚、武王夺取天下并分封列国为结局，中间掺杂一些女娲、妲己、元始天尊、姜子牙、申公豹等神话人物，这些神话人物是属于中国佛道神话体系里面的，与西游记里的也有一定关系。</p>
-<p>故事起源于封神榜，因为（1）阐教十二金仙犯了杀伐之厄、（2）昊天上帝成立的天庭缺人、（3）人间正值商周王朝更迭，共三个背景原因，于是鸿钧在紫霄宫中召开大会，与三教掌门讨论并一致决定由阐教二代弟子姜子牙执掌<strong>封神榜</strong>，从三教中选取 365 人封为天庭八部三百六十五位正神。在此前，三教各弟子属于<strong>仙</strong>，是自由自在的，而若上了封神榜、进了天庭，则为<strong>神</strong>，是属于有编制的员工。虽然两者都属于<strong>神仙</strong>，但还是有很大的差别，因而大家都不想上封神榜。最后也演变成，只有身死道消的仙人才会上榜，整个《封神演义》的故事便是围绕这么个封神来展开的。</p>
-<h2 id="派系关系图">派系关系图</h2>
-<p>神（天庭正神）的地位是低于仙人的，但一般仙人打架死了之后，就会上榜“贬”为神，为了方便叙述，下面就只讲 <strong>“圣、仙、神、人”</strong> 中的 “<strong>圣、仙、人</strong>” 三部分：</p>
-<p><img src="/ref_pic/封神演义派系图.png"></p>
-<p>注：写这个还挺累的，主要是一百章的小说，人物着实多，还有很多著名人物（例如云中子、太乙真人）都没列上去，然后人物之间精彩的故事也没写，但先暂时这样了，之后再补充吧。然后最恼火的是，Hexo 渲染 mermaid 好像并不是很好，出来的图片在上下区域有大片的空白，看着特别难受，而这个东西要导出为图片的时候也不是很清晰，最后选了个 Mermaid 的在线编辑器 https://mermaid.live/，在上面输入然后保存图片了，可能之后还是得再换一种能自动排版的方式画高清架构图（PPT 排版起来好麻烦）。为了避免自己白写，把 mermaid 代码列在下面这里了。</p>
-<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">graph</span><br><span class="line">	subgraph 圣</span><br><span class="line">	鸿钧老祖((紫霄宫-鸿钧老祖)) --封神榜--&gt; 昊天上帝 --&gt; 人教 &amp; 阐教 &amp; 截教</span><br><span class="line">	妖界{妖界} --&gt; 女娲娘娘</span><br><span class="line">	三圣皇{三圣皇} --&gt; 天皇伏羲 &amp; 地皇神农 &amp; 人皇轩辕</span><br><span class="line">	人教{人教} --&gt; 玄都洞-太上老君</span><br><span class="line">	阐教{阐教} --&gt; 玉虚宫-元始天尊</span><br><span class="line">	截教{阐教} --&gt; 碧游宫-通天教主</span><br><span class="line">	西方教{西方教} --&gt; 准提道人 &amp; 接引道人</span><br><span class="line">	end</span><br><span class="line">	</span><br><span class="line">	玄都洞-太上老君 --&gt; 玄都大法师</span><br><span class="line">	玉虚宫-元始天尊 -.- 十二金仙</span><br><span class="line">	碧游宫-通天教主 -.- 金灵圣母</span><br><span class="line">	女娲娘娘 -.- 九尾狐狸精</span><br><span class="line">	</span><br><span class="line">	subgraph 仙</span><br><span class="line">		subgraph 轩辕坟三妖</span><br><span class="line">         九尾狐狸精 &amp; 九头雉鸡精 &amp; 玉石琵琶精</span><br><span class="line">         end</span><br><span class="line">         </span><br><span class="line">		subgraph 人教二代</span><br><span class="line">		玄都大法师</span><br><span class="line">		end</span><br><span class="line">		</span><br><span class="line">		subgraph 阐教二代</span><br><span class="line">		十二金仙 &amp; 申公豹 &amp; 燃灯道人 &amp; 姜子牙 </span><br><span class="line">		end</span><br><span class="line">		十二金仙 -.- 杨戬</span><br><span class="line">		subgraph 阐教三代</span><br><span class="line">		杨戬 &amp; 哪/木/金吒 &amp; 李靖</span><br><span class="line">		end</span><br><span class="line">		</span><br><span class="line">		subgraph 截教二代</span><br><span class="line">		金灵圣母 &amp; 三霄娘娘 &amp; 多宝道人 &amp; 赵公明</span><br><span class="line">		end</span><br><span class="line">		金灵圣母 -.- 闻仲</span><br><span class="line">		subgraph 截教三代</span><br><span class="line">		闻仲</span><br><span class="line">		end</span><br><span class="line">	end</span><br><span class="line"></span><br><span class="line">	姜子牙 --&gt; 西岐</span><br><span class="line">	闻仲 --&gt; 殷商</span><br><span class="line">	subgraph 人</span><br><span class="line">	西岐 --&gt; 西伯侯-姬昌 &amp; 周武王-姬发</span><br><span class="line">	殷商 --&gt; 开国君主-成汤 &amp; 商纣王-帝辛</span><br><span class="line">	end</span><br></pre></td></tr></tbody></table></figure>
-<h2 id="参考资料">参考资料</h2>
-<p>《百度百科：封神演义》：https://baike.baidu.com/item/%E5%B0%81%E7%A5%9E%E6%BC%94%E4%B9%89/69344?fromModule=lemma_inlink</p>
-<p>《封神演义里，按实力可以把神仙划分为五个档次，哪五档？各有谁？》：https://baijiahao.baidu.com/s?id=1765095173684242612&amp;wfr=spider&amp;for=pc</p>
-<p>《十大等级——《封神演义》人物档次划分》：https://baijiahao.baidu.com/s?id=1750622914934823375&amp;wfr=spider&amp;for=pc</p>
-<p>《盘点封神演义中的神仙道场》：https://baijiahao.baidu.com/s?id=1603762818381088754&amp;wfr=spider&amp;for=pc</p>
-<p>《封神演义里，共有八大势力派系，各派老大是谁？各自实力如何？》：https://baijiahao.baidu.com/s?id=1762841257981094332&amp;wfr=spider&amp;for=pc</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/08/08/2023-0808-%E7%A3%81%E5%85%B1%E6%8C%AF%E5%8E%82%E5%95%86%E4%BB%8B%E7%BB%8D-Bruker%E9%AB%98%E5%9C%BA%E4%BA%A7%E5%93%81/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="zhb">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="zhb木木三的个人网页">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/08/08/2023-0808-%E7%A3%81%E5%85%B1%E6%8C%AF%E5%8E%82%E5%95%86%E4%BB%8B%E7%BB%8D-Bruker%E9%AB%98%E5%9C%BA%E4%BA%A7%E5%93%81/" class="post-title-link" itemprop="url">磁共振厂商介绍-Bruker高场产品</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2023-08-08 10:10:00 / 修改时间：10:12:02" itemprop="dateCreated datePublished" datetime="2023-08-08T10:10:00+08:00">2023-08-08</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/MRI/" itemprop="url" rel="index"><span itemprop="name">MRI</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>1.5k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>5 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>瑞士的<a target="_blank" rel="noopener" href="https://www.bruker.com/zh.html">布鲁克</a>（Bruker）的【产品与解决方案】——【临床前成像】——【磁共振成像（MRI）】中可以看到一些产品介绍，不过这个产品线的最大磁体孔径也只是40cm，加上梯度模块之后就只剩26cm，因此是没法做人体成像的，只能做动物实验。</p>
-<p>BioSpec系列是转为临床前和分子MR成像和MR研究的新兴市场设计的，命名规则：<strong>型号名 场强/孔径</strong>，例如<strong>BioSpec 70/30</strong> 表示：BioSpec系列场强为7.0T、内孔径为30cm的系统。<a target="_blank" rel="noopener" href="https://www.bruker.com/zh/products-and-solutions/preclinical-imaging/mri.html">BioSpec系列产品介绍网址</a>。</p>
-<h2 id="高场biospec系列">高场BioSpec系列</h2>
-<p><a target="_blank" rel="noopener" href="https://www.bruker.com/zh/products-and-solutions/preclinical-imaging/mri/biospec.html">官方介绍网址</a></p>
-<table>
-<colgroup>
-<col style="width: 13%">
-<col style="width: 14%">
-<col style="width: 15%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 15%">
-<col style="width: 14%">
-</colgroup>
-<thead>
-<tr class="header">
-<th></th>
-<th>BioSpec 47/40</th>
-<th>BioSpec 70/20</th>
-<th>BioSpec 70/30</th>
-<th>BioSpec 70/40</th>
-<th>BioSpec 94/20</th>
-<th>BioSpec 94/30</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>磁体孔径</td>
-<td>40cm</td>
-<td>20cm</td>
-<td>30cm</td>
-<td>40cm</td>
-<td>20cm</td>
-<td>30cm</td>
-</tr>
-<tr class="even">
-<td>梯度孔径</td>
-<td>26cm</td>
-<td>11.4cm</td>
-<td>20cm</td>
-<td>26cm</td>
-<td>11.4cm</td>
-<td>20cm</td>
-</tr>
-<tr class="odd">
-<td>磁体</td>
-<td>4.7T</td>
-<td>7T</td>
-<td>7T</td>
-<td>7T</td>
-<td>9.4T</td>
-<td>9.4T</td>
-</tr>
-<tr class="even">
-<td>场均匀性</td>
-<td>±10ppm(220mm DSV)</td>
-<td>±10ppm(120mm DSV)</td>
-<td>±10ppm(180mm DSV)</td>
-<td>±10ppm(220mm DSV)</td>
-<td>±10ppm(120mm DSV)</td>
-<td>±10ppm(180mm DSV)</td>
-</tr>
-<tr class="odd">
-<td>线圈通道</td>
-<td>16</td>
-<td>16</td>
-<td>16</td>
-<td>16</td>
-<td>16</td>
-<td>16</td>
-</tr>
-<tr class="even">
-<td>梯度强度（常用）</td>
-<td>155 or 230 mT/m</td>
-<td>440 or 660 mT/m</td>
-<td>200 or 300 mT/m</td>
-<td>155 or 230 mT/m</td>
-<td>440 or 660 mT/m</td>
-<td>200 or 300 mT/m</td>
-</tr>
-<tr class="odd">
-<td>梯度强度（最大）</td>
-<td></td>
-<td>1000 mT/m</td>
-<td></td>
-<td>1000 mT/m</td>
-<td>1000 mT/m</td>
-<td>660 mT/m</td>
-</tr>
-<tr class="even">
-<td>切换速率（常用）</td>
-<td>280 or 650 T/m/s</td>
-<td>3440 or 4570 T/m/s</td>
-<td>640 or 1040 T/m/s</td>
-<td>280 or 650 T/m/s</td>
-<td>3440 or 4570 T/m/s</td>
-<td>640 or 1040 T/m/s</td>
-</tr>
-<tr class="odd">
-<td>切换速率（最大）</td>
-<td></td>
-<td></td>
-<td></td>
-<td>9000 T/m/s</td>
-<td></td>
-<td>4200 T/m/s</td>
-</tr>
-<tr class="even">
-<td>软件包</td>
-<td>ZTE、CMR、PET/MR</td>
-<td>ZTE、CMR、PET/MR</td>
-<td>ZTE、CMR、PET/MR</td>
-<td>ZTE、CMR、PET/MR</td>
-<td>ZTE、CMR、PET/MR</td>
-<td>ZTE、CMR、PET/MR</td>
-</tr>
-<tr class="odd">
-<td>扩展模块</td>
-<td>PET Insert</td>
-<td>PET Insert</td>
-<td>PET Insert</td>
-<td>PET Insert</td>
-<td>PET Insert</td>
-<td>PET Insert</td>
-</tr>
-</tbody>
-</table>
-<h2 id="超高场biospec系列">超高场BioSpec系列</h2>
-<p><a target="_blank" rel="noopener" href="https://www.bruker.com/zh/products-and-solutions/preclinical-imaging/mri/biospec-ultra-high-field-mri.html">官方介绍网址</a></p>
-<table>
-<thead>
-<tr class="header">
-<th></th>
-<th>BioSpec 117/11</th>
-<th>BioSpec 117/16</th>
-<th>BioSpec 152/11</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>磁体孔径</td>
-<td>11cm</td>
-<td>16cm</td>
-<td>11cm</td>
-</tr>
-<tr class="even">
-<td>梯度内径</td>
-<td>6cm</td>
-<td>9cm</td>
-<td>6cm</td>
-</tr>
-<tr class="odd">
-<td>磁体</td>
-<td>11.7T</td>
-<td>11.7T</td>
-<td>15.2T</td>
-</tr>
-<tr class="even">
-<td>场均匀性</td>
-<td>±10ppm(60mm圆柱)</td>
-<td>±4ppm(60mm DSV)</td>
-<td>±10ppm(60mm圆柱)</td>
-</tr>
-<tr class="odd">
-<td>线圈通道</td>
-<td>N/A</td>
-<td>8</td>
-<td>N/A</td>
-</tr>
-<tr class="even">
-<td>梯度强度</td>
-<td>740 or 1000 mT/m</td>
-<td>570 or 760 mT/m</td>
-<td>740 or 1000 mT/m</td>
-</tr>
-<tr class="odd">
-<td>切换速率</td>
-<td>9000 T/m/s</td>
-<td>5130 or 6840 T/m/s</td>
-<td>9000 T/m/s</td>
-</tr>
-<tr class="even">
-<td>软件包</td>
-<td>ZTE、CMR、PET/MR</td>
-<td>ZTE、CMR、PET/MR</td>
-<td>ZTE、CMR、PET/MR</td>
-</tr>
-<tr class="odd">
-<td>扩展模块</td>
-<td>PET Insert</td>
-<td>PET Insert</td>
-<td>PET Insert</td>
-</tr>
-</tbody>
-</table>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/08/06/2023-0806-%E4%BA%94%E4%B8%AA%E4%B8%96%E7%95%8C%E7%A5%9E%E8%AF%9D%E4%BD%93%E7%B3%BB/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="zhb">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="zhb木木三的个人网页">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/08/06/2023-0806-%E4%BA%94%E4%B8%AA%E4%B8%96%E7%95%8C%E7%A5%9E%E8%AF%9D%E4%BD%93%E7%B3%BB/" class="post-title-link" itemprop="url">五个世界神话体系</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2023-08-06 12:30:00 / 修改时间：12:35:44" itemprop="dateCreated datePublished" datetime="2023-08-06T12:30:00+08:00">2023-08-06</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%90%9E%E7%82%B9%E8%AF%BE%E5%A4%96%E7%9F%A5%E8%AF%86/" itemprop="url" rel="index"><span itemprop="name">搞点课外知识</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>3.5k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>12 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>在人类文明的早期，人类还处于探索世界的阶段，古老先辈们会试图描绘、想象世界的真实样貌，当这种想象逐渐升级为一种对于超自然神祇（qi，第二声）进行崇拜的集体行为，同时一套可以自圆其说的<strong>世界观</strong>建立时，便是一个神话体系了。要注意的是，神话还只是一种民间文学，属于一个逻辑自洽的世界观，而宗教则是一种特殊的<strong>社会意识形态</strong>，两者还是有点微妙的不同。</p>
-<p>想起《文明6》里面的旁白：“从水下第一个生命的萌芽开始，到石器时代的巨型野兽，再到人类第一次直立行走，<strong>你已经历许多</strong>。现在，开启你最伟大的探索吧：从早期文明的摇篮到浩瀚星宇”，人类文明的演化总是多样化的不同地区就会有不同的神话体系，这里也主要是简单列一列我听过的几个神话体系<del>（然后就可以去和别人吹牛逼了）</del>。</p>
-<table>
-<thead>
-<tr class="header">
-<th>东亚</th>
-<th>欧洲</th>
-<th>美洲</th>
-<th>非洲</th>
-<th>西亚</th>
-<th>南亚</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>中国先秦神话</strong></td>
-<td><strong>古希腊神话</strong></td>
-<td>玛雅神话</td>
-<td>埃及神话</td>
-<td>美索不达米亚神话</td>
-<td>印度吠陀神话</td>
-</tr>
-<tr class="even">
-<td><strong>中国佛道神话</strong></td>
-<td>凯尔特神话</td>
-<td>阿兹特克神话</td>
-<td></td>
-<td>波斯神话</td>
-<td>印度婆罗门教神话</td>
-</tr>
-<tr class="odd">
-<td><strong>日本神道教神话</strong></td>
-<td><strong>北欧神话</strong></td>
-<td>印加神话</td>
-<td></td>
-<td>伊斯兰教神话</td>
-<td>印度佛教神话</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>犹太-基督神话</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h2 id="中国先秦神话">中国先秦神话</h2>
-<p><img src="/ref_pic/世界神话体系-盘古开天地.jpg"></p>
-<h3 id="基本介绍">基本介绍</h3>
-<ul>
-<li>先秦时期华夏先民所创造的早期神话传说，在经过后人传承与改写后形成大致的脉系</li>
-<li>主要文献包括《山海经》、《尚书》、《淮南子》、《史记》、《楚辞》等</li>
-<li>多神崇拜、英雄史诗</li>
-</ul>
-<h3 id="主要神系">主要神系</h3>
-<ul>
-<li>“炎黄史诗与虞夏英雄史诗”神系：伏羲(太昊)、女娲、燧人、祝融、共工、颛顼、帝俊、神农、黄帝(轩辕)、刑天、尧、舜、禹、后羿、夸父等。</li>
-<li>“西王母传说”神系：西王母。</li>
-<li>“蓬莱仙话传说”神系（春秋战国后期流传）：蓬莱仙人群体。</li>
-<li>“南方楚地九歌”神系：主要神话人物:东皇太一（中国神话第一个人格化的天帝形象）、少司命、大司命、山鬼。</li>
-<li>非人格化的至高神：昊天上帝/玉皇大帝、后土娘娘</li>
-<li>神兽：烛龙、应龙、白泽、麒麟、龙、凤凰、貔貅、四象（青龙-白虎-朱雀-玄武）</li>
-</ul>
-<h2 id="中国佛道神话">中国佛道神话</h2>
-<p><img src="/ref_pic/世界神话体系-孙悟空大闹天宫.jpg"></p>
-<h3 id="基本介绍-1">基本介绍</h3>
-<ul>
-<li>印度佛教传入与道教产生后所形成的中国神话体系</li>
-<li>主要文献：各道教典籍、汉传佛教典籍、民间传说（如《西游记》、《封神榜》）</li>
-<li>相关文化背景：儒家文化、汉传佛教、道教</li>
-<li>佛教神系与道教神系更像是帝国官僚体系的神话投射，神话体系之间彼此交织</li>
-<li>多宗教并存</li>
-</ul>
-<h3 id="主要神系-1">主要神系</h3>
-<ul>
-<li><strong>道教神系</strong>
-<ul>
-<li>三清：元始天尊（盘古）、道德天尊（太上老君、老子）、灵宝天尊（太上道君）</li>
-<li>五方五老与六御天帝：道教的五方尊神、玉皇大帝与勾陈天皇大帝等天帝</li>
-<li>金母木公：西王母、东王公</li>
-<li>三官神阶：天官（赐福天官，紫微大帝）、地官（赦罪地官，清虚大帝）、水官（解厄水官，洞阴大帝）。</li>
-<li>星宿神阶：真武大帝、二十八星宿、北斗星宿等。</li>
-<li>天将与星君神阶：马赵温关四大元帅、四大天王、各路星君与天将等神祇。</li>
-<li>地府阎罗神阶：十殿阎罗、地府下辖神祇。</li>
-</ul></li>
-<li><strong>佛教神系</strong>
-<ul>
-<li>三世佛神阶：横三世佛（中央释迦牟尼佛、东方药师佛、西方阿弥陀佛）、竖三世佛（往世佛燃灯佛、现世佛释迦牟尼佛、未来佛弥勒佛）。</li>
-<li>菩萨神阶：各路佛教菩萨（汉传佛教主要流行四大菩萨）。</li>
-<li>罗汉与金刚神阶：十八罗汉、四大金刚等神祇。</li>
-<li>婆罗门诸神神阶：天龙八部等印度佛教吸收印度婆罗门神祇后所形成的神祇形象。</li>
-</ul></li>
-<li><strong>民间神祇</strong>
-<ul>
-<li>主流的行业守护神与家业守护神，如武圣关羽、妈祖、财神、门神、钟馗等。</li>
-<li>《西游记》、《封神榜》、《聊斋志异》等演义文化里的神祇</li>
-</ul></li>
-</ul>
-<h2 id="日本神道教神话">日本神道教神话</h2>
-<p><img src="/ref_pic/世界神话体系-茨木童子.jpg"></p>
-<h3 id="基本介绍-2">基本介绍</h3>
-<ul>
-<li>日本神道教创立</li>
-<li>主要文献：《古事记》、《日本书纪》、《百鬼夜行绘卷》</li>
-<li>相关文化背景：日本神道教、日本佛教</li>
-<li>多神崇拜</li>
-</ul>
-<h3 id="主要神系-2">主要神系</h3>
-<ul>
-<li>初代天神：伊邪那岐、伊邪那美等</li>
-<li>伊邪那岐与伊邪那美繁衍的神明：惠比寿（财神，日本七福神之一）、淡岛、大事忍男神、石土毗古神、志那都比古神（风神）、久久能智神（木神）、大山津见神（山神）、鹿尾野比卖神（原野之神）、迦具土（火神）</li>
-<li>伊邪那岐污垢所化神明：八十祸津日神（主导灾祸）、大祸津日神（主导灾祸）</li>
-<li>“三贵子”神明：天照大神（持有八尺琼勾玉的高天原最高统领之神）、月读大神（治理夜之国）、须佐之男（风暴之神，曾斩杀了八岐大蛇）</li>
-<li>国津神：八岐大蛇、大穴牟迟神、大物主神、栉名田比卖等</li>
-<li>《百鬼夜行绘卷》：玉藻前、大天狗、茨木童子、座敷童子、鸦天狗、雪女、酒吞童子等</li>
-</ul>
-<h2 id="古希腊神话">古希腊神话</h2>
-<p><img src="/ref_pic/世界神话体系-宙斯.jpg"></p>
-<h3 id="基本介绍-3">基本介绍</h3>
-<ul>
-<li>来源：古希腊时期巴尔干地区所出现的神话传说，以及罗马人对其的传承与改写成果。</li>
-<li>主要记载文献：《荷马史诗》、《神谱》。</li>
-<li>相关文化背景：古希腊多神教、古罗马多神教。</li>
-<li>多神崇拜、英雄史诗。</li>
-</ul>
-<h3 id="主要神系-3">主要神系</h3>
-<ul>
-<li>第一代神：卡厄斯（混沌）、盖亚（大地之母）、乌拉诺斯（天空神，一代神王，曾通过强行将子嗣塞回大地盖亚的体内的方式阻止第二代神崛起）、蓬托斯（海洋）、乌瑞亚（山脉）、塔尔塔罗斯（地狱冥土的创造者）、厄瑞波斯（黑暗神）、尼克斯（黑夜女神）、厄洛斯（爱欲化身之神）。</li>
-<li>第二代神：以克洛诺斯（二代神王，曾吞噬其子嗣，最终被其子宙斯推翻）为首的一众神明。</li>
-<li>第三代神：宙斯（第三代众神之王，<strong>积极进行繁衍职责</strong>）、赫拉（天后）、赫斯提亚（炉火女神）、波塞冬（海神）、德墨忒尔（丰收女神）、雅典娜（智慧女神）、阿波罗（光明之神）、赫利俄斯（太阳神）、阿尔忒弥斯（狩猎女神）、阿瑞斯（战神）、阿芙洛狄忒（爱情女神）、赫菲斯托斯（火神）、赫尔墨斯（神使)、狄俄倪索斯（酒神)、哈迪斯（冥王）。</li>
-<li>半神与英雄：阿喀琉斯（特洛伊之战里的半神英雄，因脚踵上的弱点而死）、奥德修斯（荷马史诗《奥德修斯》的主角）、赫拉克勒斯（宙斯之子，大力神）、忒修斯（攻略米诺斯迷宫者）、俄尔普斯（曾试图把身处冥界的妻子带回人间）等</li>
-<li>神话生物：阿耳戈斯（百眼巨人）、半人马族（一个族群，代表人物有喀戎）、刻耳柏洛斯（地狱三头犬）、喀迈拉、独眼巨人（波塞冬之子，曾经阻止奥德赛回乡）、泰坦巨人、戈尔贡蛇发女怪（美杜莎三姐妹）、有翼怪兽、鸟身女怪、许德拉、弥诺陶洛斯（迷宫牛头怪）、珀伽索斯（缪斯女神的飞马坐骑 ）、不死鸟、塞壬（用歌声蛊惑水手）。</li>
-</ul>
-<h2 id="北欧神话">北欧神话</h2>
-<p><img src="/ref_pic/世界神话体系-洛基.jpg"></p>
-<h3 id="基本介绍-4">基本介绍</h3>
-<ul>
-<li>公元1世纪到公元2世纪左右斯堪的纳维亚地区（瑞典、挪威、丹麦、冰岛等地）所出现的神话体系，即维京人的主要信仰。</li>
-<li>主要文献：冰岛史诗《埃达》、《萨迦》。</li>
-<li>相关文化背景：北欧多神教。</li>
-<li>多神崇拜</li>
-</ul>
-<h3 id="主要神系-4">主要神系</h3>
-<ul>
-<li><strong>十二主神</strong>：众神之王奥丁（Odin）、爱神弗丽嘉（Frigg）、雷神索尔（Thor）、西芙（Sif）、弗雷（Freyr）、诡计之神洛基（Loki）、战神提尔（Tyr）、繁育之神弗雷亚（Freyja）、守护神海姆达尔（Heimdall）、光明之神巴德尔（Baldur）、黑暗之神霍德尔（Hoder）、布吉拉（Budlle）</li>
-<li><strong>巨人族</strong>：始祖尤弥尔（Ymir）、海洋神、蒂阿兹（Tjatse）、山岗女神斯卡娣（Skade）、女巫师古尔维格（Gullveig）、贡露（Gronru）</li>
-</ul>
-<h3 id="世界观">世界观</h3>
-<h4 id="世界结构">世界结构</h4>
-<p>神话族群大致上可分成5个体系，其中巨人是最早的生命，诸神便是由巨人生育而出，但同时巨人也是众神最大的敌人</p>
-<ul>
-<li><strong>巨人</strong>（Giants）</li>
-<li><strong>阿萨神族</strong>（Aesir）</li>
-<li><strong>华纳神族</strong>（Vanir）</li>
-<li><strong>精灵</strong>（Elves）</li>
-<li><strong>侏儒</strong>（Dwarves）</li>
-</ul>
-<p><img src="/ref_pic/世界神话体系-北欧神话世界树.jpg"></p>
-<p>世界树（Yggdrasil）将世界分为三层九界：</p>
-<ul>
-<li><strong>上层</strong>
-<ul>
-<li>阿斯加德：神国，阿萨神族居住之地，拥有12个地区，例如英灵殿（Valhalla）</li>
-<li>亚尔夫海姆：精灵之国，光明精灵居住之地</li>
-</ul></li>
-<li><strong>中层</strong>
-<ul>
-<li>米德加尔特：人类居住之地，可以用彩虹桥（由守护神海姆达尔把守）通往神国</li>
-<li>华纳海姆：华纳神族居住之地</li>
-<li>约顿海姆：巨人国，冰霜巨人（如洛基）和山地巨人之地</li>
-</ul></li>
-<li><strong>下层</strong>
-<ul>
-<li>斯瓦塔尔夫海姆：矮人国，侏儒居住之地</li>
-<li>赫尔海姆：死人之国，也称地狱，永夜</li>
-<li>尼福尔海姆：雾之国，常年浓雾笼罩</li>
-<li>穆斯贝尔海姆：火之国，火焰巨人居住之地</li>
-</ul></li>
-</ul>
-<h4 id="创世神话">创世神话</h4>
-<p>巨人之祖尤弥尔（Ymir）从水滴中诞生，后续被奥丁为首的诸神所杀，其身体化作大地、天空、山脉、海洋和光明/黑暗精灵，后续奥丁制定了四季的运行，并带领诸神创造凡人</p>
-<h4 id="末世神话">末世神话</h4>
-<p>诸神与巨人之间的冲突战争最终一定会导致世界毁灭，迎来北欧诸神的黄昏，这场战役无可避免、众神也必定失败，在世界灭亡后，残存的诸神会再次建立新世界。</p>
-<h2 id="参考资料">参考资料</h2>
-<p>《百度百科：封神演义》：https://baike.baidu.com/item/%E5%B0%81%E7%A5%9E%E6%BC%94%E4%B9%89/69344?fromModule=lemma_inlink</p>
-<p>《世界神话体系大盘点（内容扩充版）》：https://zhuanlan.zhihu.com/p/558662579</p>
-<p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzUzODAxMjA0OQ==&amp;mid=2247484375&amp;idx=2&amp;sn=4df1f74a9ec4e85f1fba7fc070d1f17a&amp;chksm=fadf7329cda8fa3f407457c3ee91e22d478459dc493f85cb13eae0159d69b674f1b8e459581b&amp;scene=27">《衡水学院图书馆：世界六大神话体系》</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/08/06/2023-0806-everything%E6%90%9C%E7%B4%A2%E8%BD%AF%E4%BB%B6%E7%9A%84%E4%BD%BF%E7%94%A8%E5%92%8C%E5%8E%9F%E7%90%86/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="zhb">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="zhb木木三的个人网页">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/08/06/2023-0806-everything%E6%90%9C%E7%B4%A2%E8%BD%AF%E4%BB%B6%E7%9A%84%E4%BD%BF%E7%94%A8%E5%92%8C%E5%8E%9F%E7%90%86/" class="post-title-link" itemprop="url">everything搜索软件的使用和原理</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2023-08-06 02:00:00 / 修改时间：03:36:13" itemprop="dateCreated datePublished" datetime="2023-08-06T02:00:00+08:00">2023-08-06</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%90%9E%E7%82%B9%E8%AF%BE%E5%A4%96%E7%9F%A5%E8%AF%86/" itemprop="url" rel="index"><span itemprop="name">搞点课外知识</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>2.3k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>8 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>现在的面向大众的电脑硬盘容量越来越大，特别是最近长江存储颗粒的固态硬盘，2T的容量只要惊人的350块。但硬盘容量上去了，文件数量变多了，文件搜索也是一个大问题。除了使用规范化的文件夹命名、打开文件夹<strong>手动查找</strong>文件的方式以外，有时候还会使用<strong>Windows自带的文件搜索器</strong>，但这个搜索往往很耗时。所以这里就介绍一个可以充当Windows搜索功能的上位替代品的软件。</p>
-<h2 id="everything">Everything</h2>
-<p><a target="_blank" rel="noopener" href="https://www.voidtools.com/zh-cn/">Everything</a>是Voidtools制作组开发的文件搜索工具，官网描述为<strong>基于名称的实时文件和目录定位</strong>（Locate files and folders by name instantl），在2004年时创立项目，2008年推出了完善的1.0版本，目前最新的是2023年5月26更新的1.4.1.1024版本。</p>
-<p>Everything（也称Everything Search Engine）软件堪称搜索界的神器，它是一个第三方的搜索软件，<strong>搜索速度特别快</strong>，而且CPU<strong>占用特别低</strong>，例如使用Windows系统自带搜索功能去搜索全盘，CPU、磁盘读写可能都会占用100%，且需要持续若干分钟，此时Everything只占用0.1%的CPU和磁盘读写，且只需持续个0.001秒，即使待搜索文件有几百万个，且对结果排序（例如按大小排序）都是毫秒级响应，使用时也不需要管理员权限。</p>
-<h2 id="使用方法">使用方法</h2>
-<p>使用的时候也很简单，从官网的<a target="_blank" rel="noopener" href="https://www.voidtools.com/zh-cn/">下载地址</a>获取免安装的<strong>便携版</strong>，解压之后直接运行.exe文件，在首次或者隔一段时间后就会花个大概10秒钟进行硬盘数据的扫描（我的固态电脑大概366万的对象用了10秒不到的时间完成索引库的建立）。</p>
-<p><img src="/ref_pic/everything搜索-1.png"></p>
-<p>如果是第一次运行，可能会弹出以下提示框，选择<strong>安装“Everything”服务</strong>即可。</p>
-<p><img src="/ref_pic/everything搜索-2.png"></p>
-<p>接着在搜索框内输入待检索的内容（可以是文件/文件夹名字，也可以是.pdf等后缀扩展名），就能几乎是秒出排序结果了。</p>
-<p><img src="/ref_pic/everything搜索-3.png"></p>
-<p>除了上面这种最近的搜索功能以外，还支持正则表达式、自定义的高级搜索等功能，不过这些我都没怎么用过。</p>
-<p><img src="/ref_pic/everything搜索-4.png"></p>
-<h2 id="快速搜索原理">快速搜索原理</h2>
-<p>Everything在第一次打开使用的时候，它会扫描整个硬盘，然后建立一个索引数据库（大小和电脑文件的数量有直接关系）。索引数据库建立之后，每次搜索文件，everything就在它的数据库里搜索，而不需要重新扫描整个硬盘，这也是everything和Windows系统自带搜索的本质区别。而everything之所有能快速地建立起这么小的索引数据库，主要得益于Windows对NTFS（New Technology File System，一种磁盘格式，除此之外还有FAT32等磁盘格式/文件系统）的支持。</p>
-<h3 id="mft数据表">MFT数据表</h3>
-<p>对于NTFS文件系统下的所有数据，都会有一个<strong>MFT数据表</strong>（Master File Table），该表记录了NTFS磁盘上所有文件的文件信息，且访问速度很快，Windows提供了各种API给开发者去直接调用并访问MFT数据表，不需要遍历文件系统就能获取当前卷/磁盘里的所有文件名称和路径。</p>
-<h3 id="usn-journal">USN Journal</h3>
-<p>除了MFT数据表以外，NTFS文件系统还有一个日志功能，即所有对文件系统有修改的操作都会被记录在<strong>USN Journal日志文件</strong>中，且该日志文件是实时、同步更新的。</p>
-<h3 id="everything实现">Everything实现</h3>
-<p>Everything搜索引擎主要就是利用了NTFS文件系统中<strong>MFT</strong>和<strong>USN Journal</strong>的特性：</p>
-<ol type="1">
-<li>在程序启动时，<strong>扫描</strong>所有NTFS卷/磁盘的MTF表</li>
-<li>将MTF表里面的文件名称以一种利于字符串检索的算法形式化存储在<strong>索引数据库</strong>中（在退出程序后就会看到有个大概一百多MB的Everything.db文件）</li>
-<li>后台运行时，Everything会监控NTFS卷的USN Journal日志文件，<strong>实时更新</strong>该索引数据库</li>
-<li>用户搜索文件时，Everything利用其字符串查找算法，在索引数据库里查找</li>
-</ol>
-<p>从上面的实现过程可以看出，everything的搜索速度快、占用小，除了得益于其索引数据库生成算法和字符串查找算法以外，主要还是利用了MTF表的易于访问的特性。也正是因为这样，everything只能检索NTFS磁盘的文件，而不能检索其他如FAT32、exFAT等文件系统。</p>
-<p>虽然everything比Windows自动的搜索功能快几个量级，但Windows也没有采取这种方法，可能主要原因还是因为文件系统的兼容性不足（仅局限于NTFS系统），且不支持搜索文件内容、附加属性。此外，微软自家的ActiveDirectory软件其实也有在使用MTF特性来快速检索文件。</p>
-<h2 id="参考材料">参考材料</h2>
-<p>《秒搜神器everything背后的索引原理》：https://cloud.tencent.com/developer/article/1848667</p>
-<p>《Everything Search Engine这款软件如何做到如此快速的搜索的？》：https://www.zhihu.com/question/22862246</p>
-<p>《高效搜索神器Everything最全使用技巧(一篇看全)及详细功能帮助教程(更新第10次)》：https://www.zhihu.com/tardis/bd/art/409783518?source_id=1001</p>
-<p>《Everything等本地搜索软件为什么比windows自带的搜索工具快那么多？》：https://www.zhihu.com/question/378399106/answer/2518408735</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/19/">19</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
-  </nav>
-
-
-
-          </div>
-          
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
-
-        </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">zhb</p>
-  <div class="site-description" itemprop="description"></div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">109</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-          
-        <span class="site-state-item-count">10</span>
-        <span class="site-state-item-name">分类</span></a>
-      </div>
-      <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-          
-        <span class="site-state-item-count">17</span>
-        <span class="site-state-item-name">标签</span></a>
-      </div>
-  </nav>
-</div>
-
-
-
-      </div>
-
-    </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        
-
-<div class="copyright">
-  
-  &copy; 
-  <span itemprop="copyrightYear">2023</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">zhb</span>
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item-icon">
-      <i class="fa fa-chart-area"></i>
-    </span>
-    <span title="站点总字数">145k</span>
-</div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
-  </div>
-
-        
-
-
-
-
-
-
-
-
-      </div>
-    </footer>
-  </div>
-
-  
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
-
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/muse.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-<script>
-if (document.querySelectorAll('pre.mermaid').length) {
-  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
-    mermaid.initialize({
-      theme    : 'forest',
-      logLevel : 3,
-      flowchart: { curve     : 'linear' },
-      gantt    : { axisFormat: '%m/%d/%Y' },
-      sequence : { actorMargin: 50 }
-    });
-  }, window.mermaid);
+<style>mjx-container[jax="SVG"] {
+  direction: ltr;
 }
-</script>
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">111</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">22</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">10</div></a></div><hr class="custom-hr"/></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="zhb木木三的个人网页"><span class="site-name">zhb木木三的个人网页</span></a></span><div id="menus"><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">zhb木木三的个人网页</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/08/21/2023-0821-%E7%82%AE%E5%A1%94%E8%BD%AC%E9%80%9F%E4%B8%8E%E5%9D%A6%E5%85%8B%E8%BD%AC%E5%9C%88%E6%88%98%E6%9C%AF/" title="坦克转圈战术与炮塔转速">坦克转圈战术与炮塔转速</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-08-21T15:55:00.000Z" title="发表于 2023-08-21 23:55:00">2023-08-21</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%90%9E%E7%82%B9%E8%AF%BE%E5%A4%96%E7%9F%A5%E8%AF%86/">搞点课外知识</a></span></div><div class="content">坦克转圈战术
+今天在群里看到个算是官方的新闻采访，说的是：
+12演兵场上，该营一辆轻型突击车与“敌”一台重型坦克狭路相逢。那一-刻，所有人都觉得，胜负已定。没想到，突击车竟利用轻便优势,绕着坦克转圈射击，依靠速度跑赢坦克炮管的转速，最终成功摧毁”敌”坦克，创造了以劣胜优的奇迹。
+看起来还挺魔幻，居然能通过“秦王绕柱”的方式打赢坦克，仿佛是《英雄连》或者《坦克世界》之类的游戏操作。
+
+而在吴京主演的电影《战狼2》里面，好像也有这么一段戏，大概就是主角冷锋驾驶的坦克与非洲反叛军的坦克近距离接触时，为了防止敌方的火炮瞄准自己，冷锋操纵坦克以敌方坦克为圆心“转圈”，而敌方坦克的炮手不停地旋转火炮寻找机会。最后冷锋所在坦克的转动速度太快，以致于敌方炮手眩晕呕吐，而主角则抓住机会迅速完成装弹并“反杀”敌坦克。
+
+此外，在著名电影《狂怒》里面，也同样有一个场景是四辆谢尔曼抵进到虎式身边（只剩下主角那一辆），然后绕着圈近距离打虎式的弱点，才以三换一的战损比拿下虎式。
+感觉这种坦克绕圈战术还挺有意思的，就是不知道具体的绕圈速度是不是真的能跑得过炮塔转速。
+炮塔转速数据
+
+这里就只是稍微列一下坦克的数据， ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/08/16/2023-0816-Hexo%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98/" title="Hexo更换主题">Hexo更换主题</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-08-15T17:30:00.000Z" title="发表于 2023-08-16 01:30:00">2023-08-16</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">博客搭建</a></span></div><div class="content">虽然 NexT 6.0 用着挺好，很多功能我也还没试过怎么用，不过感觉还是到了尝试新主题的时候了（转折有点生硬），再加上之前一直都没有记录怎么安装 Hexo 的主题，也算是一种补完了吧。
+Hexo 主题搜索
+在 Hexo 的官网中，就收录了 388 个主题（https://hexo.io/themes/），含有该主题的一个小图以及作者的链接。不过一部分的链接以及无法打开了，这时候就得求助搜索引擎了。除了去 Hexo 官网去找心仪的主题外，还可以通过各种自媒体、文章、搜索引擎去找别人推荐的博客主题。对我这种小白来说，可能后者更适合吧，至少还有人帮忙总结要点。
+我就不在这里瞎推荐了，目前为止只用过 NeXT，主要是更偏向于纯文本的网站，很简洁干净。不过最近想换个炫酷一点的主题，然后要有文章标题+左右侧边栏的结构。
+Hexo 主题安装
+一般的安装就是从 Github 下载并解压到 [Hexo根目录]\themes（或者通过命令行用 git 命令下载），然后把 Hexo 根目录的 _config.yml 配置文件中 Extensions 的 theme 后面改成对应主题文件夹名字就能生效了。
+ ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/08/13/2023-0813-ChatPDF%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/" title="ChatPDF使用方法">ChatPDF使用方法</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-08-13T12:50:00.000Z" title="发表于 2023-08-13 20:50:00">2023-08-13</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%90%9E%E7%82%B9%E8%AF%BE%E5%A4%96%E7%9F%A5%E8%AF%86/">搞点课外知识</a></span></div><div class="content">ChatGPT 是 NLP 的一个大模型，专门用于文本处理与分析，而在社会生产中，一个很直接的地方就是科研论文的统计与分析，ChatPDF 就是这么个在线免费的论文辅助阅读工具。
+上传论文PDF
+首先，打开网址：https://www.chatpdf.com/，上传下载好的 PDF 论文文件（也可以用 URL，不过好像非开源的论文 URL 大部分都识别不出来。
+
+提问
+读取成功后，会列出论文的一些基本信息。
+
+然后就可以提问了。
+
+基本用法就是这么简单，好像也没什么特殊的了，主要就是用来精一点的略读（毕竟有些原理性的回答还是不太行），了解个大概的论文背景，尤其是 introduction 部分，全是文本、没有公式，特别适合用 AI 来总结。
+中文版ChatPDF
+写博客的时候发现上面这个英文版的 ChatPDF 响应速度大大变慢了，而且也没法正常上传读取 PDF 并浏览以前的记录了。翻了一下，有个深圳公司开发的中文版的 ChatPDF （https://www.chatpdfs.cn/）好像还行，但就是要微信扫码登录，不知道以后会不会收费。
+
+</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/08/13/2023-0813-%E5%A6%99%E9%B8%AD%E7%9B%B8%E6%9C%BA%E7%AD%89AI%E5%86%99%E7%9C%9F%E8%BD%AF%E4%BB%B6%E5%8E%9F%E7%90%86/" title="妙鸭相机等AI写真软件原理">妙鸭相机等AI写真软件原理</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-08-13T11:55:00.000Z" title="发表于 2023-08-13 19:55:00">2023-08-13</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%90%9E%E7%82%B9%E8%AF%BE%E5%A4%96%E7%9F%A5%E8%AF%86/">搞点课外知识</a></span></div><div class="content">2023 年 7 月 17 日正式上线的妙鸭相机在最近挺火的，它主打的就是一个方便快捷，只要 9.9 元以及上传大概 20 张图片，就能生成个人的数字分身，并一键生成商务照、证件照等各种风格的个人写真照，在微信小程序上搜一下就能用了。
+
+像妙鸭相机、45AI 写真这一类的 AI 小程序算是 AI 绘画技术风口下的第一批商业产品，这一类互联网产品只要底层的软件写好，使用量上去之后，边际成本是几乎为零的，剩下的事情主要就是营销推广以及用户留存率了。不过这里主要还是想了解一下这种 AI 写真软件的原理，理论上就和 Stable Diffusion 中训练 LoRA 模型是相通的。
+原理
+“投入少量图片，经过一定训练时间生成自定义的不同风格的写真照片”，该效果描述基本就是今年年初火起来的 LoRA（Low-Rank Adaptation of Large Language Models（大语言模型的低阶适应） AI 画图模型，其效果就是在 Checkpoint 等大的主模型基础上，利用少量数据训练处一种画风/IP/人物，实现定制化需求。正因为它所需的训练资源比其他模型要少很多，所以非常适合社区 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/08/13/2023-0813-%E5%B0%81%E7%A5%9E%E6%BC%94%E4%B9%89%E7%9A%84%E7%AD%89%E7%BA%A7%E5%88%B6%E5%BA%A6/" title="封神演义的等级制度">封神演义的等级制度</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-08-13T08:30:00.000Z" title="发表于 2023-08-13 16:30:00">2023-08-13</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%90%9E%E7%82%B9%E8%AF%BE%E5%A4%96%E7%9F%A5%E8%AF%86/">搞点课外知识</a></span></div><div class="content">最近看了《封神榜-第一部》的电影，感觉商周大战+（背后）阐截大战这种世界观很有意思，再加上现在网文里有一大流派叫“洪荒流”，大概就是以《封神演义》为世界观的一类小说，而我之前看过的很喜欢的一篇叫《我的师兄实在太稳健了》就是这个流派里面的，里面看阐截教如何勾心斗角、人教如何试图把西方教给拉进劫中、纣王帝辛如何逆天道（灭商兴周）而行，很有意思。所以还是想略微把这个世界观给列一列，顺便熟悉一下之前学的 Mermaid 写法。
+何为封神
+《封神演义》（俗称《封神榜》，又名《商周列国全传》、《武王伐纣外史》等）是明代的一个虚构长篇小说，共一百回，前三十回讲商超末代君主纣王的暴虐，后七十回讲商、周两国的战争，以纣王自焚、武王夺取天下并分封列国为结局，中间掺杂一些女娲、妲己、元始天尊、姜子牙、申公豹等神话人物，这些神话人物是属于中国佛道神话体系里面的，与西游记里的也有一定关系。
+故事起源于封神榜，因为（1）阐教十二金仙犯了杀伐之厄、（2）昊天上帝成立的天庭缺人、（3）人间正值商周王朝更迭，共三个背景原因，于是鸿钧在紫霄宫中召开大会，与三教掌门讨论并一致决定由阐教二代弟子姜子牙执掌封神榜，从三教中选取 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/08/08/2023-0808-%E7%A3%81%E5%85%B1%E6%8C%AF%E5%8E%82%E5%95%86%E4%BB%8B%E7%BB%8D-Bruker%E9%AB%98%E5%9C%BA%E4%BA%A7%E5%93%81/" title="磁共振厂商介绍-Bruker高场产品">磁共振厂商介绍-Bruker高场产品</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-08-08T02:10:00.000Z" title="发表于 2023-08-08 10:10:00">2023-08-08</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/MRI/">MRI</a></span></div><div class="content">瑞士的布鲁克（Bruker）的【产品与解决方案】——【临床前成像】——【磁共振成像（MRI）】中可以看到一些产品介绍，不过这个产品线的最大磁体孔径也只是40cm，加上梯度模块之后就只剩26cm，因此是没法做人体成像的，只能做动物实验。
+BioSpec系列是转为临床前和分子MR成像和MR研究的新兴市场设计的，命名规则：型号名 场强/孔径，例如BioSpec 70/30 表示：BioSpec系列场强为7.0T、内孔径为30cm的系统。BioSpec系列产品介绍网址。
+高场BioSpec系列
+官方介绍网址
 
 
-  
 
-  
-      
 
-<script>
-  if (typeof MathJax === 'undefined') {
-    window.MathJax = {
-      loader: {
-          load: ['[tex]/mhchem'],
-        source: {
-          '[tex]/amsCd': '[tex]/amscd',
-          '[tex]/AMScd': '[tex]/amscd'
-        }
-      },
-      tex: {
-        inlineMath: {'[+]': [['$', '$']]},
-          packages: {'[+]': ['mhchem']},
-        tags: 'ams'
-      },
-      options: {
-        renderActions: {
-          findScript: [10, doc => {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
-              const display = !!node.type.match(/; *mode=display/);
-              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-              const text = document.createTextNode('');
-              node.parentNode.replaceChild(text, node);
-              math.start = {node: text, delim: '', n: 0};
-              math.end = {node: text, delim: '', n: 0};
-              doc.math.push(math);
-            });
-          }, '', false],
-          insertedScript: [200, () => {
-            document.querySelectorAll('mjx-container').forEach(node => {
-              let target = node.parentNode;
-              if (target.nodeName.toLowerCase() === 'li') {
-                target.parentNode.classList.add('has-jax');
-              }
-            });
-          }, '', false]
-        }
-      }
-    };
-    (function () {
-      var script = document.createElement('script');
-      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
-      script.defer = true;
-      document.head.appendChild(script);
-    })();
-  } else {
-    MathJax.startup.document.state(0);
-    MathJax.texReset();
-    MathJax.typeset();
-  }
-</script>
 
-    
 
-  
 
-</body>
-</html>
+
+
+
+
+
+
+BioSpec 47/40
+BioSpec 70/20
+BioSpec 70/30
+BioSpec 70/40
+BioSpec 94/20
+BioSpec 94/30
+
+
+
+
+磁体孔径
+40cm
+20cm
+30cm
+40cm
+20cm
+30cm
+
+
+梯度孔径
+26cm
+11.4cm
+20cm
+26cm
+11.4cm
+20cm
+
+
+磁体
+4.7T
+7T
+7T
+7T
+9.4T
+9.4T
+
+
+场均匀性
+±10ppm(220mm DSV)
+±10ppm(120mm DSV ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/#content-inner">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/19/#content-inner">19</a><a class="extend next" rel="next" href="/page/2/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">zhb</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">111</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">22</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">10</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/08/21/2023-0821-%E7%82%AE%E5%A1%94%E8%BD%AC%E9%80%9F%E4%B8%8E%E5%9D%A6%E5%85%8B%E8%BD%AC%E5%9C%88%E6%88%98%E6%9C%AF/" title="坦克转圈战术与炮塔转速">坦克转圈战术与炮塔转速</a><time datetime="2023-08-21T15:55:00.000Z" title="发表于 2023-08-21 23:55:00">2023-08-21</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/08/16/2023-0816-Hexo%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98/" title="Hexo更换主题">Hexo更换主题</a><time datetime="2023-08-15T17:30:00.000Z" title="发表于 2023-08-16 01:30:00">2023-08-16</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/08/13/2023-0813-ChatPDF%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/" title="ChatPDF使用方法">ChatPDF使用方法</a><time datetime="2023-08-13T12:50:00.000Z" title="发表于 2023-08-13 20:50:00">2023-08-13</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/08/13/2023-0813-%E5%A6%99%E9%B8%AD%E7%9B%B8%E6%9C%BA%E7%AD%89AI%E5%86%99%E7%9C%9F%E8%BD%AF%E4%BB%B6%E5%8E%9F%E7%90%86/" title="妙鸭相机等AI写真软件原理">妙鸭相机等AI写真软件原理</a><time datetime="2023-08-13T11:55:00.000Z" title="发表于 2023-08-13 19:55:00">2023-08-13</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/08/13/2023-0813-%E5%B0%81%E7%A5%9E%E6%BC%94%E4%B9%89%E7%9A%84%E7%AD%89%E7%BA%A7%E5%88%B6%E5%BA%A6/" title="封神演义的等级制度">封神演义的等级制度</a><time datetime="2023-08-13T08:30:00.000Z" title="发表于 2023-08-13 16:30:00">2023-08-13</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            <a class="card-more-btn" href="/categories/" title="查看更多">
+    <i class="fas fa-angle-right"></i></a>
+            </div>
+            <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/MRI/"><span class="card-category-list-name">MRI</span><span class="card-category-list-count">10</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/python/"><span class="card-category-list-name">python</span><span class="card-category-list-count">3</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E4%B8%AA%E4%BA%BA%E5%90%90%E6%A7%BD/"><span class="card-category-list-name">个人吐槽</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"><span class="card-category-list-name">博客搭建</span><span class="card-category-list-count">17</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%AD%A6%E6%9C%AF%E6%A8%A1%E5%9D%97/"><span class="card-category-list-name">学术模块</span><span class="card-category-list-count">23</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%90%9E%E7%82%B9%E8%AF%BE%E5%A4%96%E7%9F%A5%E8%AF%86/"><span class="card-category-list-name">搞点课外知识</span><span class="card-category-list-count">31</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%97%A5%E8%AE%B0/"><span class="card-category-list-name">日记</span><span class="card-category-list-count">10</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%B8%B8%E6%88%8F/"><span class="card-category-list-name">游戏</span><span class="card-category-list-count">7</span></a></li>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/%E5%AE%9E%E7%94%A8%E5%B0%8F%E5%B7%A5%E5%85%B7/" style="font-size: 1.27em; color: #99a0a9">实用小工具</a> <a href="/tags/%E7%94%9F%E6%B4%BB%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE/" style="font-size: 1.16em; color: #999b9e">生活中的数据</a> <a href="/tags/%E6%98%9F%E7%A9%B9%E9%93%81%E9%81%93/" style="font-size: 1.27em; color: #99a0a9">星穹铁道</a> <a href="/tags/%E6%AF%94%E8%B5%9B/" style="font-size: 1.21em; color: #999ea4">比赛</a> <a href="/tags/sci%E8%AE%BA%E6%96%87/" style="font-size: 1.44em; color: #99a7ba">sci论文</a> <a href="/tags/markdown/" style="font-size: 1.16em; color: #999b9e">markdown</a> <a href="/tags/%E5%B8%82%E5%9C%BA%E8%A7%84%E6%A8%A1/" style="font-size: 1.1em; color: #999">市场规模</a> <a href="/tags/%E6%9C%AA%E5%88%86%E7%B1%BB/" style="font-size: 1.5em; color: #99a9bf">未分类</a> <a href="/tags/%E5%B8%82%E5%9C%BA/" style="font-size: 1.33em; color: #99a2af">市场</a> <a href="/tags/%E6%97%85%E6%B8%B8%E6%B5%81%E6%B0%B4%E8%B4%A6/" style="font-size: 1.39em; color: #99a4b4">旅游流水账</a> <a href="/tags/MATLAB/" style="font-size: 1.1em; color: #999">MATLAB</a> <a href="/tags/%E4%B8%93%E5%88%A9/" style="font-size: 1.16em; color: #999b9e">专利</a> <a href="/tags/AI%E6%96%87%E6%9C%AC%E5%A4%84%E7%90%86/" style="font-size: 1.27em; color: #99a0a9">AI文本处理</a> <a href="/tags/%E6%88%98%E9%94%A4/" style="font-size: 1.16em; color: #999b9e">战锤</a> <a href="/tags/typora/" style="font-size: 1.1em; color: #999">typora</a> <a href="/tags/%E7%AD%89%E7%BA%A7%E5%88%B6%E5%BA%A6/" style="font-size: 1.33em; color: #99a2af">等级制度</a> <a href="/tags/AI%E7%BB%98%E7%94%BB/" style="font-size: 1.33em; color: #99a2af">AI绘画</a> <a href="/tags/%E5%BF%83%E7%90%86%E5%AD%A6/" style="font-size: 1.16em; color: #999b9e">心理学</a> <a href="/tags/%E5%8E%9F%E7%A5%9E/" style="font-size: 1.1em; color: #999">原神</a> <a href="/tags/%E7%A5%9E%E8%AF%9D/" style="font-size: 1.16em; color: #999b9e">神话</a> <a href="/tags/%E6%96%87%E7%8C%AE/" style="font-size: 1.27em; color: #99a0a9">文献</a> <a href="/tags/LaTeX/" style="font-size: 1.33em; color: #99a2af">LaTeX</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/08/"><span class="card-archive-list-date">八月 2023</span><span class="card-archive-list-count">15</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/07/"><span class="card-archive-list-date">七月 2023</span><span class="card-archive-list-count">29</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/06/"><span class="card-archive-list-date">六月 2023</span><span class="card-archive-list-count">20</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/05/"><span class="card-archive-list-date">五月 2023</span><span class="card-archive-list-count">29</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/04/"><span class="card-archive-list-date">四月 2023</span><span class="card-archive-list-count">15</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/03/"><span class="card-archive-list-date">三月 2023</span><span class="card-archive-list-count">3</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">111</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2023-08-21T15:56:17.410Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By zhb</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

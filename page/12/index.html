@@ -1,1256 +1,337 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.4.2">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
-
-<link rel="stylesheet" href="/css/main.css">
-
-<link rel="stylesheet" href="fonts.lug.ustc.edu.cn/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"zhb-daydream.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
-  </script>
-
-  <meta property="og:type" content="website">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>zhb木木三的个人网页 - 个人博客的新尝试（页面渲染需要时间，请耐心等待）</title><meta name="author" content="zhb"><meta name="copyright" content="zhb"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
 <meta property="og:title" content="zhb木木三的个人网页">
 <meta property="og:url" content="https://zhb-daydream.github.io/page/12/index.html">
 <meta property="og:site_name" content="zhb木木三的个人网页">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
 <meta property="article:author" content="zhb">
 <meta name="twitter:card" content="summary">
-
-<link rel="canonical" href="https://zhb-daydream.github.io/page/12/">
-
-
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : true,
-    isPost : false,
-    lang   : 'zh-CN'
-  };
-</script>
-
-  <title>zhb木木三的个人网页</title>
-  
-
-
-
-
-
-
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
+<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://zhb-daydream.github.io/page/12/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'zhb木木三的个人网页',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2023-08-21 23:56:17'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
   }
 
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
 
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
 
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.2">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-</head>
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">111</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">22</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">10</div></a></div><hr class="custom-hr"/></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="zhb木木三的个人网页"><span class="site-name">zhb木木三的个人网页</span></a></span><div id="menus"><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">zhb木木三的个人网页</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/05/28/2023-0528-%E5%A6%82%E4%BD%95%E6%AD%A3%E7%A1%AE%E5%9C%B0%E6%9F%A5%E6%89%BE%E6%96%87%E7%8C%AE/" title="文献的正确查找方式和打开方式">文献的正确查找方式和打开方式</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-05-28T09:30:00.000Z" title="发表于 2023-05-28 17:30:00">2023-05-28</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%AD%A6%E6%9C%AF%E6%A8%A1%E5%9D%97/">学术模块</a></span></div><div class="content">查找文献和管理文献是每个研究生的必修课程，这也涉及到信息搜集能力和文件归档管理能力这两个重要技能，前者影响一个人如何在信息时代里更舒服的生存，后者则影响一个人如何高效地生活（比如平常聊天的时候，找一张表情包，找半天都找不到就很尴尬了）。本文只介绍最基础的文献搜索和文献管理方法，某种程度上讲，是写给当初研一刚入学、啥也不懂的过去的我看的。
+文献查找方式
+首先，这里讨论的是寻找某个领域内的文献（比如 MRI 重建中的 SENSE 算法相关的论文），而且为了方便我写，以下只推荐使用 google scholar，不推荐其他的。直接搜关键词，搜索引擎的使用方法得另外查，我基本就是用空格连接多个关键词来查找的了，然后搜索过程就结束了。关于下图有几个要点：
 
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
+左边的侧边栏可以筛选搜索结果
+通过 “被引用次数” 判断该论文的价值，但该值可能不准
+点击 “被引用次数” 按钮，可以查看引用该篇论文的其他文献
+直接点开论文链接，可以查看该论文的相关信息，最重要的是它的 doi.org 链接
 
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
-    </div>
-  </div>
 
-  <div class="site-meta">
-
-    <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">zhb木木三的个人网页</h1>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-      <p class="site-subtitle" itemprop="description">个人博客的新尝试（页面渲染需要时间，请耐心等待）</p>
-  </div>
-
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-    </div>
-  </div>
-</div>
-
-
-
-
-<nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
-
-  </li>
-  </ul>
-</nav>
-
-
-
-
-</div>
-    </header>
-
-    
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
-
-
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
-
-          <div class="content index posts-expand">
-            
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/05/25/2023-0525-%E5%8C%BB%E7%94%9F%E7%9A%84%E7%AD%89%E7%BA%A7%E5%88%B6%E5%BA%A6/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="zhb">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="zhb木木三的个人网页">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/05/25/2023-0525-%E5%8C%BB%E7%94%9F%E7%9A%84%E7%AD%89%E7%BA%A7%E5%88%B6%E5%BA%A6/" class="post-title-link" itemprop="url">医生的等级制度</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-05-25 17:36:00" itemprop="dateCreated datePublished" datetime="2023-05-25T17:36:00+08:00">2023-05-25</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-06-09 11:34:42" itemprop="dateModified" datetime="2023-06-09T11:34:42+08:00">2023-06-09</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%90%9E%E7%82%B9%E8%AF%BE%E5%A4%96%E7%9F%A5%E8%AF%86/" itemprop="url" rel="index"><span itemprop="name">搞点课外知识</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>1.7k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>6 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>根据中华人民共和国人力资源社会保障部的 <a target="_blank" rel="noopener" href="http://www.mohrss.gov.cn/SYrlzyhshbzb/ztzl/zyhzyzggg/zcwj_zc/zc/202111/t20211102_426565.html">《职称系列层级名称》</a> 和<a target="_blank" rel="noopener" href="http://www.gov.cn/zhengce/zhengceku/2021-08/05/content_5629566.htm">《关于深化卫生专业技术人员职称制度改革的指导意见》</a>，医院里的医务人员按系列划分有如下几种职称（一般按系列分有“医、药、护、技、工程、财务”等，下面只列主要的 4 类）。</p>
-<table>
-<thead>
-<tr class="header">
-<th>正高级职称</th>
-<th>副高级职称</th>
-<th>中级职称</th>
-<th>初级职称</th>
-<th>初级职称</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>主任医师</td>
-<td>副主任医师</td>
-<td>主治（主管）医师</td>
-<td>（住院）医师</td>
-<td>医士</td>
-</tr>
-<tr class="even">
-<td>主任药师</td>
-<td>副主任药师</td>
-<td>主管药师</td>
-<td>药师</td>
-<td>药士</td>
-</tr>
-<tr class="odd">
-<td>主任护师</td>
-<td>副主任护师</td>
-<td>主管护师</td>
-<td>护师</td>
-<td>护士</td>
-</tr>
-<tr class="even">
-<td>主任技师</td>
-<td>副主任技师</td>
-<td>主管技师</td>
-<td>技师</td>
-<td>技士</td>
-</tr>
-</tbody>
-</table>
-<p>就医生职称（主任医师—副主任医师—主治医师—医师—医士）而言，又可以细分为以下十三级（与十二级的高等学校的教师职称类似）。其中，<strong>助理医师</strong>即<strong>医士</strong>。</p>
-<table>
-<thead>
-<tr class="header">
-<th>正高级职称</th>
-<th>副高级职称</th>
-<th>中级职称</th>
-<th>初级职称</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>特级主任医师</td>
-<td>一级副主任医师</td>
-<td>一级主治医师</td>
-<td>一级医师</td>
-</tr>
-<tr class="even">
-<td>一级主任医师</td>
-<td>二级副主任医师</td>
-<td>二级主治医师</td>
-<td>二级医师</td>
-</tr>
-<tr class="odd">
-<td>二级主任医师</td>
-<td>三级副主任医师</td>
-<td>三级主治医师</td>
-<td>助理医师</td>
-</tr>
-<tr class="even">
-<td>三级主任医师</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p><strong>（职称版）</strong></p>
-<ol type="1">
-<li>医士：中专或大专刚毕业后进入医院，就属于医士。在考得<strong>执业医师证</strong>之后才能晋升下一级。</li>
-<li>（住院）医师：获得本职称后<strong>满一定时长</strong>（专科要六年、本科要四年、硕士要两年）且<strong>主治医师考试</strong>合格通过后才能晋升下一级。</li>
-<li>主治（主管）医师：获得本职称后<strong>满一定时长</strong>（本科/硕士要五年、博士要三年）且<strong>副主任医师评选</strong>通过后才能晋升下一级。</li>
-<li>副主任医师：获得本职称后<strong>满一定时长</strong>（本科/硕士要五年、博士要三年）且<strong>主任医师评选</strong>通过后才能晋升下一级。</li>
-<li>主任医师：一般同时兼有高校教师职称（教授），四级主任医师相当于副厅局级的行政级别，三级相当于正厅局级，二级相当于副省部级，一级相当于正省部级（基本有院士头衔）。</li>
-</ol>
-<p><strong>（头衔版）</strong></p>
-<p>主治医生/主治大夫：一种责任人称呼，医院的住院部各科室会将床位分配给各医生，每一床位的主要负责的医生就被患者和同行称为主治医生/主治大夫，可以由住院医师、主治医师或副主任医师担任。</p>
-<p>医院科室主任：也称“<strong>科主任</strong>”、“<strong>主任</strong>”，是一种<strong>行政职务</strong>（对应的主任医师等属于技术职称），是指负责医院某科室工作的人，属于医院中层干部，一般由该科室里的最高技术职称的人担任。就行政级别而言，县级医院科主任是股级、市级医院科主任是科级、省级医院科主任是副处级。</p>
-<p>医院院长：医院的法定责任人，对医院的管理负主要责任。就行政级别而言，一级医院（乡镇卫生所）院长是股级、二级医院（区县级）院长是科级、三级医院（地级市以上）院长是处级或厅级，且一般有：院长&gt;科室主任&gt;主任医师。</p>
-<h2 id="一些碎碎念">一些碎碎念</h2>
-<p>上面讲的是医生的等级制度，此外医生所在的医院也有对应的一套等级制度。医院按其功能、任务不同划分为一、二、三级。</p>
-<ul>
-<li>一级医院：社区医院，直接向一定人口的社区提供预防、医疗、保健、康复服务的基层医院、卫生院。</li>
-<li>二级医院：县医院，向多个社区提供综合医疗卫生服务，并承担一定教学、科研任务的地区性医院。</li>
-<li>三级医院：地区综合性医院，向几个地区提供高水平专科性医疗卫生服务，并执行高等教育、科研任务的区域性医院。</li>
-</ul>
-<p>1989 年时卫生部（现在的卫健委）颁布的《医院分级管理标准》还进一步将各级医院细分为甲、乙、丙三等，其中三级医院增设特等，但连北京协和都不是最高级的三特。后面卫生部在 2011 年时颁布的《医院评审暂行办法》将医院分级标准又改回了三级六等，即一二三级医院只保留甲等、乙等，原先的三级特等和各级丙等都被取消了。</p>
-<p>不得不说，就职称结构而言是简单清晰的，毕竟有文件白字黑字写着，而且规律与学术圈的基本一样。但到了实际情况的时候，还会冒出各种主任、行政级别，就和学术圈的“特聘”一样，这时候就有点把握不住了，而且感觉自己搜寻能力的水平亟待提高。之后还得再看一下我国的各种行政级别，比如“国、部、司、处、科”之类的才行，虽然我这个普通人可能一辈子也只是底层，但了解社会等级金字塔的过程多少还算是有意思的（大概）。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/05/24/2023-0524-%E5%AD%A6%E6%9C%AF%E5%9C%88%E7%9A%84%E7%AD%89%E7%BA%A7%E5%88%B6%E5%BA%A6/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="zhb">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="zhb木木三的个人网页">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/05/24/2023-0524-%E5%AD%A6%E6%9C%AF%E5%9C%88%E7%9A%84%E7%AD%89%E7%BA%A7%E5%88%B6%E5%BA%A6/" class="post-title-link" itemprop="url">学术圈的等级制度</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-05-24 23:01:00" itemprop="dateCreated datePublished" datetime="2023-05-24T23:01:00+08:00">2023-05-24</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-06-09 11:34:42" itemprop="dateModified" datetime="2023-06-09T11:34:42+08:00">2023-06-09</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%90%9E%E7%82%B9%E8%AF%BE%E5%A4%96%E7%9F%A5%E8%AF%86/" itemprop="url" rel="index"><span itemprop="name">搞点课外知识</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>1.9k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>6 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>虽然我读了个水博，有生之年也没什么希望做出高质量的学术成果或者发出高数量的学术论文，以后更不可能走进学术圈拿教职，但还是有点好奇在读完了本科（学士）、研究生（硕士、博士）之后，再往后的学术圈的等级金字塔大概是长什么样的。</p>
-<h2 id="国内等级制度">国内等级制度</h2>
-<p><img src="/ref_pic/学术圈等级制度.png"></p>
-<p>毕导的一个 <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1wC4y1x7c8/?share_medium=web&amp;share_source=weibo&amp;bbid=A100BC1A-3ED9-4CBD-8B18-EBC00AAF5DEC155825infoc&amp;ts=1587215934992&amp;vd_source=9f42c74d38b311d152245e7c84682d01">b 站视频</a>：《从博士到教授到院士，中国科研的打怪升级之路》就讲的很清楚。下面是大概的由底层向高层的“升级”路线：</p>
-<p><strong>（不严格职称版）</strong></p>
-<ol type="1">
-<li>博士：最高学历，学术圈的入门门槛。</li>
-<li>博士后：俗称<strong>博后</strong>，实际是一个工作岗位，更像是科研助理。</li>
-<li>讲师（高校）或助理研究员（科研院所）</li>
-<li>副教授（高校）或副研究员（科研院所）</li>
-<li>正教授（高校）或研究员（科研院所）</li>
-</ol>
-<p><strong>（荣誉/帽子/Title 版）</strong><span class="github-emoji"><span>🎓</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f393.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></p>
-<ol type="1">
-<li>青年教师：俗称<strong>青椒</strong>，大学老师的起点，是指还未获得高校长聘的学者，需要给本科生上课、发论文、申国家自然科学基金项目。国内目前实行非升即走制（Tenure Track），预聘期内（约 6 年）成果达标的晋升长聘为副教授或教授，否则不再续聘。</li>
-<li>“四青”：<strong>优青</strong>（国自然基金委优秀青年科学基金项目）、<strong>青长</strong>（教育部青年长江学者）、<strong>青拔</strong>（中组部万人计划的青年拔尖人才）、<strong>青千</strong>（中组部千人计划的青年千人计划），2019 年共评出 1600 个 “四青”人才（同年有约 54.4 万硕士毕业生和 6.1 万博士毕业生），评选<strong>一般不超过 40 岁</strong>。</li>
-<li>三大帽子：<strong>杰青</strong>（国家杰出青年科学基金）、<strong>长江</strong>（教育部长江学者奖励计划）、<strong>千人</strong>（海外高层次人才引进计划）。三种帽子每年各有约几百人，副高级职称也可以申请（但基本都是正高级职称），评选<strong>一般不超过 45 岁</strong>（千人计划可以放宽到 55 岁）</li>
-<li>院士：终身荣誉，两年一评，一次评一百多人（只有院士能提名别人当院士）</li>
-</ol>
-<p>根据中华人民共和国人力资源社会保障部的 <a target="_blank" rel="noopener" href="http://www.mohrss.gov.cn/SYrlzyhshbzb/ztzl/zyhzyzggg/zcwj_zc/zc/202111/t20211102_426565.html">《职称系列层级名称》</a> 以及人事部、教育部在 2007 年 <a target="_blank" rel="noopener" href="http://www.moe.gov.cn/jyb_xxgk/gk_gbgg/moe_0/moe_1443/moe_1497/tnull_23287.html">《关于印发高等学校、义务教育学校、中等职业学校等教育事业单位岗位设置管理的三个指导意见的通知》</a>，我国的<strong>高等学校教师职称</strong>可以分为以下十二级：</p>
-<table>
-<thead>
-<tr class="header">
-<th>正高级教师岗位</th>
-<th>副高级教师岗位</th>
-<th>中级教师岗位</th>
-<th>初级教师岗位</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>教授一级岗位</td>
-<td>副教授一级岗位</td>
-<td>讲师一级岗位</td>
-<td>助教一级岗位</td>
-</tr>
-<tr class="even">
-<td>教授二级岗位</td>
-<td>副教授二级岗位</td>
-<td>讲师二级岗位</td>
-<td>助教二级岗位</td>
-</tr>
-<tr class="odd">
-<td>教授三级岗位</td>
-<td>副教授三级岗位</td>
-<td>讲师三级岗位</td>
-<td></td>
-</tr>
-<tr class="even">
-<td>教授四级岗位</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h2 id="北美等级制度">北美等级制度</h2>
-<p>在北美的高等院校，教职（faculty）大概可以分为以下两类，其中助理教授 Assistant Professor 也称 AP，大概就对应于国内的青年教师/青椒，都是处于非升即走的焦虑状态，要抓紧时间发论文才能拿到终身教职。</p>
-<table>
-<thead>
-<tr class="header">
-<th>非终身教职 (Non-Tenure Track)</th>
-<th>终身教职 (Tenure Track)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>研究序列 Research Track</td>
-<td>讲师 Lecture Convertible（1-2 年）</td>
-</tr>
-<tr class="even">
-<td>临床序列 Clinical Track</td>
-<td>助理教授 Assistant Professor（≤ 6 年）</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>副教授 Associate Professor（一般为终身制）</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>教授 Professor（终身制）</td>
-</tr>
-</tbody>
-</table>
-<h2 id="一些碎碎念">一些碎碎念</h2>
-<p>国内引入了北美的非升即走制（Tenure Track），通过“预聘—长聘”实现，但北美大都是一个萝卜一个坑，如果只有 10 个教职名额，就只会预聘 10 个学者，彼此之间不存在零和博弈的局面。而国内的竞争情况激烈，如果有 10 个教职名额，可能就会预聘 50 个学者进来竞争，预聘期结束时无论如何都会有 40 个人拿不到教职而走人。</p>
-<p>国内高校职称中没有与北美 Assistant Professor 对应的岗位，但有“特聘教授”、“特聘副教授”相对应，这种职位的职称教授（正高级职称）、副教授（副高级职称）一致，但不是终身的长聘制，在有限的预聘期（约 6 年）内成果不够就得走人。从这里也可以看出，只是将 Assistant Professor 换了个说法而已，虽然名义上是教授、副教授，但却不享有教授、副教授的“<strong>终身教职</strong>”特性。</p>
-<p>教授、副教授严格上是指高等学校教师职称中的正高级职称、副高级职称，但平常也会有其他的“xx 教授”称呼。例如“客座教授”（客情聘请来作报告讲座的学者，可以是名人、官员、企业家等）、“兼职教授”（校际互相聘请讲课的正高级职称的学者）、“荣誉教授”（对知名老教授、老领导授予的荣誉称号）等。</p>
-<p>教授与博导不同，博导是一种（可以带博士的）资格而非职称。在有博士点的地方，即使身为教授或研究员，也未必有带博士的资格。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/05/24/2023-0524-%E5%85%B3%E4%BA%8E%E9%A2%84%E5%8D%B0%E6%9C%AC%E7%9A%84%E4%BA%89%E8%AE%AE/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="zhb">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="zhb木木三的个人网页">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/05/24/2023-0524-%E5%85%B3%E4%BA%8E%E9%A2%84%E5%8D%B0%E6%9C%AC%E7%9A%84%E4%BA%89%E8%AE%AE/" class="post-title-link" itemprop="url">关于预印本的争议</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-05-24 21:05:00" itemprop="dateCreated datePublished" datetime="2023-05-24T21:05:00+08:00">2023-05-24</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-06-09 11:34:42" itemprop="dateModified" datetime="2023-06-09T11:34:42+08:00">2023-06-09</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%AD%A6%E6%9C%AF%E6%A8%A1%E5%9D%97/" itemprop="url" rel="index"><span itemprop="name">学术模块</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>1.2k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>4 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>根特大学的副教授 Matt Shawkey 在 2017 年的时候曾在 Twitter 上表达了他在正式研究出版物中引用预印本内容的观点，他认为预印本（Preprint）的内容不应和已经经过<strong>同行评议</strong>的论文等同对待。同时，在 2020 年初新冠病毒 COVID-19 刚开始爆发的时候，就有很多研究人员在 arXiv 等平台上发表关于新冠的预印本论文，此时预印本的<strong>即时性</strong>就很大程度地帮助科研人员及时分享进展，这对于在病毒迅速变化的爆发阶段下的流行病研究来说尤为重要。那么什么是预印本呢？arXiv 等平台又是什么概念呢？</p>
-<h2 id="预印本概念">预印本概念</h2>
-<p>预印本（Preprint）是指作者未经同行评议（Peer Review）就在互联网上发布的含有数据和实验方法的论文稿件。在发布预印本时有些平台会对要发布的论文稿件进行简单的质控，但该过程不需同行评议，一般在一到三个工作日内就能在线发布，供其他科研者免费阅读。与预印本对应的，就是在期刊上正式发表的学术论文，为了保证出版论文的严肃性和可靠性，同行评议等审稿工作就尤为重要，期间可能还需要作者对论文格式、内容进行小修小改，因而要发一篇期刊论文都得几个月的时间。</p>
-<p>预印本（Preprint）存在的核心就在于【提前】二字，<strong>提前确认学术成果</strong>、<strong>提前进行学术交流和研究</strong>、<strong>提前吸引读者并被引用</strong>。但正因为预印本的发表是未经过同行评议的，因而在评估学术成果的时候，也有许多的争议。一部分期刊是暂不接受预印本的投稿的，会将其视作重复发表，但也有另外一些期刊会让作者在论文正式出版前发布预印本。如果论文被期刊录用了，大多数传统期刊会给出版的论文添加预印本链接或引用预印本，同时预印本网站也会放上文章的最终版本链接。</p>
-<h2 id="预印本平台">预印本平台</h2>
-<p>预印本平台，也称预印本网站、预印本文库、预印本库等，是为研究者提供预印本发布和传播渠道的学术平台。预印本平台对全球免费开放使用，是开放科学的基础设施之一。</p>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://arxiv.org/">arXiv</a>：第一个出现的电子预印本平台，在 1991 年创建，目前由康奈尔大学维护。截至 2022 年 6 月，arXiv 论文数已达到了 200 万余篇，2021 年新提交论文的学科分布大约是 37.4% 的物理学、33.6% 的计算机科学、19.6% 的数学。<strong>主要是物理、计算机领域</strong>。</li>
-<li><a target="_blank" rel="noopener" href="https://www.biorxiv.org/">bioRxiv</a>：建立于 2013 年，<strong>主要是生命科学领域</strong>。</li>
-<li><a target="_blank" rel="noopener" href="https://www.medrxiv.org/">medRxiv</a>：建立于 2019 年，<strong>主要是医学临床领域</strong>。</li>
-<li><a target="_blank" rel="noopener" href="http://chinaxiv.org/home.htm">ChinaXiv</a>：建立于 2016 年，全称是中国科学院科技论文预发布平台，包括文科、理科、工科等多个学科。</li>
-</ul>
-<h2 id="小结">小结</h2>
-<p>作为一个连正经论文都没有的学术小白，感觉我也没有什么资格或者经验去参与到预印本的争议里面。给我的感觉，就是预印本平台是个好东西，是一个即时性很强的学术情报渠道，听别的实验组成员说，每天打开网页翻一翻 arXiv 已经变成了很平常的习惯，就像看新闻一样。所以，有空而且想起来的时候，还是让自己去 arXiv 上去翻一翻吧！</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/05/24/2023-0524-sci%E6%9C%9F%E5%88%8A%E4%B8%AD%E7%9A%84OA%E6%9C%9F%E5%88%8A/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="zhb">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="zhb木木三的个人网页">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/05/24/2023-0524-sci%E6%9C%9F%E5%88%8A%E4%B8%AD%E7%9A%84OA%E6%9C%9F%E5%88%8A/" class="post-title-link" itemprop="url">sci期刊中的OA期刊</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-05-24 17:21:00" itemprop="dateCreated datePublished" datetime="2023-05-24T17:21:00+08:00">2023-05-24</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-07-17 01:49:09" itemprop="dateModified" datetime="2023-07-17T01:49:09+08:00">2023-07-17</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%AD%A6%E6%9C%AF%E6%A8%A1%E5%9D%97/" itemprop="url" rel="index"><span itemprop="name">学术模块</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>1.3k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>4 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>SCI 期刊可以分为 OA 期刊和非 OA 期刊两种。OA 期刊（Open Access Journal，开放获取期刊）即免费公开的期刊，是一种向作者收取版面费的出版方式。传统的期刊运营模式是读者付费订阅，有时候付费价格很高，因而是以高校等单位进行付费的，这也是俄罗斯黑客们要搞个 <a target="_blank" rel="noopener" href="https://sci-hub.se/">Sci-Hub</a> 服务器、破解出版社的论文并免费公开的初衷。随着计算机领域尤其是深度学习提倡公开代码以加快领域进步，OA 期刊渐渐变成了一种趋势。而读者不掏钱，总得有人要掏钱，所以就变成了向作者掏钱了。</p>
-<h2 id="oa-级别">OA 级别</h2>
-<p>芬兰汉肯经济学院信息系统科学教授 Bo-Christer 在 2017 年发表了一篇文章，"Gold, Green and Black Open Access"（https://doi.org/10.1002/leap.1096），介绍了目前 OA 常见的如下三种模式，并阐述了非法 OA 的影响。总体而言，科研论文发表一年后，约有 25% 可从 gold OA 渠道获取，15-20% 可从合法的 green OA 渠道获取，而其余的绝大多数可从非法的 black OA 渠道找到。</p>
-<ul>
-<li>gold OA：整个期刊的文章都可以永久免费获取，但依赖向作者收费的商业模式，价格昂贵，是最常见的 OA 模式。</li>
-<li>green OA：作者将文章存入平台/资源库，供订阅用户免费获取，但从存入文章到允许用户公开访问可能有 6-24 个月的时滞期。</li>
-<li>black OA：从学术社交网（Mendeley、Research Gate 等）及非法网站（如 Sci-Hub）免费下载本应付费浏览的文章。</li>
-</ul>
-<p>此外，在投稿时，OA 期刊还能进一步分为完全 OA 期刊（Full OA Journals）和混合 OA 期刊（Hybrid OA Journals）两种。Wiley 出版社在 2022 年 11 月统计了其旗下完全 OA 期刊有 300 多本，混合 OA 期刊有 1300 多本（<a target="_blank" rel="noopener" href="https://authorservices.wiley.com/author-resources/Journal-Authors/open-access/index.html">参考</a>）。</p>
-<ul>
-<li>完全 OA 期刊：强制作者在发表文章时必须选择 OA。</li>
-<li>混合 OA 期刊：允许作者在发表文章时选择 OA 或者传统订阅模式（即不 OA、不掏钱）。</li>
-</ul>
-<h2 id="oa-收费标准">OA 收费标准</h2>
-<p>不同的期刊有不同的 OA 收费标准，理论上收费越高就越容易中（当然，也就越容易上中科院的《国际期刊预警名单》了）。有个专门收录 OA 期刊的网站（www.doaj.org）可以查询相关费用。</p>
-<ul>
-<li>普通 OA 费用：2000 美元
-<ul>
-<li>IEEE Access：1950 美元，三区</li>
-<li>Plos One：1495 美元，三区</li>
-<li>Scientific Reports：1700 美元，三区</li>
-<li>Frontiers in Medicine：2490 美元，三区</li>
-</ul></li>
-<li>高 OA 费用：&gt;3000美元
-<ul>
-<li>Nature Communications：5380美元，一区</li>
-<li>Cell Reports：5200 美元，一区</li>
-<li>Communications Biology：3290 美元，二区</li>
-</ul></li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/05/24/2023-0524-%E6%9C%9F%E5%88%8A%E9%A2%84%E8%AD%A6%E5%90%8D%E5%8D%95/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="zhb">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="zhb木木三的个人网页">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/05/24/2023-0524-%E6%9C%9F%E5%88%8A%E9%A2%84%E8%AD%A6%E5%90%8D%E5%8D%95/" class="post-title-link" itemprop="url">期刊预警名单</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-05-24 15:54:00" itemprop="dateCreated datePublished" datetime="2023-05-24T15:54:00+08:00">2023-05-24</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-06-09 11:34:42" itemprop="dateModified" datetime="2023-06-09T11:34:42+08:00">2023-06-09</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%AD%A6%E6%9C%AF%E6%A8%A1%E5%9D%97/" itemprop="url" rel="index"><span itemprop="name">学术模块</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>635</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>2 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>预警期刊是由<strong>中国科学院文献情报中心期刊分区表团队</strong>发布的，旨在提醒科研人员审慎选择成果发表平台、提示出版机构强化期刊质量管理的一个清单。预警期刊从 2020 年末首次公布，每年年末发布，目前一共有以下三个名单，可以去中科院文献情报中心-期刊分区表团队的<a target="_blank" rel="noopener" href="https://earlywarning.fenqubiao.com/#/README">官方主页</a>查询。</p>
-<ul>
-<li>《国际期刊预警名单（试行）》2023版共计包含 <strong>28</strong> 本期刊（<a target="_blank" rel="noopener" href="https://earlywarning.fenqubiao.com/#/zh-cn/early-warning-journal-list-2023">查看</a>）</li>
-<li>《国际期刊预警名单（试行）》2021 版共计包含 <strong>35 </strong>本期刊（<a target="_blank" rel="noopener" href="https://earlywarning.fenqubiao.com/#/zh-cn/early-warning-journal-list-2021">查看</a>）</li>
-<li>《国际期刊预警名单（试行）》2020 版共计包含 <strong>65</strong> 本期刊（<a target="_blank" rel="noopener" href="https://earlywarning.fenqubiao.com/#/zh-cn/early-warning-journal-list-2020">查看</a>）</li>
-</ul>
-<h2 id="预警标准">预警标准</h2>
-<p>预警期刊的识别采用定性（专家意见）与定量（处理费、拒稿率、作者国际化程度、自引率等指标）相结合的方法，将预警级别分为高、中、低三档，风险指数依次减弱。如果期刊的相关指标发生了变化，那么新的《预警名单》也会发生变化。</p>
-<ul>
-<li>高风险期刊：批量论文涉及“论文工厂”事件</li>
-<li>中风险期刊：作者群、读者群的国际化程度低，以及论文处理费不合理（过高）</li>
-<li>低风险期刊：期刊存在学术影响力骤降风险（期刊发文量激增）</li>
-</ul>
-<h2 id="被预警的后果">被预警的后果</h2>
-<p>由于《预警名单》是中科院根据中共中央办公厅、国务院办公厅在 2018 年引发的《关于进一步加强科研诚信建设的若干意见》执行的，因而各高校肯定会高度重视该名单。</p>
-<p>虽然还没找到中国科学技术大学的相关正式通知，但一般而言，在《预警名单》的期刊上发表学术论文，<strong>不能报销相关费用</strong>、<strong>不会发放相应的科研业绩奖励</strong>，如果是在预警等级为“高”的期刊上发表论文，甚至可能<strong>不被认定为学术成果</strong>。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/05/24/2023-0524-%E5%AD%A6%E6%9C%AF%E8%AE%BA%E6%96%87%E7%A7%8D%E7%B1%BB(SCI%E3%80%81EI%E3%80%81IEEE%E7%AD%89)/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="zhb">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="zhb木木三的个人网页">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/05/24/2023-0524-%E5%AD%A6%E6%9C%AF%E8%AE%BA%E6%96%87%E7%A7%8D%E7%B1%BB(SCI%E3%80%81EI%E3%80%81IEEE%E7%AD%89)/" class="post-title-link" itemprop="url">学术论文种类(SCI、EI、IEEE等)</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-05-24 15:21:00" itemprop="dateCreated datePublished" datetime="2023-05-24T15:21:00+08:00">2023-05-24</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-07-17 01:49:38" itemprop="dateModified" datetime="2023-07-17T01:49:38+08:00">2023-07-17</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%AD%A6%E6%9C%AF%E6%A8%A1%E5%9D%97/" itemprop="url" rel="index"><span itemprop="name">学术模块</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>2.9k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>10 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="博士毕业要求">博士毕业要求</h2>
-<p>按照<a target="_blank" rel="noopener" href="https://gradschool.ustc.edu.cn/column/54">中国科学技术大学研究生院</a>的<a target="_blank" rel="noopener" href="https://gradschool.ustc.edu.cn/static/upload/article/file/1631930389067/e79e26f01a064a8f919ac523d59167fd.pdf">《中国科学技术大学学位授予标准（2020版）》</a>里的第 44-50 页的信息与智能学部研究生学位授予标准，<strong>硕博连读生</strong>申请博士学位需要满足以下任意一条：</p>
-<ul>
-<li>A 档论文 1 篇，且自硕士入学满 11 学期</li>
-<li>B 档成果 2 个，且自硕士入学满 11 学期</li>
-<li>B 档成果 1 个加 C 档成果 2 个，且自硕士入学满 12 学期</li>
-</ul>
-<p>其中，关于 A、B、C 档的具体解释如下：</p>
-<ul>
-<li>A 档：期刊：SCI 一区、二区收录的国际期刊（不含 IEEE Access）、IEEE Transactions 期刊、IEEE Journal 期刊、ACM Transactions 期刊、ACM Proceedings 期刊、中国计算机学会（CCF）推荐 A 类国际英文期刊/会议、信息与智能学部学位分委员会认定的 A 档期刊/会议（见附录）。</li>
-<li>B 档：SCI 收录的外文期刊、中国计算机学会（CCF）推荐 B 类国际英文期刊/会议、信息与智能学部学位分委员会认定的 B 档期刊/会议（见附录）。</li>
-<li>C 档：SCI 或 EI 收录的中文期刊/国际会议、中国计算机学会（CCF）推荐 C 类国际英文期刊/会议、中国计算机学会（CCF）推荐中文期刊、CSCD 收录期刊、已授权的国内外发明专利。</li>
-</ul>
-<p>从这里也可以看到，一个期刊能不能被学校认可为一个学术成果，就看它是不是被 SCI、EI、CCF 等机构收录的，因而下面也主要介绍这些有权利评判学术成果的机构都是什么概念。省流版如下：</p>
-<table>
-<thead>
-<tr class="header">
-<th>机构</th>
-<th>属性</th>
-<th>收录/出版类型</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>SCI</td>
-<td>数据库</td>
-<td>期刊</td>
-</tr>
-<tr class="even">
-<td>EI</td>
-<td>数据库</td>
-<td>期刊、会议</td>
-</tr>
-<tr class="odd">
-<td>CSCD</td>
-<td>数据库</td>
-<td>期刊（中文为主）</td>
-</tr>
-<tr class="even">
-<td>CCF</td>
-<td>学术组织</td>
-<td>会议</td>
-</tr>
-<tr class="odd">
-<td>IEEE</td>
-<td>学术组织、出版社</td>
-<td>期刊、会议</td>
-</tr>
-<tr class="even">
-<td>ACM</td>
-<td>学术组织、出版社</td>
-<td>期刊</td>
-</tr>
-</tbody>
-</table>
-<h2 id="sci-收录的期刊">SCI 收录的期刊</h2>
-<p>SCI（Science Citation Index，科学引文索引）是由美国科学信息研究所（Institute for Scientific Information，简称ISI）1961 年创办出版的引文<strong>数据库</strong>，会从世界上所有期刊里选择性地挑选一部分，然后将发表在上面的所有论文都收录进该数据库中，主要收录自然科学、工程技术类论文，目前是 <a target="_blank" rel="noopener" href="https://www.webofscience.com/">Web of Science</a> 数据库的其中一个子库（Web of Science 数据库属于 ISI 在 2001 年推出的 Web of Knowledge 信息资源整合平台的一部分）。</p>
-<p>有时候会同时提到 SCI 和 SCIE 两个数据库，后者的 SCIE 是指 SCI Expanded，属于 SCI 的网络扩展版，由 SCI 收录期刊加上额外的新期刊组成，目前 SCI 和 SCIE 已不做区分。此外，SCI 是理科类的，在文科领域就是 SSCI（Social Sciences Citation Index，社会科学引文索引）。</p>
-<p>为了区分期刊水平，级别划分是很重要的事情。对 SCI 收录的期刊分区主要有两种：</p>
-<ul>
-<li>JCR（Journal Citation Reports） 分区/ WoS 分区：由 SCI 检索系统背后的科睿唯安 Clarivate 每年 6 月出版的分区标准（由于 SCI 目前为 WoS 的子库，因而也把 JCR 分区称为 WoS 分区），将 SCI 期刊等比例划分为 Q1（1%-25%）、Q2（26%-50%）、Q3（51%-75%）、Q4（76%-100%） 四个级别。</li>
-<li>中科院分区：由中国科学院国家科学图书馆制定的标准，将 SCI 期刊划分为一区（前 5%）、二区（6%-20%）、三区（21%-50%)、四区（51%-100%）四个级别。</li>
-</ul>
-<h2 id="ei-收录的期刊会议">EI 收录的期刊/会议</h2>
-<p><a href="%5Bhttps://www.engineeringvillage.com%5D(https://link.zhihu.com/?target=https%3A//www.engineeringvillage.com/)">EI</a>（The Engineering Index，工程索引）是由美国工程师学会联合会于 1884 年创办的历史上最悠久的大型综合性检索工具，也可以理解为一个<strong>数据库</strong>，收录文章侧重于工程技术类，质量会比 SCI 数据库稍微差一点。SCI 收录的期刊，EI 也会收录，SCI 没收录的水平差一点的期刊，EI 也可能会收录。此外，SCI 只收录期刊论文，而 EI 会收录期刊论文（JA）和会议论文（CA）。</p>
-<h2 id="ccf-收录的期刊会议">CCF 收录的期刊/会议</h2>
-<p><a target="_blank" rel="noopener" href="https://www.ccf.org.cn/">CCF</a>（China Computer Federation，中国计算机学会）是一个比较权威的学术组织，很有含金量。在评价期刊、会议水平方面起到的是一个推荐作用，定期会公开一个推荐列表，按照 A、B、C 类三级推荐相应领域的期刊和会议，例如<a target="_blank" rel="noopener" href="https://www.ccf.org.cn/Academic_Evaluation/By_category/">《中国计算机学会推荐国际学术会议和期刊目录-2022》</a>。SCI 不收录会议，在计算机学科中主要靠 CCF 推荐的级别来评价会议水平。</p>
-<h2 id="其他数据库">其他数据库</h2>
-<ul>
-<li>Science ：世界 Top 2 的论文数据库</li>
-<li>Nature ：世界 Top 2 的论文数据库</li>
-<li><a target="_blank" rel="noopener" href="https://www.cnki.net/">中国知网</a>：一般只收录国内毕业论文</li>
-<li>万方数据：一般只收录国内毕业论文</li>
-<li>CPCI（Conference Proceedings Citation Indexes，会议录引文索引）：由 ISI 创建，收录会议</li>
-<li>CSCD（Chinese Science Citation Database，中国科学引文数据库）：创建于 1989 年，分为核心期刊与扩展期刊两类，以中文期刊为主</li>
-</ul>
-<h2 id="常见出版社学术组织">常见出版社/学术组织</h2>
-<h3 id="ieee">IEEE</h3>
-<p>IEEE（Institute of Electrical and Electronics Engineers，电气和电子工程师协会）是一个学术组织，在制定行业标准、出版杂志期刊、开展学术交流时大都能找到它的身影。同时，IEEE 也出版很多刊物，且 IEEE 期刊大都被 SCI 收录了。除了期刊以外，IEEE 还出版很多会议文章，但一般而言 IEEE 的会议论文质量会比期刊论文低很多，其中一个重要原因是绝大部分的 IEEE 会议不是由 IEEE 主办的，而是由一些高校或其他机构主办的，由会议主办方向 IEEE 出版社提交会议论文集的出版申请，IEEE 只参与后续的出版工作，而没有派遣专家学者参与论文评审。<a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/Xplore/home.jsp">IEEE xplore</a> 是 IEEE 推出的一个数据库（与 SCI、EI 数据库类似），是专门收录 IEEE 出版社发行的期刊和会议里的学术论文。</p>
-<h3 id="acm">ACM</h3>
-<p><a target="_blank" rel="noopener" href="https://www.acm.org/">ACM</a>（Association for Computing Machinery，国际计算机学会）是一个创立与 1947 年的世界性计算机从业员的学生组织，也是目前全世界计算机领域影响力最大的专业学术组织，它所评选的图灵奖（A.M.Turing Award）被公认为世界计算机领域的诺贝尔奖。与 IEEE 一样，ACM 也会出版一些期刊，且这些期刊大都被 SCI 收录。</p>
-<h3 id="elsevier">Elsevier</h3>
-<p>Elsevier 中文也称爱思唯尔，是一家专门从事科学和医学的全球专业信息和分析公司。 它成立于 1880 年，隶属于 RELX 集团，总部位于阿姆斯特丹。 它自己也会出版很多被 sci 收录的高质量期刊（如 JMR）。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/11/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><span class="page-number current">12</span><a class="page-number" href="/page/13/">13</a><span class="space">&hellip;</span><a class="page-number" href="/page/19/">19</a><a class="extend next" rel="next" href="/page/13/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
-  </nav>
-
-
-
-          </div>
-          
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
-
-        </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">zhb</p>
-  <div class="site-description" itemprop="description"></div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">109</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-          
-        <span class="site-state-item-count">10</span>
-        <span class="site-state-item-name">分类</span></a>
-      </div>
-      <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-          
-        <span class="site-state-item-count">17</span>
-        <span class="site-state-item-name">标签</span></a>
-      </div>
-  </nav>
-</div>
-
-
-
-      </div>
-
-    </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        
-
-<div class="copyright">
-  
-  &copy; 
-  <span itemprop="copyrightYear">2023</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">zhb</span>
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item-icon">
-      <i class="fa fa-chart-area"></i>
-    </span>
-    <span title="站点总字数">145k</span>
-</div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
-  </div>
-
-        
-
-
-
-
-
-
-
-
-      </div>
-    </footer>
-  </div>
-
-  
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
-
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/muse.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-<script>
-if (document.querySelectorAll('pre.mermaid').length) {
-  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
-    mermaid.initialize({
-      theme    : 'forest',
-      logLevel : 3,
-      flowchart: { curve     : 'linear' },
-      gantt    : { axisFormat: '%m/%d/%Y' },
-      sequence : { actorMargin: 50 }
-    });
-  }, window.mermaid);
-}
-</script>
-
-
-  
-
-  
-      
-
-<script>
-  if (typeof MathJax === 'undefined') {
-    window.MathJax = {
-      loader: {
-          load: ['[tex]/mhchem'],
-        source: {
-          '[tex]/amsCd': '[tex]/amscd',
-          '[tex]/AMScd': '[tex]/amscd'
-        }
-      },
-      tex: {
-        inlineMath: {'[+]': [['$', '$']]},
-          packages: {'[+]': ['mhchem']},
-        tags: 'ams'
-      },
-      options: {
-        renderActions: {
-          findScript: [10, doc => {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
-              const display = !!node.type.match(/; *mode=display/);
-              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-              const text = document.createTextNode('');
-              node.parentNode.replaceChild(text, node);
-              math.start = {node: text, delim: '', n: 0};
-              math.end = {node: text, delim: '', n: 0};
-              doc.math.push(math);
-            });
-          }, '', false],
-          insertedScript: [200, () => {
-            document.querySelectorAll('mjx-container').forEach(node => {
-              let target = node.parentNode;
-              if (target.nodeName.toLowerCase() === 'li') {
-                target.parentNode.classList.add('has-jax');
-              }
-            });
-          }, '', false]
-        }
-      }
-    };
-    (function () {
-      var script = document.createElement('script');
-      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
-      script.defer = true;
-      document.head.appendChild(script);
-    })();
-  } else {
-    MathJax.startup.document.state(0);
-    MathJax.texReset();
-    MathJax.typeset();
-  }
-</script>
-
-    
-
-  
-
-</body>
-</html>
+文献打开方式
+再次，为了方便我写，下面只推荐使用 EndNote20 作为文献管理软件，可以从科大信息平台的正版 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/05/26/2023-0526-%E5%85%AC%E5%8A%A1%E5%91%98%E7%9A%84%E7%AD%89%E7%BA%A7%E5%88%B6%E5%BA%A6/" title="公务员的等级制度">公务员的等级制度</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-05-26T05:30:00.000Z" title="发表于 2023-05-26 13:30:00">2023-05-26</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%90%9E%E7%82%B9%E8%AF%BE%E5%A4%96%E7%9F%A5%E8%AF%86/">搞点课外知识</a></span></div><div class="content">根据中共中央办公厅 2019 年印发的《公务员职务与职级并行规定》以及 2020 年发布的《公务员职务、职级与级别管理办法》，公务员级别由低至高依次为二十七级至一级，同时公务员职位分为领导职务和职级两类，职级是一种公务员的等级序列，是与领导职务并行的晋升通道，不具有领导职责。
+级别、领导职务、职级
+级别、领导职务、职级三者的概念与对应关系如下：
+
+级别：也称行政级别，共 27 个等级（一级最高，二十七级最低），是划分公务员地位等级的量化指标，每个级别会有对应的工资档次。
+领导职务：公务员职位的一类，共 10 个等级。
+职级：公务员职级，在 2019 年以前也称非领导职务，公务员职位的一种，可以细分为综合管理类（共 12 个等级）、专业技术类（共 11 个等级）、行政执法类（共 11 个等级）三类，但平常最多提到的还是综合管理类。
+
+
+
+
+级别
+领导职务
+综合管理类职级
+行政执法类职级
+专业技术类职级
+
+
+
+
+一级
+国家级正职
+
+
+
+
+
+四级至二级
+国家级副职
+
+
+
+
+
+八级至四级
+省部级正职
+
+
+
+
+
+十级至六级
+省部级副职
+
+
+
+
+
+十三级至八级
+厅局级正职
+一级巡视员
+
+一级总监
+ ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/05/25/2023-0525-%E5%8C%BB%E7%94%9F%E7%9A%84%E7%AD%89%E7%BA%A7%E5%88%B6%E5%BA%A6/" title="医生的等级制度">医生的等级制度</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-05-25T09:36:00.000Z" title="发表于 2023-05-25 17:36:00">2023-05-25</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%90%9E%E7%82%B9%E8%AF%BE%E5%A4%96%E7%9F%A5%E8%AF%86/">搞点课外知识</a></span></div><div class="content">根据中华人民共和国人力资源社会保障部的 《职称系列层级名称》 和《关于深化卫生专业技术人员职称制度改革的指导意见》，医院里的医务人员按系列划分有如下几种职称（一般按系列分有“医、药、护、技、工程、财务”等，下面只列主要的 4 类）。
+
+
+
+正高级职称
+副高级职称
+中级职称
+初级职称
+初级职称
+
+
+
+
+主任医师
+副主任医师
+主治（主管）医师
+（住院）医师
+医士
+
+
+主任药师
+副主任药师
+主管药师
+药师
+药士
+
+
+主任护师
+副主任护师
+主管护师
+护师
+护士
+
+
+主任技师
+副主任技师
+主管技师
+技师
+技士
+
+
+
+就医生职称（主任医师—副主任医师—主治医师—医师—医士）而言，又可以细分为以下十三级（与十二级的高等学校的教师职称类似）。其中，助理医师即医士。
+
+
+
+正高级职称
+副高级职称
+中级职称
+初级职称
+
+
+
+
+特级主任医师
+一级副主任医师
+一级主治医师
+一级医师
+
+
+一级主任医师
+二级副主任医师
+二级主治医师
+二级医师
+
+
+二级主任医师
+三级副主任医师
+三级主治医师
+助理医师
+
+
+三级主任医师
+
+
+
+
+
+
+（职称版）
+
+医士：中专或大专刚毕业后进入医院，就属于医士。在考得执业医师证之后才能 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/05/24/2023-0524-%E5%AD%A6%E6%9C%AF%E5%9C%88%E7%9A%84%E7%AD%89%E7%BA%A7%E5%88%B6%E5%BA%A6/" title="学术圈的等级制度">学术圈的等级制度</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-05-24T15:01:00.000Z" title="发表于 2023-05-24 23:01:00">2023-05-24</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%90%9E%E7%82%B9%E8%AF%BE%E5%A4%96%E7%9F%A5%E8%AF%86/">搞点课外知识</a></span></div><div class="content">虽然我读了个水博，有生之年也没什么希望做出高质量的学术成果或者发出高数量的学术论文，以后更不可能走进学术圈拿教职，但还是有点好奇在读完了本科（学士）、研究生（硕士、博士）之后，再往后的学术圈的等级金字塔大概是长什么样的。
+国内等级制度
+
+毕导的一个 b 站视频：《从博士到教授到院士，中国科研的打怪升级之路》就讲的很清楚。下面是大概的由底层向高层的“升级”路线：
+（不严格职称版）
+
+博士：最高学历，学术圈的入门门槛。
+博士后：俗称博后，实际是一个工作岗位，更像是科研助理。
+讲师（高校）或助理研究员（科研院所）
+副教授（高校）或副研究员（科研院所）
+正教授（高校）或研究员（科研院所）
+
+（荣誉/帽子/Title 版）🎓
+
+青年教师：俗称青椒，大学老师的起点，是指还未获得高校长聘的学者，需要给本科生上课、发论文、申国家自然科学基金项目。国内目前实行非升即走制（Tenure Track），预聘期内（约 6 年）成果达标的晋升长聘为副教授或教授，否则不再续聘。
+“四青”：优青（国自然基金委优秀青年科学基金项目）、青长（教育部青年长江学者）、青拔（中组部万人计划的青年拔尖人才）、青千（中组部千人 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/05/24/2023-0524-%E5%85%B3%E4%BA%8E%E9%A2%84%E5%8D%B0%E6%9C%AC%E7%9A%84%E4%BA%89%E8%AE%AE/" title="关于预印本的争议">关于预印本的争议</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-05-24T13:05:00.000Z" title="发表于 2023-05-24 21:05:00">2023-05-24</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%AD%A6%E6%9C%AF%E6%A8%A1%E5%9D%97/">学术模块</a></span></div><div class="content">根特大学的副教授 Matt Shawkey 在 2017 年的时候曾在 Twitter 上表达了他在正式研究出版物中引用预印本内容的观点，他认为预印本（Preprint）的内容不应和已经经过同行评议的论文等同对待。同时，在 2020 年初新冠病毒 COVID-19 刚开始爆发的时候，就有很多研究人员在 arXiv 等平台上发表关于新冠的预印本论文，此时预印本的即时性就很大程度地帮助科研人员及时分享进展，这对于在病毒迅速变化的爆发阶段下的流行病研究来说尤为重要。那么什么是预印本呢？arXiv 等平台又是什么概念呢？
+预印本概念
+预印本（Preprint）是指作者未经同行评议（Peer Review）就在互联网上发布的含有数据和实验方法的论文稿件。在发布预印本时有些平台会对要发布的论文稿件进行简单的质控，但该过程不需同行评议，一般在一到三个工作日内就能在线发布，供其他科研者免费阅读。与预印本对应的，就是在期刊上正式发表的学术论文，为了保证出版论文的严肃性和可靠性，同行评议等审稿工作就尤为重要，期间可能还需要作者对论文格式、内容进行小修小改，因而要发一篇期刊论文都得几个月的时间。
+预印本（P ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/05/24/2023-0524-sci%E6%9C%9F%E5%88%8A%E4%B8%AD%E7%9A%84OA%E6%9C%9F%E5%88%8A/" title="sci期刊中的OA期刊">sci期刊中的OA期刊</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-05-24T09:21:00.000Z" title="发表于 2023-05-24 17:21:00">2023-05-24</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%AD%A6%E6%9C%AF%E6%A8%A1%E5%9D%97/">学术模块</a></span></div><div class="content">SCI 期刊可以分为 OA 期刊和非 OA 期刊两种。OA 期刊（Open Access Journal，开放获取期刊）即免费公开的期刊，是一种向作者收取版面费的出版方式。传统的期刊运营模式是读者付费订阅，有时候付费价格很高，因而是以高校等单位进行付费的，这也是俄罗斯黑客们要搞个 Sci-Hub 服务器、破解出版社的论文并免费公开的初衷。随着计算机领域尤其是深度学习提倡公开代码以加快领域进步，OA 期刊渐渐变成了一种趋势。而读者不掏钱，总得有人要掏钱，所以就变成了向作者掏钱了。
+OA 级别
+芬兰汉肯经济学院信息系统科学教授 Bo-Christer 在 2017 年发表了一篇文章，"Gold, Green and Black Open Access"（https://doi.org/10.1002/leap.1096），介绍了目前 OA 常见的如下三种模式，并阐述了非法 OA 的影响。总体而言，科研论文发表一年后，约有 25% 可从 gold OA 渠道获取，15-20% 可从合法的 green OA 渠道获取，而其余的绝大多数可从非法的 black OA 渠道找到。
+
+gold OA： ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/11/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/#content-inner">11</a><span class="page-number current">12</span><a class="page-number" href="/page/13/#content-inner">13</a><span class="space">&hellip;</span><a class="page-number" href="/page/19/#content-inner">19</a><a class="extend next" rel="next" href="/page/13/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">zhb</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">111</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">22</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">10</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/08/21/2023-0821-%E7%82%AE%E5%A1%94%E8%BD%AC%E9%80%9F%E4%B8%8E%E5%9D%A6%E5%85%8B%E8%BD%AC%E5%9C%88%E6%88%98%E6%9C%AF/" title="坦克转圈战术与炮塔转速">坦克转圈战术与炮塔转速</a><time datetime="2023-08-21T15:55:00.000Z" title="发表于 2023-08-21 23:55:00">2023-08-21</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/08/16/2023-0816-Hexo%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98/" title="Hexo更换主题">Hexo更换主题</a><time datetime="2023-08-15T17:30:00.000Z" title="发表于 2023-08-16 01:30:00">2023-08-16</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/08/13/2023-0813-ChatPDF%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/" title="ChatPDF使用方法">ChatPDF使用方法</a><time datetime="2023-08-13T12:50:00.000Z" title="发表于 2023-08-13 20:50:00">2023-08-13</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/08/13/2023-0813-%E5%A6%99%E9%B8%AD%E7%9B%B8%E6%9C%BA%E7%AD%89AI%E5%86%99%E7%9C%9F%E8%BD%AF%E4%BB%B6%E5%8E%9F%E7%90%86/" title="妙鸭相机等AI写真软件原理">妙鸭相机等AI写真软件原理</a><time datetime="2023-08-13T11:55:00.000Z" title="发表于 2023-08-13 19:55:00">2023-08-13</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/08/13/2023-0813-%E5%B0%81%E7%A5%9E%E6%BC%94%E4%B9%89%E7%9A%84%E7%AD%89%E7%BA%A7%E5%88%B6%E5%BA%A6/" title="封神演义的等级制度">封神演义的等级制度</a><time datetime="2023-08-13T08:30:00.000Z" title="发表于 2023-08-13 16:30:00">2023-08-13</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            <a class="card-more-btn" href="/categories/" title="查看更多">
+    <i class="fas fa-angle-right"></i></a>
+            </div>
+            <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/MRI/"><span class="card-category-list-name">MRI</span><span class="card-category-list-count">10</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/python/"><span class="card-category-list-name">python</span><span class="card-category-list-count">3</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E4%B8%AA%E4%BA%BA%E5%90%90%E6%A7%BD/"><span class="card-category-list-name">个人吐槽</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"><span class="card-category-list-name">博客搭建</span><span class="card-category-list-count">17</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%AD%A6%E6%9C%AF%E6%A8%A1%E5%9D%97/"><span class="card-category-list-name">学术模块</span><span class="card-category-list-count">23</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%90%9E%E7%82%B9%E8%AF%BE%E5%A4%96%E7%9F%A5%E8%AF%86/"><span class="card-category-list-name">搞点课外知识</span><span class="card-category-list-count">31</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%97%A5%E8%AE%B0/"><span class="card-category-list-name">日记</span><span class="card-category-list-count">10</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%B8%B8%E6%88%8F/"><span class="card-category-list-name">游戏</span><span class="card-category-list-count">7</span></a></li>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/%E5%AE%9E%E7%94%A8%E5%B0%8F%E5%B7%A5%E5%85%B7/" style="font-size: 1.27em; color: #99a0a9">实用小工具</a> <a href="/tags/%E7%94%9F%E6%B4%BB%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE/" style="font-size: 1.16em; color: #999b9e">生活中的数据</a> <a href="/tags/%E6%98%9F%E7%A9%B9%E9%93%81%E9%81%93/" style="font-size: 1.27em; color: #99a0a9">星穹铁道</a> <a href="/tags/%E6%AF%94%E8%B5%9B/" style="font-size: 1.21em; color: #999ea4">比赛</a> <a href="/tags/sci%E8%AE%BA%E6%96%87/" style="font-size: 1.44em; color: #99a7ba">sci论文</a> <a href="/tags/markdown/" style="font-size: 1.16em; color: #999b9e">markdown</a> <a href="/tags/%E5%B8%82%E5%9C%BA%E8%A7%84%E6%A8%A1/" style="font-size: 1.1em; color: #999">市场规模</a> <a href="/tags/%E6%9C%AA%E5%88%86%E7%B1%BB/" style="font-size: 1.5em; color: #99a9bf">未分类</a> <a href="/tags/%E5%B8%82%E5%9C%BA/" style="font-size: 1.33em; color: #99a2af">市场</a> <a href="/tags/%E6%97%85%E6%B8%B8%E6%B5%81%E6%B0%B4%E8%B4%A6/" style="font-size: 1.39em; color: #99a4b4">旅游流水账</a> <a href="/tags/MATLAB/" style="font-size: 1.1em; color: #999">MATLAB</a> <a href="/tags/%E4%B8%93%E5%88%A9/" style="font-size: 1.16em; color: #999b9e">专利</a> <a href="/tags/AI%E6%96%87%E6%9C%AC%E5%A4%84%E7%90%86/" style="font-size: 1.27em; color: #99a0a9">AI文本处理</a> <a href="/tags/%E6%88%98%E9%94%A4/" style="font-size: 1.16em; color: #999b9e">战锤</a> <a href="/tags/typora/" style="font-size: 1.1em; color: #999">typora</a> <a href="/tags/%E7%AD%89%E7%BA%A7%E5%88%B6%E5%BA%A6/" style="font-size: 1.33em; color: #99a2af">等级制度</a> <a href="/tags/AI%E7%BB%98%E7%94%BB/" style="font-size: 1.33em; color: #99a2af">AI绘画</a> <a href="/tags/%E5%BF%83%E7%90%86%E5%AD%A6/" style="font-size: 1.16em; color: #999b9e">心理学</a> <a href="/tags/%E5%8E%9F%E7%A5%9E/" style="font-size: 1.1em; color: #999">原神</a> <a href="/tags/%E7%A5%9E%E8%AF%9D/" style="font-size: 1.16em; color: #999b9e">神话</a> <a href="/tags/%E6%96%87%E7%8C%AE/" style="font-size: 1.27em; color: #99a0a9">文献</a> <a href="/tags/LaTeX/" style="font-size: 1.33em; color: #99a2af">LaTeX</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/08/"><span class="card-archive-list-date">八月 2023</span><span class="card-archive-list-count">15</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/07/"><span class="card-archive-list-date">七月 2023</span><span class="card-archive-list-count">29</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/06/"><span class="card-archive-list-date">六月 2023</span><span class="card-archive-list-count">20</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/05/"><span class="card-archive-list-date">五月 2023</span><span class="card-archive-list-count">29</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/04/"><span class="card-archive-list-date">四月 2023</span><span class="card-archive-list-count">15</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/03/"><span class="card-archive-list-date">三月 2023</span><span class="card-archive-list-count">3</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">111</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2023-08-21T15:56:17.410Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By zhb</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

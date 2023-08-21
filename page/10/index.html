@@ -1,1161 +1,339 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.4.2">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
-
-<link rel="stylesheet" href="/css/main.css">
-
-<link rel="stylesheet" href="fonts.lug.ustc.edu.cn/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"zhb-daydream.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
-  </script>
-
-  <meta property="og:type" content="website">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>zhb木木三的个人网页 - 个人博客的新尝试（页面渲染需要时间，请耐心等待）</title><meta name="author" content="zhb"><meta name="copyright" content="zhb"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
 <meta property="og:title" content="zhb木木三的个人网页">
 <meta property="og:url" content="https://zhb-daydream.github.io/page/10/index.html">
 <meta property="og:site_name" content="zhb木木三的个人网页">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
 <meta property="article:author" content="zhb">
 <meta name="twitter:card" content="summary">
-
-<link rel="canonical" href="https://zhb-daydream.github.io/page/10/">
-
-
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : true,
-    isPost : false,
-    lang   : 'zh-CN'
-  };
-</script>
-
-  <title>zhb木木三的个人网页</title>
-  
-
-
-
-
-
-
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
+<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://zhb-daydream.github.io/page/10/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'zhb木木三的个人网页',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2023-08-21 23:56:17'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
   }
 
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
 
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
 
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.2">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
-
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
-    </div>
-  </div>
-
-  <div class="site-meta">
-
-    <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">zhb木木三的个人网页</h1>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-      <p class="site-subtitle" itemprop="description">个人博客的新尝试（页面渲染需要时间，请耐心等待）</p>
-  </div>
-
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-    </div>
-  </div>
-</div>
-
-
-
-
-<nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
-
-  </li>
-  </ul>
-</nav>
-
-
-
-
-</div>
-    </header>
-
-    
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
-
-
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
-
-          <div class="content index posts-expand">
-            
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/06/18/2023-0618-%E5%B4%A9%E5%9D%8F%E6%98%9F%E7%A9%B9%E9%93%81%E9%81%93%E8%87%AA%E5%A1%91%E5%B0%98%E8%84%82%E4%BC%98%E5%85%88%E7%BA%A7/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="zhb">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="zhb木木三的个人网页">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/06/18/2023-0618-%E5%B4%A9%E5%9D%8F%E6%98%9F%E7%A9%B9%E9%93%81%E9%81%93%E8%87%AA%E5%A1%91%E5%B0%98%E8%84%82%E4%BC%98%E5%85%88%E7%BA%A7/" class="post-title-link" itemprop="url">崩坏星穹铁道自塑尘脂优先级</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2023-06-18 15:00:00 / 修改时间：15:01:09" itemprop="dateCreated datePublished" datetime="2023-06-18T15:00:00+08:00">2023-06-18</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%B8%B8%E6%88%8F/" itemprop="url" rel="index"><span itemprop="name">游戏</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>1</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><img src="/ref_pic/崩铁自塑尘脂优先级.jpg"></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/06/17/2023-0617-%E5%8E%9F%E7%A5%9E%E5%85%A8%E8%A7%92%E8%89%B2%E9%9D%A2%E6%9D%BF/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="zhb">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="zhb木木三的个人网页">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/06/17/2023-0617-%E5%8E%9F%E7%A5%9E%E5%85%A8%E8%A7%92%E8%89%B2%E9%9D%A2%E6%9D%BF/" class="post-title-link" itemprop="url">原神全角色面板</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2023-06-17 22:30:00 / 修改时间：22:30:12" itemprop="dateCreated datePublished" datetime="2023-06-17T22:30:00+08:00">2023-06-17</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%B8%B8%E6%88%8F/" itemprop="url" rel="index"><span itemprop="name">游戏</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>92</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>参考 NGA 论坛：https://nga.178.com/read.php?tid=25843014&amp;rand=65</p>
-<h2 id="草系">草系</h2>
-<p><img src="/ref_pic/原神角色面板-草系.jpg"></p>
-<h2 id="火系">火系</h2>
-<p><img src="/ref_pic/原神角色面板-火系.jpg"></p>
-<h2 id="水系">水系</h2>
-<p><img src="/ref_pic/原神角色面板-水系.jpg"></p>
-<h2 id="风系">风系</h2>
-<p><img src="/ref_pic/原神角色面板-风系.jpg"></p>
-<h2 id="雷系">雷系</h2>
-<p><img src="/ref_pic/原神角色面板-雷系.jpg"></p>
-<h2 id="冰系">冰系</h2>
-<p><img src="/ref_pic/原神角色面板-冰系.jpg"></p>
-<h2 id="岩系">岩系</h2>
-<p><img src="/ref_pic/原神角色面板-岩系.jpg"></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/06/17/2023-0617-%E5%B4%A9%E5%9D%8F%E6%98%9F%E7%A9%B9%E9%93%81%E9%81%93%E5%85%A8%E8%A7%92%E8%89%B2%E9%9D%A2%E6%9D%BF/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="zhb">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="zhb木木三的个人网页">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/06/17/2023-0617-%E5%B4%A9%E5%9D%8F%E6%98%9F%E7%A9%B9%E9%93%81%E9%81%93%E5%85%A8%E8%A7%92%E8%89%B2%E9%9D%A2%E6%9D%BF/" class="post-title-link" itemprop="url">崩坏星穹铁道全角色面板</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-06-17 22:22:00" itemprop="dateCreated datePublished" datetime="2023-06-17T22:22:00+08:00">2023-06-17</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-06-18 14:59:57" itemprop="dateModified" datetime="2023-06-18T14:59:57+08:00">2023-06-18</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%B8%B8%E6%88%8F/" itemprop="url" rel="index"><span itemprop="name">游戏</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>82</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>参考 NGA 论坛：https://ngabbs.com/read.php?tid=36580156&amp;rand=448</p>
-<h2 id="毁灭命途">毁灭命途</h2>
-<p><img src="/ref_pic/崩铁角色面板-毁灭.jpg"></p>
-<h2 id="巡猎命途">巡猎命途</h2>
-<p><img src="/ref_pic/崩铁角色面板-巡猎.jpg"></p>
-<h2 id="智识命途">智识命途</h2>
-<p><img src="/ref_pic/崩铁角色面板-智识.jpg"></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/06/17/2023-0617-%E5%A6%82%E4%BD%95%E6%AD%A3%E7%A1%AE%E4%BD%BF%E7%94%A8%E6%8B%90%E6%9D%96/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="zhb">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="zhb木木三的个人网页">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/06/17/2023-0617-%E5%A6%82%E4%BD%95%E6%AD%A3%E7%A1%AE%E4%BD%BF%E7%94%A8%E6%8B%90%E6%9D%96/" class="post-title-link" itemprop="url">如何正确使用拐杖</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2023-06-17 22:03:00 / 修改时间：22:27:02" itemprop="dateCreated datePublished" datetime="2023-06-17T22:03:00+08:00">2023-06-17</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%90%9E%E7%82%B9%E8%AF%BE%E5%A4%96%E7%9F%A5%E8%AF%86/" itemprop="url" rel="index"><span itemprop="name">搞点课外知识</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>993</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>3 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>（注：致我的崴到脚的女朋友。）</p>
-<h2 id="拐杖定义">拐杖定义</h2>
-<p>拐杖是—种辅助行走的简单器械（通常是一根木制或金属棍子）也是一种重要的医疗康复辅助用具。一般有以下三种分类：</p>
-<ul>
-<li>手杖：主要用于轻度需要例如老年人或登山者，不属于残疾人用品</li>
-<li>肘杖：肘杖属于中度下肢残疾人用品</li>
-<li>腋杖：腋杖是下肢重度残疾者（病残伤残等）的必需品，一般是左右各一个</li>
-</ul>
-<p><img src="/ref_pic/拐杖使用-1.png"></p>
-<h2 id="拐杖挑选">拐杖挑选</h2>
-<p><img src="/ref_pic/拐杖使用2.png"></p>
-<h2 id="负重程度">负重程度</h2>
-<p>使用拐杖的目的就是减轻或避免下肢负重、帮助维持身体平衡。而根据患者症状，医生一般会划分为五种负重程度（即使用拐杖时要达到的目的）：</p>
-<ul>
-<li>不负重（Non-weightbearing，NWB）∶即患腿不受力，也就是保持你的患腿离开地面</li>
-<li>轻负重（Feather-weightbearing，FeWB）∶可以用脚趾点地来维持平衡</li>
-<li>部分负重（Partial-weightbearing，PWB）∶可以将身体部分体重分担到患腿上</li>
-<li>可忍耐负重（Weightbearing as tolerated，WBAT）∶将大部分体重甚至所有重量负担到患脚，能忍耐即可</li>
-<li>全负重（Full-weightbearing，FWB）∶只要患肢不痛，可完全受力</li>
-</ul>
-<h2 id="单拐放置位置">单拐放置位置</h2>
-<p>使用单拐时，单拐的放置位置会有患侧、健侧两种选择：</p>
-<ul>
-<li>对于截肢患者：单拐应在患侧，用拐杖代替患肢实现行走功能</li>
-<li>对于不能完全负重患者：单拐应在健侧，用于将重心放在健侧，从而减少患侧的负重与身体横向移动，增加身体稳定性</li>
-</ul>
-<h2 id="单拐步态">单拐步态</h2>
-<p><strong>平地行走</strong></p>
-<ol type="1">
-<li>正常站立保持稳定</li>
-<li>重心转移到健侧</li>
-<li>患腿与拐杖同时向前迈（向前距离一致，横向宽度要给健侧腿留有空间）</li>
-<li>重心转移到患腿和拐杖</li>
-<li>健侧腿向前迈</li>
-<li>回到第 2 步</li>
-</ol>
-<p><img src="/ref_pic/拐杖使用3.png"></p>
-<p><strong>上楼梯</strong></p>
-<ol type="1">
-<li>健侧腿迈上台阶</li>
-<li>重心转移到健侧腿</li>
-<li>拐杖与患腿迈上台阶</li>
-<li>回到第 1 步</li>
-</ol>
-<p><img src="/ref_pic/拐杖使用4.png"></p>
-<p><strong>下楼梯</strong></p>
-<ol type="1">
-<li>重心在健侧腿上</li>
-<li>拐杖与患腿迈到下一个台阶</li>
-<li>重心移到拐杖与患腿上</li>
-<li>迈出健侧腿</li>
-<li>回到第 1 步</li>
-</ol>
-<p><img src="/ref_pic/拐杖使用5.png"></p>
-<p><strong>==注意==</strong>：用握住拐杖手柄来支撑你的体重，不是用腋窝顶在拐杖上。因腋窝有重要的血管神经丛通过，以免受压损伤</p>
-<h2 id="参考资料">参考资料</h2>
-<p>《教你如何使用“第三只腿”》：https://www.cn-healthcare.com/articlewm/20201022/content-1155786.html</p>
-<p>《单拐，拄患侧还是健侧？可别再继续错下去了 ！》：https://zhuanlan.zhihu.com/p/106179133</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/06/16/2023-0616-%E4%B8%93%E5%88%A9%E7%94%B3%E8%AF%B7%E6%B5%81%E7%A8%8B/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="zhb">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="zhb木木三的个人网页">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/06/16/2023-0616-%E4%B8%93%E5%88%A9%E7%94%B3%E8%AF%B7%E6%B5%81%E7%A8%8B/" class="post-title-link" itemprop="url">专利申请流程</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2023-06-16 17:52:00 / 修改时间：17:52:48" itemprop="dateCreated datePublished" datetime="2023-06-16T17:52:00+08:00">2023-06-16</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%90%9E%E7%82%B9%E8%AF%BE%E5%A4%96%E7%9F%A5%E8%AF%86/" itemprop="url" rel="index"><span itemprop="name">搞点课外知识</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>1.3k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>4 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="专利类型">专利类型</h2>
-<ul>
-<li><strong>发明专利</strong>：针对产品、方法或者产品、方法的改进所提出的新的技术方案。</li>
-<li><strong>实用新型专利</strong>：针对产品的形状、构造或者其结合所提出的适于实用的新的技术方案。</li>
-<li><strong>外观设计专利</strong>：针对产品的形状、图案或者其结合以及色彩与形状、图案的结合所作出的富有美感并适于工业应用的新设计。</li>
-</ul>
-<h2 id="涉及的人员类型">涉及的人员类型</h2>
-<ul>
-<li>发明人：即作者（第一发明人对应于论文的一作）。必须是法人，一篇专利可有多个发明人。</li>
-<li>申请人：拥有专利权利的所有人及持有人（专利授权前的称呼）。也称专利申请权人，包括自然人、各单位、院校、企业。</li>
-<li>专利权人：拥有专利权利的所有人及持有人（专利授权后的称呼）。包括自然人、各单位、院校、企业。</li>
-<li>代理人：受申请人委托，为其办理专利申请、转让、许可等事务的代办人</li>
-</ul>
-<h2 id="专利申请流程">专利申请流程</h2>
-<p>对于<strong>发明专利</strong>而言：</p>
-<ol type="1">
-<li>提出申请</li>
-<li>专利局受理</li>
-<li>初步审查</li>
-<li>公布阶段</li>
-<li>实质审查（含第一次审查意见等）</li>
-<li>授权公告</li>
-</ol>
-<p>对于<strong>实用新型专利</strong>和<strong>外观设计专利</strong>而言：</p>
-<ol type="1">
-<li>提出申请</li>
-<li>专利局受理</li>
-<li>初步审查</li>
-<li>授权公告</li>
-</ol>
-<h2 id="审查周期">审查周期</h2>
-<table>
-<thead>
-<tr class="header">
-<th></th>
-<th>普通申请通道审查周期</th>
-<th>优先审查通道审查周期</th>
-<th>快速预审通道审查周期</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>发明</td>
-<td>18-26个月</td>
-<td>7-12个月</td>
-<td>3-6个月</td>
-</tr>
-<tr class="even">
-<td>实用新型</td>
-<td>7-8个月</td>
-<td>3-6个月</td>
-<td>1-2个月</td>
-</tr>
-<tr class="odd">
-<td>外观设计</td>
-<td>3-6个月</td>
-<td>3-6个月</td>
-<td>5-7个工作日</td>
-</tr>
-</tbody>
-</table>
-<p><strong>优先审查</strong>通道需要满⾜以下条件（主要是对领域的要求）：</p>
-<ol type="1">
-<li>涉及国家大力扶持的领域（如新材料、新能源、生物医药、节能环保、智能制造、互联网大数据等）。</li>
-<li>属于各省级、市级重点扶持的领域。</li>
-<li>申请人已经做好专利内容的实施准备或者已经开始实施。</li>
-</ol>
-<p><strong>快速预审</strong>通道需要满⾜以下条件：</p>
-<ol type="1">
-<li>权利人的注册或登记地在保护中⼼所属⾏政区域，且为具有独⽴法⼈资格的企业、高校或科研院所；</li>
-<li>权利人的⽣产、研发或经营⽅向，属于保护中⼼的快速预审领域，即高端装备制造产业或新材料产业；</li>
-<li>权利人没有非正常专利申请、故意侵犯他人知识产权等不良记录。</li>
-</ol>
-<p>我自己申请的一个参考时间节点</p>
-<ul>
-<li>2022.4.29 想写专利</li>
-<li>2022.6.15 完成技术交底书并交给专利代理中介</li>
-<li>2022.7.14 中介代理人定稿并申报</li>
-<li>2022.7.28 知识产权保护中心预审并下发了预审意见（形式问题，一天答复时间）</li>
-<li>2022.8.1 专利局受理</li>
-<li>2022.9.2 进入实质审查</li>
-<li>2022.9.14 发出一审结果（一些形式问题，没有原创性问题）</li>
-<li>2022.9.28 授权通知</li>
-<li>2022.10.25 授权公告</li>
-</ul>
-<h2 id="费用">费用</h2>
-<table>
-<thead>
-<tr class="header">
-<th>（仅供参考）</th>
-<th>发明</th>
-<th>实用新型</th>
-<th>外观设计</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>快速预审费</td>
-<td>1500元</td>
-<td>1500元</td>
-<td>1500元</td>
-</tr>
-<tr class="even">
-<td>申请费</td>
-<td>950元</td>
-<td>500元</td>
-<td>500元</td>
-</tr>
-<tr class="odd">
-<td>审查费</td>
-<td>2500元</td>
-<td>0元</td>
-<td>0元</td>
-</tr>
-<tr class="even">
-<td>专利登记费（授权后）</td>
-<td>255元</td>
-<td>205元</td>
-<td>205元</td>
-</tr>
-<tr class="odd">
-<td>第1年-第3年的年费（授权后）</td>
-<td>900元/年</td>
-<td>600元/年</td>
-<td>600元/年</td>
-</tr>
-<tr class="even">
-<td>第4年-第6年的年费（授权后）</td>
-<td>1200元/年</td>
-<td>900元/年</td>
-<td>900元/年</td>
-</tr>
-<tr class="odd">
-<td>第7年-第9年的年费（授权后）</td>
-<td>2000元/年</td>
-<td>1200元/年</td>
-<td>1200元/年</td>
-</tr>
-<tr class="even">
-<td>第10年-第12年的年费（授权后）</td>
-<td>4000元/年</td>
-<td>2000元/年</td>
-<td>2000元/年</td>
-</tr>
-</tbody>
-</table>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/06/16/2023-0616-%E5%A6%82%E4%BD%95%E6%9F%A5%E9%98%85%E4%B8%93%E5%88%A9/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="zhb">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="zhb木木三的个人网页">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/06/16/2023-0616-%E5%A6%82%E4%BD%95%E6%9F%A5%E9%98%85%E4%B8%93%E5%88%A9/" class="post-title-link" itemprop="url">如何查阅专利</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-06-16 16:27:00" itemprop="dateCreated datePublished" datetime="2023-06-16T16:27:00+08:00">2023-06-16</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-08-03 15:48:23" itemprop="dateModified" datetime="2023-08-03T15:48:23+08:00">2023-08-03</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%90%9E%E7%82%B9%E8%AF%BE%E5%A4%96%E7%9F%A5%E8%AF%86/" itemprop="url" rel="index"><span itemprop="name">搞点课外知识</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>870</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>3 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>一篇专利，除了其正文内容比较重要以外，它的申请人、发明人、申请时间、法律状态等信息也同样重要，因此一个方便好用（甚至免费）的查询渠道就比较关键。</p>
-<h1 id="推荐平台">推荐平台</h1>
-<h2 id="专利汇star">专利汇<span class="github-emoji"><span>⭐</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></h2>
-<p>网址是：www.patenthub.cn（看起来和代码管理的 github、文献下载的 scihub 一样，都有个 hub，比较好记）。</p>
-<p>很推荐该平台，主打一个免费方便，能满足大部分的使用需求。</p>
-<ul>
-<li>注册即用</li>
-<li>响应速度（比官方的查阅系统）快</li>
-<li>PDF 文件下载无限制</li>
-<li>数据更新快（能查到一篇 10 天前刚授权的专利）</li>
-<li>筛选功能全</li>
-</ul>
-<p><img src="/ref_pic/专利汇检索页面.png"></p>
-<h2 id="知嘟嘟">知嘟嘟</h2>
-<p>网址是：https://www.iprdb.com/。</p>
-<p>推荐作为专利汇的备选，注册即用，响应速度很快。</p>
-<h1 id="政府平台不太好用">政府平台（不太好用）</h1>
-<h2 id="中国专利公布公告">中国专利公布公告</h2>
-<p>网址是：http://epub.cnipa.gov.cn/，属于国家知识产权局下的政府网站，主办单位：国家知识产权局　软件维护：知识产权出版社。</p>
-<p>不推荐使用，免注册、检索速度慢（一分钟过去可能还是啥也没有）。放这里纯是当一个反面例子。</p>
-<h2 id="中国及多国专利审查信息查询">中国及多国专利审查信息查询</h2>
-<p>网址是：https://link.zhihu.com/?target=http%3A//cpquery.cnipa.gov.cn/，属于国家知识产权局下的政府网站。</p>
-<p>不推荐使用，全面权威，但响应速度慢（时不时就加载不出来）。</p>
-<h2 id="专利检索及分析">专利检索及分析</h2>
-<p>网址是：https://pss-system.cponline.cnipa.gov.cn/conventionalSearch</p>
-<p>不推荐使用，注册即可免费使用，但响应速度慢。</p>
-<h1 id="其他平台">其他平台</h1>
-<h2 id="谷歌专利">谷歌专利</h2>
-<p>网址是：https://patents.google.com/。</p>
-<p>可以检索到各专利信息，也可以免费下载，但检索结果的统计信息似乎要比专利汇的少一点。</p>
-<h2 id="高校">高校</h2>
-<p>一般各高校图书馆网址里的电子资源等栏目里，都有对应的专利搜索引擎入口，通过高校游客账号访问即可。</p>
-<h1 id="参考资料">参考资料</h1>
-<p>知乎专栏《免费的专利检索网站有哪些？》：https://zhuanlan.zhihu.com/p/604738907</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/9/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><span class="page-number current">10</span><a class="page-number" href="/page/11/">11</a><span class="space">&hellip;</span><a class="page-number" href="/page/19/">19</a><a class="extend next" rel="next" href="/page/11/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
-  </nav>
-
-
-
-          </div>
-          
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
-
-        </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">zhb</p>
-  <div class="site-description" itemprop="description"></div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">109</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-          
-        <span class="site-state-item-count">10</span>
-        <span class="site-state-item-name">分类</span></a>
-      </div>
-      <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-          
-        <span class="site-state-item-count">17</span>
-        <span class="site-state-item-name">标签</span></a>
-      </div>
-  </nav>
-</div>
-
-
-
-      </div>
-
-    </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        
-
-<div class="copyright">
-  
-  &copy; 
-  <span itemprop="copyrightYear">2023</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">zhb</span>
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item-icon">
-      <i class="fa fa-chart-area"></i>
-    </span>
-    <span title="站点总字数">145k</span>
-</div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
-  </div>
-
-        
-
-
-
-
-
-
-
-
-      </div>
-    </footer>
-  </div>
-
-  
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
-
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/muse.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-<script>
-if (document.querySelectorAll('pre.mermaid').length) {
-  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
-    mermaid.initialize({
-      theme    : 'forest',
-      logLevel : 3,
-      flowchart: { curve     : 'linear' },
-      gantt    : { axisFormat: '%m/%d/%Y' },
-      sequence : { actorMargin: 50 }
-    });
-  }, window.mermaid);
+<style>mjx-container[jax="SVG"] {
+  direction: ltr;
 }
-</script>
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">111</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">22</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">10</div></a></div><hr class="custom-hr"/></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="zhb木木三的个人网页"><span class="site-name">zhb木木三的个人网页</span></a></span><div id="menus"><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">zhb木木三的个人网页</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/06/20/2023-0620-MRI%E5%9B%BE%E5%83%8F%E8%B4%A8%E9%87%8F%E8%AF%84%E4%BC%B0%E6%8C%87%E6%A0%87/" title="MRI图像质量评估指标">MRI图像质量评估指标</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-06-20T10:00:00.000Z" title="发表于 2023-06-20 18:00:00">2023-06-20</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/MRI/">MRI</a></span></div><div class="content">噪声功率 AP
+用于评估噪声大小：噪声功率（AP，Artifact Power），通过以下公式定义，其中 \(I^{recon}(x,y)\) 表示利用待评估图像，\(I^{ref}(x,y)\) 表示参考图像（一般是全采样得到的图像）。 \[
+AP=\frac{\sum_{xy} |\ |I^{recon}(x,y)|-|I^{ref}(x,y)|\ |^2}{\sum_{xy}|I^{ref}(x,y)|^2}\times 100\%
+\] 噪声功率数值越大，表示噪声影响程度越大，图像质量越低。
+信噪比 SNR
+用于评估图像中有效信号与噪声信号的对比参数：信噪比（SNR，Signal to Noise Ratio），通过以下公式定义，其中 \(S\) 表示参考图像的协方差，反映图像的有效信息，\(N\) 表示参考图像与待评估图像直接的均方误差，反映待评估图像相对于参考图像的噪声程度。 \[
+SNR(dB)=10log_{10}{\frac{S}{N}}
+\] 信噪比通常以分贝数 \(dB\) 表示，数值越高，表示图像质量越高。
+峰值信噪比 PSNR
+用于最大值信号与背景噪声之间的对 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/06/20/2023-0620-SNR%E5%9B%BE%E7%9A%84%E5%AE%9A%E4%B9%89%E4%B8%8E%E7%BB%98%E5%88%B6/" title="SNR图的定义与绘制">SNR图的定义与绘制</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-06-20T05:05:00.000Z" title="发表于 2023-06-20 13:05:00">2023-06-20</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/MRI/">MRI</a></span></div><div class="content">评估 MRI 图像质量的一些常见定量指标有 SNR（信噪比）、PSNR（峰值信噪比）、AP（噪声功率）、SSIM（结构相似度）、g-factor（结构因子）等等，这里就先从最基本的 SNR 及其衍生的 SNR map 讲起。
+SNR 定义
+一般而言，SNR（Signal to Noise Ratio）是一个值（单位分贝，dB），通过以下公式定义，其中  表示参考图像的协方差、反映图像的有效信息， 表示参考图像与待评估图像直接的均方误差、反映待评估图像相对于参考图像的噪声程度。SNR 数值越高，表示图像质量越高。  背景噪声主要是来自于线圈阻抗、功放电子噪声、成像物体介电效应等的热噪声，要与结构噪声（structured noise）如运动伪影、鬼影（ghosting）、滤波、重建等引入的信号区分开。
+噪声估计
+由于采集、重建的 MR 信号是复数信号，而后续基于图像幅值的 SNR 分析中需要将 MR 信号转化为幅值实数，因而在该过程中，背景噪声的分布由原来的高斯分布（Gaussian distribution）变为莱斯分布（Rician distribution），这会使噪声的统计性质发 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/06/18/2023-0618-%E5%B4%A9%E5%9D%8F%E6%98%9F%E7%A9%B9%E9%93%81%E9%81%93%E8%87%AA%E5%A1%91%E5%B0%98%E8%84%82%E4%BC%98%E5%85%88%E7%BA%A7/" title="崩坏星穹铁道自塑尘脂优先级">崩坏星穹铁道自塑尘脂优先级</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-06-18T07:00:00.000Z" title="发表于 2023-06-18 15:00:00">2023-06-18</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%B8%B8%E6%88%8F/">游戏</a></span></div><div class="content">
+</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/06/17/2023-0617-%E5%8E%9F%E7%A5%9E%E5%85%A8%E8%A7%92%E8%89%B2%E9%9D%A2%E6%9D%BF/" title="原神全角色面板">原神全角色面板</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-06-17T14:30:00.000Z" title="发表于 2023-06-17 22:30:00">2023-06-17</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%B8%B8%E6%88%8F/">游戏</a></span></div><div class="content">参考 NGA 论坛：https://nga.178.com/read.php?tid=25843014&amp;rand=65
+草系
+
+火系
+
+水系
+
+风系
+
+雷系
+
+冰系
+
+岩系
+
+</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/06/17/2023-0617-%E5%B4%A9%E5%9D%8F%E6%98%9F%E7%A9%B9%E9%93%81%E9%81%93%E5%85%A8%E8%A7%92%E8%89%B2%E9%9D%A2%E6%9D%BF/" title="崩坏星穹铁道全角色面板">崩坏星穹铁道全角色面板</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-06-17T14:22:00.000Z" title="发表于 2023-06-17 22:22:00">2023-06-17</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%B8%B8%E6%88%8F/">游戏</a></span></div><div class="content">参考 NGA 论坛：https://ngabbs.com/read.php?tid=36580156&amp;rand=448
+毁灭命途
+
+巡猎命途
+
+智识命途
+
+</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/06/17/2023-0617-%E5%A6%82%E4%BD%95%E6%AD%A3%E7%A1%AE%E4%BD%BF%E7%94%A8%E6%8B%90%E6%9D%96/" title="如何正确使用拐杖">如何正确使用拐杖</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-06-17T14:03:00.000Z" title="发表于 2023-06-17 22:03:00">2023-06-17</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%90%9E%E7%82%B9%E8%AF%BE%E5%A4%96%E7%9F%A5%E8%AF%86/">搞点课外知识</a></span></div><div class="content">（注：致我的崴到脚的女朋友。）
+拐杖定义
+拐杖是—种辅助行走的简单器械（通常是一根木制或金属棍子）也是一种重要的医疗康复辅助用具。一般有以下三种分类：
+
+手杖：主要用于轻度需要例如老年人或登山者，不属于残疾人用品
+肘杖：肘杖属于中度下肢残疾人用品
+腋杖：腋杖是下肢重度残疾者（病残伤残等）的必需品，一般是左右各一个
 
 
-  
+拐杖挑选
 
-  
-      
+负重程度
+使用拐杖的目的就是减轻或避免下肢负重、帮助维持身体平衡。而根据患者症状，医生一般会划分为五种负重程度（即使用拐杖时要达到的目的）：
 
-<script>
-  if (typeof MathJax === 'undefined') {
-    window.MathJax = {
-      loader: {
-          load: ['[tex]/mhchem'],
-        source: {
-          '[tex]/amsCd': '[tex]/amscd',
-          '[tex]/AMScd': '[tex]/amscd'
-        }
-      },
-      tex: {
-        inlineMath: {'[+]': [['$', '$']]},
-          packages: {'[+]': ['mhchem']},
-        tags: 'ams'
-      },
-      options: {
-        renderActions: {
-          findScript: [10, doc => {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
-              const display = !!node.type.match(/; *mode=display/);
-              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-              const text = document.createTextNode('');
-              node.parentNode.replaceChild(text, node);
-              math.start = {node: text, delim: '', n: 0};
-              math.end = {node: text, delim: '', n: 0};
-              doc.math.push(math);
-            });
-          }, '', false],
-          insertedScript: [200, () => {
-            document.querySelectorAll('mjx-container').forEach(node => {
-              let target = node.parentNode;
-              if (target.nodeName.toLowerCase() === 'li') {
-                target.parentNode.classList.add('has-jax');
-              }
-            });
-          }, '', false]
-        }
-      }
-    };
-    (function () {
-      var script = document.createElement('script');
-      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
-      script.defer = true;
-      document.head.appendChild(script);
-    })();
-  } else {
-    MathJax.startup.document.state(0);
-    MathJax.texReset();
-    MathJax.typeset();
-  }
-</script>
+不负重（Non-weightbearing，NWB）∶即患腿不受力，也就是保持你的患腿离开地面
+轻负重（Feather-weightbearing，FeWB）∶可以用脚趾点地来维持平衡
+部分负重（Partial-weightbearing，PWB）∶可以将身体部分体重分担到患腿上
+可忍耐负重（Weightbearing as tolerated，WBAT）∶将大部分体重甚至所有重量负担到患脚，能忍耐即可
+全负重（Full-weightbearing，FWB）∶只要患肢不痛，可完全受力
 
-    
-
-  
-
-</body>
-</html>
+单拐放置位置
+使用单拐时，单拐的 ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/9/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/#content-inner">9</a><span class="page-number current">10</span><a class="page-number" href="/page/11/#content-inner">11</a><span class="space">&hellip;</span><a class="page-number" href="/page/19/#content-inner">19</a><a class="extend next" rel="next" href="/page/11/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">zhb</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">111</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">22</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">10</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/08/21/2023-0821-%E7%82%AE%E5%A1%94%E8%BD%AC%E9%80%9F%E4%B8%8E%E5%9D%A6%E5%85%8B%E8%BD%AC%E5%9C%88%E6%88%98%E6%9C%AF/" title="坦克转圈战术与炮塔转速">坦克转圈战术与炮塔转速</a><time datetime="2023-08-21T15:55:00.000Z" title="发表于 2023-08-21 23:55:00">2023-08-21</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/08/16/2023-0816-Hexo%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98/" title="Hexo更换主题">Hexo更换主题</a><time datetime="2023-08-15T17:30:00.000Z" title="发表于 2023-08-16 01:30:00">2023-08-16</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/08/13/2023-0813-ChatPDF%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/" title="ChatPDF使用方法">ChatPDF使用方法</a><time datetime="2023-08-13T12:50:00.000Z" title="发表于 2023-08-13 20:50:00">2023-08-13</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/08/13/2023-0813-%E5%A6%99%E9%B8%AD%E7%9B%B8%E6%9C%BA%E7%AD%89AI%E5%86%99%E7%9C%9F%E8%BD%AF%E4%BB%B6%E5%8E%9F%E7%90%86/" title="妙鸭相机等AI写真软件原理">妙鸭相机等AI写真软件原理</a><time datetime="2023-08-13T11:55:00.000Z" title="发表于 2023-08-13 19:55:00">2023-08-13</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/08/13/2023-0813-%E5%B0%81%E7%A5%9E%E6%BC%94%E4%B9%89%E7%9A%84%E7%AD%89%E7%BA%A7%E5%88%B6%E5%BA%A6/" title="封神演义的等级制度">封神演义的等级制度</a><time datetime="2023-08-13T08:30:00.000Z" title="发表于 2023-08-13 16:30:00">2023-08-13</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            <a class="card-more-btn" href="/categories/" title="查看更多">
+    <i class="fas fa-angle-right"></i></a>
+            </div>
+            <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/MRI/"><span class="card-category-list-name">MRI</span><span class="card-category-list-count">10</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/python/"><span class="card-category-list-name">python</span><span class="card-category-list-count">3</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E4%B8%AA%E4%BA%BA%E5%90%90%E6%A7%BD/"><span class="card-category-list-name">个人吐槽</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"><span class="card-category-list-name">博客搭建</span><span class="card-category-list-count">17</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%AD%A6%E6%9C%AF%E6%A8%A1%E5%9D%97/"><span class="card-category-list-name">学术模块</span><span class="card-category-list-count">23</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%90%9E%E7%82%B9%E8%AF%BE%E5%A4%96%E7%9F%A5%E8%AF%86/"><span class="card-category-list-name">搞点课外知识</span><span class="card-category-list-count">31</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%97%A5%E8%AE%B0/"><span class="card-category-list-name">日记</span><span class="card-category-list-count">10</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%B8%B8%E6%88%8F/"><span class="card-category-list-name">游戏</span><span class="card-category-list-count">7</span></a></li>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/%E5%AE%9E%E7%94%A8%E5%B0%8F%E5%B7%A5%E5%85%B7/" style="font-size: 1.27em; color: #99a0a9">实用小工具</a> <a href="/tags/%E7%94%9F%E6%B4%BB%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE/" style="font-size: 1.16em; color: #999b9e">生活中的数据</a> <a href="/tags/%E6%98%9F%E7%A9%B9%E9%93%81%E9%81%93/" style="font-size: 1.27em; color: #99a0a9">星穹铁道</a> <a href="/tags/%E6%AF%94%E8%B5%9B/" style="font-size: 1.21em; color: #999ea4">比赛</a> <a href="/tags/sci%E8%AE%BA%E6%96%87/" style="font-size: 1.44em; color: #99a7ba">sci论文</a> <a href="/tags/markdown/" style="font-size: 1.16em; color: #999b9e">markdown</a> <a href="/tags/%E5%B8%82%E5%9C%BA%E8%A7%84%E6%A8%A1/" style="font-size: 1.1em; color: #999">市场规模</a> <a href="/tags/%E6%9C%AA%E5%88%86%E7%B1%BB/" style="font-size: 1.5em; color: #99a9bf">未分类</a> <a href="/tags/%E5%B8%82%E5%9C%BA/" style="font-size: 1.33em; color: #99a2af">市场</a> <a href="/tags/%E6%97%85%E6%B8%B8%E6%B5%81%E6%B0%B4%E8%B4%A6/" style="font-size: 1.39em; color: #99a4b4">旅游流水账</a> <a href="/tags/MATLAB/" style="font-size: 1.1em; color: #999">MATLAB</a> <a href="/tags/%E4%B8%93%E5%88%A9/" style="font-size: 1.16em; color: #999b9e">专利</a> <a href="/tags/AI%E6%96%87%E6%9C%AC%E5%A4%84%E7%90%86/" style="font-size: 1.27em; color: #99a0a9">AI文本处理</a> <a href="/tags/%E6%88%98%E9%94%A4/" style="font-size: 1.16em; color: #999b9e">战锤</a> <a href="/tags/typora/" style="font-size: 1.1em; color: #999">typora</a> <a href="/tags/%E7%AD%89%E7%BA%A7%E5%88%B6%E5%BA%A6/" style="font-size: 1.33em; color: #99a2af">等级制度</a> <a href="/tags/AI%E7%BB%98%E7%94%BB/" style="font-size: 1.33em; color: #99a2af">AI绘画</a> <a href="/tags/%E5%BF%83%E7%90%86%E5%AD%A6/" style="font-size: 1.16em; color: #999b9e">心理学</a> <a href="/tags/%E5%8E%9F%E7%A5%9E/" style="font-size: 1.1em; color: #999">原神</a> <a href="/tags/%E7%A5%9E%E8%AF%9D/" style="font-size: 1.16em; color: #999b9e">神话</a> <a href="/tags/%E6%96%87%E7%8C%AE/" style="font-size: 1.27em; color: #99a0a9">文献</a> <a href="/tags/LaTeX/" style="font-size: 1.33em; color: #99a2af">LaTeX</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/08/"><span class="card-archive-list-date">八月 2023</span><span class="card-archive-list-count">15</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/07/"><span class="card-archive-list-date">七月 2023</span><span class="card-archive-list-count">29</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/06/"><span class="card-archive-list-date">六月 2023</span><span class="card-archive-list-count">20</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/05/"><span class="card-archive-list-date">五月 2023</span><span class="card-archive-list-count">29</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/04/"><span class="card-archive-list-date">四月 2023</span><span class="card-archive-list-count">15</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/03/"><span class="card-archive-list-date">三月 2023</span><span class="card-archive-list-count">3</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">111</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2023-08-21T15:56:17.410Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By zhb</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

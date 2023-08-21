@@ -1,1248 +1,307 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.4.2">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
-
-<link rel="stylesheet" href="/css/main.css">
-
-<link rel="stylesheet" href="fonts.lug.ustc.edu.cn/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"zhb-daydream.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
-  </script>
-
-  <meta property="og:type" content="website">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>zhb木木三的个人网页 - 个人博客的新尝试（页面渲染需要时间，请耐心等待）</title><meta name="author" content="zhb"><meta name="copyright" content="zhb"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
 <meta property="og:title" content="zhb木木三的个人网页">
 <meta property="og:url" content="https://zhb-daydream.github.io/page/2/index.html">
 <meta property="og:site_name" content="zhb木木三的个人网页">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
 <meta property="article:author" content="zhb">
 <meta name="twitter:card" content="summary">
-
-<link rel="canonical" href="https://zhb-daydream.github.io/page/2/">
-
-
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : true,
-    isPost : false,
-    lang   : 'zh-CN'
-  };
-</script>
-
-  <title>zhb木木三的个人网页</title>
-  
-
-
-
-
-
-
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
+<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://zhb-daydream.github.io/page/2/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'zhb木木三的个人网页',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2023-08-21 23:56:17'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
   }
 
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
 
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
 
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.2">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-</head>
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">111</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">22</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">10</div></a></div><hr class="custom-hr"/></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="zhb木木三的个人网页"><span class="site-name">zhb木木三的个人网页</span></a></span><div id="menus"><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">zhb木木三的个人网页</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/08/06/2023-0806-%E4%BA%94%E4%B8%AA%E4%B8%96%E7%95%8C%E7%A5%9E%E8%AF%9D%E4%BD%93%E7%B3%BB/" title="五个世界神话体系">五个世界神话体系</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-08-06T04:30:00.000Z" title="发表于 2023-08-06 12:30:00">2023-08-06</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%90%9E%E7%82%B9%E8%AF%BE%E5%A4%96%E7%9F%A5%E8%AF%86/">搞点课外知识</a></span></div><div class="content">在人类文明的早期，人类还处于探索世界的阶段，古老先辈们会试图描绘、想象世界的真实样貌，当这种想象逐渐升级为一种对于超自然神祇（qi，第二声）进行崇拜的集体行为，同时一套可以自圆其说的世界观建立时，便是一个神话体系了。要注意的是，神话还只是一种民间文学，属于一个逻辑自洽的世界观，而宗教则是一种特殊的社会意识形态，两者还是有点微妙的不同。
+想起《文明6》里面的旁白：“从水下第一个生命的萌芽开始，到石器时代的巨型野兽，再到人类第一次直立行走，你已经历许多。现在，开启你最伟大的探索吧：从早期文明的摇篮到浩瀚星宇”，人类文明的演化总是多样化的不同地区就会有不同的神话体系，这里也主要是简单列一列我听过的几个神话体系（然后就可以去和别人吹牛逼了）。
 
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
 
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
-    </div>
-  </div>
 
-  <div class="site-meta">
-
-    <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">zhb木木三的个人网页</h1>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-      <p class="site-subtitle" itemprop="description">个人博客的新尝试（页面渲染需要时间，请耐心等待）</p>
-  </div>
-
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-    </div>
-  </div>
-</div>
-
-
-
-
-<nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
-
-  </li>
-  </ul>
-</nav>
-
-
-
-
-</div>
-    </header>
-
-    
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
-
-
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
-
-          <div class="content index posts-expand">
-            
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/08/05/2023-0805-LaTeX%E6%9C%AC%E5%9C%B0%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="zhb">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="zhb木木三的个人网页">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/08/05/2023-0805-LaTeX%E6%9C%AC%E5%9C%B0%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95/" class="post-title-link" itemprop="url">LaTeX本地安装方法</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2023-08-05 02:00:00 / 修改时间：02:54:03" itemprop="dateCreated datePublished" datetime="2023-08-05T02:00:00+08:00">2023-08-05</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%AD%A6%E6%9C%AF%E6%A8%A1%E5%9D%97/" itemprop="url" rel="index"><span itemprop="name">学术模块</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>1.1k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>4 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>LaTeX的官网是https://www.latex-project.org/，在另一篇博客《LaTeX与TeX的关系》也提到，LaTeX是使用TeX排版引擎生成PDF文件的一种语言，所以要使用LaTeX，就要有两个环境：（1）含有TeX引擎的TeX发行版，（2）一个LaTeX文本编辑器。</p>
-<p>目前LaTeX可以在Linux、MacOS、Windows操作系统下部署并运行，也可以通过<a target="_blank" rel="noopener" href="https://www.overleaf.com/">Overleaf</a>、<a target="_blank" rel="noopener" href="https://papeeria.com/">Papeeria</a>、<a target="_blank" rel="noopener" href="https://latexbase.com/">LaTeX base</a>等在平台使用。对于在线使用而言，只需要一个浏览器进行在线的文本编辑就可以编译所需的PDF文件并下载，不需要额外安装TeX引擎并进行配置。但缺点也很明显，如果断网、网络不好，那用起来就很抓狂，所以这里我就只列LaTeX的本地（Windows）配置。</p>
-<h2 id="安装tex排版引擎">安装TeX排版引擎</h2>
-<p>对于Windows用户而言，可以无脑选择<a target="_blank" rel="noopener" href="https://www.tug.org/texlive/">TeXLive</a>，可以直接点开该TeXLive的官网链接，也可以在<a target="_blank" rel="noopener" href="https://www.latex-project.org">LaTeX官网</a>中进行跳转。</p>
-<p><img src="/ref_pic/LaTeX本地安装-1.png"></p>
-<p>下载并解压文件后，点击运行程序（一般是<code>instal-tl-windows.bat</code>），然后会在线下载、安装3G左右的内容，基本就是全自动完成的。</p>
-<h2 id="latex编辑器-vscode">LaTeX编辑器-VSCode</h2>
-<p>LaTeX的编辑器我就只推荐<a target="_blank" rel="noopener" href="https://code.visualstudio.com/">VSCode</a>了，颜值又高，功能又多（平常也是用这个IDE写python的），此外还有个<a target="_blank" rel="noopener" href="https://texstudio.sourceforge.net/">TeXStudio</a>，好像UI界面不太好看，而且我没用过。</p>
-<p>VSCode（Visual Studio Code）的安装基本就是去官网下载安装包，然后一键安装。然后就是安装LaTeX的扩展插件，按如下图所示，只需要安装一个<code>LaTeX Workshop</code>的插件就能用了。</p>
-<p><img src="/ref_pic/LaTeX本地安装-2.png"></p>
-<h2 id="使用方法">使用方法</h2>
-<p>打开一个.tex主文件（比如这里使用的是IEEE Access提供的模板文件），通过侧边菜单栏进行LaTeX文件的编译，即可在左下角看到<code>Build</code>。此外也可以直接使用保存的快捷键ctrl+s就能进行编译。</p>
-<p><img src="/ref_pic/LaTeX本地安装-3.png"></p>
-<p>编译后，在.tex文件的同目录下就会出现编译好的PDF文件，可以直接在VSCode里面预览，点击右上角的预览按钮（也可以用侧边栏里面的<code>View LaTeX PDF</code>选项）。</p>
-<p><img src="/ref_pic/LaTeX本地安装-4.png"></p>
-<p>然后就能愉快地边编辑、边预览编译结果了。</p>
-<p><img src="/ref_pic/LaTeX本地安装-5.png"></p>
-<h2 id="参考资料">参考资料</h2>
-<p>《Latex安装与使用》：https://blog.csdn.net/u014297502/article/details/126411943</p>
-<p>《vscode中配置latex》：https://blog.csdn.net/Ruins_LEE/article/details/123555016</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/08/04/2023-0804-LaTeX%E4%B8%8EMarkdown/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="zhb">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="zhb木木三的个人网页">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/08/04/2023-0804-LaTeX%E4%B8%8EMarkdown/" class="post-title-link" itemprop="url">LaTeX与Markdown</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2023-08-04 11:30:00 / 修改时间：11:30:38" itemprop="dateCreated datePublished" datetime="2023-08-04T11:30:00+08:00">2023-08-04</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%AD%A6%E6%9C%AF%E6%A8%A1%E5%9D%97/" itemprop="url" rel="index"><span itemprop="name">学术模块</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>898</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>3 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Markdown和LaTeX是两种完全不同的<strong>标记语言</strong>，每一种都有其特定的用途和优势，前者相当于是轻量化版本的word，后者是用于生成规范化PDF文件的排版语言。</p>
-<h2 id="markdown">Markdown</h2>
-<p><img src="/ref_pic/MarkdownLogo.png"></p>
-<p><a target="_blank" rel="noopener" href="https://www.markdownguide.org/">Markdown</a>是一种轻量级的标记语言，主要用于创建格式化的文本。</p>
-<ul>
-<li>它被设计为易读且易写，以便尽可能无障碍地进行文字表达</li>
-<li>有极简的语法，以纯文本方式书写，可以快速转化为HTML格式</li>
-<li>可以用来创建列表、链接、图片、代码块、标题、强调文本等</li>
-<li>大多数情况下在网络上编写和共享文档时使用，例如GitHub的README、博客和论坛上的说明文档</li>
-</ul>
-<h2 id="latex">LaTeX</h2>
-<p><img src="/ref_pic/LaTeXLogo.png"></p>
-<p><a target="_blank" rel="noopener" href="https://www.latex-project.org/">LaTeX</a>是一种基于TeX的排版系统，被广泛用于科学、数学和技术文档的制作。</p>
-<ul>
-<li>提供了对复杂表格和数学公式的高级处理能力，以及对参考文献和索引的自动处理等功能</li>
-<li>语法更复杂，也有着更强的功能和灵活性</li>
-</ul>
-<h2 id="两者的主要差异">两者的主要差异</h2>
-<table>
-<thead>
-<tr class="header">
-<th>特性</th>
-<th>Markdown</th>
-<th>LaTeX</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>易用性</strong></td>
-<td>语法相对<strong>简单</strong>，适合于编写简单的文档和笔记</td>
-<td>提供了许多用于创建复杂文档的工具和选项，但需要更多的学习和理解</td>
-</tr>
-<tr class="even">
-<td><strong>灵活性</strong></td>
-<td>主要关注内容本身，而不是样式</td>
-<td>提供了对文档样式的深度控制，包括页眉、页脚、边距、脚注、参考文献等</td>
-</tr>
-<tr class="odd">
-<td><strong>公式表格处理</strong></td>
-<td>数学公式处理能力较弱，适合简单的表格</td>
-<td>处理复杂数学公式和表格的<strong>最佳选择</strong>，其公式排版优美，符合学术要求</td>
-</tr>
-<tr class="even">
-<td><strong>用途</strong></td>
-<td>更常用于编写网页、博客文章、演示文稿等</td>
-<td>用于创建专业级别的科学和数学文档，如学术论文、技术报告、书籍等</td>
-</tr>
-<tr class="odd">
-<td><strong>输出格式</strong></td>
-<td>主要用于生成 HTML，但也可以通过一些工具转换为其他格式</td>
-<td>可以输出到多种格式，如 PDF、HTML、RTF 等</td>
-</tr>
-</tbody>
-</table>
-<p>总的来说，Markdown和LaTeX两者各有所长，选择使用哪一种主要取决于个人需求。如果需要编写一个简单的文档，那么Markdown 可能是一个更好的选择。如果需要创建一个包含复杂表格和数学公式的专业级别的文档，那么LaTeX可能是一个更好的选择。</p>
-<h2 id="参考资料">参考资料</h2>
-<p>《Markdown 语法技巧点，以及和 LateX 的区别》：https://zhuanlan.zhihu.com/p/637627317</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/08/04/2023-0804-LaTeX%E4%B8%8ETeX%E7%9A%84%E5%85%B3%E7%B3%BB/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="zhb">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="zhb木木三的个人网页">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/08/04/2023-0804-LaTeX%E4%B8%8ETeX%E7%9A%84%E5%85%B3%E7%B3%BB/" class="post-title-link" itemprop="url">LaTeX与TeX的关系</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2023-08-04 11:15:00 / 修改时间：11:15:34" itemprop="dateCreated datePublished" datetime="2023-08-04T11:15:00+08:00">2023-08-04</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%AD%A6%E6%9C%AF%E6%A8%A1%E5%9D%97/" itemprop="url" rel="index"><span itemprop="name">学术模块</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>1.9k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>6 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>平常写论文有时候会接触到LaTeX和TeX两个概念，除此之外还会有pdfLaTeX、XeLaTeX、CTeX等等，这些名词之间大概是什么关系呢？</p>
-<h2 id="tex排版引擎">TeX排版引擎</h2>
-<p>TeX是一种<strong>宏语言</strong>，同时也是一种<strong>排版引擎</strong>，最初开发的时候就是为了能更方便地对文本进行排版，生成类似于PDF那样的规范化文件。TeX系统只有300多个元命令（primitive），十分短小精悍，但也很晦涩难读，一个简单的符号可能就需要多个命令来实现。</p>
-<h3 id="排版引擎">排版引擎</h3>
-<p>这里提及的排版引擎是底层的程序，其作用就是将输入语法进行解释，并把字排成行，把行排成页，涉及到断字、断行、分页等算法。最原始的排版引擎是TeX，此外还有其他排版引擎：</p>
-<ul>
-<li>TeX：1978年由Donald Erwin Knuth开发，是后来大部分TeX相关的基础。它生成dvi文件，然后经由其他程序转换为pdf文件。</li>
-<li>pdfTeX：TeX语言的一个实现，将TeX代码直接编译成PDF文件。</li>
-<li>XeTeX：TeX语言的一个实现，支持Unicode编码和直接访问操作系统字体。</li>
-<li>LuaTeX：TeX语言的一个完整的有扩展的实现。LuaTeX支持Unicode、系统字体和内嵌语言扩展，能直接输出PDF格式文件，也可以仍然输出 DVI 格式。</li>
-</ul>
-<h3 id="发行版">发行版</h3>
-<p>一个完整的TeX需要最基本的TeX引擎、格式支持、各种辅助宏语言包、一些转换程序、GUI、编辑器、文档查看器等等，将所有的程序、文件进行相应的组合，就形成了不同的<strong>发行版</strong>（一般都是用TeX Live）：</p>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://www.tug.org/texlive/">TeX Live</a><span class="github-emoji"><span>⭐</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>：支持Linux，Windows，Mac OS</li>
-<li><a target="_blank" rel="noopener" href="https://tug.org/mactex/">MacTeX</a>：只支持Mac</li>
-<li><a target="_blank" rel="noopener" href="https://ctex.org/">CTeX</a>：只支持Windows，加入了中文的支持，可以很好地支持中文的宏包</li>
-</ul>
-<h2 id="latex格式">LaTeX格式</h2>
-<h3 id="格式">格式</h3>
-<p>因为TeX本身很难用，所以后续就有LaTeX等其他基于TeX的语言，通过将最基本的TeX命令封装为各个更简便的宏命令，这些简写的合集就称为<strong>格式</strong>。LaTeX本身属于宏语言，也是一种格式。与TeX排版引擎一样，除了LaTeX以外，还有其他的格式（可以基于不同的排版引擎）：</p>
-<ul>
-<li>LaTeX：更易于使用的宏集，最常见的一种格式。</li>
-<li>Plain TeX：由Don Knuth提供的最小的宏集合。</li>
-<li>ConTeXt：另一种常见的格式。</li>
-</ul>
-<h3 id="宏包">宏包</h3>
-<p>使用LaTeX的时候，还会有一些辅助文件来定义格式，这些辅助文件即为<strong>宏包</strong>（在LaTeX中叫做packages，在ConTeXt中叫做modules）。在LaTeX格式中，导言区的<code>\usepackage</code>的作用就是引入各种宏包。宏包其实也是一堆基本的TeX命令的集合，只是其不够全，所以称之为宏包而不是格式。</p>
-<h3 id="相关文件">相关文件</h3>
-<p>LaTeX的最终目的是将文本按照特定的格式编译为PDF文件，同时为了简便使用，会把待编译的文本与排版格式分离开，因此就会有一个专门写文本的tex主文件，以及一系列定义排版格式的bib、sty等文件。</p>
-<ul>
-<li><p>.tex文件：写文档内容的主文件，其余的辅助文件均在这里声明</p></li>
-<li><p>.bib文件：写参考文献的文档，使用<code>\bibligraphy</code>方式导入参考文献时会用到</p></li>
-<li><p>.bbl文件：.bib文件编译之后形成的文件，可以将里面的文本内容直接复制粘贴进.tex中</p></li>
-<li><p>.sty文件：包文件，通常使用，定义各种排版风格</p></li>
-<li><p>.cls文件：类文件，通过文档最前面的</p></li>
-<li><p>.bst文件：定义参考文献格式的风格文件，一般各个期刊会有对应的文件（比如 ieeetran.bst）</p></li>
-</ul>
-<h2 id="latex与tex">LaTeX与TeX</h2>
-<p>LaTeX与TeX分别是格式与排版引擎，后者是底层运行的框架，前者则是基于TeX的几百个元命令所封装起来的语言，两者之间的关系类似于汇编语言与二进制语言。因此，在使用LaTeX时，本质上是在调用TeX的元命令，不过对于使用者来说则完全不需要考虑TeX的语法。</p>
-<h2 id="参考资料">参考资料</h2>
-<p>《tex ,latex等分类及其区别》：https://blog.csdn.net/qq_35478750/article/details/107151304</p>
-<p>《TeX和LaTeX关系：原生TeX实现LaTeX命令》：https://zhuanlan.zhihu.com/p/202799658?utm_id=0</p>
-<p>《Latex安装与使用》：https://blog.csdn.net/u014297502/article/details/126411943</p>
-<p>【LaTex】cls文件编写和使用入门：https://zhuanlan.zhihu.com/p/77537952</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/08/03/2023-0803-%E9%80%9A%E8%83%80%E4%B8%8E%E9%80%9A%E7%BC%A9-%E5%8A%A0%E6%81%AF%E4%B8%8E%E9%99%8D%E6%81%AF/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="zhb">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="zhb木木三的个人网页">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/08/03/2023-0803-%E9%80%9A%E8%83%80%E4%B8%8E%E9%80%9A%E7%BC%A9-%E5%8A%A0%E6%81%AF%E4%B8%8E%E9%99%8D%E6%81%AF/" class="post-title-link" itemprop="url">通胀与通缩-加息与降息</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2023-08-03 16:00:00 / 修改时间：16:13:58" itemprop="dateCreated datePublished" datetime="2023-08-03T16:00:00+08:00">2023-08-03</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%90%9E%E7%82%B9%E8%AF%BE%E5%A4%96%E7%9F%A5%E8%AF%86/" itemprop="url" rel="index"><span itemprop="name">搞点课外知识</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>1.8k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>6 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>最近总能看到新闻，说现在全球经济大环境不好，包括美国在内的大部分国家都在加息，而中国却在逆势降息。除了加息与降息，有时候还经常接触到通胀和通缩，为了更好地刷知乎、刷新闻，感觉还是得了解一下这四个经济学里面的概念。</p>
-<h2 id="通胀与通缩的定义">通胀与通缩的定义</h2>
-<table>
-<thead>
-<tr class="header">
-<th>经济学现象</th>
-<th>定义</th>
-<th>根本原因</th>
-<th>具体表现</th>
-<th>影响</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>通货膨胀</td>
-<td>货币贬值</td>
-<td>货币流通量&gt;货币需求量</td>
-<td>物价上涨</td>
-<td>刺激消费、扩大内需</td>
-</tr>
-<tr class="even">
-<td>通货紧缩</td>
-<td>货币升值</td>
-<td>货币流通量&lt;货币需求量</td>
-<td>物价下跌</td>
-<td>消费下降、经济衰退</td>
-</tr>
-</tbody>
-</table>
-<p>从上表可以看到，通胀或者通缩是由<strong>货币流通量</strong>以及<strong>货币需求量</strong>共同决定的，前者会受到各国中央银行的货币发行量（俗称放水）、外币兑换量、居民储蓄率等因素影响，后者则是由当前社会的商品生产量与价值决定的。理想情况下，货币的购买力与商品的产出供给匹配，那就相安无事。如果货币超发<strong>且其余因素不变</strong>，则会突然有大量的货币流通于市面上，但商品产值又没有发生变化，那么货币本身的价值就会降低。</p>
-<p><img src="/ref_pic/各国货币的放水大战.png"></p>
-<h2 id="通胀与通缩的评估cpi">通胀与通缩的评估：CPI</h2>
-<p>评估通胀或通缩的主要指标是CPI（社会消费者物价指数，Consumer Price Index），其高低表示物价的上涨程度，也表示通货膨胀的程度。一般在<a target="_blank" rel="noopener" href="http://www.stats.gov.cn/zs/tjll/tjzs/202302/t20230224_1918473.html">国家统计局</a>等公开平台就能查到统计数据。</p>
-<table>
-<thead>
-<tr class="header">
-<th>CPI指数</th>
-<th>状态</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>&lt;2%</td>
-<td>通货紧缩</td>
-</tr>
-<tr class="even">
-<td>2%-3%</td>
-<td>正常水平</td>
-</tr>
-<tr class="odd">
-<td>3%-6%</td>
-<td>通货膨胀</td>
-</tr>
-<tr class="even">
-<td>&gt;6%</td>
-<td>严重通货膨胀</td>
-</tr>
-</tbody>
-</table>
-<h2 id="通胀与通缩的影响">通胀与通缩的影响</h2>
-<p>首先要明确的是，无论是通胀还是通缩，都是宏观经济运行的病态特征，有积极的一面，也会有对应的消极副作用，基本就是一种双刃剑。</p>
-<h3 id="通货膨胀">通货膨胀</h3>
-<p>积极：</p>
-<ul>
-<li><strong>投资行为增加</strong>。此时货币捏在手上就会贬值，而商品价值又在上涨，因而投资者更倾向于将手中的货币投入到社会生产中来避免资产贬值、实现资产增值。</li>
-<li><strong>消费需求增加</strong>。最典型的例子就是居民预测商品房会涨价时，就会把所有积蓄都拿出来进行“消费”，甚至贷款去“消费”。</li>
-<li><strong>扩大企业生产</strong>。当生产的商品价格在上涨时，企业会选择扩大生产规模以获取更大利润。</li>
-</ul>
-<p>消极：</p>
-<ul>
-<li><strong>居民资产缩水</strong>。此时货币购买力下降，居民储蓄能兑换的商品总额是在变少的，等价于资产在缩水。如果不能靠商品房等消费/投资行为实现资产增值，那最终就是资产越来越少。</li>
-<li><strong>生产结构失调</strong>。资本是逐利的，企业会一直扩大生产规模，直到商品供应过剩，此时就可能会往通货紧缩演化。</li>
-</ul>
-<h3 id="通货紧缩">通货紧缩</h3>
-<p>积极：</p>
-<ul>
-<li><strong>减少经济泡沫</strong>。通过加剧市场竞争，在企业“你死我活”的竞争中促进企业改进产品和服务质量，从而调整经济结构。</li>
-</ul>
-<p>消极：</p>
-<ul>
-<li><strong>投资行为减少</strong>。此时货币本身在升值，手持货币啥也不干所获得的收益可能还高于具有风险的投资。</li>
-<li><strong>消费水平下降</strong>。此时物价下降，消费者也预期商品价格会进一步下降，所以会持观望状，减少消费，这会进一步使得货币流通量降低，通缩加剧并进一步降低物价，形成恶性循环。</li>
-<li><strong>失业人口增加</strong>。此时整个社会的商品需求处于萎缩期，生产商、服务商就会进行裁员，这种经济衰退自然会导致大量的失业人口。</li>
-</ul>
-<h2 id="加息与降息">加息与降息</h2>
-<p>不同于通货膨胀与通货紧缩这两个经济学现象，加息与降息是各国或地区的中央银行调整利息（存款利息和贷款利息）的行为，属于一种策略、手段。不过对于普通老百姓而言，通过观察各国地区的加息与降息状况，也能一部分反推出央行的意图，进而判断经济形势（然后和人吹牛逼）。</p>
-<table>
-<thead>
-<tr class="header">
-<th>操作</th>
-<th>定义</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>加息</td>
-<td>提高存款、贷款利率</td>
-<td>抑制通货膨胀</td>
-</tr>
-<tr class="even">
-<td>降息</td>
-<td>降低存款、贷款利率</td>
-<td>刺激消费与投资</td>
-</tr>
-</tbody>
-</table>
-<p>加息是一个国家或地区的中央银行提高利息的行为，会使商业银行对中央银行的借贷成本提高，进而迫使市场的利息也进行增加（不然大家都跑去市场里面借钱了）。加息最终可以减少货币流通量、抑制消费、控制通货膨胀、鼓励存款、减缓市场投机等等。</p>
-<p>降息是与加息是逆向的操作，也是一种改变现金流动的金融方式。降息对于金融机构而言，放贷利率下降，融资的成本降低，因而就会促进投资行为。于普通个人而言，把资金存入银行的收益减少，因而会倾向于将资金从银行取出，将存款拿去投资或消费，最终结果是资金流动性增加。</p>
-<h2 id="参考资料">参考资料</h2>
-<p>《为什么全球都在加息 中国逆势降息》：https://baijiahao.baidu.com/s?id=1769289156919986192&amp;wfr=spider&amp;for=pc</p>
-<p>《“加息、降息”的含义？影响那些方面？如何应对？》：https://zhuanlan.zhihu.com/p/646788172</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/08/03/2023-0803-%E5%9B%BE%E7%89%87%E5%8E%8B%E7%BC%A9%EF%BC%88JPEG%E4%B8%8EPNG%EF%BC%89/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="zhb">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="zhb木木三的个人网页">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/08/03/2023-0803-%E5%9B%BE%E7%89%87%E5%8E%8B%E7%BC%A9%EF%BC%88JPEG%E4%B8%8EPNG%EF%BC%89/" class="post-title-link" itemprop="url">图片压缩（JPEG与PNG）</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2023-08-03 11:40:00 / 修改时间：15:47:25" itemprop="dateCreated datePublished" datetime="2023-08-03T11:40:00+08:00">2023-08-03</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" itemprop="url" rel="index"><span itemprop="name">博客搭建</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>1k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>3 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>目前我写博客的时候用的是本地图片，Hexo生成静态网页并部署时就会包含这些本地图片。有时候一张图片就要若干MB，感觉会影响上传速度和额外占用所要部署的服务器容量，所以就有压缩图片尺寸大小的需求。</p>
-<h2 id="jpeg与png等图片格式">JPEG与PNG等图片格式</h2>
-<p>一般常用的图片格式就是.jpg图片和.png图片，对应于JPEG与PNG两种图片格式，JPEG是有损压缩，PNG是无损压缩。</p>
-<ul>
-<li><strong>JPEG</strong>（Joint Photographic Experts Group）：文件后缀名为.jpg或.jpeg，是一种面向连续色调<strong>静态图像压缩</strong>的图像文件格式。是目前能把文件压缩到最小的图像格式，也是网络最流行的图像格式，在不影响人类可分辨的图片质量前提下，去掉了一部分图片的原始信息（有损压缩），且不支持透明背景，在多次编辑后图片会比原图模糊很多（例如网络中多次转发的图片会泛绿色）。</li>
-<li><strong>PNG</strong>（Portable Network Graphics）：文件后缀名为.png，是一种图像<strong>无损压缩</strong>的图像文件格式。设计的时候是为了替代GIF和TIFF文件格式，在压缩文件尺寸的同时，还能支持压缩不失真、透明背景（alpha通道/透明通道）、渐变图像等功能。</li>
-</ul>
-<h2 id="windows本地图片压缩">Windows本地图片压缩</h2>
-<p>使用Windows自带的<strong>照片</strong>应用程序就能实现基本的图片压缩功能。</p>
-<p>第 1 步：用Windows的<strong>照片</strong>应用打开图像文件，右键选择<strong>调整图像大小</strong>。</p>
-<p><img src="/ref_pic/图片压缩-1.jpg"></p>
-<p>第 2 步：按照绝对像素值或者缩放百分比压缩图片，同时还可以调整图像质量、文件类型。</p>
-<p><img src="/ref_pic/图片压缩-2.jpg"></p>
-<p>第 3 步：设置好相应的图片压缩参数后，就能预览新建文件的大小，最后点击<strong>保存</strong>即可。</p>
-<p><img src="/ref_pic/图片压缩-3.png"></p>
-<p>要注意的是，如果要保存的文件类型为PNG格式，则图片无法压缩，新建的尺寸甚至会变大。</p>
-<p><img src="/ref_pic/图片压缩-4.png"></p>
-<h2 id="在线免费图片压缩">在线免费图片压缩</h2>
-<p>上述手动调整的方法只适合处理少量的图像，如果要尝试批量压缩图像，则需要用到其他图像压缩工具。这里介绍的是其中一个叫 <a target="_blank" rel="noopener" href="https://zh.geekersoft.com/image-compress-online.html">Geekersoft</a> 的在线图片压缩工具，它最大的优势就是能够批量压缩多个图像（当然，免费也是一个优势）。</p>
-<p><img src="/ref_pic/图片压缩-5.png"></p>
-<p>使用的时候也简单，打开Geekersoft的网页链接，上传一张或多张图片，逐张调整压缩质量（虽然也要逐张调整，但基本是点个按钮就能调整，会比Windows的照片应用稍微方便点），压缩完成后再下载图片就行了。</p>
-<p><img src="/ref_pic/图片压缩-6.jpg"></p>
-<h2 id="参考资料">参考资料</h2>
-<p>《BMP、GIF、TIFF、PNG、JPG和SVG格式图像的特点》：https://zhuanlan.zhihu.com/p/374765116</p>
-<p>百度百科</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/08/03/2023-0803-%E4%B8%8A%E5%B8%82%E5%85%AC%E5%8F%B8%E4%BC%B0%E5%80%BC/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="zhb">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="zhb木木三的个人网页">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/08/03/2023-0803-%E4%B8%8A%E5%B8%82%E5%85%AC%E5%8F%B8%E4%BC%B0%E5%80%BC/" class="post-title-link" itemprop="url">上市公司估值</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2023-08-03 03:00:00 / 修改时间：11:24:59" itemprop="dateCreated datePublished" datetime="2023-08-03T03:00:00+08:00">2023-08-03</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%90%9E%E7%82%B9%E8%AF%BE%E5%A4%96%E7%9F%A5%E8%AF%86/" itemprop="url" rel="index"><span itemprop="name">搞点课外知识</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>1.7k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>6 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="估值准则">估值准则</h2>
-<p>估值<strong>不是算出来</strong>的，而是由企业和投资机构双方进行询价协商的结果，一般是企业方根据相对估值法报价，投资机构再根据调查情况进行砍价，最后得到一个双方都能接收的结果。</p>
-<p>从企业方的角度，倾向于将估值做高，可以融到更多的钱；从投资人的角度，倾向于将估值压低，可以用更少的钱获得更大的股份比例。因而两者诉求相悖，最终的估值也存在博弈。一个合理的评判标准是：<strong>基于该估值，投资人是否能获得合理的投资回报</strong>。</p>
-<p>对于投资人而言，通过股权投资赚百倍、千倍的利润是不切实际的，投资回报率不是越高越好，因为高回报率伴随着高风险，反之亦然。只要能达到一定的回报率，且投资过程的风险控制在合理区间，那投资目标就是完成了。因而，<strong>合理的投资回报</strong>主要有两点考量：</p>
-<ul>
-<li><strong>投资回报率</strong>：投资回报与投资金额的比例。一般而言，银行的1年储蓄利率为1.8%，信托投资收益率为9%，如果风险更大的股权投资回报率还低于其他稳健的投资方式，那就完全失去了投资的意义。</li>
-<li><strong>收益风险比</strong>：潜在盈利与潜在亏损的比例。例如，投资四次，有三次亏损，有一次赚100%，那么收益风险比就是3:1，对应的总收益率就是0。常用的计算指标/计算方法是夏普比率/指数。</li>
-</ul>
-<h2 id="估值倍率市盈率">估值倍率/市盈率</h2>
-<p>要再次强调的是，估值行为是投资方与被投资方的协商博弈过程，并没有最优算法，计算的结果也只是一个心理价位。</p>
-<p>企业估值的最简单的方法就是直接对目前企业的净利润进行倍率放大，这个放大倍率也称<strong>市盈率</strong>（PE，Price Earning ratio），可以用来对上市前的企业进行估值，也可以用来评估上市企业的股票是否值得投资。市盈率主要有以下两种计算方式，对于第二种方式中的<strong>每股收益</strong>（EPS，Earning Per Share），一般是根据市场内同类企业来估计的值。</p>
-<ol type="1">
-<li>市盈率PE = 总市值 ÷ 税后净利润（不考虑股票数量）</li>
-<li>市盈率PE = 股价 ÷ 每股收益（考虑股票数量）</li>
-</ol>
-<h2 id="常见估值倍率">常见估值倍率</h2>
-<p>对于成长股，一般以<strong>20-30倍PE</strong>（即当年的税后净利润的20-30倍）估计市值，该倍率也是有一定依据的，例如下表，2019年的市值都是2018年利润的20倍以上，这大致表明了该公司的发展速度。</p>
-<table>
-<thead>
-<tr class="header">
-<th>公司</th>
-<th>2018年利润/亿</th>
-<th>2019年市值/亿</th>
-<th>倍率</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>海天味业</td>
-<td>43.65</td>
-<td>2787</td>
-<td>63.8</td>
-</tr>
-<tr class="even">
-<td>片仔癀</td>
-<td>11.43</td>
-<td>596</td>
-<td>52.1</td>
-</tr>
-<tr class="odd">
-<td>涪陵榨菜</td>
-<td>6.62</td>
-<td>175</td>
-<td>26.4</td>
-</tr>
-<tr class="even">
-<td>海康威视</td>
-<td>114</td>
-<td>2805</td>
-<td>24.6</td>
-</tr>
-<tr class="odd">
-<td>贵州茅台</td>
-<td>352</td>
-<td>13200</td>
-<td>37.5</td>
-</tr>
-</tbody>
-</table>
-<p>但麦哲伦基金的“传奇”基金经理彼得·林奇也说过，“任何超过40倍市盈率的股票，都有很大风险，无论它有多高的成长性”。以巴菲特以下的几个投资经历大致可以看出，他对于前景一般的企业，投资的市盈率不超过5倍，而对于高品质的优质股，市盈率则不超过15倍。尽管如今时代不同，但过高的市盈率（如30倍以上）仍可能意味着价值的高估，往往会导致投资亏损。</p>
-<table>
-<thead>
-<tr class="header">
-<th>年份-公司</th>
-<th>买入-当年净利润（万美元）</th>
-<th>市盈率</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>1967-国民保险公司</td>
-<td>860-160</td>
-<td>5.4</td>
-</tr>
-<tr class="even">
-<td>1972-喜诗糖果</td>
-<td>2500-210</td>
-<td>11.9</td>
-</tr>
-<tr class="odd">
-<td>1973-华盛顿邮报</td>
-<td></td>
-<td>10.9</td>
-</tr>
-<tr class="even">
-<td>1983-内布拉斯加家具卖场（80%股权）</td>
-<td>5500-810</td>
-<td>8.5</td>
-</tr>
-<tr class="odd">
-<td>1985-大都会广播</td>
-<td></td>
-<td>14.4</td>
-</tr>
-</tbody>
-</table>
-<h2 id="参考资料">参考资料</h2>
-<p>《PE、VC 及天使投资人是如何对所投资的互联网公司估值的？》：https://www.zhihu.com/question/33922440/answer/2623633453?utm_id=0</p>
-<p>《市盈率超过20倍，应该算是投机！》：https://zhuanlan.zhihu.com/p/112995662</p>
-<p>《估值=拍脑袋？从13家IPO公司估值数据看每一轮投资估值应该涨多少倍》：https://zhuanlan.zhihu.com/p/104682427</p>
-<p>《对于“成长股”，30倍PE的估值意味着什么？》：http://www.360doc.com/content/19/1204/19/905523_877432679.shtml</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/19/">19</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
-  </nav>
-
-
-
-          </div>
-          
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
-
-        </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">zhb</p>
-  <div class="site-description" itemprop="description"></div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">109</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-          
-        <span class="site-state-item-count">10</span>
-        <span class="site-state-item-name">分类</span></a>
-      </div>
-      <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-          
-        <span class="site-state-item-count">17</span>
-        <span class="site-state-item-name">标签</span></a>
-      </div>
-  </nav>
-</div>
-
-
-
-      </div>
-
-    </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        
-
-<div class="copyright">
-  
-  &copy; 
-  <span itemprop="copyrightYear">2023</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">zhb</span>
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item-icon">
-      <i class="fa fa-chart-area"></i>
-    </span>
-    <span title="站点总字数">145k</span>
-</div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
-  </div>
-
-        
-
-
-
-
-
-
-
-
-      </div>
-    </footer>
-  </div>
-
-  
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
-
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/muse.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-<script>
-if (document.querySelectorAll('pre.mermaid').length) {
-  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
-    mermaid.initialize({
-      theme    : 'forest',
-      logLevel : 3,
-      flowchart: { curve     : 'linear' },
-      gantt    : { axisFormat: '%m/%d/%Y' },
-      sequence : { actorMargin: 50 }
-    });
-  }, window.mermaid);
-}
-</script>
-
-
-  
-
-  
-      
-
-<script>
-  if (typeof MathJax === 'undefined') {
-    window.MathJax = {
-      loader: {
-          load: ['[tex]/mhchem'],
-        source: {
-          '[tex]/amsCd': '[tex]/amscd',
-          '[tex]/AMScd': '[tex]/amscd'
-        }
-      },
-      tex: {
-        inlineMath: {'[+]': [['$', '$']]},
-          packages: {'[+]': ['mhchem']},
-        tags: 'ams'
-      },
-      options: {
-        renderActions: {
-          findScript: [10, doc => {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
-              const display = !!node.type.match(/; *mode=display/);
-              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-              const text = document.createTextNode('');
-              node.parentNode.replaceChild(text, node);
-              math.start = {node: text, delim: '', n: 0};
-              math.end = {node: text, delim: '', n: 0};
-              doc.math.push(math);
-            });
-          }, '', false],
-          insertedScript: [200, () => {
-            document.querySelectorAll('mjx-container').forEach(node => {
-              let target = node.parentNode;
-              if (target.nodeName.toLowerCase() === 'li') {
-                target.parentNode.classList.add('has-jax');
-              }
-            });
-          }, '', false]
-        }
-      }
-    };
-    (function () {
-      var script = document.createElement('script');
-      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
-      script.defer = true;
-      document.head.appendChild(script);
-    })();
-  } else {
-    MathJax.startup.document.state(0);
-    MathJax.texReset();
-    MathJax.typeset();
-  }
-</script>
-
-    
-
-  
-
-</body>
-</html>
+东亚
+欧洲
+美洲
+非洲
+西亚
+南亚
+
+
+
+
+中国先秦神话
+古希腊神话
+玛雅神话
+埃及神话
+美索不达米亚神话
+印度吠陀神话
+
+
+中国佛道神话
+凯尔特神话
+阿兹特克神话
+
+波斯神话
+印度婆罗门教神话
+
+
+日本神道教神话
+北欧神话
+印加神话
+
+伊斯兰教神话
+印度佛教神话
+
+
+
+犹太-基督神话
+
+
+
+
+
+
+
+中国先秦神话
+
+基本介绍
+
+先秦时期华夏先民所创 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/08/06/2023-0806-everything%E6%90%9C%E7%B4%A2%E8%BD%AF%E4%BB%B6%E7%9A%84%E4%BD%BF%E7%94%A8%E5%92%8C%E5%8E%9F%E7%90%86/" title="everything搜索软件的使用和原理">everything搜索软件的使用和原理</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-08-05T18:00:00.000Z" title="发表于 2023-08-06 02:00:00">2023-08-06</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%90%9E%E7%82%B9%E8%AF%BE%E5%A4%96%E7%9F%A5%E8%AF%86/">搞点课外知识</a></span></div><div class="content">现在的面向大众的电脑硬盘容量越来越大，特别是最近长江存储颗粒的固态硬盘，2T的容量只要惊人的350块。但硬盘容量上去了，文件数量变多了，文件搜索也是一个大问题。除了使用规范化的文件夹命名、打开文件夹手动查找文件的方式以外，有时候还会使用Windows自带的文件搜索器，但这个搜索往往很耗时。所以这里就介绍一个可以充当Windows搜索功能的上位替代品的软件。
+Everything
+Everything是Voidtools制作组开发的文件搜索工具，官网描述为基于名称的实时文件和目录定位（Locate files and folders by name instantl），在2004年时创立项目，2008年推出了完善的1.0版本，目前最新的是2023年5月26更新的1.4.1.1024版本。
+Everything（也称Everything Search Engine）软件堪称搜索界的神器，它是一个第三方的搜索软件，搜索速度特别快，而且CPU占用特别低，例如使用Windows系统自带搜索功能去搜索全盘，CPU、磁盘读写可能都会占用100%，且需要持续若干分钟，此时Everything只占用0. ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/08/05/2023-0805-LaTeX%E6%9C%AC%E5%9C%B0%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95/" title="LaTeX本地安装方法">LaTeX本地安装方法</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-08-04T18:00:00.000Z" title="发表于 2023-08-05 02:00:00">2023-08-05</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%AD%A6%E6%9C%AF%E6%A8%A1%E5%9D%97/">学术模块</a></span></div><div class="content">LaTeX的官网是https://www.latex-project.org/，在另一篇博客《LaTeX与TeX的关系》也提到，LaTeX是使用TeX排版引擎生成PDF文件的一种语言，所以要使用LaTeX，就要有两个环境：（1）含有TeX引擎的TeX发行版，（2）一个LaTeX文本编辑器。
+目前LaTeX可以在Linux、MacOS、Windows操作系统下部署并运行，也可以通过Overleaf、Papeeria、LaTeX base等在平台使用。对于在线使用而言，只需要一个浏览器进行在线的文本编辑就可以编译所需的PDF文件并下载，不需要额外安装TeX引擎并进行配置。但缺点也很明显，如果断网、网络不好，那用起来就很抓狂，所以这里我就只列LaTeX的本地（Windows）配置。
+安装TeX排版引擎
+对于Windows用户而言，可以无脑选择TeXLive，可以直接点开该TeXLive的官网链接，也可以在LaTeX官网中进行跳转。
+
+下载并解压文件后，点击运行程序（一般是instal-tl-windows.bat），然后会在线下载、安装3G左右的内容，基本就是全自动完成的。
+LaTeX编辑器 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/08/04/2023-0804-LaTeX%E4%B8%8EMarkdown/" title="LaTeX与Markdown">LaTeX与Markdown</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-08-04T03:30:00.000Z" title="发表于 2023-08-04 11:30:00">2023-08-04</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%AD%A6%E6%9C%AF%E6%A8%A1%E5%9D%97/">学术模块</a></span></div><div class="content">Markdown和LaTeX是两种完全不同的标记语言，每一种都有其特定的用途和优势，前者相当于是轻量化版本的word，后者是用于生成规范化PDF文件的排版语言。
+Markdown
+
+Markdown是一种轻量级的标记语言，主要用于创建格式化的文本。
+
+它被设计为易读且易写，以便尽可能无障碍地进行文字表达
+有极简的语法，以纯文本方式书写，可以快速转化为HTML格式
+可以用来创建列表、链接、图片、代码块、标题、强调文本等
+大多数情况下在网络上编写和共享文档时使用，例如GitHub的README、博客和论坛上的说明文档
+
+LaTeX
+
+LaTeX是一种基于TeX的排版系统，被广泛用于科学、数学和技术文档的制作。
+
+提供了对复杂表格和数学公式的高级处理能力，以及对参考文献和索引的自动处理等功能
+语法更复杂，也有着更强的功能和灵活性
+
+两者的主要差异
+
+
+
+特性
+Markdown
+LaTeX
+
+
+
+
+易用性
+语法相对简单，适合于编写简单的文档和笔记
+提供了许多用于创建复杂文档的工具和选项，但需要更多的学习和理解
+
+
+灵活性
+主要关注内容本身，而不是样式
+提供了对文档样式的深度控制，包括页眉、页脚 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/08/04/2023-0804-LaTeX%E4%B8%8ETeX%E7%9A%84%E5%85%B3%E7%B3%BB/" title="LaTeX与TeX的关系">LaTeX与TeX的关系</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-08-04T03:15:00.000Z" title="发表于 2023-08-04 11:15:00">2023-08-04</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%AD%A6%E6%9C%AF%E6%A8%A1%E5%9D%97/">学术模块</a></span></div><div class="content">平常写论文有时候会接触到LaTeX和TeX两个概念，除此之外还会有pdfLaTeX、XeLaTeX、CTeX等等，这些名词之间大概是什么关系呢？
+TeX排版引擎
+TeX是一种宏语言，同时也是一种排版引擎，最初开发的时候就是为了能更方便地对文本进行排版，生成类似于PDF那样的规范化文件。TeX系统只有300多个元命令（primitive），十分短小精悍，但也很晦涩难读，一个简单的符号可能就需要多个命令来实现。
+排版引擎
+这里提及的排版引擎是底层的程序，其作用就是将输入语法进行解释，并把字排成行，把行排成页，涉及到断字、断行、分页等算法。最原始的排版引擎是TeX，此外还有其他排版引擎：
+
+TeX：1978年由Donald Erwin Knuth开发，是后来大部分TeX相关的基础。它生成dvi文件，然后经由其他程序转换为pdf文件。
+pdfTeX：TeX语言的一个实现，将TeX代码直接编译成PDF文件。
+XeTeX：TeX语言的一个实现，支持Unicode编码和直接访问操作系统字体。
+LuaTeX：TeX语言的一个完整的有扩展的实现。LuaTeX支持Unicode、系统字体和内嵌语言扩展，能 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/08/03/2023-0803-%E9%80%9A%E8%83%80%E4%B8%8E%E9%80%9A%E7%BC%A9-%E5%8A%A0%E6%81%AF%E4%B8%8E%E9%99%8D%E6%81%AF/" title="通胀与通缩-加息与降息">通胀与通缩-加息与降息</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-08-03T08:00:00.000Z" title="发表于 2023-08-03 16:00:00">2023-08-03</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%90%9E%E7%82%B9%E8%AF%BE%E5%A4%96%E7%9F%A5%E8%AF%86/">搞点课外知识</a></span></div><div class="content">最近总能看到新闻，说现在全球经济大环境不好，包括美国在内的大部分国家都在加息，而中国却在逆势降息。除了加息与降息，有时候还经常接触到通胀和通缩，为了更好地刷知乎、刷新闻，感觉还是得了解一下这四个经济学里面的概念。
+通胀与通缩的定义
+
+
+
+经济学现象
+定义
+根本原因
+具体表现
+影响
+
+
+
+
+通货膨胀
+货币贬值
+货币流通量&gt;货币需求量
+物价上涨
+刺激消费、扩大内需
+
+
+通货紧缩
+货币升值
+货币流通量&lt;货币需求量
+物价下跌
+消费下降、经济衰退
+
+
+
+从上表可以看到，通胀或者通缩是由货币流通量以及货币需求量共同决定的，前者会受到各国中央银行的货币发行量（俗称放水）、外币兑换量、居民储蓄率等因素影响，后者则是由当前社会的商品生产量与价值决定的。理想情况下，货币的购买力与商品的产出供给匹配，那就相安无事。如果货币超发且其余因素不变，则会突然有大量的货币流通于市面上，但商品产值又没有发生变化，那么货币本身的价值就会降低。
+
+通胀与通缩的评估：CPI
+评估通胀或通缩的主要指标是CPI（社会消费者物价指数，Consumer Price Index），其高低表示物价的上涨程度，也表示通货膨胀的 ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/#content-inner">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/19/#content-inner">19</a><a class="extend next" rel="next" href="/page/3/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">zhb</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">111</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">22</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">10</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/08/21/2023-0821-%E7%82%AE%E5%A1%94%E8%BD%AC%E9%80%9F%E4%B8%8E%E5%9D%A6%E5%85%8B%E8%BD%AC%E5%9C%88%E6%88%98%E6%9C%AF/" title="坦克转圈战术与炮塔转速">坦克转圈战术与炮塔转速</a><time datetime="2023-08-21T15:55:00.000Z" title="发表于 2023-08-21 23:55:00">2023-08-21</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/08/16/2023-0816-Hexo%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98/" title="Hexo更换主题">Hexo更换主题</a><time datetime="2023-08-15T17:30:00.000Z" title="发表于 2023-08-16 01:30:00">2023-08-16</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/08/13/2023-0813-ChatPDF%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/" title="ChatPDF使用方法">ChatPDF使用方法</a><time datetime="2023-08-13T12:50:00.000Z" title="发表于 2023-08-13 20:50:00">2023-08-13</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/08/13/2023-0813-%E5%A6%99%E9%B8%AD%E7%9B%B8%E6%9C%BA%E7%AD%89AI%E5%86%99%E7%9C%9F%E8%BD%AF%E4%BB%B6%E5%8E%9F%E7%90%86/" title="妙鸭相机等AI写真软件原理">妙鸭相机等AI写真软件原理</a><time datetime="2023-08-13T11:55:00.000Z" title="发表于 2023-08-13 19:55:00">2023-08-13</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/08/13/2023-0813-%E5%B0%81%E7%A5%9E%E6%BC%94%E4%B9%89%E7%9A%84%E7%AD%89%E7%BA%A7%E5%88%B6%E5%BA%A6/" title="封神演义的等级制度">封神演义的等级制度</a><time datetime="2023-08-13T08:30:00.000Z" title="发表于 2023-08-13 16:30:00">2023-08-13</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            <a class="card-more-btn" href="/categories/" title="查看更多">
+    <i class="fas fa-angle-right"></i></a>
+            </div>
+            <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/MRI/"><span class="card-category-list-name">MRI</span><span class="card-category-list-count">10</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/python/"><span class="card-category-list-name">python</span><span class="card-category-list-count">3</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E4%B8%AA%E4%BA%BA%E5%90%90%E6%A7%BD/"><span class="card-category-list-name">个人吐槽</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"><span class="card-category-list-name">博客搭建</span><span class="card-category-list-count">17</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%AD%A6%E6%9C%AF%E6%A8%A1%E5%9D%97/"><span class="card-category-list-name">学术模块</span><span class="card-category-list-count">23</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%90%9E%E7%82%B9%E8%AF%BE%E5%A4%96%E7%9F%A5%E8%AF%86/"><span class="card-category-list-name">搞点课外知识</span><span class="card-category-list-count">31</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%97%A5%E8%AE%B0/"><span class="card-category-list-name">日记</span><span class="card-category-list-count">10</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%B8%B8%E6%88%8F/"><span class="card-category-list-name">游戏</span><span class="card-category-list-count">7</span></a></li>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/%E5%AE%9E%E7%94%A8%E5%B0%8F%E5%B7%A5%E5%85%B7/" style="font-size: 1.27em; color: #99a0a9">实用小工具</a> <a href="/tags/%E7%94%9F%E6%B4%BB%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE/" style="font-size: 1.16em; color: #999b9e">生活中的数据</a> <a href="/tags/%E6%98%9F%E7%A9%B9%E9%93%81%E9%81%93/" style="font-size: 1.27em; color: #99a0a9">星穹铁道</a> <a href="/tags/%E6%AF%94%E8%B5%9B/" style="font-size: 1.21em; color: #999ea4">比赛</a> <a href="/tags/sci%E8%AE%BA%E6%96%87/" style="font-size: 1.44em; color: #99a7ba">sci论文</a> <a href="/tags/markdown/" style="font-size: 1.16em; color: #999b9e">markdown</a> <a href="/tags/%E5%B8%82%E5%9C%BA%E8%A7%84%E6%A8%A1/" style="font-size: 1.1em; color: #999">市场规模</a> <a href="/tags/%E6%9C%AA%E5%88%86%E7%B1%BB/" style="font-size: 1.5em; color: #99a9bf">未分类</a> <a href="/tags/%E5%B8%82%E5%9C%BA/" style="font-size: 1.33em; color: #99a2af">市场</a> <a href="/tags/%E6%97%85%E6%B8%B8%E6%B5%81%E6%B0%B4%E8%B4%A6/" style="font-size: 1.39em; color: #99a4b4">旅游流水账</a> <a href="/tags/MATLAB/" style="font-size: 1.1em; color: #999">MATLAB</a> <a href="/tags/%E4%B8%93%E5%88%A9/" style="font-size: 1.16em; color: #999b9e">专利</a> <a href="/tags/AI%E6%96%87%E6%9C%AC%E5%A4%84%E7%90%86/" style="font-size: 1.27em; color: #99a0a9">AI文本处理</a> <a href="/tags/%E6%88%98%E9%94%A4/" style="font-size: 1.16em; color: #999b9e">战锤</a> <a href="/tags/typora/" style="font-size: 1.1em; color: #999">typora</a> <a href="/tags/%E7%AD%89%E7%BA%A7%E5%88%B6%E5%BA%A6/" style="font-size: 1.33em; color: #99a2af">等级制度</a> <a href="/tags/AI%E7%BB%98%E7%94%BB/" style="font-size: 1.33em; color: #99a2af">AI绘画</a> <a href="/tags/%E5%BF%83%E7%90%86%E5%AD%A6/" style="font-size: 1.16em; color: #999b9e">心理学</a> <a href="/tags/%E5%8E%9F%E7%A5%9E/" style="font-size: 1.1em; color: #999">原神</a> <a href="/tags/%E7%A5%9E%E8%AF%9D/" style="font-size: 1.16em; color: #999b9e">神话</a> <a href="/tags/%E6%96%87%E7%8C%AE/" style="font-size: 1.27em; color: #99a0a9">文献</a> <a href="/tags/LaTeX/" style="font-size: 1.33em; color: #99a2af">LaTeX</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/08/"><span class="card-archive-list-date">八月 2023</span><span class="card-archive-list-count">15</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/07/"><span class="card-archive-list-date">七月 2023</span><span class="card-archive-list-count">29</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/06/"><span class="card-archive-list-date">六月 2023</span><span class="card-archive-list-count">20</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/05/"><span class="card-archive-list-date">五月 2023</span><span class="card-archive-list-count">29</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/04/"><span class="card-archive-list-date">四月 2023</span><span class="card-archive-list-count">15</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/03/"><span class="card-archive-list-date">三月 2023</span><span class="card-archive-list-count">3</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">111</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2023-08-21T15:56:17.410Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By zhb</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

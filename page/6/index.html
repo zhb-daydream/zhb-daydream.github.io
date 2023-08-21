@@ -1,1302 +1,299 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.4.2">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
-
-<link rel="stylesheet" href="/css/main.css">
-
-<link rel="stylesheet" href="fonts.lug.ustc.edu.cn/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"zhb-daydream.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
-  </script>
-
-  <meta property="og:type" content="website">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>zhb木木三的个人网页 - 个人博客的新尝试（页面渲染需要时间，请耐心等待）</title><meta name="author" content="zhb"><meta name="copyright" content="zhb"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
 <meta property="og:title" content="zhb木木三的个人网页">
 <meta property="og:url" content="https://zhb-daydream.github.io/page/6/index.html">
 <meta property="og:site_name" content="zhb木木三的个人网页">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
 <meta property="article:author" content="zhb">
 <meta name="twitter:card" content="summary">
-
-<link rel="canonical" href="https://zhb-daydream.github.io/page/6/">
-
-
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : true,
-    isPost : false,
-    lang   : 'zh-CN'
-  };
-</script>
-
-  <title>zhb木木三的个人网页</title>
-  
-
-
-
-
-
-
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
+<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://zhb-daydream.github.io/page/6/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'zhb木木三的个人网页',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2023-08-21 23:56:17'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
   }
 
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
 
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
 
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.2">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-</head>
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">111</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">22</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">10</div></a></div><hr class="custom-hr"/></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="zhb木木三的个人网页"><span class="site-name">zhb木木三的个人网页</span></a></span><div id="menus"><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">zhb木木三的个人网页</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/07/09/2023-0709-LaTeX%E4%BD%BF%E7%94%A8bib%E6%96%87%E4%BB%B6%E7%BC%96%E8%AF%91%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE/" title="LaTeX使用bib文件编译参考文献">LaTeX使用bib文件编译参考文献</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-07-09T10:13:00.000Z" title="发表于 2023-07-09 18:13:00">2023-07-09</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%AD%A6%E6%9C%AF%E6%A8%A1%E5%9D%97/">学术模块</a></span></div><div class="content">涉及的文件
+.tex文件
+最常见的LaTeX文件，也是编写文章的文件。
+.bib文件
+BiBTeX文件，是一种用于管理参考文献的工具，将参考文献以一种标准化的格式存储（包括参考文献的作者、标题、出版社、出版日期等详细信息），并在LaTeX文档（.tex文件）中引用。每个参考文献都有一个唯一的标识符，即“键”，可以在.tex文件中使用这个键来引用该参考文献。例如，在正文段使用\cite{key}就会在文档中生成一个带有作者、出版日期的引用标记（具体的引用样式会在.tex文件中定义）
+.bst文件
+定义参考文献的引用样式的文件，一般在.tex文件中通过\bibliographystyle{xxx.bst}导入
+.bbl文件
+由BiBTeX根据某一个参考文献引用样式（.bst文件）生成的参考文献记录文件，可以将里面的内容复制粘贴到.tex文件中，通过\begin{thebibliography}{}  \end{thebibliography}调用。
+从EndNote导出bib文件
+在EndNote中选中待导出的参考文献，依次点击左上角的 File — Export，在 Output sty ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/07/09/2023-0709-LaTeX%E7%94%9F%E6%88%90%E6%9C%AF%E8%AF%AD%E8%A1%A8/" title="LaTeX生成术语表">LaTeX生成术语表</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-07-09T09:35:00.000Z" title="发表于 2023-07-09 17:35:00">2023-07-09</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%AD%A6%E6%9C%AF%E6%A8%A1%E5%9D%97/">学术模块</a></span></div><div class="content">在使用 LaTeX 写学术论文的时候，有些期刊会要求提供缩写词汇对应表（List of Abbreviations）、术语表（List of Terminology），一般就是通过调用一些库函数来实现的。
+三种package
+常用的库函数有 Nomenclature：\usepackage{nomencl}、Glossaries：\usepackage{glossaries}，但这两种库函数在线上的 LaTeX 编辑器（如Overleaf）中不需要额外的操作，但在本地编译的时候，需要通过 cmd 进行额外的编译操作（如 makeindex、makeglossaries），而不能直接在 VS Code 中保存-自动编译-预览。为了在本地编译的时候减少步骤，这里使用了UIUC的一个 Acro 库：\usepackage{acro}。
+Acro使用方法
+使用方法和选项可以参考官方文档：https://ctan.math.illinois.edu/macros/latex/contrib/acro/acro-manual.pdf
+12345678910111213141516171819202 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/07/08/2023-0708-ChatGPT%E4%B8%8ENewBing%E7%9A%84AI%E8%81%8A%E5%A4%A9%E5%BC%95%E6%93%8E%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/" title="ChatGPT与NewBing的AI聊天引擎使用方法">ChatGPT与NewBing的AI聊天引擎使用方法</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-07-08T05:54:00.000Z" title="发表于 2023-07-08 13:54:00">2023-07-08</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%90%9E%E7%82%B9%E8%AF%BE%E5%A4%96%E7%9F%A5%E8%AF%86/">搞点课外知识</a></span></div><div class="content">
 
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
 
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
-    </div>
-  </div>
+产品名
+开发公司
+推出时间
+LLM
 
-  <div class="site-meta">
-
-    <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">zhb木木三的个人网页</h1>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-      <p class="site-subtitle" itemprop="description">个人博客的新尝试（页面渲染需要时间，请耐心等待）</p>
-  </div>
-
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-    </div>
-  </div>
-</div>
-
-
-
-
-<nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
-
-  </li>
-  </ul>
-</nav>
-
-
-
-
-</div>
-    </header>
-
-    
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
-
-
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
-
-          <div class="content index posts-expand">
-            
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/07/08/2023-0708-ChatGPT%E4%B8%8ENewBing%E7%9A%84AI%E8%81%8A%E5%A4%A9%E5%BC%95%E6%93%8E%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="zhb">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="zhb木木三的个人网页">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/07/08/2023-0708-ChatGPT%E4%B8%8ENewBing%E7%9A%84AI%E8%81%8A%E5%A4%A9%E5%BC%95%E6%93%8E%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/" class="post-title-link" itemprop="url">ChatGPT与NewBing的AI聊天引擎使用方法</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2023-07-08 13:54:00 / 修改时间：13:55:41" itemprop="dateCreated datePublished" datetime="2023-07-08T13:54:00+08:00">2023-07-08</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%90%9E%E7%82%B9%E8%AF%BE%E5%A4%96%E7%9F%A5%E8%AF%86/" itemprop="url" rel="index"><span itemprop="name">搞点课外知识</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>1.9k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>6 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <table>
-<thead>
-<tr class="header">
-<th>产品名</th>
-<th>开发公司</th>
-<th>推出时间</th>
-<th>LLM</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>ChatGPT3.5</td>
-<td>OpenAI</td>
-<td>2022-11</td>
-<td>GPT-3.5</td>
-</tr>
-<tr class="even">
-<td>ChatGPT4</td>
-<td>OpenAI</td>
-<td>2023-03</td>
-<td>GPT-4</td>
-</tr>
-<tr class="odd">
-<td>NewBing</td>
-<td>微软(Microsoft)</td>
-<td>2023-05</td>
-<td>GPT-4</td>
-</tr>
-<tr class="even">
-<td>文心一言</td>
-<td>百度</td>
-<td>2023-03</td>
-<td>Ernie</td>
-</tr>
-<tr class="odd">
-<td>通义千问</td>
-<td>阿里巴巴</td>
-<td>2023-04</td>
-<td>通义</td>
-</tr>
-<tr class="even">
-<td>Google bard</td>
-<td>谷歌(Google)</td>
-<td>2023-05</td>
-<td>LaMDA</td>
-</tr>
-</tbody>
-</table>
-<h2 id="chatgpt">ChatGPT</h2>
-<p>首先，要使用 ChatGPT，就需要有 OpenAI 的账号（注册需要使用境外手机号进行验证，相关方法可以参考网上攻略）。在使用时，可以通过网页 chat.openai.com/chat 进行访问（需要大陆地区以外的IP才能访问），也可以用 OpenAI 的账户申请一个 OpenAI API Key 用于本地部署 OpenAI 相关的应用。</p>
-<h3 id="网页对话">网页对话</h3>
-<p>访问网页：https://chat.openai.com/chat ，登陆账号（注意网络IP），然后就可以进入界面使用了。如果登陆不成功或提示失败（在2023-05那段时间经常出现访问不了的情况），就只能多试几次，或者换个时间段再试。</p>
-<p>虽然交互界面中都是英文，但实际上 ChatGPT 是支持中文输入和输出的。一个账号可以在多个设备登录，但同时只能进行一段对话。目前网页版是基础版的 ChatGPT，搭载的是 GPT-3.5 模型，可免费使用，但对话结果是预训练好的、不支持联网搜索。如果升级到 ChatGPT Plus（每月$20）则可以使用可联网版的 GPT-4 模型。（但那样其实还不如直接使用同样搭载了 GPT-4 的免费 NewBing）</p>
-<p><img src="/ref_pic/ChatGPT使用-1.png"></p>
-<h3 id="api-key">API Key</h3>
-<p>该方法用于开发基于 ChatGPT 的应用。首先需要获取 API（Application Programming Interface，应用程序编程接口）密钥，可以参考 <a target="_blank" rel="noopener" href="https://chatgpt.cn.obiscr.com/blog/posts/2023/How-to-get-api-key/">获取 API Key 的教程</a>。此处的 API Key 是用于外部访问的一个密钥，在 <a target="_blank" rel="noopener" href="https://platform.openai.com/account/api-keys">OpenAI 官网</a> 登录账户后进行申请，以随机字符串形式保存，若丢失该字符串，需要再次生成。</p>
-<p>OpenAI 提供的 API Key 是要<strong>收费的</strong>，因为调用 GPT 模型也是需要消耗计算机算力、电费的，在使用量巨大的时候该成本更是明显。1000个 token/令牌大概 0.002 刀，一般情况下有 18 美元的免费额度。其中，token 是 GPT 一类应用对文本进行划分的单位，1个 token 大约为 0.75 个词（word）。</p>
-<p>正因为 API Key 是收费的，因而在2023年初的时候，大佬们开发出来一堆基于ChatGPT开发的免费应用（比如ChatGPT Next Web）也慢慢地开始要收费或者不好用了（当然，也可能是因为我很久没碰了，所以换地儿了）。之后有时间或许可以写一下基于ChatGPT的其他应用，比如文献分析之类的，毕竟AI时代，还是得学点相关的。</p>
-<p><img src="/ref_pic/ChatGPT使用-2.png"></p>
-<h2 id="new-bing">New Bing</h2>
-<p>在2023年5月4日，微软就宣布搭载了GPT模型的NewBing聊天机器人全面开放给所有用户，不再需要加入候补名单，只要有一个微软账户，且使用 Microsoft Edge 浏览器访问 www.bing.com，就可以立刻进行体验。（注：Firefox浏览器似乎不支持，而且需要非中国地区的IP）</p>
-<p>访问bing主页、登录了微软账号、更换了IP地址后，就能在网页最上方看到“聊天”标签。</p>
-<p><img src="/ref_pic/NewBing使用-1.png"></p>
-<p>点开后，就能愉快地使用了！由于使用的是可联网的GPT-4，因而对话信息里会有实时的搜索信息，而且引用材料还挺全。目前支持30条的连续对话，感觉比ChatGPT好用。</p>
-<p><img src="/ref_pic/NewBing使用-2.png"></p>
-<h2 id="其他">其他</h2>
-<p>百度的文心一言、阿里的通义千问在使用的时候，也是差不多，而且由于是国内，不需要考虑ChatGPT那种使用国际手机注册、NewBing需要更换网络IP地址的额外步骤，这里就不讲它们的使用方法了。（主要是平常NewBing就够我用了，好像也暂时用不到其他的）</p>
-<h2 id="参考材料">参考材料</h2>
-<p>《人工智能盘点：ChatGPT、NewBing、文心一言、通义千问大PK》：http://blog.itpub.net/70028956/viewspace-2945911/</p>
-<p>《一文看懂chatGPT3.5和chatGPT4的区别》：https://zhuanlan.zhihu.com/p/623038596</p>
-<p>《一文看懂：什么是ChatGPT-4及如何使用》：https://baijiahao.baidu.com/s?id=1760520583680609370&amp;wfr=spider&amp;for=pc</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/07/08/2023-0708-NLP%E4%B8%AD%E7%9A%84%E5%A4%A7%E5%9E%8B%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8BLLM/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="zhb">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="zhb木木三的个人网页">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/07/08/2023-0708-NLP%E4%B8%AD%E7%9A%84%E5%A4%A7%E5%9E%8B%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8BLLM/" class="post-title-link" itemprop="url">NLP中的大型语言模型LLM</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2023-07-08 02:00:00 / 修改时间：15:48:41" itemprop="dateCreated datePublished" datetime="2023-07-08T02:00:00+08:00">2023-07-08</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%90%9E%E7%82%B9%E8%AF%BE%E5%A4%96%E7%9F%A5%E8%AF%86/" itemprop="url" rel="index"><span itemprop="name">搞点课外知识</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>1.7k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>6 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="llm概念">LLM概念</h2>
-<p>自然语言处理NLP发展已久，但在2023年年初火出圈的一重大原因就是大型语言模型（LLM，Large Language Models）的应用。第一个真正引起业界关注的模型是 OpenAI 在2018年开发的 GPT（Generative Pre-trained Transformer）模型，目前，OpenAI 所推出的 ChatGPT 所使用的 LLM 就已经迭代到 GPT-3.5、GPT-4 了。</p>
-<p>LLM的目标是让机器能以类似于人类语言的方式进行交互对话：获取上下文并生成不仅连贯而且感觉像是来自真实人类的回复。这些大模型（神经网络）通过分析大量的文本数据并学习语言使用的模式来工作，其内部需要调整的参数极大，例如 OpenAI 的 GPT-3 模型就有超过1750亿个参数。</p>
-<h2 id="llm分类">LLM分类</h2>
-<p>根据具体实现方式的不同，可以将大型语言模型划分为大概5种类型（GPT模型就是其中基于Transformer的模型）：</p>
-<ul>
-<li>基于自编码器的模型（Autoencoder-Based Model）：将输入文本编码为较低维度的表示，然后根据该表示生成新的文本。在文本摘要或内容生成等任务中表现出色。</li>
-<li>序列到序列模型（Sequence-to-Sequence Model）：接收一个输入序列（如一个句子）并生成一个输出序列（如翻译成另一种语言）。这些模型通常用于机器翻译和文本摘要。</li>
-<li>基于Transformer的模型（Transformer-Based Models）：使用神经网络架构，擅长理解文本数据中的长距离依赖关系。在生成文本、翻译语言和回答问题等语言任务中非常有用。</li>
-<li>递归神经网络模型（Recursive Neural Network Models）：用于处理结构化数据，如句子的句法结构表示。对情感分析和自然语言推理等任务非常有用。</li>
-<li>分层模型（Hierarchical Models）：用于处理不同粒度级别的文本，例如句子、段落和文档。常用于文档分类和主题建模等任务。</li>
-</ul>
-<h2 id="基于transformer的llm分类">基于Transformer的LLM分类</h2>
-<p><img src="/ref_pic/基于Transformer的LLM分类.png"></p>
-<p>主要有三种技术路线，目前最流行的是Decoder-Only的路线。并不是说另外两条路线做不出大语言模型，而是GPT的碾压力证明了Decoder-Only路线更先进、未来天花板更高，所以大佬们也将主要精力都放在该路线上，而国内似乎只有百度的文心一言是一开始押在Encoder-Only的路线上，不过后来3.0的时候也转路线了（但也比腾讯好，腾讯传闻很早就大幅砍了AI研发，导致现在都没有拿得出手的LLM）。</p>
-<table>
-<thead>
-<tr class="header">
-<th>Encoder-Only</th>
-<th>Encoder-Decoder</th>
-<th>Decoder-Only<span class="github-emoji"><span>⭐</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>谷歌-BERT（1.1-3.45亿个参数）</td>
-<td>Meta-BART</td>
-<td>OpenAI-GPT（1750-1w亿个参数）</td>
-</tr>
-<tr class="even">
-<td>百度-Ernie（Ernie和Bert是《芝麻街》动漫里的好朋友）</td>
-<td>谷歌-FLAN-T5（5400亿个参数）</td>
-<td>谷歌-Bard</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>清华大学-GLM</td>
-<td>Meta-LLaMA（开源）</td>
-</tr>
-<tr class="even">
-<td></td>
-<td></td>
-<td>DeepMind-Chinchilla</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td></td>
-<td>Anthropic-Claude</td>
-</tr>
-<tr class="even">
-<td></td>
-<td></td>
-<td>谷歌-LaMDA（1370亿个参数）</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td></td>
-<td>阿里-通义千问（基于GPT）</td>
-</tr>
-<tr class="even">
-<td></td>
-<td></td>
-<td>科大讯飞（基于LLaMA）</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td></td>
-<td>百度-Ernie3.0</td>
-</tr>
-</tbody>
-</table>
-<h2 id="参考材料">参考材料</h2>
-<p>《大型语言模型（Large Language Models，LLMs）概览》：https://zhuanlan.zhihu.com/p/639318309</p>
-<p>《ChatGPT以及LLM（大语言模型）的思考》：https://zhuanlan.zhihu.com/p/598833254</p>
-<p>《LLMs模型速览（GPTs、LaMDA、GLM/ChatGLM、PaLM/Flan-PaLM、BLOOM、LLaMA、Alpaca）》：https://blog.csdn.net/qq_56591814/article/details/131162128</p>
-<p>《大语言模型（LLM）的三条技术路线》：https://xueqiu.com/6979880213/249596910</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/07/07/2023-0707-%E6%98%9F%E7%A9%B9%E9%93%81%E9%81%93%E6%89%93%E5%88%86%E6%9E%AA%E6%9C%BA%E5%88%B6/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="zhb">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="zhb木木三的个人网页">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/07/07/2023-0707-%E6%98%9F%E7%A9%B9%E9%93%81%E9%81%93%E6%89%93%E5%88%86%E6%9E%AA%E6%9C%BA%E5%88%B6/" class="post-title-link" itemprop="url">星穹铁道打分枪机制</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2023-07-07 21:36:00 / 修改时间：21:37:07" itemprop="dateCreated datePublished" datetime="2023-07-07T21:36:00+08:00">2023-07-07</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%B8%B8%E6%88%8F/" itemprop="url" rel="index"><span itemprop="name">游戏</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>700</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>2 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>参考：https://www.zhihu.com/answer/3091694178</p>
-<p>星铁打分枪机制：星神宇宙下的san/理智值（类似于克苏鲁/饥荒里的精神值）</p>
-<p>该机制下对应的几种规律：</p>
-<ul>
-<li>意志坚定的人的san值上限高。</li>
-<li>儿童、文盲、人偶、魔阴身的san值上限低。</li>
-<li>直面星神后会掉san。例如卡夫卡、布洛妮娅、希尔</li>
-<li>经历挫折后会掉san。例如娜塔莎（见证了哥哥的结局）、瓦尔特（见证旧世界的毁灭）</li>
-<li>与星神相关的人物无法测定。例如桑博（欢愉令使）、景元（巡猎令使）、罗刹（丰饶令使）、三月七</li>
-</ul>
-<table>
-<thead>
-<tr class="header">
-<th>常规</th>
-<th>得分</th>
-<th>特殊</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>彦卿</td>
-<td>99</td>
-<td>罗刹</td>
-<td>【无法测定！】眼珠在转动了三圈后突然瞪大。在僵持了片刻后，它疲惫地合上了眼皮</td>
-</tr>
-<tr class="even">
-<td>佩拉</td>
-<td>93</td>
-<td>景元</td>
-<td>【无法测定！】眼珠在转动了三圈后突然瞪大。在僵持了片刻后，它疲惫地合上了眼皮</td>
-</tr>
-<tr class="odd">
-<td>卡芙卡</td>
-<td>90</td>
-<td>桑博</td>
-<td>【无法测定！】眼珠在转动了三圈后突然瞪大。在僵持了片刻后，它疲惫地合上了眼皮</td>
-</tr>
-<tr class="even">
-<td>丹恒</td>
-<td>88</td>
-<td>三月七</td>
-<td>【无法测定！】眼珠在转动了三圈后突然瞪大。在僵持了片刻后，它疲惫地合上了眼皮</td>
-</tr>
-<tr class="odd">
-<td>开拓者</td>
-<td>84</td>
-<td>银狼</td>
-<td>【110分！】定分枪对银狼宣布，声音里夹杂着奇怪的电子音</td>
-</tr>
-<tr class="even">
-<td>符玄</td>
-<td>77</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>白露</td>
-<td>71</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>希露瓦</td>
-<td>67</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>青雀</td>
-<td>65</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>杰帕德</td>
-<td>62</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>阿兰</td>
-<td>55</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>布洛妮娅</td>
-<td>37</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>希尔</td>
-<td>33</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>娜塔莎</td>
-<td>32</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>艾丝妲</td>
-<td>29</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>驭空</td>
-<td>20</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>素裳</td>
-<td>18</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>停云</td>
-<td>13</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>姬子</td>
-<td>9</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>虎克</td>
-<td>6</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>瓦尔特</td>
-<td>5</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>黑塔</td>
-<td>4</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>帕姆</td>
-<td>1</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>镜流</td>
-<td>0</td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/07/06/2023-0706-%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86NLP/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="zhb">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="zhb木木三的个人网页">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/07/06/2023-0706-%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86NLP/" class="post-title-link" itemprop="url">自然语言处理NLP</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2023-07-06 11:37:00 / 修改时间：11:38:15" itemprop="dateCreated datePublished" datetime="2023-07-06T11:37:00+08:00">2023-07-06</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%90%9E%E7%82%B9%E8%AF%BE%E5%A4%96%E7%9F%A5%E8%AF%86/" itemprop="url" rel="index"><span itemprop="name">搞点课外知识</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>1.2k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>4 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>今年（2023年）年初大概3月份的时候，AI绘画和AI对话都特别火 ，前者的大新闻是 Stable-Diffusion 火出圈，后者则是 OpenAI 公司的 ChatGPT 的火出圈。照理来说，就应该追热点赶紧列一下写个博客的，结果现在都没热度了，甚至我都不怎么用了，才想起还是得补一补笔记。</p>
-<h2 id="nlp">NLP</h2>
-<p>AI对话本质上是AI在<strong>自然语言处理</strong>（NLP，Natural Language Processing）领域的一个新应用。NLP也是计算机科学领域、人工智能领域的重要方向，研究的是如何用<strong>自然语言</strong>（而不是二进制语言）实现人与计算机之间的有效通信。</p>
-<p>NLP所面对的核心难题在于自然语言文本和对话广泛存在着各种各样的歧义性或多义性（ambiguity），即同一段字符串在不同的场景下会有不同的含义，虽然这正是自然语言的魅力所在，但也是计算机处理中必须消除的东西，因为机器只是机器。</p>
-<p>抛开理论和技术不谈（我也不懂啊），NLP的应用方向主要有6种：</p>
-<ul>
-<li><strong>文本挖掘</strong>：对文本进行分类、摘要、分析、信息可视化、交互式呈现</li>
-<li><strong>信息检索</strong>：对文档词汇建立索引、对查询信息进行分析并匹配索引库</li>
-<li><strong>句法语义分析</strong>：针对文本语句进行分词、标记、实体识别、句法分析、多义词消歧等</li>
-<li><strong>机器翻译</strong>：根据一种自然语言自动生成另一种自然语言</li>
-<li><strong>问答系统</strong>：利用计算机自动回答用户所提出的问题，包括问题理解、关键信息抽取、检索匹配知识库、反馈</li>
-<li><strong>对话系统</strong>：包括用户意图识别、通用聊天引擎、问答引擎、对话管理系统，还要具备多轮对话能力</li>
-</ul>
-<p>针对这6个应用方向，又可以把NLP总结为2大类核心任务：</p>
-<ul>
-<li><strong>自然语言理解</strong>（NLU）：Natural Language Understanding，指计算机系统对自然语言文本进行分析、理解和推理的过程。NLU技术包括词法分析、句法分析、语义分析和语用分析等方面，旨在使计算机能够理解自然语言文本的含义和意图。NLU技术是自然语言处理的核心技术之一，它是实现智能对话、文本分类、信息抽取等应用的基础。</li>
-<li><strong>自然语言生成</strong>（NLG）：Natural Language Generation，指计算机系统根据特定的规则和语言模型，生成自然语言文本的过程。NLG技术包括文本规划、语言生成和输出等方面，旨在使计算机能够生成符合人类语言习惯和规范的自然语言文本。NLG技术的应用包括自动摘要、自动文摘、智能写作等方面。</li>
-</ul>
-<h2 id="参考材料">参考材料</h2>
-<p>《NLP（自然语言处理）介绍》：https://zhuanlan.zhihu.com/p/609712878?utm_id=0</p>
-<p>《NLU、NLP、NLG：自然语言处理的三大核心技术》：https://baijiahao.baidu.com/s?id=1763374317402085282&amp;wfr=spider&amp;for=pc</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/07/05/2023-0705-%E7%BB%93%E6%9E%84%E5%8C%96%E6%8B%96%E5%BB%B6-%E6%8B%96%E7%9D%80%E6%8B%96%E7%9D%80%E5%B0%B1%E6%8A%8A%E4%BA%8B%E6%83%85%E5%81%9A%E5%AE%8C%E4%BA%86/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="zhb">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="zhb木木三的个人网页">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/07/05/2023-0705-%E7%BB%93%E6%9E%84%E5%8C%96%E6%8B%96%E5%BB%B6-%E6%8B%96%E7%9D%80%E6%8B%96%E7%9D%80%E5%B0%B1%E6%8A%8A%E4%BA%8B%E6%83%85%E5%81%9A%E5%AE%8C%E4%BA%86/" class="post-title-link" itemprop="url">结构化拖延-拖着拖着就把事情做完了？</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2023-07-05 14:42:00 / 修改时间：14:49:22" itemprop="dateCreated datePublished" datetime="2023-07-05T14:42:00+08:00">2023-07-05</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%90%9E%E7%82%B9%E8%AF%BE%E5%A4%96%E7%9F%A5%E8%AF%86/" itemprop="url" rel="index"><span itemprop="name">搞点课外知识</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>1.5k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>5 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>拖延是大家经常会碰到的事情，一种重要的事也很可能会一直拖到临近 DDL 才会弄完，甚至可能会导致更多的事情完成不了。但斯坦福一个荣誉客座教授、哲学家约翰·佩里在《拖拉一点也无妨》里就提出了一个<strong>结构化拖延（structured procrastination）</strong>的概念，通过合理规划任务，利用拖延症来完成更多的事情。当然，作者本人提出该理论之后，花了15年才总算把这书写完，可以说很切题了。</p>
-<h2 id="战术拖延策略">战术拖延策略</h2>
-<p>结构化拖延这个概念并不是让人根除掉拖延的坏习惯，而是与它进行妥协，进行某种战术拖延。一般而言，拖延就是单纯地不想干某件事，而且可能越紧迫，就越不想干，比如考试前由休闲地玩手机变成焦虑地玩手机。</p>
-<p><img src="/ref_pic/结构化拖延.png"></p>
-<p>而结构化拖延，就是要利用“逃避”的这个特性，在拖延正事的时候，给自己安排一些没那么重要、但也是次重要的事情，从而完成掉它。而这个结构化，就是指如何去安排自己的任务清单。</p>
-<p>首先，要构建一个优先级的任务清单：把看起来最紧急迫切的事排在最前头，一些其他值得一做但没那么紧急的事情排在后面。这个清单可以只在脑子里想想，也可以专门写下来，尤其是当这件事不能在短时间（比如几分钟）内完成的话，就应该记下来，这样可以帮助我们专注在当前的事情上，而不会一直在脑子里转着从而引起焦虑。</p>
-<p>接着，就是对任务清单进行分解，把不能轻易完成的任务分解地足够细（甚至可以做到那种，打开教材、新建一页PPT、列出题目的详细程度）。<strong>“难事做于易，大事做于细”</strong>。这个目的是避免我们因为害怕大任务而逃避，同时也能帮助思考如何解决问题，可以不断肯定自己的进展，从而获得更多成就感而非挫败感。</p>
-<p>最后，就是任务的执行了。只要上面的任务清单设计的足够合理，那在拖延正事的时候，就不至于无事可做而跑去用奶头乐消磨时光。这时候“拖延”的力量会迫使我们去做任务清单上一些别的事情，就像我之前为了逃避改论文而写了一堆博客文章一样。在这个拖延过程中，及时记录自己每天完成的“杂事”，久而久之，就会发现自己已经完成了不少东西，也就不容易焦虑了。毕竟，焦虑常常是因为我们觉得有太多的事情要做，却又无从下手。</p>
-<h2 id="别让自己无事可做">别让自己无事可做</h2>
-<p>其实结构化拖延的核心，就是<strong>构建一个合理的任务清单</strong>。居于榜首的任务应当是有明确的截止期限，但拖延的后果其实又不是特别大的（比如给自己定下这个月底要把小论文改完，但就算超时了，也没有实质损害）。而排在后面的则是没那么重要，但又是有用的小事情（比如看一篇小论文并用三句话概括）。不要因为小事情“不重要”就不列上去，用更多的事情填满任务清单，是结构化拖延的重要环节，也就是让自己<strong>有事可做</strong>。</p>
-<p>一个反例就是任务清单上只有寥寥几项任务，还全都是最重要的级别。这时候，按照拖延特性，逃避做这些重要事的唯一选择就只剩下啥也不做了，跑去玩游戏、看微信、刷短视频，慢慢地停不下来，想着明天再做也无妨，最终陷入拖延，甚至习得性无助感，任何积极的事情都不想做，包括吃饭睡觉。</p>
-<h2 id="拖延本身是有问题的">拖延本身是有问题的</h2>
-<p>结构化拖延不能解决拖延问题，有时候，拖延是由某些更深层的问题导致的，这可能需要医学手段治疗，而不是一些哲学、生活策略就能解决。面对难题时，有逃避困难的心态是很正常的，因为困难会带来不适，而我们不喜欢这样的不适。当然，人与人之间不能一概而论，毅力更强的人能够忍受更大的不适感。因为不适，就会逃避，就会拖延。</p>
-<p>结构化拖延可以通过充分利用拖延过程来完成一些杂事，提高自己的成就感，减少内疚和绝望，从而帮助增强行动力。而如果自己拖延到，连重要事以外的东西都不想做，那也许就不是这个策略能解决的问题了，或许该散散心、换个环境了。</p>
-<h2 id="参考资料">参考资料</h2>
-<p>《结构化拖延：由于没有做某些事，从而做成了不少别的事》：https://zhuanlan.zhihu.com/p/68745835</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zhb-daydream.github.io/2023/07/04/2023-0704-%E4%B8%AD%E5%8F%A4%E6%88%98%E9%94%A4%E9%98%B5%E8%90%A5/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="zhb">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="zhb木木三的个人网页">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/07/04/2023-0704-%E4%B8%AD%E5%8F%A4%E6%88%98%E9%94%A4%E9%98%B5%E8%90%A5/" class="post-title-link" itemprop="url">中古战锤阵营</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2023-07-04 11:10:00 / 修改时间：11:11:28" itemprop="dateCreated datePublished" datetime="2023-07-04T11:10:00+08:00">2023-07-04</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%B8%B8%E6%88%8F/" itemprop="url" rel="index"><span itemprop="name">游戏</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>269</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="主要种族">主要种族</h2>
-<table>
-<thead>
-<tr class="header">
-<th>秩序阵营</th>
-<th>中立阵营</th>
-<th>混沌阵营</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>蜥蜴人</td>
-<td>古墓王</td>
-<td>混沌恶魔</td>
-</tr>
-<tr class="even">
-<td>高等精灵</td>
-<td>食人魔</td>
-<td>斯卡文鼠人</td>
-</tr>
-<tr class="odd">
-<td>巴托尼亚</td>
-<td>黑暗精灵</td>
-<td>吸血鬼伯爵</td>
-</tr>
-<tr class="even">
-<td>木精灵</td>
-<td></td>
-<td>野兽人</td>
-</tr>
-<tr class="odd">
-<td>矮人</td>
-<td></td>
-<td>绿皮部落</td>
-</tr>
-<tr class="even">
-<td>人类帝国-西格玛</td>
-<td></td>
-<td>混沌勇士-诺斯卡</td>
-</tr>
-<tr class="odd">
-<td>震旦</td>
-<td></td>
-<td>恐孽-四神</td>
-</tr>
-<tr class="even">
-<td>基斯里夫</td>
-<td></td>
-<td>纳垢-四神</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td></td>
-<td>奸奇-四神</td>
-</tr>
-<tr class="even">
-<td></td>
-<td></td>
-<td>色孽-四神</td>
-</tr>
-</tbody>
-</table>
-<h2 id="参考资料">参考资料</h2>
-<p>《中古战锤-百度百科》：https://baike.baidu.com/item/%E4%B8%AD%E5%8F%A4%E6%88%98%E9%94%A4/3721968?fr=aladdin</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/5/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/19/">19</a><a class="extend next" rel="next" href="/page/7/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
-  </nav>
-
-
-
-          </div>
-          
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
-
-        </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">zhb</p>
-  <div class="site-description" itemprop="description"></div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">109</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-          
-        <span class="site-state-item-count">10</span>
-        <span class="site-state-item-name">分类</span></a>
-      </div>
-      <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-          
-        <span class="site-state-item-count">17</span>
-        <span class="site-state-item-name">标签</span></a>
-      </div>
-  </nav>
-</div>
-
-
-
-      </div>
-
-    </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        
-
-<div class="copyright">
-  
-  &copy; 
-  <span itemprop="copyrightYear">2023</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">zhb</span>
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item-icon">
-      <i class="fa fa-chart-area"></i>
-    </span>
-    <span title="站点总字数">145k</span>
-</div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
-  </div>
-
-        
-
-
-
-
-
-
-
-
-      </div>
-    </footer>
-  </div>
-
-  
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
-
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/muse.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-<script>
-if (document.querySelectorAll('pre.mermaid').length) {
-  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
-    mermaid.initialize({
-      theme    : 'forest',
-      logLevel : 3,
-      flowchart: { curve     : 'linear' },
-      gantt    : { axisFormat: '%m/%d/%Y' },
-      sequence : { actorMargin: 50 }
-    });
-  }, window.mermaid);
-}
-</script>
-
-
-  
-
-  
-      
-
-<script>
-  if (typeof MathJax === 'undefined') {
-    window.MathJax = {
-      loader: {
-          load: ['[tex]/mhchem'],
-        source: {
-          '[tex]/amsCd': '[tex]/amscd',
-          '[tex]/AMScd': '[tex]/amscd'
-        }
-      },
-      tex: {
-        inlineMath: {'[+]': [['$', '$']]},
-          packages: {'[+]': ['mhchem']},
-        tags: 'ams'
-      },
-      options: {
-        renderActions: {
-          findScript: [10, doc => {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
-              const display = !!node.type.match(/; *mode=display/);
-              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-              const text = document.createTextNode('');
-              node.parentNode.replaceChild(text, node);
-              math.start = {node: text, delim: '', n: 0};
-              math.end = {node: text, delim: '', n: 0};
-              doc.math.push(math);
-            });
-          }, '', false],
-          insertedScript: [200, () => {
-            document.querySelectorAll('mjx-container').forEach(node => {
-              let target = node.parentNode;
-              if (target.nodeName.toLowerCase() === 'li') {
-                target.parentNode.classList.add('has-jax');
-              }
-            });
-          }, '', false]
-        }
-      }
-    };
-    (function () {
-      var script = document.createElement('script');
-      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
-      script.defer = true;
-      document.head.appendChild(script);
-    })();
-  } else {
-    MathJax.startup.document.state(0);
-    MathJax.texReset();
-    MathJax.typeset();
-  }
-</script>
-
-    
-
-  
-
-</body>
-</html>
+
+
+
+ChatGPT3.5
+OpenAI
+2022-11
+GPT-3.5
+
+
+ChatGPT4
+OpenAI
+2023-03
+GPT-4
+
+
+NewBing
+微软(Microsoft)
+2023-05
+GPT-4
+
+
+文心一言
+百度
+2023-03
+Ernie
+
+
+通义千问
+阿里巴巴
+2023-04
+通义
+
+
+Google bard
+谷歌(Google)
+2023-05
+LaMDA
+
+
+
+ChatGPT
+首先，要使用 ChatGPT，就需要有 OpenAI 的账号（注册需要使用境外手机号进行验证，相关方法可以参考网上攻略）。在使用时，可以通过网页 chat.openai.com/chat 进行访问（需要大陆地区以外的IP才能访问），也可以用 OpenAI 的账户申请一个 OpenAI API Key 用于本地部署 OpenAI 相关的应用。
+网页对话
+访问网页：https://chat.openai.com/chat ，登陆账号（注意网络IP），然后就可以进入界面使用了。如果登陆不成功或提示失败（在2023-05那段时间经常出现访问不了的情况 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/07/08/2023-0708-NLP%E4%B8%AD%E7%9A%84%E5%A4%A7%E5%9E%8B%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8BLLM/" title="NLP中的大型语言模型LLM">NLP中的大型语言模型LLM</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-07-07T18:00:00.000Z" title="发表于 2023-07-08 02:00:00">2023-07-08</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%90%9E%E7%82%B9%E8%AF%BE%E5%A4%96%E7%9F%A5%E8%AF%86/">搞点课外知识</a></span></div><div class="content">LLM概念
+自然语言处理NLP发展已久，但在2023年年初火出圈的一重大原因就是大型语言模型（LLM，Large Language Models）的应用。第一个真正引起业界关注的模型是 OpenAI 在2018年开发的 GPT（Generative Pre-trained Transformer）模型，目前，OpenAI 所推出的 ChatGPT 所使用的 LLM 就已经迭代到 GPT-3.5、GPT-4 了。
+LLM的目标是让机器能以类似于人类语言的方式进行交互对话：获取上下文并生成不仅连贯而且感觉像是来自真实人类的回复。这些大模型（神经网络）通过分析大量的文本数据并学习语言使用的模式来工作，其内部需要调整的参数极大，例如 OpenAI 的 GPT-3 模型就有超过1750亿个参数。
+LLM分类
+根据具体实现方式的不同，可以将大型语言模型划分为大概5种类型（GPT模型就是其中基于Transformer的模型）：
+
+基于自编码器的模型（Autoencoder-Based Model）：将输入文本编码为较低维度的表示，然后根据该表示生成新的文本。在文本摘要或内容生成等任务中表现出色。
+序 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/07/07/2023-0707-%E6%98%9F%E7%A9%B9%E9%93%81%E9%81%93%E6%89%93%E5%88%86%E6%9E%AA%E6%9C%BA%E5%88%B6/" title="星穹铁道打分枪机制">星穹铁道打分枪机制</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-07-07T13:36:00.000Z" title="发表于 2023-07-07 21:36:00">2023-07-07</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%B8%B8%E6%88%8F/">游戏</a></span></div><div class="content">参考：https://www.zhihu.com/answer/3091694178
+星铁打分枪机制：星神宇宙下的san/理智值（类似于克苏鲁/饥荒里的精神值）
+该机制下对应的几种规律：
+
+意志坚定的人的san值上限高。
+儿童、文盲、人偶、魔阴身的san值上限低。
+直面星神后会掉san。例如卡夫卡、布洛妮娅、希尔
+经历挫折后会掉san。例如娜塔莎（见证了哥哥的结局）、瓦尔特（见证旧世界的毁灭）
+与星神相关的人物无法测定。例如桑博（欢愉令使）、景元（巡猎令使）、罗刹（丰饶令使）、三月七
+
+
+
+
+常规
+得分
+特殊
+描述
+
+
+
+
+彦卿
+99
+罗刹
+【无法测定！】眼珠在转动了三圈后突然瞪大。在僵持了片刻后，它疲惫地合上了眼皮
+
+
+佩拉
+93
+景元
+【无法测定！】眼珠在转动了三圈后突然瞪大。在僵持了片刻后，它疲惫地合上了眼皮
+
+
+卡芙卡
+90
+桑博
+【无法测定！】眼珠在转动了三圈后突然瞪大。在僵持了片刻后，它疲惫地合上了眼皮
+
+
+丹恒
+88
+三月七
+【无法测定！】眼珠在转动了三圈后突然瞪大。在僵持了片刻后，它疲惫地合上了眼皮
+
+
+开拓者
+84
+银狼
+【110分！】定分枪对银狼宣布，声音里夹杂着奇 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/07/06/2023-0706-%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86NLP/" title="自然语言处理NLP">自然语言处理NLP</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-07-06T03:37:00.000Z" title="发表于 2023-07-06 11:37:00">2023-07-06</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%90%9E%E7%82%B9%E8%AF%BE%E5%A4%96%E7%9F%A5%E8%AF%86/">搞点课外知识</a></span></div><div class="content">今年（2023年）年初大概3月份的时候，AI绘画和AI对话都特别火 ，前者的大新闻是 Stable-Diffusion 火出圈，后者则是 OpenAI 公司的 ChatGPT 的火出圈。照理来说，就应该追热点赶紧列一下写个博客的，结果现在都没热度了，甚至我都不怎么用了，才想起还是得补一补笔记。
+NLP
+AI对话本质上是AI在自然语言处理（NLP，Natural Language Processing）领域的一个新应用。NLP也是计算机科学领域、人工智能领域的重要方向，研究的是如何用自然语言（而不是二进制语言）实现人与计算机之间的有效通信。
+NLP所面对的核心难题在于自然语言文本和对话广泛存在着各种各样的歧义性或多义性（ambiguity），即同一段字符串在不同的场景下会有不同的含义，虽然这正是自然语言的魅力所在，但也是计算机处理中必须消除的东西，因为机器只是机器。
+抛开理论和技术不谈（我也不懂啊），NLP的应用方向主要有6种：
+
+文本挖掘：对文本进行分类、摘要、分析、信息可视化、交互式呈现
+信息检索：对文档词汇建立索引、对查询信息进行分析并匹配索引库
+句法语义分析：针对文本语句进行分词 ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/5/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/#content-inner">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/#content-inner">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/19/#content-inner">19</a><a class="extend next" rel="next" href="/page/7/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">zhb</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">111</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">22</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">10</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/08/21/2023-0821-%E7%82%AE%E5%A1%94%E8%BD%AC%E9%80%9F%E4%B8%8E%E5%9D%A6%E5%85%8B%E8%BD%AC%E5%9C%88%E6%88%98%E6%9C%AF/" title="坦克转圈战术与炮塔转速">坦克转圈战术与炮塔转速</a><time datetime="2023-08-21T15:55:00.000Z" title="发表于 2023-08-21 23:55:00">2023-08-21</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/08/16/2023-0816-Hexo%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98/" title="Hexo更换主题">Hexo更换主题</a><time datetime="2023-08-15T17:30:00.000Z" title="发表于 2023-08-16 01:30:00">2023-08-16</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/08/13/2023-0813-ChatPDF%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/" title="ChatPDF使用方法">ChatPDF使用方法</a><time datetime="2023-08-13T12:50:00.000Z" title="发表于 2023-08-13 20:50:00">2023-08-13</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/08/13/2023-0813-%E5%A6%99%E9%B8%AD%E7%9B%B8%E6%9C%BA%E7%AD%89AI%E5%86%99%E7%9C%9F%E8%BD%AF%E4%BB%B6%E5%8E%9F%E7%90%86/" title="妙鸭相机等AI写真软件原理">妙鸭相机等AI写真软件原理</a><time datetime="2023-08-13T11:55:00.000Z" title="发表于 2023-08-13 19:55:00">2023-08-13</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/08/13/2023-0813-%E5%B0%81%E7%A5%9E%E6%BC%94%E4%B9%89%E7%9A%84%E7%AD%89%E7%BA%A7%E5%88%B6%E5%BA%A6/" title="封神演义的等级制度">封神演义的等级制度</a><time datetime="2023-08-13T08:30:00.000Z" title="发表于 2023-08-13 16:30:00">2023-08-13</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            <a class="card-more-btn" href="/categories/" title="查看更多">
+    <i class="fas fa-angle-right"></i></a>
+            </div>
+            <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/MRI/"><span class="card-category-list-name">MRI</span><span class="card-category-list-count">10</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/python/"><span class="card-category-list-name">python</span><span class="card-category-list-count">3</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E4%B8%AA%E4%BA%BA%E5%90%90%E6%A7%BD/"><span class="card-category-list-name">个人吐槽</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"><span class="card-category-list-name">博客搭建</span><span class="card-category-list-count">17</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%AD%A6%E6%9C%AF%E6%A8%A1%E5%9D%97/"><span class="card-category-list-name">学术模块</span><span class="card-category-list-count">23</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%90%9E%E7%82%B9%E8%AF%BE%E5%A4%96%E7%9F%A5%E8%AF%86/"><span class="card-category-list-name">搞点课外知识</span><span class="card-category-list-count">31</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%97%A5%E8%AE%B0/"><span class="card-category-list-name">日记</span><span class="card-category-list-count">10</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%B8%B8%E6%88%8F/"><span class="card-category-list-name">游戏</span><span class="card-category-list-count">7</span></a></li>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/%E5%AE%9E%E7%94%A8%E5%B0%8F%E5%B7%A5%E5%85%B7/" style="font-size: 1.27em; color: #99a0a9">实用小工具</a> <a href="/tags/%E7%94%9F%E6%B4%BB%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE/" style="font-size: 1.16em; color: #999b9e">生活中的数据</a> <a href="/tags/%E6%98%9F%E7%A9%B9%E9%93%81%E9%81%93/" style="font-size: 1.27em; color: #99a0a9">星穹铁道</a> <a href="/tags/%E6%AF%94%E8%B5%9B/" style="font-size: 1.21em; color: #999ea4">比赛</a> <a href="/tags/sci%E8%AE%BA%E6%96%87/" style="font-size: 1.44em; color: #99a7ba">sci论文</a> <a href="/tags/markdown/" style="font-size: 1.16em; color: #999b9e">markdown</a> <a href="/tags/%E5%B8%82%E5%9C%BA%E8%A7%84%E6%A8%A1/" style="font-size: 1.1em; color: #999">市场规模</a> <a href="/tags/%E6%9C%AA%E5%88%86%E7%B1%BB/" style="font-size: 1.5em; color: #99a9bf">未分类</a> <a href="/tags/%E5%B8%82%E5%9C%BA/" style="font-size: 1.33em; color: #99a2af">市场</a> <a href="/tags/%E6%97%85%E6%B8%B8%E6%B5%81%E6%B0%B4%E8%B4%A6/" style="font-size: 1.39em; color: #99a4b4">旅游流水账</a> <a href="/tags/MATLAB/" style="font-size: 1.1em; color: #999">MATLAB</a> <a href="/tags/%E4%B8%93%E5%88%A9/" style="font-size: 1.16em; color: #999b9e">专利</a> <a href="/tags/AI%E6%96%87%E6%9C%AC%E5%A4%84%E7%90%86/" style="font-size: 1.27em; color: #99a0a9">AI文本处理</a> <a href="/tags/%E6%88%98%E9%94%A4/" style="font-size: 1.16em; color: #999b9e">战锤</a> <a href="/tags/typora/" style="font-size: 1.1em; color: #999">typora</a> <a href="/tags/%E7%AD%89%E7%BA%A7%E5%88%B6%E5%BA%A6/" style="font-size: 1.33em; color: #99a2af">等级制度</a> <a href="/tags/AI%E7%BB%98%E7%94%BB/" style="font-size: 1.33em; color: #99a2af">AI绘画</a> <a href="/tags/%E5%BF%83%E7%90%86%E5%AD%A6/" style="font-size: 1.16em; color: #999b9e">心理学</a> <a href="/tags/%E5%8E%9F%E7%A5%9E/" style="font-size: 1.1em; color: #999">原神</a> <a href="/tags/%E7%A5%9E%E8%AF%9D/" style="font-size: 1.16em; color: #999b9e">神话</a> <a href="/tags/%E6%96%87%E7%8C%AE/" style="font-size: 1.27em; color: #99a0a9">文献</a> <a href="/tags/LaTeX/" style="font-size: 1.33em; color: #99a2af">LaTeX</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/08/"><span class="card-archive-list-date">八月 2023</span><span class="card-archive-list-count">15</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/07/"><span class="card-archive-list-date">七月 2023</span><span class="card-archive-list-count">29</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/06/"><span class="card-archive-list-date">六月 2023</span><span class="card-archive-list-count">20</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/05/"><span class="card-archive-list-date">五月 2023</span><span class="card-archive-list-count">29</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/04/"><span class="card-archive-list-date">四月 2023</span><span class="card-archive-list-count">15</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/03/"><span class="card-archive-list-date">三月 2023</span><span class="card-archive-list-count">3</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">111</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2023-08-21T15:56:17.410Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By zhb</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
